@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours HTML5 / CSS3</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web</h1>
+
+    <article>
+      <h2>Introduction</h2>
+
+      <section>
+        <h3>Introduction</h3>
+
+        <div>
+          <figure>
+            <img src="images/HTML-CSS_languages.jpeg" alt="Les langages du Web" class="h2cm">
+            <figcaption>Les langages du Web</figcaption>
+          </figure>
+        </div>
+
+        <p>Les langages <strong>HTML</strong> et <strong>CSS</strong> sont les principaux langages du Web.</p>
+
+        <p>Les deux langages sont complémentaires :</p>
+        <ul>
+          <li>Le <strong>HTML</strong> décrit la structure (le squelette) d'une page Web.</li>
+          <li>Le <strong>CSS</strong> sert à la mise en forme et la mise en page d'une page web. Ce langage
+            est essentiel pour embellir et donner une apparence attractive à une page Web.</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-6">
+            <figure>
+              <img src="images/html_css.jpg" alt="Rôle" class="h5cm">
+              <figcaption>Rôle des langages HTML et CSS</figcaption>
+            </figure>
+          </div>
+          <div class="col-6">
+            <figure>
+              <img src="images/html_css_importance.jpg" alt="Importance" class="h5cm">
+              <figcaption>Importance des langages HTML et CSS</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Structure minimale</h3>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Ouvrir le fichier <a href="assets/downloads/tp1/vide.html" target="_blank"
+              rel="noopener noreferrer">vide.html</a>.</li>
+          <li>Afficher la page dans l'inspecteur, cliquer sur la touche <kbd>F12</kbd> pour l'ouvrir.</li>
+          <li>Sélectionner l'onglet <strong>Elements</strong>.</li>
+          <li>Relever la structure minimale d'une page Web.</li>
+          <li>Expliquer la signifiation de chaque élément de la page.</li>
+        </ul>
+
+        <figure>
+          <img src="images/inspecteur.png" alt="Inspecteur" class="h3cm">
+          <figcaption>Inspecteur</figcaption>
+        </figure>
+      </section>
+
+      <section class="p-break">
+        <h3>Squelette d'une page web</h3>
+
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h4>Explication</h4>
+
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;</code></pre>
+        <p>Indique au navigateur que notre page utilise la version 5 du langage, ou le HTML5, selon W3C.</p>
+
+        <pre><code class="language-html">&lt;html&gt;
+...
+&lt;/html&gt;</code></pre>
+        <p>Indiquent le début et la fin du document HTML.</p>
+
+        <pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+        <p>L'entête du document HTML est la partie invisible de la page, elle renferme le titre de la page affiché dans
+          la barre du titre du navigateur.</p>
+
+        <pre><code class="language-html">&lt;body&gt;
+  ...
+&lt;/body&gt;</code></pre>
+        <p>Tout le contenu visible d'une page Web doit être tapé dans cette partie du document.</p>
+      </section>
+
+      <section>
+        <h3>Squelette complète</h3>
+
+        <p>Pratiquement, on commence par le squelette suivant :</p>
+
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h4 class="p-break">Explication</h4>
+
+        <pre><code class="language-html">&lt;html lang=&quot;en&quot;&gt;...&lt;/html&gt;</code></pre>
+        <p>Il est recommandé d'indiquer la langue utilisée dans le document HTML, cette information peut être utile pour
+          les screen readers et les outils de traduction.</p>
+
+        <pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;</code></pre>
+        <p>Indique l'encodage des caractères, l'UTF-8 est un encodage universel qui permet d'afficher toutes
+          les langues (Latin, Arabe, Chinois, Japonais, etc.).</p>
+
+        <pre><code class="language-html">&lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
+        <p>Indique que la page peut-être rendue sur un mobile sans subir d'agrandissements, ni de
+          rétricissements.</p>
+      </section>
+    </article>
+
+    <article>
+      <h2>Balises de base</h2>
+
+      <section>
+        <h3>Titres / Paragraphes / Images</h3>
+
+        <h4>Les titres</h4>
+        <p>Le langage HTML supporte 6 niveaux pour les titres de <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>.</p>
+        <p>Le titre principal est indiqué par, un titre niveau 1, <code>&lt;h1&gt;</code>.</p>
+        <p>Un sous-titre, titre niveau 2, est indiqué par <code>&lt;h2&gt;</code>.</p>
+
+        <pre><code class="language-html">&lt;h1&gt;Langages du web&lt;/h1&gt;</code></pre>
+
+        <h4>Les paragraphes</h4>
+        <p>On utilise la balise <code>&lt;p&gt;...&lt;/p&gt;</code> pour délimiter les paragraphes.</p>
+
+        <pre><code class="language-html">&lt;p&gt;Bonjour, je suis un paragraphe.&lt;/p&gt;</code></pre>
+
+        <h4>Les images</h4>
+        <p>La balise <code>img</code> est utilisée pour insérer une image. Elle possède deux attributs obligatoires :
+        </p>
+        <ul>
+          <li>L'attribut <code>src</code> indique le chemin de l'image.</li>
+          <li>L'attribut <code>alt</code> indique le texte à afficher en cas de non disponibilité de l'image.</li>
+        </ul>
+
+        <pre><code class="language-html">&lt;img src=&quot;images/html_css_logo.png&quot; alt=&quot;Logo HTML et CSS&quot;&gt;</code></pre>
+      </section>
+
+      <section class="p-break">
+        <h3>Exercice 1</h3>
+
+        <p>On désire créer la page Web suivante :</p>
+
+        <figure>
+          <img class="p-2 border h10cm" src="assets/downloads/tp1/tp1_simpsons.html.png" alt="TP1 - Les Simpson">
+          <figcaption>TP1 - Les Simpson</figcaption>
+        </figure>
+
+        <p>Cette page contient trois types d'éléments :</p>
+        <ul>
+          <li>Un titre</li>
+          <li>Deux paragraphes</li>
+          <li>Une image</li>
+        </ul>
+
+        <div class="d-print-none">
+          <p>On donne le texte de la page :</p>
+          <pre class="p-2 bg-dark text-light"><code class="nohighlight">Les Simpson
+
+Les Simpson (The Simpsons) sont une série télévisée d'animation américaine pour 
+adultes créée par Matt Groening et diffusée depuis le 17 décembre 1989 sur le 
+réseau Fox.
+
+Elle met en scène les Simpson, stéréotype d'une famille de classe moyenne 
+américaine. Leurs aventures servent une satire du mode de vie américain. 
+Les membres de la famille, sont Homer, Marge, Bart, Lisa, Maggie, ainsi que 
+Abe, le père d'Homer.</code></pre>
+
+          <p>Ainsi que l'image de la famille à télécharger.</p>
+          <p><a href="assets/downloads/tp1/simpson.jpg" target="_blank" rel="noopener noreferrer"><img
+                src="assets/downloads/tp1/simpson_thumb.jpg" alt="La famille Simpson"></a></p>
+        </div>
+
+        <h4>Travail demandé</h4>
+        <p>On demande de :</p>
+        <ol>
+          <li>Créer une page web nommée : <strong>simpsons.html</strong></li>
+          <li>Ajouter le titre de la page.</li>
+          <li>Ajouter les paragraphes.</li>
+          <li>Insérer l'image.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Listes ordonnées / Listes non ordonnées</h3>
+
+        <h4>Liste non ordonnée</h4>
+
+        <p>Une <strong>liste non ordonnée</strong> indique une liste d'éléments qui ne sont pas ordonnées ou dont
+          l'ordre n'a pas d'importance. Une liste non ordonnée est appelée aussi <strong>liste à puces</strong>.</p>
+
+        <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Emprunter un tamis pour la farine&lt;/li&gt;
+  &lt;li&gt;Prendre le cousous&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <p>Dans ce code <code>&lt;ul&gt;...&lt;/ul&gt;</code> indiquent le début et la fin de la liste non ordonnée
+          (ul=unordered list).</p>
+
+        <p>Tandis que <code>&lt;li&gt;...&lt;/li&gt;</code> indiquent les éléments de la liste (li = list item).</p>
+
+        <h4 class="p-break">Liste ordonnée</h4>
+
+        <p>Une <strong>liste ordonnée</strong>, appelée également <strong>liste numérotée</strong>, indique l'ordre dans
+          lequel les éléments doivent figurer.</p>
+
+        <pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;Ouvrir le réfrégirateur&lt;/li&gt;
+  &lt;li&gt;Chercher une boisson&lt;/li&gt;
+  &lt;li&gt;Prendre la boisson&lt;/li&gt;
+  &lt;li&gt;Fermer le réfrégirateur&lt;/li&gt;
+  &lt;li&gt;Dévisser le bouchon de la boisson&lt;/li&gt;
+  &lt;li&gt;Verser dans un verre&lt;/li&gt;
+  &lt;li&gt;Boire&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <p>Dans l'exemple précédent l'ordre des étapes est important, pour celà on utilise une liste ordonnée.</p>
+      </section>
+
+      <section>
+        <h3>Exercice 2</h3>
+        <p>On désire créer la page web suivante :</p>
+        <figure>
+          <img class="p-2 border h7cm" src="assets/downloads/tp1/tp1_liste_achats.html.png" alt="Liste des courses">
+          <figcaption>Liste des courses</figcaption>
+        </figure>
+
+        <p>Cette page contient deux types d'éléments :</p>
+        <ul>
+          <li>Des titres : niveau 1 et niveau 2</li>
+          <li>Une liste numérotée et trois listes à puces</li>
+        </ul>
+
+        <div class="d-print-none">
+          <p>On donne le texte de la page :</p>
+          <pre class="p-2 bg-dark text-light"><code class="nohighlight">Planning des courses
+
+Aller au marché.
+Visiter la tante.
+Aller à l'épicerie du quartier.
+
+Marché
+
+Poissons
+Patates
+Oignons
+Tomates
+Poivre, si prix abordable
+
+Tante
+
+Emprunter un tamis pour la farine
+Prendre le cousous
+
+Epicerie du quartier
+
+3Kg de farine
+2l huile végétale
+3 baguettes</code></pre>
+        </div>
+
+        <h4>Travail demandé</h4>
+        <p>On demande de :</p>
+        <ol>
+          <li>Créer une page web nommée : <strong>liste_courses.html</strong></li>
+          <li>Ajouter les titres.</li>
+          <li>Ajouter les listes.</li>
+        </ol>
+      </section>
+
+      <section class="p-break">
+        <h3>Balises de mise en forme</h3>
+
+        <h4>Gras</h4>
+
+        <p>Pour mettre un texte en gras on utilise, selon le contexte, soit la balise
+          <code>&lt;strong&gt;mot en gras&lt;/strong&gt;</code> ou bien la balise
+          <code>&lt;b&gt;mot en gras&lt;/b&gt;</code>
+        </p>
+
+        <p>Ainsi, le code suivant :</p>
+
+        <pre><code class="language-html">Je suis &lt;strong&gt;Tunisien&lt;/strong&gt;, et j&apos;aime la &lt;b&gt;Tunisie&lt;/b&gt;</code></pre>
+
+        <p>Est interprété comme :</p>
+
+        <p class="bg-dark text-light p-2">Je suis <strong>Tunisien</strong>, et j'aime la <b>Tunisie</b></p>
+
+        <h4>Italique</h4>
+
+        <p>On utilise aussi, selon le contexte, l'une des balises <code>&lt;em&gt;mot italique&lt;/em&gt;</code> ou
+          <code>&lt;i&gt;mot italique&lt;/i&gt;</code>.
+        </p>
+
+        <p>Ainsi, le code suivant :</p>
+
+        <pre><code class="language-html">L&apos;&lt;em&gt;autoconfiance&lt;/em&gt; est importante, il faut avoir &lt;i&gt;confiance en soi&lt;/i&gt;.</code></pre>
+
+        <p>Est interprété comme :</p>
+
+        <p class="bg-dark text-light p-2">L'<em>autoconfiance</em> est importante, il faut avoir <i>confiance en
+            soi</i>.</p>
+
+        <h4>Souligné</h4>
+
+        <p>Pour souligner un mot ou une phrase on utilise la balise
+          <code>&lt;u&gt;mot soulign&eacute;&lt;/u&gt;</code></code>.
+        </p>
+
+        <p>Ainsi, le code suivant :</p>
+
+        <pre><code class="language-html">Une &lt;u&gt;cl&eacute; primaire&lt;/u&gt; doit &ecirc;tre toujours &lt;u&gt;soulign&eacute;e.</code></pre>
+
+        <p>Est interprété comme :</p>
+
+        <p class="bg-dark text-light p-2">Une <u>clé primaire</u> doit être toujours <u>soulignée</u>.</p>
+
+        <h4>Exposant et Indice</h4>
+
+        <p>Dans la formule suivante :</p>
+
+        <p class="text-center bg-dark text-light p-2 fs-2">U<sub>n+1</sub>=0.5 &times; 2<sup>(n+3)</sup></p>
+
+        <p>L'indice est ajouté à l'aide de la balise <code>&lt;sub&gt;n+1&lt;/sub&gt;</code>.</p>
+        <p>L'exposant est ajouté à l'aide de la balise <code>&lt;sup&gt;(n+3)&lt;/sup&gt;</code>.</p>
+        <p>Ce qui donne :</p>
+
+        <pre><code class="language-html">U&lt;sub&gt;n+1&lt;/sub&gt;=0.5 &times; 2&lt;sup&gt;(n+3)&lt;/sup&gt;</code></pre>
+      </section>
+
+      <section class="p-break">
+        <h3>Exercice 3</h3>
+
+        <p>On désire créer la page web suivante :</p>
+        <figure>
+          <img class="p-2 border h3cm" src="assets/downloads/tp1/tp1_la_patrie.html.png" alt="Quotes sur la patrie">
+          <figcaption>Quotes sur la patrie</figcaption>
+        </figure>
+
+        <p>Cette page contient deux types d'éléments :</p>
+        <ul>
+          <li>Un titre : niveau 1</li>
+          <li>Des paragraphes avec des mots en gras, en italique et soulignés.</li>
+        </ul>
+
+        <div class="d-print-none">
+          <p>On donne le texte de la page :</p>
+          <pre class="p-2 bg-dark text-light"><code class="nohighlight">La Patrie
+
+“La première des vertus est le dévouement à la patrie.”
+
+“Une patrie est un soporifique de chaque instant.”
+
+“La Charité est une patrie quand elle est vraie.”
+
+“Un homme sans patrie, c'est un rossignol sans chanson.”</code></pre>
+        </div>
+
+        <h4>Travail demandé</h4>
+        <p>On demande de :</p>
+        <ol>
+          <li>Créer une page web nommée : <strong>la_patrie.html</strong></li>
+          <li>Mettre en forme le titre.</li>
+          <li>Mettre en forme les mots des paragraphes : gras, italique et souligné.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Application</h3>
+
+        <p>On veut concevoir un site composé de quatre pages web à propos des ordinateurs, cliquer sur les miniatures
+          ci-dessous pour les agrandir :</p>
+        <ul>
+          <li>La page <strong>index.html</strong>, définit ce qu'est un ordinateur.</li>
+          <li>La page <strong>uses.html</strong>, définit les usages qu'on peut faire avec un
+            ordinateur.</li>
+          <li>La page <strong>types.html</strong>, présente quelques types d'ordinateurs.</li>
+          <li>La page <strong>parts.html</strong>, présente les composants principaux d'un
+            ordinateur.</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-3">
+            <figure>
+              <a href="images/page01.png" target="_blank"><img src="images/page01-thumb.png" alt="index.html"></a>
+              <figcaption>index.html</figcaption>
+            </figure>
+            <p>Page 1, What is a computer?</p>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="images/page02.png" target="_blank"><img src="images/page02-thumb.png" alt="uses.html"></a>
+              <figcaption>uses.html</figcaption>
+            </figure>
+            <p>Page 2, What a computer is used for?</p>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="images/page03.png" target="_blank"><img src="images/page03-thumb.png" alt="types.html"></a>
+              <figcaption>types.html</figcaption>
+            </figure>
+            <p>Page 3, What are computers types?</p>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="images/page04.png" target="_blank"><img src="images/page04-thumb.png" alt="parts.html"></a>
+              <figcaption>parts.html</figcaption>
+            </figure>
+            <p>Page 4, What a computer is composed of?</p>
+          </div>
+        </div>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Télécharger le texte et les images nécessaires pour réaliser ce TP : <a
+              href="assets/downloads/Computers_nocss.zip" download="computers_nocss">Fichiers du TP</a></li>
+          <li>Décompresser le fichier <i>compressé</i> dans votre dossier de travail.</li>
+          <li>Ouvrir ce dossier à l'aide de Visual Studio Code.</li>
+          <li>Ajouter la structure minimale d'une page Web à chacune des quatre pages.</li>
+          <li>Ajouter les balises des titres et des sous-titres.</li>
+          <li>Ajouter les balises pour les paragraphes.</li>
+          <li>Mettre en forme les mots <strong>gras</strong>, <em>italiques</em> et <u>soulignés</u>.
+          </li>
+          <li>Insérer les images miniatures dans les pages qui contiennent des images.
+            <p><strong>Attention :</strong> Les images sont dans le dossier <strong>images</strong> et se terminent par
+              le mot <strong>thumb</strong>
+            </p>
+          </li>
+          <li>Ajouter les balises pour les listes.</li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2020/2021</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

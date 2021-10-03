@@ -1,0 +1,236 @@
+@font-face {
+  src: url(../fonts/Raleway-Regular.ttf), 
+       url(../fonts/Raleway-Bold.ttf), 
+       url(../fonts/Raleway-Italic.ttf);
+  font-family: "Raleway";
+}
+
+body {
+  font-family: "Raleway";
+  font-size: 12pt;
+  margin: 0;
+}
+
+body::before {
+  content: ' ';
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.05;
+}
+
+#header {
+	height: 44px;
+	line-height: 44px;
+  display: flex;
+  background-color: #000;
+}
+
+#header .logo {
+  font-weight: bolder;
+  margin: 0 20px;
+}
+
+#header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#header .links {
+  list-style: none;
+  margin: 0;
+}
+
+#header .links li {
+  display: inline;
+  margin: 0;
+}
+
+#header .links li a {
+  padding: 10px 20px;
+}
+
+#header .links li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#banner {
+	background: url(../images/banner.jpg) center center no-repeat fixed;
+  background-size: cover;
+	font-size: 2em;
+	padding: 2em;
+	text-align: center;
+	color: #ffffffe0;
+  position: relative;
+}
+
+#banner::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(128,0,0,0.7);
+	z-index: 1;
+}
+
+#banner a {
+  text-decoration: none;
+  color: #ffffff80;
+}
+
+#banner a:hover {
+  color: #fff;
+}
+
+#banner > .inner {
+  position: relative;
+  z-index: 3;
+}
+
+.inner {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#highlights .highlights, #testimonials .testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#highlights .highlights section, #testimonials .testimonials section {
+	width: calc(33.3% - 60px);
+	padding: 5px 20px;
+	margin: 10px;
+	background-color: #fff;
+}
+
+#highlights a {
+  font-size: 5em;
+  color: #ce1b28;
+}
+
+#highlights h3 {
+  font-size: initial;
+}
+
+#testimonials blockquote {
+	font-size: 0.85em;
+	font-style: italic;
+	text-align: left;
+	margin: 20px 0;
+	padding: 10px 15px;
+	border-left: #ddd solid 10px;
+}
+
+#testimonials blockquote p {
+  margin: 0;
+}
+
+#testimonials .author {
+  display: flex;
+  align-items: center;
+  font-size: 0.7em;
+  color: #666;
+}
+
+#testimonials .author strong {
+  color: #ce1b28;
+}
+
+#testimonials .author .image {
+  width: 20%;
+  margin-right: 10px;
+}
+
+#testimonials .author .image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#footer {
+	background-color: #000;
+	color: #fff;
+	padding: 30px;
+}
+
+#footer h3, #footer h4 {
+  text-align: left;
+}
+
+#footer .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#footer section {
+  width: calc(50% - 60px);
+  margin: 0 30px;
+}
+
+#footer section:nth-child(1) {
+  width: calc(100% - 60px);
+}
+
+#footer .alt, #footer .plain {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .alt li {
+  padding: 15px 10px;
+  border-bottom: #777 solid 1px;
+}
+
+#footer .alt li:last-child {
+  border-bottom: none;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer a:hover {
+  color: #ce1b28;
+}
+
+#footer .plain li {
+  padding: 5px 10px;
+}
+
+#footer .plain li i {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  background-color: #333;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+#footer .copyright {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 0.7em;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Types de liens</title>
+</head>
+
+<body>
+  <h1 id="main">Hyperlink</h1>
+  <ul>
+    <li><a href="#section-1">Types of links</a>
+      <ul>
+        <li><a href="#section-1-1">Inline links</a></li>
+        <li><a href="#section-1-2">Anchor</a></li>
+        <li><a href="#section-1-3">Fat link</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#section-2">Uses in various technologies</a>
+      <ul>
+        <li><a href="#section-2-1">HTML</a></li>
+      </ul>
+    </li>
+  </ul>
+  <h2 id="section-1">Types of links</h2>
+
+  <h3 id="section-1-1">Inline links</h3>
+
+  <p>An inline link displays remote content without the need for embedding the content. The remote content may be
+    accessed with or without the user selecting the link.</p>
+
+  <p>An inline link may display a modified version of the content; for instance, instead of an image, a thumbnail, low
+    resolution preview, cropped section, or magnified section may be shown. The full content is then usually available
+    on demand, as is the case with print publishing software – e.g., with an external link. This allows for smaller file
+    sizes and quicker response to changes when the full linked content is not needed, as is the case when rearranging a
+    page layout. </p>
+
+  <h3 id="section-1-2">Anchor</h3>
+
+  <p>An anchor hyperlink is a link bound to a portion of a document[3] – generally text, though not necessarily. For
+    instance, it may also be a hot area in an image (image map in HTML), a designated, often irregular part of an image.
+    One way to define it is by a list of coordinates that indicate its boundaries. For example, a political map of
+    Africa may have each country hyperlinked to further information about that country. A separate invisible hot area
+    interface allows for swapping skins or labels within the linked hot areas without repetitive embedding of links in
+    the various skin elements.</p>
+
+  <h3 id="section-1-3">Fat link</h3>
+
+  <p>A fat link (also known as a "one-to-many" link, an "extended link"[4] or a "multi-tailed link"[5]) is a hyperlink
+    which leads to multiple endpoints; the link is a multivalued function.</p>
+
+  <p><a href="#main">Top page</a></p>
+
+  <h2 id="section-2">Uses in various technologies</h2>
+
+  <h3 id="section-2-1">HTML</h3>
+
+  <p>Tim Berners-Lee saw the possibility of using hyperlinks to link any information to any other information over the
+    Internet. Hyperlinks were therefore integral to the creation of the World Wide Web. Web pages are written in the
+    hypertext mark-up language HTML.</p>
+
+  <p>This is what a hyperlink to the home page of the W3C organization could look like in HTML code:</p>
+
+  <p>&lt;a href=&quot;https://www.w3.org/&quot;&gt;W3C organization website&lt;/a&gt;</p>
+
+  <p>This HTML code consists of several tags:</p>
+
+  <ul>
+    <li>The hyperlink starts with an anchor opening tag &lt;a, and includes a hyperlink reference
+      href="https://www.w3.org/" to the URL for the page. (Note that the URL is enclosed in quotes.)</li>
+    <li>The URL is followed by &gt;, marking the end of the anchor opening tag.</li>
+    <li>The words that follow identify what is being linked; this is the only part of the code that is ordinarily
+      visible on the screen when the page is rendered, but when the cursor hovers over the link, many browsers display
+      the target URL somewhere on the screen, such as in the lower left-hand corner.</li>
+    <li>Typically these words are underlined and colored (for example, blue for a link that has not yet been visited and
+      purple for a link already visited).</li>
+    <li>The anchor closing tag (&lt;/a&gt;) terminates the hyperlink code.</li>
+    <li>The &lt;a&gt; tag can also consist of various attributes such as the "rel" attribute which specifies the
+      relationship between the current document and linked document.</li>
+  </ul>
+  <p>Webgraph is a graph, formed from web pages as vertices and hyperlinks, as directed edges.</p>
+
+  <h3 id="section-2-2">XLink: hyperlinks</h3>
+
+  <p>The <a href="https://www.w3.org">W3C</a> <a href="https://en.wikipedia.org/wiki/W3C#Recommendations_and_Certifications">Recommendation</a> called XLink describes hyperlinks that offer a far greater degree of functionality than
+    those offered in HTML. These extended links can be multidirectional, linking from, within, and between XML
+    documents. It can also describe simple links, which are unidirectional and therefore offer no more functionality
+    than hyperlinks in HTML.</p>
+
+  <p><a href="#main">Top page</a></p>
+
+</body>
+
+</html>

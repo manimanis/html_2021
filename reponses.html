@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Answers</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+  <div id="app">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web evaluation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown" v-if="mode == 'questions_view'">
+              <a class="nav-link dropdown-toggle" href="#" id="subjects-dropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Subjects
+              </a>
+              <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="subjects-dropdown">
+                <li v-for="sujet in noms_sujets">
+                  <a class="dropdown-item" v-bind:class="{active: questions[curr_question].nom_sujet == sujet.nom_sujet}" href="#" v-on:click.prevent="onMoveToSubjectClicked(sujet.first_page)">{{sujet.nom_sujet}} ({{sujet.questions_count}} question{{sujet.questions_count > 1 ? 's' : ''}})</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav" v-if="mode != 'login'">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="user-dropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{sel_user.nom_prenom}}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user-dropdown">
+                <li><a class="dropdown-item" href="#" v-on:click.prevent="onLogoutClicked()">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-3">
+      <div v-if="loading > 0" class="loading-spinner">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="login-form" v-if="mode == 'login'">
+        <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <!-- Login Form -->
+            <form>
+              <select name="login" id="login" class="fadeIn second" v-model="user_id">
+                <option value="-1">Select your name</option>
+                <option v-for="user in users" v-bind:value="user.id">{{user.nom_prenom}}</option>
+              </select>
+              <input type="submit" class="fadeIn third" value="Log In" v-bind:disabled="user_id == -1"
+                v-on:click.prevent="onLoginClicked()">
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section v-if="mode == 'waiting'">
+        <div class="text-center">
+          <p>You're welcome</p>
+          <h3>{{sel_user.nom_prenom}}</h3>
+          <p>Your login id is</p>
+          <p class="fs-1"><b>{{login_data.id}}</b></p>
+          <p>Your login request is sent and is waiting to be granted access. Please wait!</p>
+          <p>You will be logged in automatically when granted.</p>
+        </div>
+      </section>
+
+      <section v-if="mode == 'questions_view'">
+        <div v-if="questions != null && questions.length > 0">
+          <div>
+            <div>{{curr_question + 1}} / {{questions.length}}</div>
+            <div v-if="questions[curr_question].est_corrige">
+              <p>Question has been reviewed: {{questions[curr_question].date_correction}}</p>
+              <p>Your mark: {{questions[curr_question].note}}</p>
+            </div>
+            <div v-if="!questions[curr_question].est_corrige">
+              Question not reviewed yet
+            </div>
+            <h2>{{questions[curr_question].nom_sujet}}</h2>
+            <h3>{{questions[curr_question].question}}</h3>
+            <textarea v-if="!questions[curr_question].est_corrige" class="form-control" rows="5"
+              v-model="questions[curr_question].reponse" v-on:change="onReponseChanged(curr_question)"></textarea>
+            <div v-if="answer_saved" class="my-2 small text-success">Answer saved successfully!</div>
+          </div>
+
+          <div id="question-navigation" class="my-2">
+            <nav aria-label="...">
+              <ul class="pagination pagination-sm justify-content-center">
+                <li class="page-item" v-bind:class="{disabled: curr_question - 5 < 0}">
+                  <a class="page-link" href="#" v-bind:aria-disabled="curr_question - 5 < 0"
+                    v-on:click.prevent="onNavigationClicked(curr_question-5)">-5</a>
+                </li>
+                <li class="page-item" v-bind:class="{disabled: curr_question == 0}">
+                  <a class="page-link" href="#" v-bind:aria-disabled="curr_question == 0"
+                    v-on:click.prevent="onNavigationClicked(curr_question-1)">&lt;</a>
+                </li>
+                <li v-for="num_page in nav_pages" class="page-item"
+                  v-bind:class="{'active': num_page === curr_question}">
+                  <a class="page-link" href="#" v-on:click.prevent="onNavigationClicked(num_page)">{{num_page + 1}}</a>
+                </li>
+                <li class="page-item" v-bind:class="{disabled: curr_question == questions.length - 1}">
+                  <a class="page-link" href="#" v-bind:aria-disabled="curr_question == questions.length - 1"
+                    v-on:click.prevent="onNavigationClicked(curr_question+1)">&gt;</a>
+                </li>
+                <li class="page-item" v-bind:class="{disabled: curr_question + 5 >= questions.length}">
+                  <a class="page-link" href="#" v-bind:aria-disabled="curr_question + 5 >= questions.length"
+                    v-on:click.prevent="onNavigationClicked(curr_question+5)">+5</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/vue.min.js"></script>
+  <script src="assets/apps/reponses.js"></script>
+</body>
+
+</html>

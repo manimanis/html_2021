@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <main class="container my-3" id="app">
+    <div v-if="loading > 0" class="loading-spinner">
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+
+    <h1>Web evaluation - Questions</h1>
+    <div v-if="error">
+      <ul class="text-danger">
+        <li v-for="err in errorMessage.split('\n')">{{err}}</li>
+      </ul>
+    </div>
+    <div v-if="curr_page >= 0 && curr_question != null">
+      <h2>Question {{curr_page + 1}} / {{questions.length}}</h2>
+      <form action="">
+        <div>
+          <label for="nom_sujet">Subject</label>
+          <textarea name="num_sujet" id="num_sujet" class="form-control" v-model="curr_question.nom_sujet"
+            v-bind:disabled="!edit_mode"></textarea>
+        </div>
+        <div>
+          <label for="question">Question</label>
+          <textarea name="question" id="question" class="form-control" v-model="curr_question.question" rows="3"
+            v-bind:disabled="!edit_mode"></textarea>
+        </div>
+        <div>
+          <label for="reponse_modele">Model Answer</label>
+          <textarea name="reponse_modele" id="reponse_modele" class="form-control" rows="6"
+            v-model="curr_question.reponse_modele" v-bind:disabled="!edit_mode"></textarea>
+        </div>
+      </form>
+      <div v-if="!edit_mode" class="my-3">
+        <button class="btn btn-primary" v-on:click.prevent="onEditClicked()">Edit</button>
+      </div>
+      <div v-if="edit_mode" class="my-3">
+        <button class="btn btn-primary" v-on:click.prevent="onSaveClicked()">Save</button>
+        <button class="btn btn-dark" v-on:click.prevent="onCancelClicked()">Cancel</button>
+      </div>
+      <div v-if="!edit_mode" id="question-navigation" class="my-2">
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm justify-content-center">
+            <li class="page-item" v-bind:class="{disabled: curr_page - 15 < 0}">
+              <a class="page-link" href="#" v-bind:aria-disabled="curr_page - 15 < 0"
+                v-on:click.prevent="onNavigationClicked(curr_page-15)">-15</a>
+            </li>
+            <li class="page-item" v-bind:class="{disabled: curr_page - 5 < 0}">
+              <a class="page-link" href="#" v-bind:aria-disabled="curr_page - 5 < 0"
+                v-on:click.prevent="onNavigationClicked(curr_page-5)">-5</a>
+            </li>
+            <li class="page-item" v-bind:class="{disabled: curr_page == 0}">
+              <a class="page-link" href="#" v-bind:aria-disabled="curr_page == 0"
+                v-on:click.prevent="onNavigationClicked(curr_page-1)">&lt;</a>
+            </li>
+            <li v-for="num_page in nav_pages" class="page-item" v-bind:class="{'active': num_page === curr_page}">
+              <a class="page-link" href="#" v-on:click.prevent="onNavigationClicked(num_page)">{{num_page + 1}}</a>
+            </li>
+            <li class="page-item" v-bind:class="{disabled: curr_page == questions.length - 1}">
+              <a class="page-link" href="#" v-bind:aria-disabled="curr_page == questions.length - 1"
+                v-on:click.prevent="onNavigationClicked(curr_page+1)">&gt;</a>
+            </li>
+            <li class="page-item" v-bind:class="{disabled: curr_page + 5 > questions.length}">
+              <a class="page-link" href="#" v-bind:aria-disabled="curr_page + 5 > questions.length"
+                v-on:click.prevent="onNavigationClicked(curr_page+5)">+5</a>
+            </li>
+            <li class="page-item" v-bind:class="{disabled: curr_page + 15 > questions.length}">
+              <a class="page-link" href="#" v-bind:aria-disabled="curr_page + 15 > questions.length"
+                v-on:click.prevent="onNavigationClicked(curr_page+15)">+15</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/vue.min.js"></script>
+  <script src="assets/apps/questions.js"></script>
+</body>
+
+</html>
