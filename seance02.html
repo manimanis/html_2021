@@ -93,6 +93,28 @@
       </section>
 
       <section>
+        <h3>Exercice 1</h3>
+
+        <p>L'image suivante montre les liens entre des pages du site <strong>monsite.com</strong> et les liens qui le
+          relient avec le site <strong>othersite.com</strong>.</p>
+
+        <figure>
+          <img src="images/links_types.jpg" alt="Types de liens">
+          <figcaption>Les types de liens</figcaption>
+        </figure>
+
+        <p>On demande de déterminer les types de liens <strong>(1)</strong>, <strong>(2)</strong>, <strong>(3)</strong>
+          et <strong>(4)</strong>.</p>
+        <p>Les choix disponibles sont :</p>
+        <ul>
+          <li>Lien interne</li>
+          <li>Lien externe</li>
+          <li>Lien nommé</li>
+          <li>Lien interne nommé</li>
+        </ul>
+      </section>
+
+      <section>
         <h3>Attributs</h3>
 
         <p>La balise <code>&lt;a&gt;</code> possède deux parties importantes :</p>
@@ -115,26 +137,27 @@
       </section>
 
       <section>
-        <h3>Exercice 1</h3>
+        <h3>Exercice 2</h3>
 
-        <p>Ouvrir le site Web que nous avons commencé, puis :</p>
+        <p>Ouvrir le site Web, <strong>computers</strong>, que nous avons commencé, puis :</p>
         <ol>
-          <li>Compléter les liens hypertextes qui permettent de se déplacer d'une page à l'autre.
-            <p>
+          <li>Compléter les liens hypertextes qui permettent de se déplacer d'une page à l'autre. <strong>Les fléches
+              indiquent les noms des fichiers à ouvrir lorsqu'on clique sur le texte souligné.</strong>
             <figure>
               <img src="images/links_list.png" alt="Les liens" class="h2cm">
               <figcaption>Les liens</figcaption>
             </figure>
-            </p>
           </li>
-          <li>Créer des liens hypertextes dans la page <strong>index.html</strong> ,à l'aide des images
-            "computerXX_thumb.jpg", pour afficher une version plus grande de ces images dans une nouvelle page.
-            <p>
+          <li>La page <strong>index.html</strong> contient des <u>images miniaturisées</u> des ordinateurs. On veut
+            créer des liens hypertextes dans cette page, à l'aide des images <em>computerXX_thumb.jpg</em>, pour
+            afficher une version plus grande de ces images dans une nouvelle page.
+            <p>Le clic sur <u>l'image</u> <strong>computer01_thumb.jpg</strong> ouvre l'image
+              <strong>computer01.jpg</strong> dans une nouvelle fenêtre.
+            </p>
             <figure>
               <img src="images/resize-computer01.png" alt="Agrandir les images" class="h3cm">
               <figcaption>Agrandir les images</figcaption>
             </figure>
-            </p>
           </li>
           <li>Refaire le même travail dans la page <strong>parts.html</strong> avec les composants de l'ordinateur.</li>
         </ol>
@@ -216,1178 +239,270 @@
     </article>
 
     <article>
-      <h2>Balises sémantiques</h2>
+      <h2>Balises HTML</h2>
 
       <section>
-        <h3>Balises sémantiques</h3>
+        <h3>Orphelines & non orphelines</h3>
 
-        <h4>Introduction</h4>
-        <p>Le langage HTML 5 a introduit beaucoup de nouvelles balises sémantiques (structurelles) pour permettre
-          <strong>un découpage plus précis de votre page web en délimitant des zones spécifiques</strong>. La figure
-          suivante présente ces balises d'une façon graphique :
+        <h4>Non empty tags</h4>
+
+        <p>Les balises HTML qui se présentent par <strong>paires</strong> sont dites non orphelines,
+          <strong><em>non-void tag</em></strong> ou <strong><em>non-empty tag</em></strong>. Elles commencent par une
+          balise ouvrante, <strong>&lt;balise&gt;</strong>, et se terminent par une balise fermante,
+          <strong>&lt;/balise&gt;</strong>.
+        </p>
+        <p>Exemples :
+          <code>&lt;h1&gt;...&lt;/h1&gt;</code>,
+          <code>&lt;p&gt;...&lt;/p&gt;</code>, etc.
         </p>
 
-        <div>
-          <figure>
-            <img src="images/page_structure.png" alt="Balises sémantiques" class="h7cm">
-            <figcaption>Balises sémantique</figcaption>
-          </figure>
-        </div>
+        <h4>Empty tags</h4>
+
+        <p>D'autres, dites, <strong>orphelines</strong> ne nécessitent pas de balise fermante, <strong><em>empty
+              tags</em></strong> ou <strong><em>void tags</em></strong>.
+        </p>
+        <p>Exemples : <code>&lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;</code>, <code>&lt;br&gt;</code>, etc.
+        </p>
       </section>
 
       <section>
-        <h3>Application 2</h3>
-        <p>Nous voulons utiliser ces balises pour mieux structurer notre site web de la façon suivante :</p>
+        <h3>Bloc & En ligne</h3>
 
-        <div>
-          <figure>
-            <img src="images/computer_page_structure.png" alt="Structure de notre site Web" class="h5cm">
-            <figcaption>Structure de notre site</figcaption>
-          </figure>
-        </div>
+        <h4>Block tags</h4>
 
-        <p>Appliquer cette structure à toutes les pages de votre site.</p>
+        <p>Une <strong><em>balise de bloc</em></strong> commence toujours dans une nouvelle ligne. Elle <u>s'étend sur
+            toute la largeur disponible</u>.</p>
 
-        <h4 class="p-break">Solution</h4>
-        <p>Ajouter les balises comme le montre la figure suivante, pour toutes les pages :</p>
-        <div class="d-print-none">
-          <figure>
-            <img src="images/semantique01.png" alt="Emplacement des balises sémantiques" class="h10cm">
-            <figcaption>Emplacement des balises sémantiques</figcaption>
-          </figure>
-        </div>
-        <div class="d-none d-print-block">
-          <pre><code class="language-html">&lt;header&gt;
-  &lt;nav&gt;
-    &lt;!-- Entête de page - Menu principal --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;What is it?&lt;/a&gt;&lt;/li&gt;
-      &lt;!-- ... --&gt;
-    &lt;/ul&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
-
-&lt;main&gt;
-  &lt;!-- Contenu du site --&gt;
-  &lt;h1&gt;Computers&lt;/h1&gt;
-  &lt;h2&gt;What is a computer?&lt;/h2&gt;
-  &lt;!-- ... --&gt;
-&lt;/main&gt;
-
-&lt;footer&gt;
-  &lt;!-- Pied de page --&gt;
-  &lt;p&gt;&lt;small&gt;Designed by Mohamed Anis MANI &amp;copy; for the Web course for 2&lt;sup&gt;nd&lt;/sup&gt;TI class&lt;/small&gt;&lt;/p&gt;
-&lt;/footer&gt;</code></pre>
-        </div>
-      </section>
-
-      <section>
-        <h3>Feuilles de style (CSS)</h3>
-
-        <h4>Introduction</h4>
-
-        <p>
-          Les feuilles de style en cascade sont définis par le site Mozilla Developper Network (MDN). comme suit :
-        </p>
-        <div>
-          <blockquote class="blockquote">
-            <p>Les Cascading StyleSheets — ou CSS — (Feuilles de style en cascade) sont la
-              première technique à apprendre après le HTML. Alors que HTML s'utilise pour définir la structure et la
-              sémantique du contenu, les CSS sont employées pour composer et déterminer l'apparence de ce contenu.</p>
-            <p>Ainsi par exemple, vous utiliserez les CSS pour modifier les polices, la couleur, la taille et
-              l'espacement de votre contenu, pour le répartir sur plusieurs colonnes ou bien pour ajouter des animations
-              et autres fonctionnalités décoratives.</p>
-            <footer class="blockquote-footer">Source <cite title="Source Title">MDN</cite></footer>
-          </blockquote>
-        </div>
-
-        <h4>Premiers pas</h4>
-
-        <p>Il existe trois méthodes pour appliquer du CSS à un document HTML. La plus utilisée est celle qui consiste à
-          :</p>
-        <ul>
-          <li>Créer un fichier <strong>style.css</strong> externe,</li>
-          <li>Et le lier au fichier HTML à travers la balise <code>&lt;link&gt;</code>, qui doit figurer dans la partie
-            <code>&lt;head&gt;</code> du document HTML.
-          </li>
-        </ul>
-
-        <h5>Exemple</h5>
-        <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></pre>
-      </section>
-
-      <section class="p-break">
-        <h3>Application 3</h3>
-
-        <h4>Liaison entre le fichier HTMl et le fichier CSS</h4>
-        <p>On demande de :</p>
-        <ul>
-          <li>Créer un fichier nommé <code>style.css</code>, dans votre site.</li>
-          <li>Lier ce fichiers dans toutes vos pages HTML, en utilisant le code suivant :
-            <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></pre>
-            <p><strong>Attention :</strong> veillez à mettre ce code dans la partie
-              <code>&lt;head&gt;</code> du document.
-            </p>
-          </li>
-          <li>Taper le texte suivant dans le fichier <code>style.css</code>, puis observer le changement effectué :
-            <pre><code class="language-css">body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 10pt;
-    margin: 0;
-}</code></pre>
-          </li>
-        </ul>
-
-        <h4>Les règles CSS</h4>
-        <p>Le code tapé dans le fichier <code>css</code> est appelé une <strong>règle</strong>. Cette règle est
-          constituée de <strong>déclarations</strong> qui modifient les <strong>valeurs</strong> des
-          <strong>propriétés</strong> du document.
+        <p><b>Exemples :</b> &lt;address&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;blockquote&gt;, &lt;canvas&gt;,
+          &lt;dd&gt;, &lt;div&gt;,
+          &lt;dl&gt;, &lt;dt&gt;, &lt;fieldset&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;footer&gt;, &lt;form&gt;,
+          &lt;h1&gt;, &lt;h6&gt;, &lt;header&gt;, &lt;hr&gt;, &lt;li&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;noscript&gt;,
+          &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;section&gt;, &lt;table&gt;, &lt;tfoot&gt;, &lt;ul&gt;, &lt;video&gt;
         </p>
 
-        <div>
-          <figure>
-            <img src="images/css_rule.jpg" alt="Règle CSS" class="h3cm">
-            <figcaption>Règle CSS</figcaption>
-          </figure>
-        </div>
+        <p>Un paragraphe <strong>&lt;p&gt;...&lt;/p&gt;</strong> est un élément de bloc, ainsi chaque paragraphe
+          commence dans une nouvelle ligne et s'étend sur toute la largeur qui lui est disponible.</p>
 
-        <h4>Les sélecteurs</h4>
-        <p>Outre le sélecteur <code>body</code>, nous devons utiliser d'autres sélecteurs.</p>
-
-        <ul>
-          <li>Définir la mise en forme du sélecteur <code>nav</code>, définir :
-            <ul>
-              <li>Une couleur d'arrère plan <code>background-color</code> (code couleur #3f51b5)</li>
-              <li>Une marge extérieure basse <code>margin-bottom</code> à 25 pixels</li>
-              <li>Une marge intérieure <code>padding</code> à 15 pixels</li>
-            </ul>
-            <pre><code class="language-css">nav {
-    background-color: #3f51b5;
-    margin-bottom: 25px;
-    padding: 15px;
-  }</code></pre>
-          </li>
-          <li>Définir la mise en forme de la balise <code>ul</code> qui est à l'intérieur d'une balise <code>nav</code>,
-            c'est-à-dire <code>nav ul</code> :
-            <ul>
-              <li>Aligner la liste non ordonnée au centre de la page, définir la propriété <code>text-align</code> à
-                <code>center</code>
-              </li>
-              <li>Supprimer les bulles de la liste, définir la propriété <code>list-style</code> à <code>none</code>
-              </li>
-              <li>Supprimer les marges intérieures et extérieures, propriétés <code>margin</code> et
-                <code>padding</code>
-              </li>
-            </ul>
-            <pre><code class="language-css">nav ul {
-    text-align: center;
-    list-style: none;
-    padding: 0; margin: 0;
-}</code></pre>
-          </li>
-          <li>Mettre toutes les <code>li</code> de la liste précédente sur une même ligne, et définir une marge
-            extérieure horizontale de 20 pixels.
-            <pre><code class="language-css">nav ul li {
-    display: inline-block;
-    margin: 0 20px;
-}</code></pre>
-          </li>
-          <li>La couleur des liens devra être blanche et leur ôter le soulignement par défaut, qui est propre aux liens
-            hypertextes. Ajouter le soulignement, lorsque le lien est survolé :
-            <pre><code class="language-css">nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-nav ul li a:hover {
-  text-decoration: underline;
-}</code></pre>
-          </li>
-        </ul>
-
-        <h4>Travail à faire</h4>
-        <p>Continuer la mise en page de la page pour qu'elle ressemble à peu-près à ce qui suit :</p>
-        <div>
-          <figure>
-            <img src="images/mise_en_page_computers.png" alt="Mise en page finale de la page" class="h7cm">
-            <figcaption>Mise en page finale de la page</figcaption>
-          </figure>
-        </div>
-        <p>Les sélecteurs qu'il faudra changer, copier/coller ces règles et essayer de les compléter :</p>
-        <pre><code class="language-css">main {
-  /* marge extérieures droite et gauche : auto */
-  /* largeur 800px*/
-  /* hauteur minimale 100vh */
-}
-main h1 {
-  /* alignement centré */
-  /* couleur du texte #3f51b5 */
-}
-main h2 {
-  /* couleur du texte #E91E63 */
-}
-main h3 {
-  /* couleur du texte #795548 */
-}
-main strong {
-  /* couleur du texte #f44336*/
-}
-main img {
-  /* bordure noire de 1 pixel */
-}
-footer {
-  /* couleur de remplissage #3f51b5 */
-  /* marge extérieure haut 25 pixels */
-  /* marge intérieure 15 pixels */
-  /* alignement centré */
-  /* couleur de texte blanche */
-}</code></pre>
-
-        <h4>Correction</h4>
-        <div class="d-print-none">
-          <figure>
-            <img src="images/css_computers.png" alt="Correction du code CSS" class="h10cm">
-            <figcaption>Correction du code CSS</figcaption>
-          </figure>
-        </div>
-        <div class="d-none d-print-block">
-          <pre><code class="language-css">main {
-    margin: 0 auto;
-    width: 800px;
-    min-height: 100vh;
-}
-
-main h1 {
-    text-align: center;
-    color: #3f51b5;
-}
-
-main h2 {
-    color: #E91E63;
-}
-
-main h3 {
-    color: #795548;
-}
-
-main strong {
-    color: #f44336;
-}
-
-main img {
-    border: #000 solid 1px;
-}
-
-footer {
-    background-color: #3f51b5;
-    margin-top: 25px;
-    padding: 15px;
-    text-align: center;
-    color: #fff;
-}</code></pre>
-        </div>
-      </section>
-    </article>
-
-    <article>
-      <h2>Séance 3</h2>
-
-      <section>
-        <h3>Tic-Tac-Toe</h3>
-
-        <p>On désire créer l'interface du jeu : Tic-Tac-Toe, comme suit :</p>
-
-        <div>
-          <figure>
-            <img src="images/xxo.png" alt="Tic-Tac-Toe">
-            <figcaption>Tic-Tac-Toe</figcaption>
-          </figure>
-        </div>
-
-        <h4>Partie HTML</h4>
-
-        <p>On commence par le squelette du jeu, dans le <code>&lt;body&gt;...&lt;/body&gt;</code> fichier HTML.</p>
-
-        <div>
-          <pre><code class="language-html">&lt;h1&gt;Tic-Tac-Toe&lt;/h1&gt;
-&lt;div id=&quot;game&quot;&gt;
-  &lt;div class=&quot;carre col-1&quot;&gt;X&lt;/div&gt;
-  &lt;div class=&quot;carre col-2&quot;&gt;O&lt;/div&gt;
-  &lt;div class=&quot;carre col-1&quot;&gt;X&lt;/div&gt;
-  &lt;div class=&quot;carre col-2&quot;&gt;O&lt;/div&gt;
-  &lt;div class=&quot;carre col-1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;carre col-2&quot;&gt;X&lt;/div&gt;
-  &lt;div class=&quot;carre col-1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;carre col-2&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;carre col-1&quot;&gt;&lt;/div&gt;
-&lt;/div&gt</code></pre>
-        </div>
-
-        <h4>Partie CSS</h4>
-
-        <p>On commence par changer le style et la taille de la police du <code>body</code>. On enlève toutes les marges.
-        </p>
-        <div>
-          <pre><code class="language-css">body {
-  font-family: sans-serif;
-  font-size: 40px;
-  margin: 0;
-  padding: 0;
-}</code></pre>
-        </div>
-
-        <p>On centre le titre tout en réduisant sa marge extérieure.</p>
-        <div>
-          <pre><code class="language-css">h1 {
-  text-align: center;
-  color: chocolate;
-  margin: 20px 0;
-}</code></pre>
-        </div>
-
-        <p>On définit les dimensions de la grille du jeu <code>width</code> et <code>height</code>. On utilise
-          <code>display: flex</code> pour agencer les carreaux l'un à coté de l'autre. On utilise
-          <code>flex-wrap: wrap</code> pour indiquer que le contenu sera rendu sur plusieurs lignes. Le tout sera
-          indiqué dans <code>#game</code>.
-        </p>
-        <div>
-          <pre><code class="language-css">#game {
-  width: 450px;
-  height: 450px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}</code></pre>
-        </div>
-
-        <p>Chaque carreau doit tenir dans une boite de dimensions 150px (450px / 3). </p>
-        <p class="text-center">largeur totale = width + 2 &times; padding + 2 &times; border</p>
-        <p>Avec une bordure d'épaisseur égale à 1px et une marge intérieure (padding) de 10px, il reste 128px pour la
-          largeur du box.</p>
-        <p>Tous les carrés du jeu <code>.carre</code> partagent les mêmes propriétés et différent par leurs couleurs qui
-          sera indiquée dans les classes <code>.col-1</code> et <code>.col-2</code>.</p>
-        <div>
-          <pre><code class="language-css">.carre {
-  width: 128px;
-  height: 128px;
-  padding: 10px;
-  font-size: 128px;
-  line-height: 128px;
-  text-align: center;
-  border: #000 solid 1px;
-}</code></pre>
-        </div>
-
-        <p>Enfin, les carreaux possèdent des couleurs alternées qui sont définis par les classes <code>.col-1</code> et
-          <code>.col-2</code>.
-        </p>
-        <div>
-          <pre><code class="language-css">.col-1 {
-  background-color: lightblue;
-}
-.col-2 {
-  background-color: lightsalmon;
-}</code></pre>
-        </div>
-      </section>
-
-      <section>
-        <h3>Modèle de boite (Box model)</h3>
-
-        <h4>Présentation</h4>
-        <p>Chaque élément HTML est considéré, en CSS, comme étant une boite qui possède :</p>
-        <ul>
-          <li><strong>Un contenu (content)</strong> : représente une image ou un texte affichés;</li>
-          <li><strong>Des marges intérieures (padding)</strong> : un espace transparent entre les bordures de l'élément
-            et son contenu;
-          </li>
-          <li><strong>Une bordure (border)</strong></li>
-          <li><strong>Une marge extérieure (margin</strong>) : un espace transparent qui sépare l'élément courant de ses
-            voisins.</li>
-        </ul>
-
-        <div>
-          <figure>
-            <img src="images/box-model.png" alt="Modèle de boite">
-            <figcaption>Modèle de boite</figcaption>
-          </figure>
-        </div>
-
-        <h4>Exemple</h4>
-
-        <p>L'élément <strong>div</strong> suivant possède :</p>
-
-        <ul>
-          <li>une marge intérieure (padding) de 20px</li>
-          <li>une bordure rouge de 10px</li>
-          <li>une marge extérieure (margin) de 30px</li>
-        </ul>
-
-        <div style="margin: 30px; border: 10px solid red; padding: 20px; background-color: blueviolet; color: #fff;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
-        </div>
-
-        <p>Le code HTML correspondant peut ressembler à ce qui suit :</p>
-        <div>
-          <pre><code class="language-html">&lt;div class=&quot;exemple&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-...&lt;/div&gt;</code></pre>
-        </div>
-
-        <p>La règle CSS utilisée pour le mettre en forme est comme suit :</p>
-        <div>
-          <pre><code class="language-css">.exemple {
-  /* box model */
-  margin: 30px; 
-  border: 10px solid red; 
-  padding: 20px;
-  /* couleurs */
-  color: #fff;
-  background-color: blueviolet;
-}</code></pre>
-        </div>
-      </section>
-
-      <section>
-        <h3>Types de balises</h3>
-
-        <h4>Présentation</h4>
-        <p>En HTML, les balises peuvent être classées selon leur mise en page (layout). Ainsi on distingue deux types de
-          balises :</p>
-        <ul>
-          <li>Les <strong>balises de bloc (block elements)</strong> qui commencent toujours sur une nouvelle ligne et
-            qui s'étendent sur toute la largeur disponible.
-            <p>Exemples : p, h1, div, footer, main, aside, etc.</p>
-          </li>
-          <li>Les <strong>balises en ligne (inline elements)</strong> qui prennent uniquement l'espace qui leur est
-            nécessaire,
-            sans nécessiter obligatarement le retour à la ligne.
-            <p>Exemples : b, u, i, strong, img, etc.</p>
-          </li>
-        </ul>
-
-        <h4>Exemples</h4>
-
-        <p>Un paragraphe &lt;p&gt;...&lt;/p&gt; est un élément de bloc, ainsi chaque paragraphe commence dans une
-          nouvelle ligne et s'étend sur
-          toute la largeur qui lui est disponible.</p>
         <div class="border border-dark p-2 my-2">
           <p>Premier paragraphe</p>
           <p class="border border-danger">Deuxième paragraphe</p>
           <p>Troisième paragraphe</p>
         </div>
 
-        <p>Un élément gras &lt;b&gt;...&lt;/b&gt; s'étend uniquement sur l'espace qui lui est nécessaire et ne commence
+        <h4>Inline tags</h4>
+
+        <p>Une <strong><em>balise en ligne</em></strong> ne commence pas dans une nouvelle ligne. Et elle <u>s'étend
+            uniquement sur l'espace qui lui est nécessaire</u>.</p>
+
+        <p><b>Exemples :</b> &lt;a&gt;, &lt;abbr&gt;, &lt;acronym&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;br&gt;,
+          &lt;button&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dfn&gt;, &lt;em&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;,
+          &lt;kbd&gt;, &lt;label&gt;, &lt;map&gt;, &lt;object&gt;, &lt;output&gt;, &lt;q&gt;, &lt;samp&gt;,
+          &lt;script&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;,
+          &lt;textarea&gt;, &lt;time&gt;, &lt;tt&gt;, &lt;var&gt;, &lt;/p&gt;
+
+        <p>Un élément gras <strong>&lt;b&gt;...&lt;/b&gt;</strong> s'étend uniquement sur l'espace qui lui est
+          nécessaire et ne commence
           pas dans une nouvelle ligne.</p>
+
         <div class="border border-dark p-2 my-2">
-          <p>Un texte en <b class="border border-danger">gras</b>.</p>
+          <p>Un texte en <b class="border border-danger">gras</b> et en <i class="border border-danger">italique</i>.
+          </p>
         </div>
       </section>
 
       <section>
-        <h3>Les sélecteurs CSS</h3>
+        <h3>Exercice 3</h3>
 
-        <p>Une règle CSS est appliquée pour un sélecteur donné. Ainsi, on distingue une variété de sélecteurs dont les
-          plus importants sont :</p>
-        <ul>
-          <li>Sélecteur des éléments (element selector)</li>
-          <li>Sélecteur des classes (classe selector)</li>
-          <li>Sélecteur des identifiant (id selector)</li>
-        </ul>
-        <p>Pour plus de précision, ces sélecteurs peuvent être combinés.</p>
+        <p>On demande de :</p>
+        <ol>
+          <li>Ouvrir le code source de la page <a href="assets/downloads/tp2/starwars.html" target="_blank"
+              rel="noopener noreferrer">Stars wars</a>.</li>
+          <li>Identifier toutes les balises utilisées.</li>
+          <li>Identifier parmi ces balises les <strong>void tags</strong> et les <strong>non-void tags</strong>.
+            <table class="table table-sm table-striped table-hover w-50">
+              <thead>
+                <tr>
+                  <th>void tags</th>
+                  <th>non-void tags</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Identifier parmi ces balises les <strong>block tags</strong> et les <strong>inline tags</strong>.
+            <table class="table table-sm table-striped table-hover w-50">
+              <thead>
+                <tr>
+                  <th>block tags</th>
+                  <th>inline tags</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ol>
+      </section>
 
-        <h4>Sélecteur d'éléments</h4>
+      <section>
+        <h3>Balises sémantiques et non sémantiques</h3>
 
-        <p>Pour définir la mise en forme de tous les paragraphes on peut écrire :</p>
-        <div>
-          <pre><code class="language-css">p {
-  color: white;
-  background-color: black;
-}</code></pre>
-        </div>
+        <h4>Balises sémantiques</h4>
 
-        <p>Pour définir uniquement la mise en forme des paragraphes qui sont des descendants de <strong>main</strong>,
-          par exemple, on écrit :</p>
-        <div>
-          <pre><code class="language-css">main p {
-  color: yellow;
-  font-weight: bold;
-}</code></pre>
-        </div>
+        <p>Les balises telles que, par exemple, <strong>&lt;p&gt;...&lt;/p&gt;</strong> pour
+          <strong><em>paragraph</em></strong>, <strong>&lt;h1&gt;...&lt;/h1&gt;</strong> pour <strong><em>heading level
+              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>italic</em></strong></strong>,
+          possèdent une signification et possèdent, donc, une fonction très spécifiques.
+        </p>
+        <p>Ces balises sont dites <strong>sémantiques</strong> car elles possèdent un rôle bien défini dans une page
+          Web.</p>
 
-        <h4>Sélecteur de classes</h4>
-        <p>Supposons que l'on souhaite que certains paragraphes d'un texte soient centrés, et que d'autres soient en
-          gras. Enfin, pourquoi pas ne pas appliquer cette combinaison à d'autres paragraphes.</p>
-        <p>Dans ce cas, il faudra utiliser des sélecteurs de classes qu'on devra définir selon notre besoin.</p>
-        <div>
-          <pre><code class="language-css">.center {
-  text-align: center;
-}
-.bold {
-  font-weight: bold;
-}</code></pre>
-        </div>
-
-        <p>Dans le code HTML, ces styles sont appliqués en utilisant l'attribut <code>class</code> des éléments.</p>
-
-        <div>
-          <pre><code class="language-html">&lt;!-- Centrer le paragraphe --&gt;
-&lt;p class=&quot;center&quot;&gt;...&lt;/p&gt;
-&lt;!-- Mettre en gras --&gt;
-&lt;p class=&quot;bold&quot;&gt;...&lt;/p&gt;
-&lt;!-- Centrer le paragraphe et le mettre en gras --&gt;
-&lt;p class=&quot;center bold&quot;&gt;...&lt;/p&gt;</code></pre>
-        </div>
-
-        <h4>Sélecteur d'identifiant</h4>
-
-        <p>Un élément d'une page HTML peuvent avoir un <code>id</code> qui doit être unique dans une page. Exemple :
+        <h4>Balises non sémantiques</h4>
+        <p>Outre les balises sémantiques, HTML définit aussi des balises à <strong><em>usage général</em></strong>,
+          dites <strong>non sémantiques</strong>. Le HTML4, parent du HTML5, en possède uniquement deux :
         </p>
 
-        <div>
-          <pre><code class="language-html">&lt;div id=&quot;cercle-bleu&quot;&gt;...&lt;/div&gt;</code></pre>
-        </div>
-
-        <p>Cet élément est ensuite accessible grâce au sélecteur <code>#cercle-bleu</code> en CSS :</p>
-        <div>
-          <pre><code class="language-css">#cercle-bleu {
-  background-color: blue;
-  border-radius: 50%;
-}</code></pre>
-        </div>
-      </section>
-
-      <section class="p-break">
-        <h3>Les liens hypertextes (HTML + CSS)</h3>
-
-        <p>On souhaite concevoir un site Web, qui présente des recettes de gâteaux, composé de quatre pages.</p>
-
-        <p>L'objectif de ce site est de montrer l'utilisation des trois <a href="#section-3-1">types de liens</a>
-          étudiés dans la séance 2.</p>
-
-        <div class="d-print-none text-center">
-          <p>La vidéo suivante explique ce qu'il faudra faire.</p>
-          <video controls>
-            <source src="videos/liens.mp4" type="video/mp4">
-            <source src="videos/liens.mp4.webm" type="video/webm">
-          </video>
-        </div>
-
-        <div class="d-print-none text-center">
-          <p>La vidéo suivante explique comment le faire.</p>
-          <video controls>
-            <source src="videos/liens_how_to.mp4" type="video/mp4">
-            <source src="videos/liens_how_to.mp4.webm" type="video/webm">
-          </video>
-        </div>
-
-        <p>Cliquer sur les miniatures pour les agrandir et voir la mise en forme qu'on souhaite appliquer à chacune des
-          pages.</p>
-
-        <div class="row">
-          <div class="col-sm-6 col-xl-3">
-            <a href="images/recettes_final.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="images/recettes_final-mini.jpg" alt="Page1" class="h2cm">
-            </a>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <a href="images/gateaux_p2.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/gateaux_p2-mini.png" alt="" class="h2cm">
-            </a>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <a href="images/gateaux_p3.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/gateaux_p3-mini.png" alt="" class="h2cm">
-            </a>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <a href="images/gateaux_p4.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/gateaux_p4-mini.png" alt="" class="h2cm">
-            </a>
-          </div>
-        </div>
-
-        <h4>Travail demandé</h4>
-
-        <ol>
-          <li>Télécharger une version complète des fichiers html, sans feuilles de styles CSS : <a
-              href="assets/downloads/recettes_w_html.zip">Fichiers HTML et images</a></li>
-          <li>Ouvrir le fichier <strong>index.html</strong> dans VSC.</li>
-          <li>Ce fichier comporte trois <a href="#section-3-1">types de liens</a>, on demande de les compléter :
-            <ul>
-              <li>Nommés : pour se déplacer à l'intérieur de la page</li>
-              <li>Internes : pour accéder à des ressources dans un même domaine</li>
-              <li>Externes : pour accéder à des ressources dans d'autres domaines</li>
-            </ul>
+        <ul>
+          <li><strong>&lt;div&gt;...&lt;/div&gt;</strong> pour <strong><em>division</em></strong>, est une
+            <strong>balise de bloc</strong>, qui est utilisée pour
+            diviser la page en plusieurs parties emboîtées l'une dans l'autre.
           </li>
-          <li>
-            <p>Mettre en forme le fichier <strong>index.html</strong> (Partie CSS). Le choix des couleurs ainsi que la
-              disposition des objets sont laissés au libre choix de l'élève.</p>
+          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé à
+            l'intérieur d'un bloc pour marquer une partie de celui-ci.</li>
+        </ul>
 
-            <p>La mise en forme devra inclure au moins 10 règles CSS pour les types de sélecteurs suivants : </p>
-            <ul>
-              <li>Elements, exemples : body, main, aside, header, footer, etc.</li>
-              <li>Classes, exemples : .infos, .liens</li>
-            </ul>
+        <h4>Exemple</h4>
 
-            <p>Cependant, les règles de la mise en forme devront inclure, au moins, les propriétés suivantes :</p>
-            <ul>
-              <li>font-size</li>
-              <li>font-family</li>
-              <li>margin</li>
-              <li>padding</li>
-              <li>color</li>
-              <li>background-color</li>
-              <li>text-align</li>
-              <li>border</li>
-            </ul>
-          </li>
-        </ol>
-      </section>
-
-      <section class="p-break">
-        <h3>Tunisian Flag (CSS)</h3>
-
-        <p>Nous voulons dessiner le drapeau tunisien afin de s'exercer sur les marges intérieures (padding) et les
-          marges extérieures (margin).</p>
-
-        <div>
-          <figure>
-            <img src="images/tn-flag.png" alt="Drapeau Tunisien" class="h3cm">
-            <figcaption>Drapeau Tunisien</figcaption>
-          </figure>
-        </div>
-
-        <ol>
-          <li>
-            <p>Copier/Coller le code HTML suivant dans une page vide.</p>
-
-            <div>
-              <pre><code class="language-html">&lt;div class=&quot;external-box&quot;&gt;
-  &lt;div class=&quot;white-circle&quot;&gt;
-    &lt;div class=&quot;crescent-external&quot;&gt;
-      &lt;div class=&quot;crescent-internal&quot;&gt;
-        &lt;div class=&quot;star&quot;&gt;&starf;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+        <p>Dans l'exemple ci-dessous nous avons utilisé les balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
+          <strong>&lt;span&gt;...&lt;/span&gt;</strong> pour indiquer la fonction, attribut
+          <strong>class="..."</strong>, des différents éléments de la phrase.
+        </p>
+        <pre><code class="language-html">&lt;div class=&quot;phrase&quot;&gt;
+  &lt;span class=&quot;sujet&quot;&gt;L&apos;oiseau&lt;/span&gt;
+  &lt;span class=&quot;verbe&quot;&gt;mange&lt;/span&gt;
+  &lt;span class=&quot;cod&quot;&gt;un ver&lt;/span&gt;.
 &lt;/div&gt;</code></pre>
-            </div>
-          </li>
-          <li>
-            <p>Commençons par le sélecteur de classes <code>.star</code>.</p>
-            <div>
-              <pre><code class="language-css">.star {
-  color: #f00; /* couleur de texte rouge */
-  text-align: center; /* texte centré */
-  line-height: 130px; /* hauteur d'une ligne de texte 130px */
-  font-size: 100px;   /* taille de la police 100px */
-  transform: rotate(22.5deg); /* tourner de 22.5° */
-}</code></pre>
-            </div>
-          </li>
-          <li>
-            <p>L'étoile est logée dans un croissant de couleur rouge. Le croissant n'est autre que la superposition de
-              deux cercles.</p>
-            <div>
-              <pre><code class="language-css">/* Cercle blanc contenant l'étoile */
-.crescent-internal {
-  position: absolute;     /* positionner relativement à .crescent external */
-  background-color: #fff; /* couleur de remplissage blanche */
-  width: 130px;           /* largeur */
-  height: 130px;          /* hauteur */
-  border-radius: 50%;     /* forme circulaire */
-  top: 15px;              /* déplacer en bas de 15px */
-  right: -5px;            /* déplacer à droite de 5px*/
-}
-
-.crescent-external {
-  position: relative;     /* Indique que les éléments positionnés absolute 
-                             seront relativement à cet élément */
-  background-color: #f00; /* couleur de remplissage rouge */
-  width: 160px;           /* largeur */
-  height: 160px;          /* hauteur */
-  border-radius: 50%;     /* forme circulaire */
-}</code></pre>
-            </div>
-          </li>
-          <li>
-            <p>Le croissant rouge est centré dans un cercle blanc plus grand.</p>
-            <div>
-              <pre><code class="language-css">.white-circle {
-  background-color: #fff; /* remplissage en blanc */
-  width: 160px;           /* largeur */
-  height: 160px;          /* hauteur */
-  padding: 20px;          /* marge intérieure */
-  border-radius: 50%;     /* forme arrondie */
-}</code></pre>
-            </div>
-          </li>
-          <li>
-            <p>Le tout tient à l'intérieur d'un rectangle rouge.</p>
-            <div>
-              <pre><code class="language-css">.external-box {
-  background-color: #f00; /* remplissage en rouge */
-  width: 200px;           /* largeur */
-  height: 200px;          /* hauteur */
-  padding: 50px 100px;    /* marges intérieures 
-                             haut/bas 50 px et 
-                             droite/gauche 100px 
-                             pour obtenir une forme rectangulaire */
-  margin: calc(50vh - 150px) auto; /* marges extérieures pour centrer 
-                                      dans la page*/
-}</code></pre>
-            </div>
-          </li>
-          <li>Ne pas oublier d'enlever les marges intérieures et extérieures.
-            <div>
-              <pre><code class="language-css">body {
-  margin: 0;
-  padding: 0;
-}</code></pre>
-            </div>
-          </li>
-        </ol>
-
-        <h4>Travail demandé</h4>
-
-        <p>Exploiter le code ci-dessus pour dessiner le drapeau tunisien sous cette forme.</p>
-
-        <div>
-          <figure>
-            <img src="images/Triple-Tunisian-Flags.png" alt="Trois Drapeaux Tunisiens">
-            <figcaption>Trois Drapeaux Tunisiens</figcaption>
-          </figure>
-        </div>
-
-        <h4>Correction</h4>
-
-        <p>Dupliquer le code HTML du drapeau tunisien deux fois.</p>
-
-        <div>
-          <pre><code class="language-html">&lt;div class=&quot;many-flags&quot;&gt;
-  &lt;div class=&quot;external-box&quot;&gt;
-    &lt;div class=&quot;white-circle&quot;&gt;
-      &lt;div class=&quot;crescent-external&quot;&gt;
-        &lt;div class=&quot;crescent-internal&quot;&gt;
-          &lt;div class=&quot;star&quot;&gt;&starf;&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;external-box&quot;&gt;
-    &lt;div class=&quot;white-circle&quot;&gt;
-      &lt;div class=&quot;crescent-external&quot;&gt;
-        &lt;div class=&quot;crescent-internal&quot;&gt;
-          &lt;div class=&quot;star&quot;&gt;&starf;&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;external-box&quot;&gt;
-    &lt;div class=&quot;white-circle&quot;&gt;
-      &lt;div class=&quot;crescent-external&quot;&gt;
-        &lt;div class=&quot;crescent-internal&quot;&gt;
-          &lt;div class=&quot;star&quot;&gt;&starf;&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-
-        <p>Modifier le sélecteur <code>.external-box</code>.</p>
-
-        <div>
-          <pre><code class="language-css">.external-box {
-  background-color: #f00;
-  width: 200px;
-  height: 200px;
-  padding: 50px 100px;
-  /* modifier les marges */
-  margin: calc(50vh - 150px) -50px;
-  /* faire tourner le drapeau de -90 degrés */
-  transform: rotate(270deg);
-}</code></pre>
-        </div>
-
-        <p>Ajouter le sélecteur <code>.many-flags</code> qui regroupe les trois drapeaux sur une seule ligne</p>
-
-        <div>
-          <pre><code class="language-css">.many-flags {
-  display: flex; /* Tous les drapeaux sur une seule ligne */
-  margin: auto;  /* center les drapeaux horizontalement */
-  width: 900px;  /* la largeur des trois drapeaux 300px x 3 = 900px*/
-}</code></pre>
-        </div>
-      </section>
-
-      <section class="p-break">
-        <h3>Drapeaux à trois bandes</h3>
-
-        <p>On demande de dessiner les drapeaux suivants :</p>
-
-        <div>
-          <figure>
-            <img src="images/three_bands_flags.png" alt="Drapeaux à trois bandes" class="h5cm">
-            <figcaption>Drapeaux à trois bandes</figcaption>
-          </figure>
-        </div>
-
-        <p>Voici le code HTML nécessaire. <b><u>Vous n'êtes pas autorisés à ajouter d'autres éléments hormis la
-              structure minimale d'une page Web et l'importation d'une feuille de style.</u></b></p>
-
-        <div>
-          <pre><code class="language-html">&lt;div id=&quot;belgium&quot; class=&quot;flag&quot;&gt;
-  &lt;div class=&quot;bande1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;bande2&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;bande3&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;germany&quot; class=&quot;flag&quot;&gt;
-  &lt;div class=&quot;bande1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;bande2&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;bande3&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;france&quot; class=&quot;flag&quot;&gt;
-  &lt;div class=&quot;bande1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;bande2&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;bande3&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-      </section>
-    </article>
-
-    <article>
-      <h2>Séance 4</h2>
-
-      <section>
-        <h3>Les tableaux</h3>
-
-        <p>Les tableaux sont utilisés pour mettre en forme des listes de données.</p>
-
-        <p>Regarder la video suivante pour apprendre comment l'utiliser :</p>
-
-        <div>
-          <video src="videos/Tables.mp4" controls style="max-width: 100%;"></video>
-        </div>
-
-        <h4>Exercise 1</h4>
-        <p>Create the following <b>table</b> in a page named <b>task1.html</b>.</p>
-        <p><img src="images/task01.gif" alt="Task 1"></p>
-
-        <h4>Exercise 2</h4>
-        <p>Create the following <b>table</b> in a page named <b>task2.html</b>.</p>
-        <p><img src="images/task02.gif" alt="Task 2"></p>
-
-        <h4>Exercice 3</h4>
-        <p>Create the following <b>table</b> in a page named <b>task3.html</b>.</p>
-        <p><img src="images/task03.jpg" alt="Task 3"></p>
-      </section>
-
-      <section>
-        <h3>Les formulaires</h3>
-
-        <p>Pour s'inscrire sur un site Web, pour se connecter à Facebook, pour répondre à une enquête, il faut remplir
-          un formulaire.</p>
-
-        <p>Un formulaire est utilisé pour recueillir les informations des utilisateurs d'un site Web ou d'une
-          application Web.</p>
-
-        <p>Le langage HTML définit les composants du formulaire les plus basiques. Et il existe, aussi, beaucoup de
-          bibliothèques qui offrent des composants personnalisées.</p>
-
-        <p>Le formulaire suivant est définit uniquement à l'aide du langage HTML.</p>
 
         <style>
-          #formulaire input {
-            width: initial;
-            border-radius: initial;
-            margin: initial;
-            box-sizing: content-box;
+          .phrase {
+            font-size: 2em;
+            padding: 10px 10px 26px 10px;
+            background-color: #666;
+            color: #fff;
+          }
+
+          .phrase span {
+            display: inline-block;
+            position: relative;
+          }
+
+          .phrase span::after {
+            color: #fff;
+            position: absolute;
+            top: 44px;
+            font-size: 0.5em;
+            left: 0;
+          }
+
+          .phrase .sujet {
+            color: #C89FA3;
+            text-decoration: underline;
+          }
+
+          .phrase .sujet::after {
+            content: "Sujet";
+          }
+
+          .phrase .verbe {
+            display: inline-block;
+            color: #bdd0e2;
+          }
+
+          .phrase .verbe::after {
+            content: "Verbe";
+          }
+
+          .phrase .cod {
+            display: inline-block;
+            color: #f4ffa2;
+          }
+
+          .phrase .cod::after {
+            content: "COD";
           }
         </style>
-        <div id="formulaire" class="p-2 my-2 border border-dark bg-light">
-          <form action="destination.php" method="post">
-            <div>
-              <label for="np">Nom & Prénom</label>
-              <input id="np" name="np" type="text" placeholder="Votre nom et prénom">
-            </div>
-            <div>
-              <label for="mp">Mot de passe</label>
-              <input id="mp" name="mp" type="password" placeholder="Votre mot de passe">
-            </div>
-            <div>
-              <label for="em">Email</label>
-              <input id="em" name="em" type="email" placeholder="Votre email">
-            </div>
-            <div>
-              <label for="age">Age</label>
-              <input id="age" name="age" type="age" min="0" max="100" type="number" placeholder="Votre age">
-            </div>
-            <div>
-              <div>Combien de fruits mangez-vous par jour ?</div>
-              <label>
-                <input type="radio" name="fruit" id="fruits-0" value="0">
-                Aucun</label>
-              <label>
-                <input type="radio" name="fruit" id="fruits-1" value="1">
-                Un seul
-              </label>
-              <label>
-                <input type="radio" name="fruit" id="fruits-2" value="2">
-                Deux
-              </label>
-              <label>
-                <input type="radio" name="fruit" id="fruits-m" value=">2">
-                Plus de deux
-              </label>
-            </div>
-            <div>
-              <label for="favori">Votre fruit favori est :</label>
-              <select name="favori" id="favori" size="4">
-                <option value="Pomme">Pomme</option>
-                <option value="Banane">Banane</option>
-                <option value="Orange">Orange</option>
-                <option value="Poire">Poire</option>
-              </select>
-            </div>
-            <div>
-              <label for="qst">Pourquoi vous vous mettez au régime</label>
-              <textarea id="qst" name="qst" placeholder="Votre age"></textarea>
-            </div>
-            <div>
-              <button type="submit">S'inscrire</button>
-              <input type="reset" value="Effacer">
-            </div>
-          </form>
+
+        <p>Qui peut être rendue à l'aide du CSS, par exemple, comme suit :</p>
+
+        <div class="phrase">
+          <span class="sujet">L'oiseau</span>
+          <span class="verbe">mange</span>
+          <span class="cod">un ver</span>.
         </div>
+      </section>
 
-        <p>Le code HTML nécessaire pour générer ce formulaire est le suivant :</p>
+      <section>
+        <h3>Application</h3>
 
-        <div>
-          <pre><code class="language-html">&lt;form action=&quot;destination.php&quot; method=&quot;post&quot;&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;np&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
-    &lt;input id=&quot;np&quot; name=&quot;np&quot; type=&quot;text&quot; placeholder=&quot;Votre nom et pr&eacute;nom&quot;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;mp&quot;&gt;Mot de passe&lt;/label&gt;
-    &lt;input id=&quot;mp&quot; name=&quot;mp&quot; type=&quot;password&quot; placeholder=&quot;Votre mot de passe&quot;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;em&quot;&gt;Email&lt;/label&gt;
-    &lt;input id=&quot;em&quot; name=&quot;em&quot; type=&quot;email&quot; placeholder=&quot;Votre email&quot;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;age&quot;&gt;Age&lt;/label&gt;
-    &lt;input id=&quot;age&quot; name=&quot;age&quot; type=&quot;age&quot; min=&quot;0&quot; max=&quot;100&quot; 
-           type=&quot;number&quot; placeholder=&quot;Votre age&quot;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;div&gt;Combien de fruits mangez-vous par jour ?&lt;/div&gt;
-    &lt;label&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;fruit&quot; id=&quot;fruits-0&quot; value=&quot;0&quot;&gt;
-      Aucun&lt;/label&gt;
-    &lt;label&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;fruit&quot; id=&quot;fruits-1&quot; value=&quot;1&quot;&gt;
-      Un seul
-    &lt;/label&gt;
-    &lt;label&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;fruit&quot; id=&quot;fruits-2&quot; value=&quot;2&quot;&gt;
-      Deux
-    &lt;/label&gt;
-    &lt;label&gt;
-      &lt;input type=&quot;radio&quot; name=&quot;fruit&quot; id=&quot;fruits-m&quot; value=&quot;&gt;2&quot;&gt;
-      Plus de deux
-    &lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;favori&quot;&gt;Votre fruit favori est :&lt;/label&gt;
-    &lt;select name=&quot;favori&quot; id=&quot;favori&quot; size=&quot;4&quot;&gt;
-      &lt;option value=&quot;Pomme&quot;&gt;Pomme&lt;/option&gt;
-      &lt;option value=&quot;Banane&quot;&gt;Banane&lt;/option&gt;
-      &lt;option value=&quot;Orange&quot;&gt;Orange&lt;/option&gt;
-      &lt;option value=&quot;Poire&quot;&gt;Poire&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;qst&quot;&gt;Pourquoi vous vous mettez au r&eacute;gime&lt;/label&gt;
-    &lt;textarea id=&quot;qst&quot; name=&quot;qst&quot; placeholder=&quot;Votre age&quot;&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type=&quot;submit&quot;&gt;S&apos;inscrire&lt;/button&gt;
-    &lt;input type=&quot;reset&quot; value=&quot;Effacer&quot;&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-        </div>
+        <p>On veut concevoir un site composé de quatre pages web à propos du film Star wars, cliquer sur les miniatures
+          ci-dessous pour les agrandir :</p>
 
-        <p>Le formulaire doit être tapé entre <strong>&lt;form&gt;...&lt;/form&gt;</strong>. Cette balise possède
-          plusieurs attributs importants :</p>
         <ul>
-          <li><strong>action</strong> indique la ressource qui se chargera du traitement des données du formulaire.</li>
-          <li><strong>method</strong> indique la méthode à utiliser lors de la soumission du formulaire. Les deux
-            méthodes les plus utilisées sont : <ul>
-              <li><strong>GET</strong> les informations saisies seront ajoutées à l'adresse URL de la ressource
-                mentionnée dans l'attribut action.</li>
-              <li><strong>POST</strong> les informations saisies seront envoyées dans le corps de la requête et ne
-                seront pas visibles pour l'utilisateur.</li>
-            </ul>
-          </li>
+          <li>La page <strong>starwars.html</strong>, présente la série des films.</li>
+          <li>La page <strong>originale.html</strong>, présente la trilogie originale des films.</li>
+          <li>La page <strong>prelogie.html</strong>, présente la deuxième trilogie des films.</li>
+          <li>La page <strong>trilogie.html</strong>, présente la troisième trilogie des films.</li>
         </ul>
 
-        <h4>Travail Demandé</h4>
-
-        <p>Identifier les balises utilisées pour générer le composant :</p>
-        <ol>
-          <li>Champ de texte, pour la saisie du nom et du prénom.</li>
-          <li>Zone de texte, pour la saisie des informations sur plusieurs lignes.</li>
-          <li>Liste déroulante, pour sélectionner un choix parmi plusieurs options.</li>
-          <li>Bouton radio, pour faire un choix parmi d'autres, exemple le fruit favori.</li>
-          <li>Mot de passe, pour cacher les informations sensibles aux yeux indiscrets</li>
-          <li>Bouton de soumission, pour soumettre le formulaire.</li>
-          <li>Bouton de remise à zéro, pour effacer les champs du formulaire.</li>
-        </ol>
-
-        <p>Créer le formulaire suivant :</p>
-
-        <div>
-          <figure>
-            <img src="images/web_form.png" alt="Formulaire Pizzeria">
-            <figcaption>Formulaire Pizzeria</figcaption>
-          </figure>
-        </div>
-
-        <p><strong>Regarder la vidéo suivante pour découvrir plus de détails sur les formulaires.</strong></p>
-
-        <div>
-          <video src="videos/Forms.mp4" controls style="max-width: 100%;"></video>
-        </div>
-
-        <h4>Exercice 1</h4>
-        <p>Create the following <b>form</b> in a page named <b>task4.html</b>.</p>
-        <p><img src="images/task04.png" alt="Task 4"></p>
-
-        <h4>Exercice 2</h4>
-        <p>Create the following <b>form</b> in a page named <b>task5.html</b>.</p>
-        <p><img src="images/task05.gif" alt="Task 5"></p>
-      </section>
-    </article>
-
-    <article>
-      <h2>Séance 5</h2>
-
-
-      <section>
-        <h3>Application 1</h3>
-
-        <p>On demande de réaliser un formulaire qui ressmble au formulaire suivant :</p>
-
-        <div>
-          <figure>
-            <a href="images/survey-form.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/survey-form_thumb.png" alt="Survey Form"></a>
-            <figcaption>Survey Form</figcaption>
-          </figure>
-        </div>
-
-        <p>Le choix des couleurs et la disposition sont laissés au libre choix de l'élève.</p>
-        <ol>
-          <li>Les champs <code>name</code> et <code>email</code> sont obligatoires et doivent contenir une indication de
-            type <code>placeholder=""</code>.</li>
-          <li>Le champ <code>age</code> doit contenir une valeur comprise entre 5 et 100.</li>
-          <li>La liste de choix <code>role</code> doit contenir les options suivantes :
-            <ul>
-              <li>Student</li>
-              <li>Full Time job</li>
-              <li>Full Time learner</li>
-              <li>Prefer not to say</li>
-              <li>Other</li>
-            </ul>
-          </li>
-          <li>La liste de choix <code>favorite</code> doit contenir les options suivantes :
-            <ul>
-              <li>Challenges</li>
-              <li>Projects</li>
-              <li>Community</li>
-              <li>Open Source</li>
-            </ul>
-          </li>
-          <li>Utiliser une feuille de style pour mettre en forme le formulaire.
-            <ul>
-              <li>Utiliser au moins 5 sélecteurs différents.</li>
-              <li>Utiliser les marges intérieures <code>margin</code> et extérieures <code>padding</code>.</li>
-              <li>Utiliser les propriétés <code>color</code> et <code>background-color</code>.</li>
-            </ul>
-          </li>
-        </ol>
-
-        <p>La palette de couleur utilisée est comme suit :</p>
         <div class="row">
-          <div class="py-4 col text-center" style="background-color: #DBB3B1;">#DBB3B1</div>
-          <div class="py-4 col text-center" style="background-color: #C89FA3;">#C89FA3</div>
-          <div class="py-4 col text-center" style="background-color: #A67F8E; color:#fff;">#A67F8E</div>
-          <div class="py-4 col text-center" style="background-color: #6C534E; color:#fff;">#6C534E</div>
-          <div class="py-4 col text-center" style="background-color: #2C1A1D; color:#fff;">#2C1A1D</div>
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_01.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_01-thumb.png" alt="starwars.html"></a>
+              <figcaption>starwars.html</figcaption>
+            </figure>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_02.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_02-thumb.png" alt="originale.html"></a>
+              <figcaption>originale.html</figcaption>
+            </figure>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_03.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_03-thumb.png" alt="prelogie.html"></a>
+              <figcaption>prelogie.html</figcaption>
+            </figure>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_04.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_04-thumb.png" alt="trilogie.html"></a>
+              <figcaption>parts.html</figcaption>
+            </figure>
+          </div>
         </div>
-
-        <p>L'image d'arrière plan utilisée est : <a href="images/survey-form-background.jpeg" target="_blank"
-            rel="noopener noreferrer">Arrière plan</a></p>
-      </section>
-
-      <section>
-        <h3>Application 2</h3>
-
-        <p>On demande de réaliser l'une des calculatrices suivantes en HTML et en CSS :</p>
-
-        <div>
-          <figure>
-            <a href="images/calculator_1.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/calculator_1-thumb.png" alt="Modèle calculatrice">
-            </a>
-            <a href="images/calculator_2.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/calculator_2-thumb.png" alt="Modèle calculatrice">
-            </a>
-            <figcaption>Modèles de calculatrices</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section>
-        <h3>Application 3</h3>
-
-        <p>On donne les fichiers HTML, CSS et les images pour un template d'une page Web qui ressmble à ce qui suit :
-        </p>
-
-        <div>
-          <figure>
-            <a href="images/Industrious.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/Industrious_thumb.png" alt="Modèle de la page">
-            </a>
-            <figcaption>Modèle de la page</figcaption>
-          </figure>
-        </div>
-
-        <p>L'ensemble des fichiers nécessaires sont disponibles à travers ce lien : <a
-            href="assets/downloads/industrious_w_html.zip">Fichiers de démarrage</a></p>
 
         <h4>Travail demandé</h4>
-
         <ol>
-          <li>Télécharger les fichiers requis pour l'application : <a
-              href="assets/downloads/industrious_w_html.zip">Fichiers de démarrage</a>.</li>
-          <li>Décompresser dans votre dossier.</li>
-          <li>Ouvrir le dossier de travail à l'aide de Visual Studio Code.</li>
-          <li>Compléter le fichier <strong>css\style.css</strong> afin d'obtenir une mise en page qui ressemble à la
-            mise en page donnée dans la figure.</li>
+          <li>Télécharger le texte, les images et les médias nécessaires pour réaliser ce TP : <a
+              href="assets/downloads/tp2/star_wars-html_only.zip" download="starwars_nocss">Fichiers du TP</a></li>
+          <li>Décompresser le fichier <i>compressé</i> dans votre dossier de travail.</li>
+          <li>Ouvrir ce dossier à l'aide de Visual Studio Code.</li>
+          <li>Compléter les pages pour ressembler aux images ci-dessus.</li>
         </ol>
       </section>
-
     </article>
   </main>
   <footer class="d-print-none bg-dark text-white p-2">

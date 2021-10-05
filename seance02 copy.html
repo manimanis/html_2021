@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours HTML5 / CSS3</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Les langages du Web</h1>
+
+    <article>
+      <h2>Les liens hypertextes</h2>
+
+      <section>
+        <h3>Définition</h3>
+
+        <p>Le mot <strong>HTML</strong> est l'<em>HyperText Markup Language</em>, langage de balisage hypertexte.
+          D'après Wikipedia :</p>
+
+        <blockquote class="blockquote">
+          <p>Un hypertexte est un document ou un ensemble de documents contenant des unités d'information liées entre
+            elles par des hyperliens. Ce système permet à l'utilisateur d'aller directement à l'unité qui l'intéresse, à
+            son gré, d'une façon non linéaire.</p>
+          <footer class="blockquote-footer">Source <cite title="Source Title">Wikipedia</cite></footer>
+        </blockquote>
+
+        <p><b>Plus simplement</b> un <strong>lien hypertexte</strong> est un <a href="#">texte souligné, de couleur
+            différente du reste du document,</a> qui permet de se déplacer dans le même document ou vers des documents
+          externes.</p>
+
+        <figure>
+          <img src="images/hyperliens.png" alt="Hyperlien" class="h3cm">
+          <figcaption>Hyperlien (Hyperlink)</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Démonstration</h3>
+
+        <ol>
+          <li>Ouvrir le document suivant : <a href="assets/downloads/tp2/lorem_ipsum_p1.html" target="_blank"
+              rel="noopener noreferrer">Lorem Ipsum</a></li>
+          <li>Naviguer entre les pages et relever les titre des paragraphes lisibles.
+            <ul>
+              <li>Cliquer sur le lien &laquo; Qu'est-ce que le Lorem Ipsum? &raquo;</li>
+              <li>En bas de page cliquer sur le lien &laquo; Pourquoi l'utiliser? &raquo;</li>
+              <li>En milieu de la page cliquer sur le lien &laquo; D'où vient-il? &raquo;</li>
+              <li>Enfin cliquer sur le lien &laquo; Source des informations &raquo;</li>
+            </ul>
+          </li>
+          <li>En déduire les trois types de liens.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Types</h3>
+        <p>Il existe trois types de liens :</p>
+        <ul>
+          <li><strong>Les liens externes</strong> : utilisés pour référencer des ressources dans d'autres sites.
+            <pre><code class="language_html">&lt;!-- Lien externe --&gt;
+&lt;a href=&quot;https://www.google.com&quot;&gt;Ouvrir google&lt;/a&gt;</code></pre>
+          </li>
+          <li><strong>Les liens internes</strong> : utilisés pour référencer les ressources dans un même site.
+            <pre><code class="language_html">&lt;!-- Lien intene --&gt;
+&lt;a href=&quot;page2.html&quot;&gt;Ouvrir page 2&lt;/a&gt;</code></pre>
+          </li>
+          <li><strong>Les liens nommés</strong> (signets) : utilisés pour référencer des parties d'une même page.
+            <pre><code class="language_html">&lt;!-- Lien nomm&eacute; --&gt;
+&lt;a href=&quot;#section_2&quot;&gt;Section 2&lt;/a&gt;
+
+&lt;!-- La destination d&apos;un lien nomm&eacute; --&gt;
+&lt;h2 id=&quot;section_2&quot;&gt;Partie n&deg;2&lt;/h2&gt;</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Exercice 1</h3>
+
+        <p>L'image suivante montre les liens entre des pages du site <strong>monsite.com</strong> et les liens qui le
+          relient avec le site <strong>othersite.com</strong>.</p>
+
+        <figure>
+          <img src="images/links_types.jpg" alt="Types de liens">
+          <figcaption>Les types de liens</figcaption>
+        </figure>
+
+        <p>On demande de déterminer les types de liens <strong>(1)</strong>, <strong>(2)</strong>, <strong>(3)</strong>
+          et <strong>(4)</strong>.</p>
+        <p>Les choix disponibles sont :</p>
+        <ul>
+          <li>Lien interne</li>
+          <li>Lien externe</li>
+          <li>Lien nommé</li>
+          <li>Lien interne nommé</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Attributs</h3>
+
+        <p>La balise <code>&lt;a&gt;</code> possède deux parties importantes :</p>
+        <ul>
+          <li>L'attribut <code>href</code> qui indique la cible du lien.</li>
+          <li>Le texte/l'image qui servira de lien cliquable.</li>
+        </ul>
+
+        <p>Cette balise supporte, aussi entre autres, l'attribut <code>target</code> qui indique le nom de la fenêtre
+          dans laquelle le lien sera ouvert. Pour ouvrir le lien dans une page vide, on lui affecte la valeur
+          <strong>target="_blank"</strong>.
+        </p>
+
+        <p>
+        <figure>
+          <img src="images/a-tag.gif" alt="Définition d'un lien hypertexte" class="h3cm">
+          <figcaption>Définition d'un lien hypertexte</figcaption>
+        </figure>
+        </p>
+      </section>
+
+      <section>
+        <h3>Exercice 2</h3>
+
+        <p>Ouvrir le site Web, <strong>computers</strong>, que nous avons commencé, puis :</p>
+        <ol>
+          <li>Compléter les liens hypertextes qui permettent de se déplacer d'une page à l'autre. <strong>Les fléches
+              indiquent les noms des fichiers à ouvrir lorsqu'on clique sur le texte souligné.</strong>
+            <figure>
+              <img src="images/links_list.png" alt="Les liens" class="h2cm">
+              <figcaption>Les liens</figcaption>
+            </figure>
+          </li>
+          <li>La page <strong>index.html</strong> contient des <u>images miniaturisées</u> des ordinateurs. On veut
+            créer des liens hypertextes dans cette page, à l'aide des images <em>computerXX_thumb.jpg</em>, pour
+            afficher une version plus grande de ces images dans une nouvelle page.
+            <p>Le clic sur <u>l'image</u> <strong>computer01_thumb.jpg</strong> ouvre l'image
+              <strong>computer01.jpg</strong> dans une nouvelle fenêtre.
+            </p>
+            <figure>
+              <img src="images/resize-computer01.png" alt="Agrandir les images" class="h3cm">
+              <figcaption>Agrandir les images</figcaption>
+            </figure>
+          </li>
+          <li>Refaire le même travail dans la page <strong>parts.html</strong> avec les composants de l'ordinateur.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Solution</h3>
+        <ol>
+          <li>Les liens suivants sont ajoutés dans toutes les pages.
+            <div class="d-print-none">
+              <figure>
+                <img src="images/links01_before.png" alt="Avant ajout des liens">
+                <figcaption>Avant l'ajout des liens</figcaption>
+              </figure>
+              <figure>
+                <img src="images/links01.png" alt="Les liens entre les pages" class="h3cm">
+                <figcaption>Les liens entre les pages</figcaption>
+              </figure>
+            </div>
+            <div class="d-none d-print-block">
+              <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;What is it?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;uses.html&quot;&gt;What is used for?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;types.html&quot;&gt;What types?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;parts.html&quot;&gt;What is composed of?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </li>
+          <li>Les liens suivants sont ajoutés dans la page <b>index.html</b>, pour agrandir les images
+            <div class="d-print-none">
+              <figure>
+                <img src="images/links02_before.png" alt="Avant l'ajout des liens">
+                <figcaption>Avant l'ajout des liens</figcaption>
+              </figure>
+              <figure>
+                <img src="images/links02.png" alt="Agrandir les images des ordinateurs" class="h5cm">
+                <figcaption>Ajouter des liens pour agrandir les images des ordinateurs</figcaption>
+              </figure>
+            </div>
+            <div class="d-none d-print-block">
+              <pre><code class="language-html">&lt;p&gt;
+  &lt;a href=&quot;images/computer01.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/computer01_thumb.jpg&quot; alt=&quot;NeXT box&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;images/computer02.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/computer02_thumb.jpg&quot; alt=&quot;Terminal&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;images/computer03.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/computer03_thumb.jpg&quot; alt=&quot;Macintosh&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;images/computer04.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/computer04_thumb.jpg&quot; alt=&quot;Modern Laptop&quot;&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+          </li>
+          <li>De même les liens suivants sont ajoutés dans la page <b>parts.html</b>.
+            <div class="d-print-none">
+              <figure>
+                <img src="images/links03_before.png" alt="Avant l'ajout des liens" class="h5cm">
+                <figcaption>Avant l'ajout des liens</figcaption>
+              </figure>
+              <figure>
+                <img src="images/links03.png" alt="Agrandir les images des composants" class="h5cm">
+                <figcaption>Ajouter des liens pour agrandir les images des composants</figcaption>
+              </figure>
+            </div>
+            <div class="d-none d-print-block">
+              <pre><code class="language-html">&lt;p&gt;
+  &lt;a href=&quot;images/cpu.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/cpu_thumb.jpg&quot; alt=&quot;Processor&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;images/memory.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/memory_thumb.jpg&quot; alt=&quot;Memory&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;images/motherboard.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/motherboard_thumb.jpg&quot; alt=&quot;Motherboard&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;images/storage.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;images/storage_thumb.jpg&quot; alt=&quot;Storage device&quot;&gt;&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </article>
+
+    <article>
+      <h2>Balises HTML</h2>
+
+      <section>
+        <h3>Orphelines & non orphelines</h3>
+
+        <h4>Non empty tags</h4>
+
+        <p>Les balises HTML qui se présentent par <strong>paires</strong> sont dites non orphelines,
+          <strong><em>non-void tag</em></strong> ou <strong><em>non-empty tag</em></strong>. Elles commencent par une
+          balise ouvrante, <strong>&lt;balise&gt;</strong>, et se terminent par une balise fermante,
+          <strong>&lt;/balise&gt;</strong>.
+        </p>
+        <p>Exemples :
+          <code>&lt;h1&gt;...&lt;/h1&gt;</code>,
+          <code>&lt;p&gt;...&lt;/p&gt;</code>, etc.
+        </p>
+
+        <h4>Empty tags</h4>
+
+        <p>D'autres, dites, <strong>orphelines</strong> ne nécessitent pas de balise fermante, <strong><em>empty
+              tags</em></strong> ou <strong><em>void tags</em></strong>.
+        </p>
+        <p>Exemples : <code>&lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;</code>, <code>&lt;br&gt;</code>, etc.
+        </p>
+      </section>
+
+      <section>
+        <h3>Bloc & En ligne</h3>
+
+        <h4>Block tags</h4>
+
+        <p>Une <strong><em>balise de bloc</em></strong> commence toujours dans une nouvelle ligne. Elle <u>s'étend sur
+            toute la largeur disponible</u>.</p>
+
+        <p><b>Exemples :</b> &lt;address&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;blockquote&gt;, &lt;canvas&gt;,
+          &lt;dd&gt;, &lt;div&gt;,
+          &lt;dl&gt;, &lt;dt&gt;, &lt;fieldset&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;footer&gt;, &lt;form&gt;,
+          &lt;h1&gt;, &lt;h6&gt;, &lt;header&gt;, &lt;hr&gt;, &lt;li&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;noscript&gt;,
+          &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;section&gt;, &lt;table&gt;, &lt;tfoot&gt;, &lt;ul&gt;, &lt;video&gt;
+        </p>
+
+        <p>Un paragraphe <strong>&lt;p&gt;...&lt;/p&gt;</strong> est un élément de bloc, ainsi chaque paragraphe
+          commence dans une nouvelle ligne et s'étend sur toute la largeur qui lui est disponible.</p>
+
+        <div class="border border-dark p-2 my-2">
+          <p>Premier paragraphe</p>
+          <p class="border border-danger">Deuxième paragraphe</p>
+          <p>Troisième paragraphe</p>
+        </div>
+
+        <h4>Inline tags</h4>
+
+        <p>Une <strong><em>balise en ligne</em></strong> ne commence pas dans une nouvelle ligne. Et elle <u>s'étend
+            uniquement sur l'espace qui lui est nécessaire</u>.</p>
+
+        <p><b>Exemples :</b> &lt;a&gt;, &lt;abbr&gt;, &lt;acronym&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;br&gt;,
+          &lt;button&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dfn&gt;, &lt;em&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;,
+          &lt;kbd&gt;, &lt;label&gt;, &lt;map&gt;, &lt;object&gt;, &lt;output&gt;, &lt;q&gt;, &lt;samp&gt;,
+          &lt;script&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;,
+          &lt;textarea&gt;, &lt;time&gt;, &lt;tt&gt;, &lt;var&gt;, &lt;/p&gt;
+
+        <p>Un élément gras <strong>&lt;b&gt;...&lt;/b&gt;</strong> s'étend uniquement sur l'espace qui lui est
+          nécessaire et ne commence
+          pas dans une nouvelle ligne.</p>
+
+        <div class="border border-dark p-2 my-2">
+          <p>Un texte en <b class="border border-danger">gras</b> et en <i class="border border-danger">italique</i>.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Exercice 3</h3>
+
+        <p>On demande de :</p>
+        <ol>
+          <li>Ouvrir le code source de la page <a href="assets/downloads/tp2/starwars.html" target="_blank"
+              rel="noopener noreferrer">Stars wars</a>.</li>
+          <li>Identifier toutes les balises utilisées.</li>
+          <li>Identifier parmi ces balises les <strong>void tags</strong> et les <strong>non-void tags</strong>.
+            <table class="table table-sm table-striped table-hover w-50">
+              <thead>
+                <tr>
+                  <th>void tags</th>
+                  <th>non-void tags</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Identifier parmi ces balises les <strong>block tags</strong> et les <strong>inline tags</strong>.
+            <table class="table table-sm table-striped table-hover w-50">
+              <thead>
+                <tr>
+                  <th>block tags</th>
+                  <th>inline tags</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Balises sémantiques et non sémantiques</h3>
+
+        <h4>Balises sémantiques</h4>
+
+        <p>Les balises telles que, par exemple, <strong>&lt;p&gt;...&lt;/p&gt;</strong> pour
+          <strong><em>paragraph</em></strong>, <strong>&lt;h1&gt;...&lt;/h1&gt;</strong> pour <strong><em>heading level
+              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>italic</em></strong></strong>,
+          possèdent une signification et possèdent, donc, une fonction très spécifiques.
+        </p>
+        <p>Ces balises sont dites <strong>sémantiques</strong> car elles possèdent un rôle bien défini dans une page
+          Web.</p>
+
+        <h4>Balises non sémantiques</h4>
+        <p>Outre les balises sémantiques, HTML définit aussi des balises à <strong><em>usage général</em></strong>,
+          dites <strong>non sémantiques</strong>. Le HTML4, parent du HTML5, en possède uniquement deux :
+        </p>
+
+        <ul>
+          <li><strong>&lt;div&gt;...&lt;/div&gt;</strong> pour <strong><em>division</em></strong>, est une
+            <strong>balise de bloc</strong>, qui est utilisée pour
+            diviser la page en plusieurs parties emboîtées l'une dans l'autre.
+          </li>
+          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé à
+            l'intérieur d'un bloc pour marquer une partie de celui-ci.</li>
+        </ul>
+
+        <h4>Exemple</h4>
+
+        <p>Dans l'exemple ci-dessous nous avons utilisé les balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
+          <strong>&lt;span&gt;...&lt;/span&gt;</strong> pour indiquer la fonction, attribut
+          <strong>class="..."</strong>, des différents éléments de la phrase.
+        </p>
+        <pre><code class="language-html">&lt;div class=&quot;phrase&quot;&gt;
+  &lt;span class=&quot;sujet&quot;&gt;L&apos;oiseau&lt;/span&gt;
+  &lt;span class=&quot;verbe&quot;&gt;mange&lt;/span&gt;
+  &lt;span class=&quot;cod&quot;&gt;un ver&lt;/span&gt;.
+&lt;/div&gt;</code></pre>
+
+        <style>
+          .phrase {
+            font-size: 2em;
+            padding: 10px 10px 26px 10px;
+            background-color: #666;
+            color: #fff;
+          }
+
+          .phrase span {
+            display: inline-block;
+            position: relative;
+          }
+
+          .phrase span::after {
+            color: #fff;
+            position: absolute;
+            top: 44px;
+            font-size: 0.5em;
+            left: 0;
+          }
+
+          .phrase .sujet {
+            color: #C89FA3;
+            text-decoration: underline;
+          }
+
+          .phrase .sujet::after {
+            content: "Sujet";
+          }
+
+          .phrase .verbe {
+            display: inline-block;
+            color: #bdd0e2;
+          }
+
+          .phrase .verbe::after {
+            content: "Verbe";
+          }
+
+          .phrase .cod {
+            display: inline-block;
+            color: #f4ffa2;
+          }
+
+          .phrase .cod::after {
+            content: "COD";
+          }
+        </style>
+
+        <p>Qui peut être rendue à l'aide du CSS, par exemple, comme suit :</p>
+
+        <div class="phrase">
+          <span class="sujet">L'oiseau</span>
+          <span class="verbe">mange</span>
+          <span class="cod">un ver</span>.
+        </div>
+      </section>
+
+      <section>
+        <h3>Application</h3>
+
+        <p>On veut concevoir un site composé de quatre pages web à propos du film Star wars, cliquer sur les miniatures
+          ci-dessous pour les agrandir :</p>
+
+        <ul>
+          <li>La page <strong>starwars.html</strong>, présente la série des films.</li>
+          <li>La page <strong>originale.html</strong>, présente la trilogie originale des films.</li>
+          <li>La page <strong>prelogie.html</strong>, présente la deuxième trilogie des films.</li>
+          <li>La page <strong>trilogie.html</strong>, présente la troisième trilogie des films.</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_01.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_01-thumb.png" alt="starwars.html"></a>
+              <figcaption>starwars.html</figcaption>
+            </figure>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_02.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_02-thumb.png" alt="originale.html"></a>
+              <figcaption>originale.html</figcaption>
+            </figure>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_03.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_03-thumb.png" alt="prelogie.html"></a>
+              <figcaption>prelogie.html</figcaption>
+            </figure>
+          </div>
+          <div class="col-3">
+            <figure>
+              <a href="assets/downloads/tp2/star_wars_04.png" target="_blank"><img
+                  src="assets/downloads/tp2/star_wars_04-thumb.png" alt="trilogie.html"></a>
+              <figcaption>parts.html</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Télécharger le texte, les images et les médias nécessaires pour réaliser ce TP : <a
+              href="assets/downloads/tp2/star_wars-html_only.zip" download="starwars_nocss">Fichiers du TP</a></li>
+          <li>Décompresser le fichier <i>compressé</i> dans votre dossier de travail.</li>
+          <li>Ouvrir ce dossier à l'aide de Visual Studio Code.</li>
+          <li>Compléter les pages pour ressembler aux images ci-dessus.</li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2020/2021</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
