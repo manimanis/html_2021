@@ -27,6 +27,308 @@
     <h1>Conception Web - Séance 3</h1>
 
     <article>
+      <h2>Tableaux</h2>
+
+      <section>
+        <h3>Structure</h3>
+
+        <p>Les tableaux sont utilisés pour mettre en forme des listes de données. Exemple liste des élèves dans une
+          classe.</p>
+
+        <style>
+          table.special {
+            border: green solid 2px;
+            border-collapse: separate;
+            width: 100%;
+            position: relative;
+            padding: 22px 0px 0px;
+          }
+
+          table.special::after,
+          .special tr::after,
+          .special td::after,
+          .special th::after {
+            display: inline-block;
+            content: "<table>";
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px;
+            background-color: #000;
+            color: #fff;
+            font-size: small;
+            font-weight: bold;
+          }
+
+          .special tr {
+            display: flex;
+            flex-wrap: wrap;
+            border: red solid 2px;
+            margin: 5px;
+            position: relative;
+            padding: 28px 0 0;
+          }
+
+          .special tr::after {
+            content: "<tr>";
+          }
+
+          .special td,
+          .special th {
+            width: calc(33.3% - 6px);
+            display: block;
+            padding: 28px 0 0;
+            margin: 3px;
+            border: blue dashed 2px;
+            position: relative;
+            text-align: initial;
+          }
+
+          .special td::after {
+            content: "<td>";
+          }
+
+          .special th::after {
+            content: "<th>";
+          }
+        </style>
+
+        <p>Les balises <strong>&lt;table&gt;...&lt;/table&gt;</strong> marquent le début et la fin d'un tableau.</p>
+        <p>Le tableau est composé de <u>lignes</u> délimitées par les balises <strong>&lt;tr&gt;...&lt;/tr&gt;</strong>,
+          <strong>tr = table row</strong>.
+        </p>
+        <p>Chaque ligne est composée de <u>cellules</u>, le HTML distingue deux types de cellules :</p>
+        <ul>
+          <li>Les <u>cellules d'entêtes</u> délimitées par <strong>&lt;th&gt;...&lt;/th&gt;</strong>, <strong>th = table
+              heading</strong></li>
+          <li>Les <u>cellules de données</u> délimitées par <strong>&lt;td&gt;...&lt;/td&gt;</strong>, <strong>td =
+              table data</strong></li>
+        </ul>
+
+        <p>L'exemple suivant montre <strong>la structure d'un tableau</strong> (et non pas son rendu) :</p>
+
+        <table class="special">
+          <tr>
+            <th>Nom & Prénom</th>
+            <th>Téléphone</th>
+            <th>Adresse</th>
+          </tr>
+          <tr>
+            <td>Yassine Ben Ahmed</td>
+            <td>22 36 47 48</td>
+            <td>Akouda</td>
+          </tr>
+        </table>
+
+        <p>Le code source de ce tableau est comme suit :</p>
+        <pre><code class="language-html">&lt;table border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nom &amp; Pr&eacute;nom&lt;/th&gt;
+    &lt;th&gt;T&eacute;l&eacute;phone&lt;/th&gt;
+    &lt;th&gt;Adresse&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Yassine Ben Ahmed&lt;/td&gt;
+    &lt;td&gt;22 36 47 48&lt;/td&gt;
+    &lt;td&gt;Akouda&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <p>Ce code précédent donne le rendu suivant, sans l'attribut <strong>border="1"</strong> (déprécié en HTML 5)
+          les <strong>bordures</strong> des cellules seront <strong>invisibles</strong> :
+        </p>
+        <figure>
+          <img src="assets/downloads/tp3/imgs/table-01.png" alt="Exemple de tableau">
+          <figcaption>Exemple de tableau</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Exercices</h3>
+
+        <h4>Exercice 1</h4>
+        <p>Créer le <b>tableau</b> dans une nouvelle page nommée <strong>tables.html</strong>.</p>
+        <figure>
+          <img src="assets/downloads/tp3/imgs/task01.gif" alt="Exercice 1">
+          <figcaption>Exercice 1</figcaption>
+        </figure>
+
+        <h4>Exercice 2</h4>
+        <p>Créer le <b>tableau</b> dans la page nommée <strong>tables.html</strong> sous le premier tableau.</p>
+        <ul>
+          <li>Utiliser l'attribut <strong>colspan="6"</strong> pour créer la cellule de la première ligne <strong>Time
+              Table</strong>. Cette cellule s'étend sur six colonnes.
+            <pre><code class="language-html">&lt;th colspan=&quot;6&quot;&gt;Time Table&lt;/th&gt;</code></pre>
+          </li>
+          <li>Utiliser l'attribut <strong>rowspan="6"</strong> pour créer la cellule de la première colonne
+            <strong>Hours</strong>. Cette cellule s'étend sur six lignes.
+            <pre><code class="language-html">&lt;th rowspan=&quot;6&quot;&gt;Hours&lt;/th&gt;</code></pre>
+          </li>
+        </ul>
+        <figure>
+          <img src="assets/downloads/tp3/imgs/task02.gif" alt="Exercice 2">
+          <figcaption>Exercice 2</figcaption>
+        </figure>
+
+        <h4>Exercice 3</h4>
+        <p>Créer le <b>tableau</b> dans la page nommée <strong>tables.html</strong> sous le deuxième tableau.</p>
+        <figure>
+          <img src="assets/downloads/tp3/imgs/task03.jpg" alt="Exercice 3">
+          <figcaption>Exercice 3</figcaption>
+        </figure>
+      </section>
+
+    </article>
+
+    <article>
+      <h2>Balises HTML</h2>
+
+      <section>
+        <h3>Balises sémantiques et non sémantiques</h3>
+
+        <h4>Balises sémantiques</h4>
+
+        <p>Les balises telles que, par exemple, <strong>&lt;p&gt;...&lt;/p&gt;</strong> pour
+          <strong><em>paragraph</em></strong>, <strong>&lt;h1&gt;...&lt;/h1&gt;</strong> pour <strong><em>heading level
+              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>italic</em></strong></strong>,
+          possèdent une signification et possèdent, donc, une fonction très spécifiques.
+        </p>
+        <p>Ces balises sont dites <strong>sémantiques</strong> car elles possèdent un rôle bien défini dans une page
+          Web.</p>
+
+        <h4>Balises non sémantiques</h4>
+        <p>Outre les balises sémantiques, HTML définit aussi des balises à <strong><em>usage général</em></strong> ou
+          <strong><em>génériques</em></strong>, dites <strong>non sémantiques</strong>. Le HTML4, parent du HTML5, en
+          possède uniquement deux :
+        </p>
+
+        <ul>
+          <li><strong>&lt;div&gt;...&lt;/div&gt;</strong> pour <strong><em>division</em></strong>, est une
+            <strong>balise de bloc</strong>, qui est utilisée pour
+            diviser la page en plusieurs parties emboîtées l'une dans l'autre.
+          </li>
+          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé à
+            l'intérieur d'un bloc pour marquer une partie de celui-ci.</li>
+        </ul>
+
+        <h4>Exemple</h4>
+
+        <p>Dans l'exemple ci-dessous nous avons utilisé les balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
+          <strong>&lt;span&gt;...&lt;/span&gt;</strong>. Pour donner un sens, ou sémantique, aux différents composants
+          nous avons utilisé l'attribut <strong>class="..."</strong>.
+        </p>
+        <pre><code class="language-html">&lt;div class=&quot;phrase&quot;&gt;
+  &lt;span class=&quot;sujet&quot;&gt;L&apos;oiseau&lt;/span&gt;
+  &lt;span class=&quot;verbe&quot;&gt;mange&lt;/span&gt;
+  &lt;span class=&quot;cod&quot;&gt;un ver&lt;/span&gt;.
+&lt;/div&gt;</code></pre>
+
+        <style>
+          .phrase {
+            font-size: 2em;
+            padding: 10px 10px 26px 10px;
+            background-color: #666;
+            color: #fff;
+          }
+
+          .phrase span {
+            display: inline-block;
+            position: relative;
+          }
+
+          .phrase span::after {
+            color: #fff;
+            position: absolute;
+            top: 44px;
+            font-size: 0.5em;
+            left: 0;
+          }
+
+          .phrase .sujet {
+            color: #C89FA3;
+            text-decoration: underline;
+          }
+
+          .phrase .sujet::after {
+            content: "Sujet";
+          }
+
+          .phrase .verbe {
+            display: inline-block;
+            color: #bdd0e2;
+          }
+
+          .phrase .verbe::after {
+            content: "Verbe";
+          }
+
+          .phrase .cod {
+            display: inline-block;
+            color: #f4ffa2;
+          }
+
+          .phrase .cod::after {
+            content: "COD";
+          }
+        </style>
+
+        <p>Qui peut être rendue à l'aide du CSS, par exemple, comme suit :</p>
+
+        <div class="phrase">
+          <span class="sujet">L'oiseau</span>
+          <span class="verbe">mange</span>
+          <span class="cod">un ver</span>.
+        </div>
+      </section>
+
+      <section>
+        <h3>Exercice 1</h3>
+
+        <p>Diviser la page comme suit en utilisant les balises indiquées dans l'image suivante.</p>
+
+        <figure>
+          <img src="assets/downloads/tp3/imgs/semantique-generique.png"
+            alt="Exemple d'utilisation des balises génériques">
+          <figcaption>Exemple d'utilisation des balises génériques</figcaption>
+        </figure>
+
+        <p>Télécharger le code à partir de ce <a href="assets/downloads/tp3/balises_generiques_starter.zip"
+            download="balises_generiques_starter.zip">lien</a>.</p>
+      </section>
+
+      <section>
+        <h3>Balises sémantiques HTML 5</h3>
+
+        <p>Le langage HTML 5 a introduit beaucoup de nouvelles balises sémantiques (structurelles) pour permettre
+          <strong>un découpage plus précis de votre page web en délimitant des zones spécifiques</strong>. La figure
+          suivante présente ces balises d'une façon graphique :
+        </p>
+
+        <figure>
+          <img src="images/page_structure.png" alt="Balises sémantiques" class="h7cm">
+          <figcaption>Balises sémantique</figcaption>
+        </figure>
+
+        <p>Les nouvelles balises sont <strong>recommandées</strong> pour la construction des nouveaux sites.</p>
+      </section>
+
+      <section>
+        <h3>Exercice 2</h3>
+
+        <p>Diviser la page comme suit en utilisant les balises <strong>sémantiques</strong> indiquées dans l'image
+          suivante.</p>
+
+        <figure>
+          <img src="assets/downloads/tp3/imgs/semantique-balises.png"
+            alt="Exemple d'utilisation des balises sémantiques">
+          <figcaption>Exemple d'utilisation des balises sémantiques</figcaption>
+        </figure>
+
+        <p>Télécharger le code à partir de ce <a href="assets/downloads/tp3/balises_semantiques_starter.zip"
+            download="balises_semantiques_starter.zip">lien</a>.</p>
+      </section>
+    </article>
+
+    <article>
       <h2>Application HTML</h2>
 
       <section>
@@ -259,155 +561,6 @@ Home page</code></pre>
         
 &lt;!-- un lien vers (index.html) dans un paragraphe --&gt;
 Home page</code></pre>
-      </section>
-    </article>
-
-    <article>
-      <h2>Balises HTML</h2>
-
-      <section>
-        <h3>Balises sémantiques et non sémantiques</h3>
-
-        <h4>Balises sémantiques</h4>
-
-        <p>Les balises telles que, par exemple, <strong>&lt;p&gt;...&lt;/p&gt;</strong> pour
-          <strong><em>paragraph</em></strong>, <strong>&lt;h1&gt;...&lt;/h1&gt;</strong> pour <strong><em>heading level
-              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>italic</em></strong></strong>,
-          possèdent une signification et possèdent, donc, une fonction très spécifiques.
-        </p>
-        <p>Ces balises sont dites <strong>sémantiques</strong> car elles possèdent un rôle bien défini dans une page
-          Web.</p>
-
-        <h4>Balises non sémantiques</h4>
-        <p>Outre les balises sémantiques, HTML définit aussi des balises à <strong><em>usage général</em></strong> ou
-          <strong><em>génériques</em></strong>, dites <strong>non sémantiques</strong>. Le HTML4, parent du HTML5, en
-          possède uniquement deux :
-        </p>
-
-        <ul>
-          <li><strong>&lt;div&gt;...&lt;/div&gt;</strong> pour <strong><em>division</em></strong>, est une
-            <strong>balise de bloc</strong>, qui est utilisée pour
-            diviser la page en plusieurs parties emboîtées l'une dans l'autre.
-          </li>
-          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé à
-            l'intérieur d'un bloc pour marquer une partie de celui-ci.</li>
-        </ul>
-
-        <h4>Exemple</h4>
-
-        <p>Dans l'exemple ci-dessous nous avons utilisé les balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
-          <strong>&lt;span&gt;...&lt;/span&gt;</strong>. Pour donner un sens, ou sémantique, aux différents composants
-          nous avons utilisé l'attribut <strong>class="..."</strong>.
-        </p>
-        <pre><code class="language-html">&lt;div class=&quot;phrase&quot;&gt;
-  &lt;span class=&quot;sujet&quot;&gt;L&apos;oiseau&lt;/span&gt;
-  &lt;span class=&quot;verbe&quot;&gt;mange&lt;/span&gt;
-  &lt;span class=&quot;cod&quot;&gt;un ver&lt;/span&gt;.
-&lt;/div&gt;</code></pre>
-
-        <style>
-          .phrase {
-            font-size: 2em;
-            padding: 10px 10px 26px 10px;
-            background-color: #666;
-            color: #fff;
-          }
-
-          .phrase span {
-            display: inline-block;
-            position: relative;
-          }
-
-          .phrase span::after {
-            color: #fff;
-            position: absolute;
-            top: 44px;
-            font-size: 0.5em;
-            left: 0;
-          }
-
-          .phrase .sujet {
-            color: #C89FA3;
-            text-decoration: underline;
-          }
-
-          .phrase .sujet::after {
-            content: "Sujet";
-          }
-
-          .phrase .verbe {
-            display: inline-block;
-            color: #bdd0e2;
-          }
-
-          .phrase .verbe::after {
-            content: "Verbe";
-          }
-
-          .phrase .cod {
-            display: inline-block;
-            color: #f4ffa2;
-          }
-
-          .phrase .cod::after {
-            content: "COD";
-          }
-        </style>
-
-        <p>Qui peut être rendue à l'aide du CSS, par exemple, comme suit :</p>
-
-        <div class="phrase">
-          <span class="sujet">L'oiseau</span>
-          <span class="verbe">mange</span>
-          <span class="cod">un ver</span>.
-        </div>
-      </section>
-
-      <section>
-        <h3>Exercice 1</h3>
-
-        <p>Diviser la page comme suit en utilisant les balises indiquées dans l'image suivante.</p>
-
-        <figure>
-          <img src="assets/downloads/tp3/imgs/semantique-generique.png"
-            alt="Exemple d'utilisation des balises génériques">
-          <figcaption>Exemple d'utilisation des balises génériques</figcaption>
-        </figure>
-
-        <p>Télécharger le code à partir de ce <a href="assets/downloads/tp3/balises_generiques_starter.zip"
-            download="balises_generiques_starter.zip">lien</a>.</p>
-      </section>
-
-      <section>
-        <h3>Balises sémantiques HTML 5</h3>
-
-        <p>Le langage HTML 5 a introduit beaucoup de nouvelles balises sémantiques (structurelles) pour permettre
-          <strong>un découpage plus précis de votre page web en délimitant des zones spécifiques</strong>. La figure
-          suivante présente ces balises d'une façon graphique :
-        </p>
-
-        <figure>
-          <img src="images/page_structure.png" alt="Balises sémantiques" class="h7cm">
-          <figcaption>Balises sémantique</figcaption>
-        </figure>
-
-        <p>Les nouvelles balises sont <strong>recommandées</strong> pour la construction des nouveaux sites.</p>
-      </section>
-
-      <section>
-        <h3>Exercice 2</h3>
-
-        <p>Diviser la page comme suit en utilisant les balises <strong>sémantiques</strong> indiquées dans l'image
-          suivante.</p>
-
-        <figure>
-          <img src="assets/downloads/tp3/imgs/semantique-balises.png"
-            alt="Exemple d'utilisation des balises sémantiques">
-          <figcaption>Exemple d'utilisation des balises sémantiques</figcaption>
-        </figure>
-
-        <p>Télécharger le code à partir de ce <a href="assets/downloads/tp3/balises_semantiques_starter.zip"
-            download="balises_semantiques_starter.zip">lien</a>.</p>
       </section>
     </article>
   </main>
