@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Devoir de contrôle N°2</title>
+
+  <style type="text/css">
+    body {
+      font-family: 'Book Antiqua';
+      font-size: 12pt;
+      width: 900px;
+      margin: 8px auto;
+    }
+    
+    .header-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .header-table p {
+      margin: 0;
+    }
+    
+    .header-table td {
+      width: 33%;
+      padding: 5px;
+      text-align: center;
+      border: 2px solid #000;
+    }
+    
+    .header-table td:last-child {
+      text-align: initial;
+    }
+    
+    .header-table td:nth-child(2) {
+      font-weight: bolder;
+      font-size: 20pt;
+    }
+    
+    h1 {
+      background-color: #d70046;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 10px 10px 0 0;
+      margin: 0.3em 0;
+    }
+    
+    h2 {
+      color: #fff;
+      background-color: #4e0055;
+      padding: 5px 15px;
+      border-radius: 5px 5px 0 0;
+      margin: 0.3em 0;
+    }
+    
+    .page {
+      padding: 7px;
+      border: 2px solid #666;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    
+    @media print {
+      .page {
+        page-break-inside: avoid;
+      }
+    }
+    
+    .page h2 {
+      margin-top: 0;
+    }
+    
+    .page img {
+      display: inline-block;
+      padding: 5px;
+      border: 2px solid #222;
+    }
+    
+    .page figure {
+      margin: 10px 20px;
+    }
+    
+    .page figcaption {
+      font-size: 11pt;
+      font-style: italic;
+    }
+
+    p {
+      margin: 0.3em 0;
+    }
+    
+    p i b {
+      color: red;
+    }
+    
+    footer {
+      text-align: center;
+      border-top: 2px solid #222;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <table class="header-table">
+      <tr>
+        <td>
+          <p>High-school of Hammam-Sousse</p>
+          <p>School Year 2019/2020</p>
+        </td>
+        <td>Mid-term exam N&deg;2</td>
+        <td>
+          <p><b>Teacher:</b> Mohamed Anis MANI</p>
+          <p><b>Class:</b> 2TI</p>
+          <p><b>Duration:</b> 1hour</p>
+          <p><b>Course: </b>HTML &amp; CSS</p>
+        </td>
+      </tr>
+    </table>
+  </header>
+
+
+  <h1>Introduction</h1>
+  <p>We are building the skeleton of a Website, <b>HTML only</b>, for the famous Fortnite game composed of four pages:</p>
+  <ul>
+    <li>
+      index.html
+    </li>
+    <li>
+      intro.html
+    </li>
+    <li>
+      competetive.html
+    </li>
+    <li>
+      register.html
+    </li>
+  </ul>
+
+  <h1>Web pages contents</h1>
+  <p>The screenshots below show the contents of each page.</p>
+  <p>The provided resource includes:</p>
+
+  <ul>
+    <li>the images required to build the web pages.</li>
+    <li>the starter code (you can download it) from the link below in the <a href="#task_list">task list</a>.</li>
+  </ul>
+
+  <p><i><b>Please, fellow the instructions provided in each HTML file without deleting comments.</b></i></p>
+
+  <div class="page">
+    <h2>First page: index.html</h2>
+    <figure>
+      <picture>
+        <img src="imgs/index.html.png" alt="index.html web page" />
+      </picture>
+      <figcaption><strong>Figure 1:</strong> The contents of the <b>index.html</b> page</figcaption>
+    </figure>
+    <p>The page contains three links as fellow:</p>
+    <ul>
+      <li>Epic games &rarr; http://epicgames.com/</li>
+      <li>Game Intro &rarr; intro.html</li>
+      <li>Competetive &rarr; competetive.html</li>
+    </ul>
+    <p><i><b>Take care to replicate all of the formatting of the page.</b></i></p>
+  </div>
+
+  <div class="page">
+    <h2>Second page: intro.html</h2>
+    <figure>
+      <picture>
+        <img src="imgs/intro.html.png" alt="intro.html web page" />
+      </picture>
+      <figcaption><strong>Figure 2:</strong> The contents of the <b>intro.html</b> page</figcaption>
+    </figure>
+
+    <p>The page contains one link as fellow:</p>
+    <ul>
+      <li>Home page &rarr; index.html</li>
+    </ul>
+
+    <p><i><b>Take care to replicate all of the formatting of the page.</b></i></p>
+  </div>
+
+  <div class="page">
+    <h2>Third page: competetive.html</h2>
+    <figure>
+      <picture><img src="imgs/competetive.html.png" alt="competetive.html web page" /></picture>
+      <figcaption><strong>Figure 3:</strong> The contents of the <b>competetive.html</b> page</figcaption>
+    </figure>
+    <p>From this page the user can reach either</p>
+    <ul>
+      <li>the home page (index.html)</li>
+      <li>or he/she can registers for the competetives using the (register.html) web form.</li>
+    </ul>
+    <p><i><b>Take care to replicate all of the formatting of the page.</b></i></p>
+  </div>
+
+  <div class="page">
+    <h2>Fourth page: register.html</h2>
+    <figure>
+      <picture>
+        <img src="imgs/register.html.png" alt="register.html web page"/>
+      </picture>
+      <figcaption><strong>Figure 4:</strong> The contents of the <b>register.html</b> page</figcaption>
+    </figure>
+
+    <p>The page contains the Fortnite image logo, and the registration form to the competitive.</p>
+    <p>We have used a table in order to properly format the table.</p>
+    <p>The link on the page is used to reach the home page (ie: index.html)</p>
+
+    <p><i><b>Take care to replicate all of the formatting of the page.</b></i></p>
+  </div>
+
+  <h1 id="task_list">Tasks</h1>
+  <ol>
+    <li>Download <a href="starter_code.zip">starter code</a> zip file from the server.</li>
+    <li>Create a folder into Documents folder having your name and forename.</li>
+    <li>Unzip/decmpress the starter code into the created folder.</li>
+    <li>Open the folder using the VSC editor.</li>
+    <li>Create the required pages to complete the exam.</li>
+    <li>Save your work periodically to avoid surprises!</li>
+  </ol>
+
+  <footer>
+    Good Luck
+  </footer>
+</body>
+
+</html>

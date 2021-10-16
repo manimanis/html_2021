@@ -1,0 +1,98 @@
+body {
+  width: 800px;
+  margin: 20px auto;
+  background-color: #a9a9a9;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  height: 3em;
+  line-height: 3em;
+  color: #fff;
+  font-size: 2em;
+  font-family: cursive;
+  text-align: center;
+  border: #fff solid 1px;
+  margin: 0.15em 0;
+  position: relative;
+}
+
+.header::after, .nav::after, .main::after, .aside::after, .footer::after {
+  content: "<div class=\"header\">";
+  display: inline-block;
+  position: absolute;
+  font-size: small;
+  background-color: #fff;
+  color: red;
+  line-height: initial;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  font-family: cursive;
+}
+
+.nav {
+  background-color: #ff80ff;
+  text-align: center;
+  border: #fff solid 1px;
+  width: 100%;
+  height: 3em;
+  margin: 0.15em 0;
+  line-height: 3em;
+  position: relative;
+}
+
+.nav::after {
+  content: "<div class=\"nav\">";
+}
+
+.main {
+  background-color: #fff;
+  text-align: center;
+  border: #333 solid 1px;
+  width: 70%;
+  height: 15em;
+  margin: 0.15em 0;
+  position: relative;
+  padding-top: 2em;
+}
+
+.main::after {
+  content: "<div class=\"main\">";
+  color: #fff;
+  background-color: #000;
+}
+
+.aside {
+  background-color: #ff80ff;
+  text-align: center;
+  border: #fff solid 1px;
+  width: calc(30% - 0.3em - 4px);
+  height: 15em;
+  margin: 0.15em 0 0.15em 0.3em;
+  position: relative;
+  padding-top: 2em;
+}
+
+.aside::after {
+  content: "<div class=\"aside\">";
+}
+
+.footer {
+  background-color: #fff;
+  text-align: center;
+  border: #333 solid 1px;
+  width: 100%;
+  height: 3em;
+  line-height: 3em;
+  margin: 0.15em 0;
+  position: relative;
+}
+
+.footer::after {
+  content: "<div class=\"footer\">";
+  color: #fff;
+  background-color: #000;
+}

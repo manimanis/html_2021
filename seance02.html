@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cours HTML5 / CSS3</title>
+  <title>Conception Web - Séance 2</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -24,7 +24,7 @@
     </nav>
   </aside>
   <main class="my-4 container">
-    <h1>Les langages du Web</h1>
+    <h1>Conception Web - Séance 2</h1>
 
     <article>
       <h2>Les liens hypertextes</h2>
@@ -355,103 +355,6 @@
             </table>
           </li>
         </ol>
-      </section>
-
-      <section>
-        <h3>Balises sémantiques et non sémantiques</h3>
-
-        <h4>Balises sémantiques</h4>
-
-        <p>Les balises telles que, par exemple, <strong>&lt;p&gt;...&lt;/p&gt;</strong> pour
-          <strong><em>paragraph</em></strong>, <strong>&lt;h1&gt;...&lt;/h1&gt;</strong> pour <strong><em>heading level
-              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>italic</em></strong></strong>,
-          possèdent une signification et possèdent, donc, une fonction très spécifiques.
-        </p>
-        <p>Ces balises sont dites <strong>sémantiques</strong> car elles possèdent un rôle bien défini dans une page
-          Web.</p>
-
-        <h4>Balises non sémantiques</h4>
-        <p>Outre les balises sémantiques, HTML définit aussi des balises à <strong><em>usage général</em></strong>,
-          dites <strong>non sémantiques</strong>. Le HTML4, parent du HTML5, en possède uniquement deux :
-        </p>
-
-        <ul>
-          <li><strong>&lt;div&gt;...&lt;/div&gt;</strong> pour <strong><em>division</em></strong>, est une
-            <strong>balise de bloc</strong>, qui est utilisée pour
-            diviser la page en plusieurs parties emboîtées l'une dans l'autre.
-          </li>
-          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé à
-            l'intérieur d'un bloc pour marquer une partie de celui-ci.</li>
-        </ul>
-
-        <h4>Exemple</h4>
-
-        <p>Dans l'exemple ci-dessous nous avons utilisé les balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
-          <strong>&lt;span&gt;...&lt;/span&gt;</strong> pour indiquer la fonction, attribut
-          <strong>class="..."</strong>, des différents éléments de la phrase.
-        </p>
-        <pre><code class="language-html">&lt;div class=&quot;phrase&quot;&gt;
-  &lt;span class=&quot;sujet&quot;&gt;L&apos;oiseau&lt;/span&gt;
-  &lt;span class=&quot;verbe&quot;&gt;mange&lt;/span&gt;
-  &lt;span class=&quot;cod&quot;&gt;un ver&lt;/span&gt;.
-&lt;/div&gt;</code></pre>
-
-        <style>
-          .phrase {
-            font-size: 2em;
-            padding: 10px 10px 26px 10px;
-            background-color: #666;
-            color: #fff;
-          }
-
-          .phrase span {
-            display: inline-block;
-            position: relative;
-          }
-
-          .phrase span::after {
-            color: #fff;
-            position: absolute;
-            top: 44px;
-            font-size: 0.5em;
-            left: 0;
-          }
-
-          .phrase .sujet {
-            color: #C89FA3;
-            text-decoration: underline;
-          }
-
-          .phrase .sujet::after {
-            content: "Sujet";
-          }
-
-          .phrase .verbe {
-            display: inline-block;
-            color: #bdd0e2;
-          }
-
-          .phrase .verbe::after {
-            content: "Verbe";
-          }
-
-          .phrase .cod {
-            display: inline-block;
-            color: #f4ffa2;
-          }
-
-          .phrase .cod::after {
-            content: "COD";
-          }
-        </style>
-
-        <p>Qui peut être rendue à l'aide du CSS, par exemple, comme suit :</p>
-
-        <div class="phrase">
-          <span class="sujet">L'oiseau</span>
-          <span class="verbe">mange</span>
-          <span class="cod">un ver</span>.
-        </div>
       </section>
 
       <section class="p-break">
