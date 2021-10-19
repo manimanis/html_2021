@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C#</title>
+</head>
+
+<body>
+  <!-- titre 1-->
+  <h1>C#</h1>
+
+  <!-- image csharp.png -->
+  <p><img src="images/csharp.png" alt="C#"></p>
+
+  <!-- paragraphe -->
+  <p>C# (C sharp [siː.ʃɑːp] en anglais britannique) est un langage de programmation orientée objet, commercialisé par
+    Microsoft depuis 20023 et destiné à développer sur la plateforme Microsoft .NET.</p>
+
+  <!-- paragraphe -->
+  <p>Il est dérivé du C++ et très proche du Java dont il reprend la syntaxe générale ainsi que les concepts, y ajoutant
+    des notions telles que la surcharge des opérateurs, les indexeurs et les délégués. Il est utilisé notamment pour
+    développer des applications web sur la plateforme ASP.NET.</p>
+
+  <!-- liste ordonnée -->
+  <ol>
+    <li><a href="#presentation">Présentation</a>
+      <ul>
+        <li>Plateforme .NET</li>
+      </ul>
+    </li>
+    <li><a href="#caracteristiques">Caractéristiques</a>
+      <ul>
+        <li>Syntaxe</li>
+        <li>Différences avec le C++</li>
+        <li>Différences avec le Java</li>
+      </ul>
+    </li>
+    <li><a href="#histoire">Histoire</a></li>
+  </ol>
+
+  <!-- titre 2 / id : presentation-->
+  <h2 id="presentation">Présentation</h2>
+
+  <!-- paragrpahe -->
+  <p>C# est un langage de programmation orientée objet, fortement typé, dérivé de C et de C++, ressemblant au langage
+    Java3. Il est utilisé pour développer des applications web, ainsi que des applications de bureau, des services web,
+    des commandes, des widgets ou des bibliothèques de classes3. En C#, une application est un lot de classes où une des
+    classes comporte une méthode Main, comme cela se fait en Java3.</p>
+
+  <!-- paragrpahe -->
+  <p>C# est destiné à développer sur la plateforme .NET, une pile technologique créée par Microsoft pour succéder à COM.
+  </p>
+
+  <!-- paragrpahe -->
+  <p>Les exécutables en C# sont subdivisés en assemblies, en namespaces, en classes et en membres de classe4. Un
+    assembly est la forme compilée, qui peut être un programme (un exécutable) ou une bibliothèque de classes (une dll).
+    Un assembly contient le code exécutable en MSIL, ainsi que les symboles. Le code MSIL est traduit en langage machine
+    au moment de l'exécution par la fonction just-in-time de la plateforme .NET4.</p>
+
+  <!-- titre 3 -->
+  <h3>Plateforme .NET</h3>
+
+  <!-- paragraphe -->
+  <p>C# est destiné à développer sur la plateforme .NET. Le cœur de cette pile technologique est le framework .NET,
+    composé de :</p>
+
+  <!-- liste non ordonnée -->
+  <ul>
+    <li>Les environnements ASP.NET et Winforms qui servent à exécuter des applications web, resp. de bureau conçus pour
+      la plateforme .NET.</li>
+    <li>Une bibliothèque de classes qui permet de manipuler des fichiers, manipuler des tableaux ou des structures en
+      arbres, accéder à Internet, créer des interfaces graphiques, accéder à des bases de données, accéder au registre
+      Windows et beaucoup d'autres choses. La plupart des fonctionnalités sont offertes par des classes de l'espace de
+      noms System.</li>
+    <li>Le Common Language Runtime (abr. CLR) est le runtime utilisé par les langages de la plateforme .NET (C#, Visual
+      Basic .NET, J#, etc.), les services fournis par la CLR sont le lancement et l'exécution de programmes, le
+      ramasse-miettes et la gestion d'exceptions. Un programme pour la plateforme .NET est tout d'abord compilé en une
+      forme intermédiaire, le MSIL, puis ce code MSIL est transformé en code machine qui sera exécuté par la CLR. Ce
+      code machine est appelé managed code parce que son exécution est sous le contrôle de la CLR.</li>
+  </ul>
+
+  <!-- paragraphe -->
+  <p>Un autre produit de la plateforme .NET est l'environnement de développement Visual Studio .NET, outil généralement
+    utilisé pour programmer en C#.</p>
+
+  <!-- titre 2 / id : caracteristiques -->
+  <h2 id="caracteristiques">Caractéristiques</h2>
+
+  <!-- paragraphe -->
+  <p>C# est un langage dérivé du C++, il apporte un typage sûr, ainsi que les possibilités d'encapsulation, d'héritage
+    et de polymorphisme des langages orientés objet3. En C# tous les types sont des objets3. Le langage comporte un
+    ramasse-miettes et un système de gestion d'exceptions.</p>
+
+  <!-- paragraphe -->
+  <p>Le typage sûr signifie notamment que les opérations suivantes sont refusées : utilisation de variable non
+    initialisée, tentative d'accéder au-delà des limites d'un tableau, conversions de type dont les résultats ne sont
+    pas prévisibles, dépassement des limites lors d'opérations arithmétiques.</p>
+
+  <!-- paragraphe -->
+  <p>Beaucoup de possibilités de Java se retrouvent dans C# et il y a une forte ressemblance entre un code écrit en C#
+    et le code équivalent en Java.</p>
+
+  <!-- paragraphe -->
+  <p>En C# les variables peuvent être d'un type référence ou d'un type valeur. Les types valeur sont les types
+    primitifs, les énumérations, les struct et les types nullable4. Les types référence sont les classes, les
+    interfaces, les tableaux et les delegate.</p>
+
+  <!-- titre 3 -->
+  <h3>Syntaxe</h3>
+
+  <!-- code préformatté -->
+  <pre><code>using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello world!");
+    }
+}
+</code></pre>
+
+  <!-- titre 3 -->
+  <h3>Différences avec le C++</h3>
+
+  <!-- paragraphe -->
+  <p>Le langage compte un certain nombre de changements par rapport au C/C++ ; on notera particulièrement les points
+    suivants :</p>
+
+  <!-- liste non ordonnée -->
+  <ul>
+    <li>la manipulation directe de pointeurs ne peut se faire qu’au sein d’un code marqué unsafe, et seuls les
+      programmes avec les permissions appropriées peuvent exécuter des blocs de code unsafe. La plupart des
+      manipulations de pointeurs se font via des références sécurisées, dont l’adresse ne peut être directement
+      modifiée, et la plupart des opérations de pointeurs et d’allocations sont contrôlées contre les dépassements de
+      mémoire. Les pointeurs ne peuvent pointer que sur des types de valeurs, les types objets, manipulés par le
+      ramasse-miettes, ne pouvant qu’être référencés ;</li>
+    <li>les objets ne peuvent pas être explicitement détruits. Le ramasse-miettes s’occupe de libérer la mémoire
+      lorsqu’il n’existe plus aucune référence pointant sur un objet. Toutefois, pour les objets gérant des types non
+      managés, il est possible d’implémenter l’interface IDisposable pour spécifier des traitements à effectuer au
+      moment de la libération de la ressource ;</li>
+    <li>l’héritage multiple de classes est interdit, mais une classe peut implémenter un nombre illimité d’interfaces,
+      et une interface peut hériter de plusieurs interfaces ;</li>
+  </ul>
+
+  <!-- titre 3 -->
+  <h3>Différences avec le Java</h3>
+
+  <!-- paragraphe -->
+  <p>Bien que le C# soit similaire à Java, il existe des différences notables, par exemple :</p>
+
+  <!-- liste non ordonnée -->
+  <ul>
+    <li>Java n'autorise pas la surcharge des opérateurs ;</li>
+    <li>Java a des exceptions vérifiées, alors que les exceptions du C# ne sont pas vérifiées, comme en C++ ;</li>
+    <li>Java permet la génération automatique de la documentation HTML à partir des fichiers sources à l'aide des
+      descriptions Javadoc-syntax, tandis que le C# utilise des descriptions fondées sur le XML ;</li>
+  </ul>
+
+  <!-- titre 2  / id : hidtoire -->
+  <h2 id="histoire">Histoire</h2>
+
+  <!-- paragraphe -->
+  <p>C'est en septembre 2002 que la plateforme .NET et C# sont présentés au public. C# devient le langage de facto de
+    cette plateforme, il a par ailleurs été utilisé pour implémenter une partie de la plateforme .NET.</p>
+
+  <!-- tableau 9 lignes x 4 colonnes-->
+  <table border="1">
+    <tr>
+      <th>Année</th>
+      <th>Version</th>
+      <th>Bibliothèque</th>
+      <th>Principal changement</th>
+    </tr>
+    <tr>
+      <td>2002</td>
+      <td>1.0</td>
+      <td>.NET framework 1.0 et 1.1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>2005</td>
+      <td>2.0</td>
+      <td>.NET framework 2.0</td>
+      <td>Généricité ajoutée à C# et au framework</td>
+    </tr>
+    <tr>
+      <td>2008</td>
+      <td>3.0</td>
+      <td>.NET framework 3.5</td>
+      <td>LINQ (Language INtegrated Queries)</td>
+    </tr>
+    <tr>
+      <td>2010</td>
+      <td>4.0</td>
+      <td>.NET framework 4.0</td>
+      <td>Types dynamiques</td>
+    </tr>
+    <tr>
+      <td>2012</td>
+      <td>5.0</td>
+      <td>.NET framework 4.5</td>
+      <td>Méthodes asynchrones</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>6.0</td>
+      <td>.NET framework 4.6</td>
+      <td>Version pour Linux</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>7.0</td>
+      <td>.NET framework >= 4.5</td>
+      <td>Tuples, fonctions locales</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>8.0</td>
+      <td>.NET standard >=2.1 et .NET Core >=3.0</td>
+      <td>Membre ReadOnly, opérateur d’assignation de fusion</td>
+    </tr>
+  </table>
+
+  <!-- 
+    paragraphe -> Lien vers langages.html
+ -->
+  <p><a href="langages.html">Page d'accueil</a></p>
+</body>
+
+</html>
