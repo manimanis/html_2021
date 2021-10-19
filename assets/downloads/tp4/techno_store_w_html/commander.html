@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commander</title>
+</head>
+
+<body>
+  <h1>Techno Store - Commande</h1>
+
+  <h2>Information client</h2>
+  <form action="confirmation.html" method="post">
+    <div>
+      <label for="nom-prenom">Nom & Prénom</label>
+      <input id="nom-prenom" name="nom_prenom" type="text" required>
+    </div>
+
+    <div>
+      <label for="date-naiss">Date de naissance</label>
+      <input id="date-naiss" name="date_naiss" type="date" required>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+    </div>
+
+    <div>
+      <label for="telephone">Téléphone</label>
+      <input id="telephone" name="telephone" type="phone" required>
+    </div>
+
+    <div>
+      <label for="adresse">Adresse</label>
+      <textarea id="adresse" name="adresse" required></textarea>
+    </div>
+
+    <h2>Information compte</h2>
+    <div>
+      <label for="pseudo">Pseudo-nom</label>
+      <input id="pseudo" name="pseudo" type="text" required>
+    </div>
+
+    <div>
+      <label for="mot-passe">Mot de passe</label>
+      <input id="mot-passe" name="mot_passe" type="password" required>
+    </div>
+
+    <div>
+      <label for="mot-passe-conf">Confirmation</label>
+      <input id="mot-passe-conf" name="mot_passe_conf" type="password" required>
+    </div>
+
+    <h3>Information commande</h3>
+
+    <div>
+      <label for="article">Article</label>
+      <select id="article" name="article" required>
+        <option value="2229">Lenovo</option>
+        <option value="2599">Dell</option>
+        <option value="2199">HP</option>
+        <option value="1859">MSI</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="qte">Quantité</label>
+      <input id="qte" name="qte" type="number" min="1" max="10" value="1" required>
+    </div>
+
+    <h3>Information paiement</h3>
+    <div>
+      Type de paiement
+      <input id="type-paiement-1" name="type_paiement" type="radio" value="Carte bancaire" checked required>
+      <label for="type-paiement-1">Carte bancaire</label>
+      - <input id="type-paiement-2" name="type_paiement" type="radio" value="Virement bancaire" required>
+      <label for="type-paiement-2">Virement bancaire</label>
+      - <input id="type-paiement-3" name="type_paiement" type="radio" value="Livraison" required>
+      <label for="type-paiement-3">Comptant à la livraison</label>
+    </div>
+
+    <p>Les articles vendus ne peuvent être ni retournés, ni échangé sauf défaut d'usine</p>
+    <div>
+      <input id="approuve" name="approuve" type="checkbox" value="ok" required>
+      <label for="approuve">J'ai lu et j'accepte les termes de contrat de vente</label>
+    </div>
+
+    <div>
+      <button type="submit">Commander</button>
+      <button type="reset">Effacer</button>
+    </div>
+  </form>
+  <p>
+    <a href="index.html">&larr; Page principale</a>
+  </p>
+</body>
+
+</html>
