@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conception Web - Séance 3</title>
+  <title>Conception Web - Séance 4</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -27,92 +27,394 @@
     <h1>Conception Web - Séance 4</h1>
 
     <article>
-      <h2>Révision</h2>
+      <h2 class="p-break">Balises HTML</h2>
 
       <section>
-        <h3>Application 3</h3>
+        <h3>Balises sémantiques et non sémantiques</h3>
 
-        <p>Nous construisons le squelette d'un site Web, <strong>HTML uniquement</strong>, pour le magasin de vente de
-          matériel informatique <strong>Techno Store</strong>, composé de sept pages :</p>
+        <h4>Balises sémantiques</h4>
+
+        <p>Les balises telles que, par exemple, <strong>&lt;p&gt;...&lt;/p&gt;</strong> pour
+          <strong><em>paragraph</em></strong>, <strong>&lt;h1&gt;...&lt;/h1&gt;</strong> pour <strong><em>heading level
+              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>italic</em></strong></strong>,
+          possèdent une signification et possèdent, donc, une fonction très spécifiques.
+        </p>
+        <p>Ces balises sont dites <strong>sémantiques</strong> car elles possèdent un rôle bien défini dans une page
+          Web.</p>
+
+        <h4>Balises non sémantiques</h4>
+        <p>Outre les balises sémantiques, HTML définit aussi des balises à <strong><em>usage général</em></strong> ou
+          <strong><em>génériques</em></strong>, dites <strong>non sémantiques</strong>. Le HTML4, parent du HTML5, en
+          possède uniquement deux :
+        </p>
 
         <ul>
-          <li><strong>index.html</strong> : Page d'accueil qui présente tous les articles en promotion</li>
-          <li><strong>lenovo.html</strong>, <strong>dell.html</strong>, <strong>hp.html</strong>,
-            <strong>msi.html</strong> : Caractéristiques des PCs en promotion
+          <li><strong>&lt;div&gt;...&lt;/div&gt;</strong> pour <strong><em>division</em></strong>, est une
+            <strong>balise de bloc</strong>, qui est utilisée pour
+            diviser la page en plusieurs parties emboîtées l'une dans l'autre.
           </li>
-          <li><strong>commander.html</strong> : Formulaire de commande d'un produit</li>
-          <li><strong>confirmation.html</strong> : Message affiché pour confirmer la commande</li>
+          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé à
+            l'intérieur d'un bloc pour marquer une partie de celui-ci.</li>
+        </ul>
+
+        <h4>Exemple</h4>
+
+        <p>Dans l'exemple ci-dessous nous avons utilisé les balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
+          <strong>&lt;span&gt;...&lt;/span&gt;</strong>. Pour donner un sens, ou sémantique, aux différents composants
+          nous avons utilisé l'attribut <strong>class="..."</strong>.
+        </p>
+        <pre><code class="language-html">&lt;div class=&quot;phrase&quot;&gt;
+  &lt;span class=&quot;sujet&quot;&gt;L&apos;oiseau&lt;/span&gt;
+  &lt;span class=&quot;verbe&quot;&gt;mange&lt;/span&gt;
+  &lt;span class=&quot;cod&quot;&gt;un ver&lt;/span&gt;.
+&lt;/div&gt;</code></pre>
+
+        <style>
+          .phrase {
+            font-size: 2em;
+            padding: 10px 10px 26px 10px;
+            background-color: #666;
+            color: #fff;
+          }
+
+          .phrase span {
+            display: inline-block;
+            position: relative;
+          }
+
+          .phrase span::after {
+            color: #fff;
+            position: absolute;
+            top: 44px;
+            font-size: 0.5em;
+            left: 0;
+          }
+
+          .phrase .sujet {
+            color: #C89FA3;
+            text-decoration: underline;
+          }
+
+          .phrase .sujet::after {
+            content: "Sujet";
+          }
+
+          .phrase .verbe {
+            display: inline-block;
+            color: #bdd0e2;
+          }
+
+          .phrase .verbe::after {
+            content: "Verbe";
+          }
+
+          .phrase .cod {
+            display: inline-block;
+            color: #f4ffa2;
+          }
+
+          .phrase .cod::after {
+            content: "COD";
+          }
+        </style>
+
+        <p>Qui peut être rendue à l'aide du CSS, par exemple, comme suit :</p>
+
+        <div class="phrase">
+          <span class="sujet">L'oiseau</span>
+          <span class="verbe">mange</span>
+          <span class="cod">un ver</span>.
+        </div>
+      </section>
+
+      <section>
+        <h3>Exercice 1</h3>
+
+        <p>Diviser la page comme suit en utilisant les balises indiquées dans l'image suivante.</p>
+
+        <figure>
+          <img class="h7cm" src="assets/downloads/tp3/imgs/semantique-generique.png"
+            alt="Exemple d'utilisation des balises génériques">
+          <figcaption>Exemple d'utilisation des balises génériques</figcaption>
+        </figure>
+
+        <p>Télécharger le code à partir de ce <a href="assets/downloads/tp3/balises_generiques_starter.zip"
+            download="balises_generiques_starter.zip">lien</a>.</p>
+      </section>
+
+      <section>
+        <h3>Balises sémantiques HTML 5</h3>
+
+        <p>Le langage HTML 5 a introduit beaucoup de nouvelles balises sémantiques (structurelles) pour permettre
+          <strong>un découpage plus précis de votre page web en délimitant des zones spécifiques</strong>. La figure
+          suivante présente ces balises d'une façon graphique :
+        </p>
+
+        <figure>
+          <img src="images/page_structure.png" alt="Balises sémantiques" class="h7cm">
+          <figcaption>Balises sémantique</figcaption>
+        </figure>
+
+        <p>Les nouvelles balises sont <strong>recommandées</strong> pour la construction des nouveaux sites.</p>
+      </section>
+
+      <section>
+        <h3>Exercice 2</h3>
+
+        <p>Diviser la page comme suit en utilisant les balises <strong>sémantiques</strong> indiquées dans l'image
+          suivante.</p>
+
+        <figure>
+          <img class="h7cm" src="assets/downloads/tp3/imgs/semantique-balises.png"
+            alt="Exemple d'utilisation des balises sémantiques">
+          <figcaption>Exemple d'utilisation des balises sémantiques</figcaption>
+        </figure>
+
+        <p>Télécharger le code à partir de ce <a href="assets/downloads/tp3/balises_semantiques_starter.zip"
+            download="balises_semantiques_starter.zip">lien</a>.</p>
+      </section>
+    </article>
+
+    <article>
+      <h2>Application HTML</h2>
+
+      <section>
+        <h3>Présentation</h3>
+
+        <p>Nous construisons le squelette d'un site Web, <strong>HTML uniquement</strong>, pour le célèbre jeu Fortnite
+          composé de quatre pages :</p>
+
+        <ul>
+          <li>index.html</li>
+          <li>intro.html</li>
+          <li>competetive.html</li>
+          <li>register.html</li>
         </ul>
         <div class="d-print-none">
           <p>Cliquer sur les images pour les agrandir.</p>
           <div class="row">
             <div class="col-sm-3">
               <figure>
-                <a href="assets/downloads/tp4/images/index.html.png" target="_blank" rel="noopener noreferrer"><img
-                    src="assets/downloads/tp4/images/index.min.html.png" alt="index.html"></a>
+                <a href="assets/downloads/tp3/imgs/index.html.png" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/downloads/tp3/imgs/index.html.min.png" alt="index.html"></a>
                 <figcaption>index.html</figcaption>
               </figure>
             </div>
             <div class="col-sm-3">
               <figure>
-                <a href="assets/downloads/tp4/images/lenovo.html.png" target="_blank" rel="noopener noreferrer"><img
-                    src="assets/downloads/tp4/images/lenovo.min.html.png" alt="lenovo.html"></a>
-                <figcaption>lenovo.html</figcaption>
+                <a href="assets/downloads/tp3/imgs/intro.html.png" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/downloads/tp3/imgs/intro.html.min.png" alt="intro.html"></a>
+                <figcaption>intro.html</figcaption>
               </figure>
             </div>
             <div class="col-sm-3">
               <figure>
-                <a href="assets/downloads/tp4/images/dell.html.png" target="_blank" rel="noopener noreferrer"><img
-                    src="assets/downloads/tp4/images/dell.min.html.png" alt="java.html"></a>
-                <figcaption>dell.html</figcaption>
+                <a href="assets/downloads/tp3/imgs/competetive.html.png" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/downloads/tp3/imgs/competetive.html.min.png" alt="competetive.html"></a>
+                <figcaption>competetive.html</figcaption>
               </figure>
             </div>
             <div class="col-sm-3">
               <figure>
-                <a href="assets/downloads/tp4/images/hp.html.png" target="_blank" rel="noopener noreferrer"><img
-                    src="assets/downloads/tp4/images/hp.min.html.png" alt="csharp.html"></a>
-                <figcaption>hp.html</figcaption>
-              </figure>
-            </div>
-            <div class="col-sm-3">
-              <figure>
-                <a href="assets/downloads/tp4/images/msi.html.png" target="_blank" rel="noopener noreferrer"><img
-                    src="assets/downloads/tp4/images/msi.min.html.png" alt="msi.html"></a>
-                <figcaption>msi.html</figcaption>
-              </figure>
-            </div>
-            <div class="col-sm-3">
-              <figure>
-                <a href="assets/downloads/tp4/images/commander.html.png" target="_blank" rel="noopener noreferrer"><img
-                    src="assets/downloads/tp4/images/commander.min.html.png" alt="commander.html"></a>
-                <figcaption>commander.html</figcaption>
-              </figure>
-            </div>
-            <div class="col-sm-3">
-              <figure>
-                <a href="assets/downloads/tp4/images/confirmation.html.png" target="_blank"
-                  rel="noopener noreferrer"><img src="assets/downloads/tp4/images/confirmation.min.html.png"
-                    alt="confirmation.html"></a>
-                <figcaption>confirmation.html</figcaption>
+                <a href="assets/downloads/tp3/imgs/register.html.png" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/downloads/tp3/imgs/register.html.min.png" alt="register.html"></a>
+                <figcaption>register.html</figcaption>
               </figure>
             </div>
           </div>
         </div>
-
-        <h4>Travail demandé</h4>
-        <ol>
-          <li>Télécharger le texte et les images nécessaires pour réaliser ce TP : <a
-              href="assets/downloads/tp4/techno_store_starter.zip" download="techno_store_starter">Fichiers du TP</a>
-          </li>
-          <li>Décompresser le fichier <i>compressé</i> dans votre dossier de travail.</li>
-          <li>Ouvrir ce dossier à l'aide de Visual Studio Code.</li>
-          <li>Ajouter la structure minimale d'une page Web à chacune des quatre pages. <strong class="text-danger">Ne
-              pas supprimer les commentaires</strong></li>
-          <li>Répondre en dessous des commentaires sans les supprimer.</li>
-        </ol>
       </section>
 
+      <section>
+        <h3>Page index.html</h3>
 
+        <figure>
+          <img class="border border-dark p-2 h7cm" src="assets/downloads/tp3/imgs/index-explained.png"
+            alt="Contenu de la page index.html">
+          <figcaption>index.html</figcaption>
+        </figure>
+
+        <div class="d-print-none">
+          <h4>Texte</h4>
+
+          <pre class="bg-dark text-light"><code>&lt;!--
+    Important:
+    - Les commentaires ci-dessous servent d'instructions à l'utilisateur
+    - Ne supprimez aucun des commentaires contenus dans ce fichier 
+
+    Bonne Chance
+--&gt;
+
+&lt;!-- fornite_logo.png dans un paragraphe --&gt;
+
+&lt;!-- un paragraphe --&gt;
+Genre(s)
+Survival, battle royale, sandbox
+
+&lt;!-- un paragraphe --&gt;
+Developer(s)
+Epic Games
+
+&lt;!-- un paragraphe --&gt;
+Publisher(s)
+Epic Games, Warner Bros. Interactive Entertainment
+
+&lt;!-- un paragraphe --&gt;
+Platform(s)
+Windows, macOS, Nintendo Switch, PlayStation 4, Xbox One, iOS, Android
+
+&lt;!-- un paragraphe --&gt;
+First release
+July 25, 2017
+
+&lt;!-- lien vers intro.html à l'intérieur d'un paragraphe --&gt;
+Game Intro
+
+&lt;!-- lien vers competitive.html à l'intérieur d'un paragraphe --&gt;
+Competitive</code></pre>
+
+          <h4>Médias</h4>
+          <figure>
+            <img src="assets/downloads/tp3/DC02_Solution/images/fortnite_logo.png" alt="Logo fortnite">
+            <figcaption>Logo fortnite</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Page intro.html</h3>
+
+        <figure>
+          <img class="border border-dark p-2 h13cm" src="assets/downloads/tp3/imgs/intro.html.png"
+            alt="Contenu de la page intro.html">
+          <figcaption>intro.html</figcaption>
+        </figure>
+        <div class="d-print-none">
+          <pre class="bg-dark text-light"><code>&lt;!--
+    Important:
+    - Les commentaires ci-dessous servent d&apos;instructions &agrave; l&apos;utilisateur
+    - Ne supprimez aucun des commentaires contenus dans ce fichier 
+
+    Bonne Chance
+--&gt;
+
+&lt;!-- fornite_logo.png dans un paragraphe --&gt;
+
+&lt;!-- paragraphe --&gt;
+Fortnite is an online video game developed by Epic Games and released in 2017.
+
+&lt;!-- paragraphe --&gt;
+It is available in three distinct game mode versions:
+
+&lt;!-- liste non ordonnée --&gt;
+  1st Fortnite: Save the World, a cooperative shooter-survival game for up to four players to fight off zombie-like creatures and defend objects with fortifications they can build;
+  2nd Fortnite Battle Royale, a free-to-play battle royale game where up to 100 players fight to be the last person standing;
+  and 3rd Fortnite Creative, where players are given complete freedom to create worlds and battle arenas.
+
+&lt;!-- l'image (fortnite.jpg) dans un paragraphe --&gt;
+
+&lt;!-- un lien hypertexte vers (index.html) dans un paragraphe --&gt;
+Home page</code></pre>
+
+          <h4>Médias</h4>
+          <figure>
+            <img src="assets/downloads/tp3/DC02_Solution/images/fortnite.jpg" alt="Image fortnite">
+            <figcaption>Image fortnite</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="p-break">Page competitive.html</h3>
+
+        <figure>
+          <img class="border border-dark p-2 h10cm" src="assets/downloads/tp3/imgs/competetive.html.png"
+            alt="Contenu de la page competetive.html">
+          <figcaption>competetive.html</figcaption>
+        </figure>
+        <div class="d-print-none">
+          <pre class="bg-dark text-light"><code>&lt;!--
+    Important:
+    - Les commentaires ci-dessous servent d&apos;instructions &agrave; l&apos;utilisateur
+    - Ne supprimez aucun des commentaires contenus dans ce fichier 
+
+    Bonne Chance
+--&gt;
+
+&lt;!-- fornite_logo.png dans un paragraphe --&gt;
+
+&lt;!-- titre niveau 1 --&gt;
+Competetive
+
+&lt;!-- titre niveau 2 --&gt;
+DROP IN AND GET HYPE!
+
+&lt;!-- titre niveau 3 --&gt;
+Ways to Play
+
+&lt;!-- liste ordonnée --&gt;
+Play Arena
+Open Events
+Fortnite Champion Series
+
+
+&lt;!-- titre niveau 3 --&gt;
+Rules &amp; Guidelines
+
+&lt;!-- liste non ordonnée --&gt;
+Tournament Rules Library
+Event license terms
+Event style guide
+
+&lt;!-- un lien vers (register.html) dans un paragraphe --&gt;
+Register
+
+&lt;!-- un lien vers (index.html) dans un paragraphe --&gt;
+Home page</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3>Page register.html</h3>
+
+        <figure>
+          <img class="border border-dark p-2" src="assets/downloads/tp3/imgs/register.html.png"
+            alt="Contenu de la page register.html">
+          <figcaption>register.html</figcaption>
+        </figure>
+        <div class="d-print-none">
+          <pre class="bg-dark text-light"><code>&lt;!--
+    Important:
+    - Les commentaires ci-dessous servent d&apos;instructions &agrave; l&apos;utilisateur
+    - Ne supprimez aucun des commentaires contenus dans ce fichier 
+
+    Bonne Chance
+--&gt;
+
+&lt;!-- fornite_logo.png dans un paragraphe --&gt;
+
+&lt;!-- formulaire --&gt;
+
+  &lt;!-- un tableau à l'intérieur du formulaire --&gt;
+    
+    &lt;!-- ligne 1--&gt;  
+      &lt;!-- colonne --&gt;
+      Nickname
+      &lt;!-- une colonne qui contient une champ de texte pour le pseudo-name --&gt;
+    
+    &lt;!-- ligne 2 --&gt;
+      &lt;!-- colonne --&gt;
+      Email
+      &lt;!-- une colonne qui contient une champ de texte pour l'email --&gt;
+    
+    &lt;!-- ligne 3 --&gt;
+      &lt;!-- colonne qui s'étend deux 2 colonnes qui contient le bouton register --&gt;
+      Register
+        
+&lt;!-- un lien vers (index.html) dans un paragraphe --&gt;
+Home page</code></pre>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="d-print-none bg-dark text-white p-2">
