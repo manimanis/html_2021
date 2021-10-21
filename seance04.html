@@ -36,11 +36,10 @@
 
         <p>Les balises telles que, par exemple, <strong>&lt;p&gt;...&lt;/p&gt;</strong> pour
           <strong><em>paragraph</em></strong>, <strong>&lt;h1&gt;...&lt;/h1&gt;</strong> pour <strong><em>heading level
-              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>italic</em></strong></strong>,
-          possèdent une signification et possèdent, donc, une fonction très spécifiques.
+              1</em></strong>, <strong>&lt;b&gt;...&lt;/b&gt;</strong> pour <strong><em>bold</em></strong></strong>,
+          possèdent une signification et un usage très spécifiques.
         </p>
-        <p>Ces balises sont dites <strong>sémantiques</strong> car elles possèdent un rôle bien défini dans une page
-          Web.</p>
+        <p>Ces balises sont dites <strong>sémantiques</strong>.</p>
 
         <h4>Balises non sémantiques</h4>
         <p>Outre les balises sémantiques, HTML définit aussi des balises à <strong><em>usage général</em></strong> ou
@@ -50,18 +49,20 @@
 
         <ul>
           <li><strong>&lt;div&gt;...&lt;/div&gt;</strong> pour <strong><em>division</em></strong>, est une
-            <strong>balise de bloc</strong>, qui est utilisée pour
-            diviser la page en plusieurs parties emboîtées l'une dans l'autre.
+            <strong>balise de bloc</strong>, qui est généralement utilisée pour structurer la page.
           </li>
-          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé à
-            l'intérieur d'un bloc pour marquer une partie de celui-ci.</li>
+          <li><strong>&lt;span&gt;...&lt;/span&gt;</strong>, est une <strong>balise en ligne</strong>, qui est utilisé
+            pour grouper des éléments, en vue de les mettre en forme à l'aide du CSS.</li>
         </ul>
+
+        <p>Les <strong>balises génériques</strong> peuvent être imbriquées les unes dans les autres.</p>
 
         <h4>Exemple</h4>
 
-        <p>Dans l'exemple ci-dessous nous avons utilisé les balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
-          <strong>&lt;span&gt;...&lt;/span&gt;</strong>. Pour donner un sens, ou sémantique, aux différents composants
-          nous avons utilisé l'attribut <strong>class="..."</strong>.
+        <p>L'exemple suivant est une démonstration de l'usage des balises <strong>&lt;div&gt;...&lt;/div&gt;</strong> et
+          <strong>&lt;span&gt;...&lt;/span&gt;</strong> pour marquer les différents composants d'une phrase. Dans cet
+          exemple, il y'a eu recours à l'attribut <strong>class="..."</strong> pour donner un sens, ou une sémantique,
+          aux différents composants.
         </p>
         <pre><code class="language-html">&lt;div class=&quot;phrase&quot;&gt;
   &lt;span class=&quot;sujet&quot;&gt;L&apos;oiseau&lt;/span&gt;
@@ -118,7 +119,7 @@
           }
         </style>
 
-        <p>Qui peut être rendue à l'aide du CSS, par exemple, comme suit :</p>
+        <p>Le code HTML précédent peut être rendu comme suit, à l'aide du CSS :</p>
 
         <div class="phrase">
           <span class="sujet">L'oiseau</span>
@@ -130,7 +131,7 @@
       <section>
         <h3>Exercice 1</h3>
 
-        <p>Diviser la page comme suit en utilisant les balises indiquées dans l'image suivante.</p>
+        <p>Diviser la page comme suit en utilisant les balises indiquées dans l'image.</p>
 
         <figure>
           <img class="h6cm" src="assets/downloads/tp3/imgs/semantique-generique.png"
@@ -156,13 +157,14 @@
         </figure>
 
         <p>Les nouvelles balises sont <strong>recommandées</strong> pour la construction des nouveaux sites.</p>
+        <p>On préfère l'écriture <strong>&lt;header&gt;...&lt;/header&gt;</strong> sur <strong>&lt;div
+            class=&quot;header&quot;&gt;...&lt;/div&gt;</strong></p>
       </section>
 
       <section>
         <h3>Exercice 2</h3>
 
-        <p>Diviser la page comme suit en utilisant les balises <strong>sémantiques</strong> indiquées dans l'image
-          suivante.</p>
+        <p>Diviser la page comme suit en utilisant les balises <strong>sémantiques</strong> indiquées dans l'image.</p>
 
         <figure>
           <img class="h6cm" src="assets/downloads/tp3/imgs/semantique-balises.png"

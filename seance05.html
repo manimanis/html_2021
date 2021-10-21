@@ -30,17 +30,19 @@
       <h2>Formulaires</h2>
 
       <section>
-        <h3>Les formulaires</h3>
+        <h3>Introduction</h3>
 
-        <p>Les formulaires HTML sont utilisés par les sites Web pour interagir avec l'utilisateur. Ils permettent à
-          l'utilisateur d'envoyer des données au site web. La plupart du temps, ces données sont envoyées à des serveurs
-          web.</p>
+        <p>Les <strong>formulaires</strong> sont utilisés par les sites Web pour <ins>interagir avec
+            l'utilisateur</ins>. Ils permettent à l'utilisateur d'<ins>envoyer des données au site web</ins>. La plupart
+          du temps, ces données sont envoyées à des serveurs web.</p>
 
-        <p>Un formulaire HTML est formé par un ou plusieurs composants. Ceux-ci peuvent être des champs/zones de texte,
-          des boîtes à sélection, des boutons, des cases à cocher ou des boutons radio.</p>
+        <p>Un <strong>formulaire</strong> est <strong><em>formé</em></strong> par <strong><em>un ou plusieurs
+              composants</em></strong>. Ceux-ci peuvent être des <ins>champs/zones de texte</ins>, des <ins>listes
+            déroulantes</ins>, des <ins>boutons</ins>, des <ins>cases à cocher</ins> ou des <ins>boutons radio</ins>.
+        </p>
 
         <figure>
-          <img src="images/formulaire.jpg" alt="Exemple de formulaire">
+          <img class="h10cm" src="images/formulaire.jpg" alt="Exemple de formulaire">
           <figcaption>Exemple de formulaire</figcaption>
         </figure>
 
@@ -84,22 +86,106 @@
       </section>
 
       <section>
+        <h3>Structure</h3>
+
+        <p>Le formulaire est délimité par <code>&lt;form&gt;...&lt;/form&gt;</code>. Cette balise admet deux
+          attributs principaux :</p>
+        <ul>
+          <li><strong><em>action="..."</em></strong> indique l'<strong>URL</strong> qui <ins>traite les données</ins>
+            récupérées dans le formulaire.
+          </li>
+          <li><strong><em>method="..."</em></strong> indique la <strong>méthode HTTP</strong> qui sera <ins>utilisée
+              pour envoyer les données au serveur</ins>. Cet attribut admet les valeurs suivantes :
+            <ul>
+              <li><strong>method="get"</strong> les données sont ajoutées à l'adresse URL indiquée dans
+                <strong>action</strong>, elles sont <ins><em>visibles à l'utilisateur</em></ins>.
+              </li>
+              <li><strong>method="post"</strong> les données sont envoyées dans le corps de la requête, donc
+                <ins><em>invisibles à l'utilisateur</em></ins>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>Le formulaire doit comporter au moins un <strong>bouton submit</strong>,
+          <code>&lt;button type=&quot;submit&quot;&gt;Login&lt;/button&gt;</code>, pour soumettre les données du
+          formulaire.
+        </p>
+
+        <p>Il est conseillé de définir une étiquette <strong>label</strong> pour chaque composant du formulaire de la façon suivante.</p>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;label for=&quot;nom_prenom&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
+  &lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot; id=&quot;nom_prenom&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4>Exemple</h4>
+
+        <p>Pour pouvoir comprendre la différence entre les méthodes GET et POST, veuillez tester les exemples suivants,
+          <strong>cliquer sur les images</strong>, le bon mot de passe est <strong>admin</strong>/<strong>admin</strong>
+          :
+        </p>
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Le formulaire est défini comme suit :</p>
+            <pre><code class="language-html">&lt;form action=&quot;login-get.php&quot; method=&quot;get&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;user&quot;&gt;Username&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;pass&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+            <a href="assets/downloads/tp4/form-get.html" target="_blank" rel="noopener noreferrer"><img
+                src="assets/downloads/tp4/images/form-get.html.png" alt="Methode GET"></a>
+
+            <figure><img src="assets/downloads/tp4/images/res-method-get.png" alt="Résultat par la méthode GET">
+            </figure>
+          </div>
+          <div class="col-sm-6">
+            <p>Le formulaire est défini comme suit :</p>
+            <pre><code class="language-html">&lt;form action=&quot;login-post.php&quot; method=&quot;post&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;username&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;pass&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+            <a href="assets/downloads/tp4/form-post.html" target="_blank" rel="noopener noreferrer"><img
+                src="assets/downloads/tp4/images/form-post.html.png" alt="Methode POST"></a>
+            <figure><img src="assets/downloads/tp4/images/res-method-post.png" alt="Résultat par la méthode POST">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <h3>Exercice</h3>
 
-        <p>Le formulaire suivant est pris depuis une plateforme de vente de produits pour le régime alimentaire.</p>
+        <p>Le formulaire suivant peut servir dans une <strong>plateforme de vente de produits alimentaires</strong> pour
+          le régime.</p>
         <figure>
           <img src="images/formulaire-vierge.png" alt="Exemple de Formulaire">
           <figcaption>Exemple de formulaire</figcaption>
         </figure>
 
         <p>On demande compléter le code du formulaire suivant :</p>
-        <pre><code class="language-html"> &lt;form action=&quot;destination.php&quot; method=&quot;post&quot;&gt;
+        <pre><code class="language-html">&lt;form action=&quot;destination.php&quot; method=&quot;post&quot;&gt;
   &lt;div&gt;
     &lt;label for=&quot;np&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
     &lt;input id=&quot;np&quot; name=&quot;np&quot; type=&quot;text&quot; placeholder=&quot;Votre nom et pr&eacute;nom&quot;&gt;
   &lt;/div&gt;
   &lt;!-- votre travail ici --&gt;
 &lt;/form&gt;</code></pre>
+
+        <h4>Explication</h4>
+
       </section>
     </article>
 
