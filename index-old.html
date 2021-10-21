@@ -1333,6 +1333,13 @@ footer {
             margin: initial;
             box-sizing: content-box;
           }
+          #formulaire > form > div {
+            margin: 10px 0;
+          }
+          #formulaire label {
+            display: inline-block;
+            width: 20%;
+          }
         </style>
         <div id="formulaire" class="p-2 my-2 border border-dark bg-light">
           <form action="destination.php" method="post">
@@ -1372,7 +1379,7 @@ footer {
             </div>
             <div>
               <label for="favori">Votre fruit favori est :</label>
-              <select name="favori" id="favori" size="4">
+              <select name="favori" id="favori">
                 <option value="Pomme">Pomme</option>
                 <option value="Banane">Banane</option>
                 <option value="Orange">Orange</option>
@@ -1381,7 +1388,21 @@ footer {
             </div>
             <div>
               <label for="qst">Pourquoi vous vous mettez au régime</label>
-              <textarea id="qst" name="qst" placeholder="Votre age"></textarea>
+              <textarea id="qst" name="qst" placeholder="Raison du régime"></textarea>
+            </div>
+            <div>
+              <div>Comment vous contacter ?</div>
+              <label>
+                <input type="checkbox" name="contact" id="email" value="0">
+                Email</label>
+              <label>
+                <input type="checkbox" name="contact" id="telephone" value="1">
+                Téléphone
+              </label>
+              <label>
+                <input type="checkbox" name="fruit" id="mailing" value="2">
+                Mailing au boîte
+              </label>
             </div>
             <div>
               <button type="submit">S'inscrire</button>

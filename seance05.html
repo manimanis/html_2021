@@ -27,6 +27,80 @@
     <h1>Conception Web - Séance 5</h1>
 
     <article>
+      <h2>Formulaires</h2>
+
+      <section>
+        <h3>Les formulaires</h3>
+
+        <p>Les formulaires HTML sont utilisés par les sites Web pour interagir avec l'utilisateur. Ils permettent à
+          l'utilisateur d'envoyer des données au site web. La plupart du temps, ces données sont envoyées à des serveurs
+          web.</p>
+
+        <p>Un formulaire HTML est formé par un ou plusieurs composants. Ceux-ci peuvent être des champs/zones de texte,
+          des boîtes à sélection, des boutons, des cases à cocher ou des boutons radio.</p>
+
+        <figure>
+          <img src="images/formulaire.jpg" alt="Exemple de formulaire">
+          <figcaption>Exemple de formulaire</figcaption>
+        </figure>
+
+        <p>Le formulaire ci-dessus est composé de :</p>
+        <ol>
+          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>text</u>,
+            <code>&lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot;&gt;</code>
+          </li>
+          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>password</u>,
+            <code>&lt;input type=&quot;password&quot; name=&quot;mot_passe&quot;&gt;</code>
+          </li>
+          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>email</u>,
+            <code>&lt;input type=&quot;email&quot; name=&quot;adr_email&quot;&gt;</code>
+          </li>
+          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>number</u>,
+            <code>&lt;input type=&quot;number&quot; name=&quot;age&quot;&gt;</code></li>
+          <li><strong>Boutons radio</strong>, <u>input</u>, type <u>radio</u>,
+            <code>&lt;input type=&quot;radio&quot; name=&quot;nbr_fruits&quot; value=&quot;0&quot;&gt;</code>
+          </li>
+          <li><strong>Liste déroulante</strong>, <u>select</u>, avec une ou plusieurs <u>option</u>,
+            <pre><code class="language-html">&lt;select name=&quot;favori&quot;&gt;
+  &lt;option value=&quot;f1&quot;&gt;Pomme&lt;/option&gt;
+  &lt;option value=&quot;f2&quot;&gt;Banane&lt;/option&gt;
+  &lt;option value=&quot;f3&quot;&gt;Orange&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+          </li>
+          <li><strong>Zone de texte</strong>,
+            <code>&lt;textarea name=&quot;regime&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</code>
+          </li>
+          <li><strong>Cases à cocher</strong>, <u>input</u>, type <u>checkbox</u>,
+            <code>&lt;input type=&quot;checkbox&quot; name=&quot;contact&quot; id=&quot;email&quot; value=&quot;0&quot;&gt;</code>
+          </li>
+          <li><strong>Bouton</strong>, <u>button</u>, type <u>submit</u>,
+            <code>&lt;button type=&quot;submit&quot;&gt;S&apos;inscrire&lt;/button&gt;</code></li>
+          <li><strong>Bouton</strong>, <u>button</u>, type <u>reset</u>,
+            <code>&lt;button type=&quot;reset&quot;&gt;Effacer&lt;/button&gt;</code></li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Exercice</h3>
+
+        <p>On demande compléter le code du formulaire suivant :</p>
+
+        <figure>
+          <img src="images/formulaire-vierge.png" alt="Exemple de Formulaire">
+          <figcaption>Exemple de formulaire</figcaption>
+        </figure>
+
+        <pre><code class="language-html"> &lt;form action=&quot;destination.php&quot; method=&quot;post&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;np&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
+    &lt;input id=&quot;np&quot; name=&quot;np&quot; type=&quot;text&quot; placeholder=&quot;Votre nom et pr&eacute;nom&quot;&gt;
+  &lt;/div&gt;
+  &lt;!-- votre travail ici --&gt;
+&lt;/form&gt;</code></pre>
+      </section>
+    </article>
+
+    <article>
       <h2>Révision</h2>
 
       <section>
