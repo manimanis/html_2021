@@ -30,7 +30,7 @@
       <h2>Formulaires</h2>
 
       <section>
-        <h3>Introduction</h3>
+        <h3>Composants</h3>
 
         <p>Les <strong>formulaires</strong> sont utilisés par les sites Web pour <ins>interagir avec
             l'utilisateur</ins>. Ils permettent à l'utilisateur d'<ins>envoyer des données au site web</ins>. La plupart
@@ -112,20 +112,39 @@
           formulaire.
         </p>
 
-        <p>Il est conseillé de définir une étiquette <strong>label</strong> pour chaque composant du formulaire de la façon suivante.</p>
-<pre><code class="language-html">&lt;div&gt;
+        <h4>Recommendations</h4>
+        <p>Il est conseillé de définir une étiquette <strong>label</strong> pour chaque composant du formulaire, sauf
+          les <strong>boutons</strong>. L'attribut <strong>for="..."</strong> du <strong>label</strong> indique
+          l'<strong><ins>id</ins></strong> du composant correspondant.</p>
+        <pre><code class="language-html">&lt;div&gt;
   &lt;label for=&quot;nom_prenom&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
   &lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot; id=&quot;nom_prenom&quot;&gt;
 &lt;/div&gt;</code></pre>
 
+        <p>Tous les <strong>boutons radio</strong> appartenant à une <u>même catégorie</u> doivent avoir le même
+          attribut <strong>name="..."</strong>.
+        </p>
+        <p>Il est conseillé d'inclure les <strong>boutons radio</strong> et les <strong>cases à cocher</strong> à
+          l'intérieur du <strong>label</strong>.</p>
+
+        <pre><code class="language-html">&lt;div&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;genre&quot; value=&quot;g&quot;&gt; Gar&ccedil;on&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;genre&quot; value=&quot;f&quot;&gt; Fille&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
         <h4>Exemple</h4>
 
-        <p>Pour pouvoir comprendre la différence entre les méthodes GET et POST, veuillez tester les exemples suivants,
+        <p>Pour comprendre la différence entre les méthodes GET et POST, veuillez tester les exemples suivants,
           <strong>cliquer sur les images</strong>, le bon mot de passe est <strong>admin</strong>/<strong>admin</strong>
           :
         </p>
         <div class="row">
           <div class="col-sm-6">
+
+            <p class="text-center"><a href="assets/downloads/tp4/form-get.html" target="_blank"
+                rel="noopener noreferrer"><img src="assets/downloads/tp4/images/form-get.html.png"
+                  alt="Methode GET"></a></p>
+
             <p>Le formulaire est défini comme suit :</p>
             <pre><code class="language-html">&lt;form action=&quot;login-get.php&quot; method=&quot;get&quot;&gt;
   &lt;div&gt;
@@ -138,13 +157,16 @@
   &lt;/div&gt;
   &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
 &lt;/form&gt;</code></pre>
-            <a href="assets/downloads/tp4/form-get.html" target="_blank" rel="noopener noreferrer"><img
-                src="assets/downloads/tp4/images/form-get.html.png" alt="Methode GET"></a>
 
+            <p>Le résultat de soumission du formulaire :</p>
             <figure><img src="assets/downloads/tp4/images/res-method-get.png" alt="Résultat par la méthode GET">
             </figure>
           </div>
           <div class="col-sm-6">
+            <p class="text-center"><a href="assets/downloads/tp4/form-post.html" target="_blank"
+                rel="noopener noreferrer"><img src="assets/downloads/tp4/images/form-post.html.png"
+                  alt="Methode POST"></a></p>
+
             <p>Le formulaire est défini comme suit :</p>
             <pre><code class="language-html">&lt;form action=&quot;login-post.php&quot; method=&quot;post&quot;&gt;
   &lt;div&gt;
@@ -157,8 +179,8 @@
   &lt;/div&gt;
   &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
 &lt;/form&gt;</code></pre>
-            <a href="assets/downloads/tp4/form-post.html" target="_blank" rel="noopener noreferrer"><img
-                src="assets/downloads/tp4/images/form-post.html.png" alt="Methode POST"></a>
+
+            <p>Le résultat de soumission du formulaire :</p>
             <figure><img src="assets/downloads/tp4/images/res-method-post.png" alt="Résultat par la méthode POST">
             </figure>
           </div>
@@ -181,11 +203,16 @@
     &lt;label for=&quot;np&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
     &lt;input id=&quot;np&quot; name=&quot;np&quot; type=&quot;text&quot; placeholder=&quot;Votre nom et pr&eacute;nom&quot;&gt;
   &lt;/div&gt;
-  &lt;!-- votre travail ici --&gt;
+  &lt;!-- Mot de passe : input, type password --&gt;
+  &lt;!-- Email : input, type email --&gt;
+  &lt;!-- Âge : input, type number --&gt;
+  &lt;!-- Combien de fruits ? : input, type radio, values 0, 1, 2, 3 --&gt;
+  &lt;!-- Votre fruit favori est : select, avec 4 option : Pomme, Banane, Orange, poire --&gt;
+  &lt;!-- Pourquoi faire le régime : textarea --&gt;
+  &lt;!-- Comment vous contacter : input, type checkbox, values : email, tel, mailing --&gt;
+  &lt;!-- S'inscrire : button, type sumit --&gt;
+  &lt;!-- Effacer : button, type reset --&gt;
 &lt;/form&gt;</code></pre>
-
-        <h4>Explication</h4>
-
       </section>
     </article>
 
