@@ -41,8 +41,9 @@
             déroulantes</ins>, des <ins>boutons</ins>, des <ins>cases à cocher</ins> ou des <ins>boutons radio</ins>.
         </p>
 
+
         <figure>
-          <img class="h10cm" src="images/formulaire.jpg" alt="Exemple de formulaire">
+          <img class="h9cm" src="images/formulaire.jpg" alt="Exemple de formulaire">
           <figcaption>Exemple de formulaire</figcaption>
         </figure>
 
@@ -86,7 +87,7 @@
       </section>
 
       <section>
-        <h3>Structure</h3>
+        <h3 class="p-break">Structure</h3>
 
         <p>Le formulaire est délimité par <code>&lt;form&gt;...&lt;/form&gt;</code>. Cette balise admet deux
           attributs principaux :</p>
@@ -125,11 +126,11 @@
           attribut <strong>name="..."</strong>.
         </p>
         <p>Il est conseillé d'inclure les <strong>boutons radio</strong> et les <strong>cases à cocher</strong> à
-          l'intérieur du <strong>label</strong>.</p>
+          l'intérieur d'un <strong>label</strong>.</p>
 
         <pre><code class="language-html">&lt;div&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;genre&quot; value=&quot;g&quot;&gt; Gar&ccedil;on&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;genre&quot; value=&quot;f&quot;&gt; Fille&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;g&quot;&gt; Gar&ccedil;on&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;f&quot;&gt; Fille&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 
         <h4>Exemple</h4>
@@ -138,50 +139,70 @@
           <strong>cliquer sur les images</strong>, le bon mot de passe est <strong>admin</strong>/<strong>admin</strong>
           :
         </p>
+
         <div class="row">
           <div class="col-sm-6">
-
-            <p class="text-center"><a href="assets/downloads/tp4/form-get.html" target="_blank"
-                rel="noopener noreferrer"><img src="assets/downloads/tp4/images/form-get.html.png"
-                  alt="Methode GET"></a></p>
-
             <p>Le formulaire est défini comme suit :</p>
             <pre><code class="language-html">&lt;form action=&quot;login-get.php&quot; method=&quot;get&quot;&gt;
-  &lt;div&gt;
+ &lt;div&gt;
     &lt;label for=&quot;user&quot;&gt;Username&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;user&quot; 
+           id=&quot;user&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label for=&quot;pass&quot;&gt;Password&lt;/label&gt;
-    &lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot;&gt;
+    &lt;input type=&quot;password&quot; name=&quot;pass&quot; 
+           id=&quot;pass&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
 &lt;/form&gt;</code></pre>
-
-            <p>Le résultat de soumission du formulaire :</p>
-            <figure><img src="assets/downloads/tp4/images/res-method-get.png" alt="Résultat par la méthode GET">
-            </figure>
           </div>
           <div class="col-sm-6">
-            <p class="text-center"><a href="assets/downloads/tp4/form-post.html" target="_blank"
-                rel="noopener noreferrer"><img src="assets/downloads/tp4/images/form-post.html.png"
-                  alt="Methode POST"></a></p>
-
             <p>Le formulaire est défini comme suit :</p>
             <pre><code class="language-html">&lt;form action=&quot;login-post.php&quot; method=&quot;post&quot;&gt;
   &lt;div&gt;
     &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;username&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;user&quot; 
+           id=&quot;user&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label for=&quot;pass&quot;&gt;Password&lt;/label&gt;
-    &lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot;&gt;
+    &lt;input type=&quot;password&quot; name=&quot;pass&quot; 
+           id=&quot;pass&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
 &lt;/form&gt;</code></pre>
+          </div>
+        </div>
 
+        <div class="row p-break">
+          <div class="col-sm-6">
+            <p>Le rendu du code HTML :</p>
+            <figure>
+              <a href="assets/downloads/tp4/form-get.html" target="_blank" rel="noopener noreferrer"><img
+                  src="assets/downloads/tp4/images/form-get.html.png" alt="Methode GET" class="h3cm"></a>
+            </figure>
+          </div>
+          <div class="col-sm-6">
+            <p>Le rendu du code HTML :</p>
+            <figure>
+              <a href="assets/downloads/tp4/form-post.html" target="_blank" rel="noopener noreferrer"><img
+                  src="assets/downloads/tp4/images/form-post.html.png" alt="Methode POST" class="h3cm"></a>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
             <p>Le résultat de soumission du formulaire :</p>
-            <figure><img src="assets/downloads/tp4/images/res-method-post.png" alt="Résultat par la méthode POST">
+            <figure><img class="h1cm" src="assets/downloads/tp4/images/res-method-get.png"
+                alt="Résultat par la méthode GET">
+            </figure>
+          </div>
+          <div class="col-sm-6">
+            <p>Le résultat de soumission du formulaire :</p>
+            <figure><img class="h1cm" src="assets/downloads/tp4/images/res-method-post.png"
+                alt="Résultat par la méthode POST">
             </figure>
           </div>
         </div>
@@ -193,12 +214,13 @@
         <p>Le formulaire suivant peut servir dans une <strong>plateforme de vente de produits alimentaires</strong> pour
           le régime.</p>
         <figure>
-          <img src="images/formulaire-vierge.png" alt="Exemple de Formulaire">
+          <img class="h8cm" src="images/formulaire-vierge.png" alt="Exemple de Formulaire">
           <figcaption>Exemple de formulaire</figcaption>
         </figure>
 
-        <p>On demande compléter le code du formulaire suivant :</p>
+        <p>On demande de copier et de compléter le code du formulaire suivant :</p>
         <pre><code class="language-html">&lt;form action=&quot;destination.php&quot; method=&quot;post&quot;&gt;
+  &lt;!-- Nom & Prénom : input, type text --&gt;
   &lt;div&gt;
     &lt;label for=&quot;np&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
     &lt;input id=&quot;np&quot; name=&quot;np&quot; type=&quot;text&quot; placeholder=&quot;Votre nom et pr&eacute;nom&quot;&gt;
@@ -208,8 +230,8 @@
   &lt;!-- Âge : input, type number --&gt;
   &lt;!-- Combien de fruits ? : input, type radio, values 0, 1, 2, 3 --&gt;
   &lt;!-- Votre fruit favori est : select, avec 4 option : Pomme, Banane, Orange, poire --&gt;
-  &lt;!-- Pourquoi faire le régime : textarea --&gt;
-  &lt;!-- Comment vous contacter : input, type checkbox, values : email, tel, mailing --&gt;
+  &lt;!-- Pourquoi faire le régime ? : textarea --&gt;
+  &lt;!-- Comment vous contacter ? : input, type checkbox, values : email, tel, mailing --&gt;
   &lt;!-- S'inscrire : button, type sumit --&gt;
   &lt;!-- Effacer : button, type reset --&gt;
 &lt;/form&gt;</code></pre>
