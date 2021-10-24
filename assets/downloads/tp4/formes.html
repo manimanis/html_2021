@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formes</title>
+</head>
+
+<body>
+  <h1>Formes géométriques</h1>
+  <form action="verif.php" method="get">
+    <p><strong>Observer les formes géométriques de l'image suivante :</strong></p>
+    <p><img src="images/formes.png" alt="Formes géométriques"></p>
+
+    <h2>Question 1</h2>
+    <p>Quelles sont les formes géométriques présentes dans l'image ?</p>
+    <div>
+      <label><input type="checkbox" name="forme[]" value="Rectangle"> Rectangle</label>
+      <label><input type="checkbox" name="forme[]" value="Carré"> Carré</label>
+      <label><input type="checkbox" name="forme[]" value="Parallélogramme"> Parallélogramme</label>
+      <label><input type="checkbox" name="forme[]" value="Triangle"> Triangle</label>
+    </div>
+
+    <h2>Question 2</h2>
+    <p>Quelle est la couleur du cercle ?</p>
+    <div>
+      <label><input type="radio" name="couleur" value="Rouge"> Rouge</label>
+      <label><input type="radio" name="couleur" value="Bleu"> Bleu</label>
+      <label><input type="radio" name="couleur" value="Vert"> Vert</label>
+      <label><input type="radio" name="couleur" value="Blanc"> Blanc</label>
+    </div>
+
+    <div><button>Vérifier</button></div>
+  </form>
+</body>
+
+</html>

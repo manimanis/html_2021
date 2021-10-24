@@ -30,7 +30,7 @@
       <h2>Formulaires</h2>
 
       <section>
-        <h3>Composants</h3>
+        <h3>Introduction</h3>
 
         <p>Les <strong>formulaires</strong> sont utilisés par les sites Web pour <ins>interagir avec
             l'utilisateur</ins>. Ils permettent à l'utilisateur d'<ins>envoyer des données au site web</ins>. La plupart
@@ -41,56 +41,120 @@
             déroulantes</ins>, des <ins>boutons</ins>, des <ins>cases à cocher</ins> ou des <ins>boutons radio</ins>.
         </p>
 
+        <h4>Exemple</h4>
 
-        <figure>
-          <img class="h9cm" src="images/formulaire.jpg" alt="Exemple de formulaire">
-          <figcaption>Exemple de formulaire</figcaption>
-        </figure>
+        <div class="d-print-none"><a href="assets/downloads/tp4/login.html" target="_blank"
+            rel="noopener noreferrer">Ouvrir le formulaire</a></div>
 
-        <p>Le formulaire ci-dessus est composé de :</p>
-        <ol>
-          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>text</u>,
-            <code>&lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot;&gt;</code>
-          </li>
-          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>password</u>,
-            <code>&lt;input type=&quot;password&quot; name=&quot;mot_passe&quot;&gt;</code>
-          </li>
-          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>email</u>,
-            <code>&lt;input type=&quot;email&quot; name=&quot;adr_email&quot;&gt;</code>
-          </li>
-          <li><strong>Champ de texte</strong>, <u>input</u>, type <u>number</u>,
-            <code>&lt;input type=&quot;number&quot; name=&quot;age&quot;&gt;</code>
-          </li>
-          <li><strong>Boutons radio</strong>, <u>input</u>, type <u>radio</u>,
-            <code>&lt;input type=&quot;radio&quot; name=&quot;nbr_fruits&quot; value=&quot;0&quot;&gt;</code>
-          </li>
-          <li><strong>Liste déroulante</strong>, <u>select</u>, avec une ou plusieurs <u>option</u>,
-            <pre><code class="language-html">&lt;select name=&quot;favori&quot;&gt;
-  &lt;option value=&quot;f1&quot;&gt;Pomme&lt;/option&gt;
-  &lt;option value=&quot;f2&quot;&gt;Banane&lt;/option&gt;
-  &lt;option value=&quot;f3&quot;&gt;Orange&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-          </li>
-          <li><strong>Zone de texte</strong>,
-            <code>&lt;textarea name=&quot;regime&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</code>
-          </li>
-          <li><strong>Cases à cocher</strong>, <u>input</u>, type <u>checkbox</u>,
-            <code>&lt;input type=&quot;checkbox&quot; name=&quot;contact&quot; id=&quot;email&quot; value=&quot;0&quot;&gt;</code>
-          </li>
-          <li><strong>Bouton</strong>, <u>button</u>, type <u>submit</u>,
-            <code>&lt;button type=&quot;submit&quot;&gt;S&apos;inscrire&lt;/button&gt;</code>
-          </li>
-          <li><strong>Bouton</strong>, <u>button</u>, type <u>reset</u>,
-            <code>&lt;button type=&quot;reset&quot;&gt;Effacer&lt;/button&gt;</code>
-          </li>
-        </ol>
+        <div class="row">
+          <div class="col-4">
+            <figure>
+              <img src="assets/downloads/tp4/images/login-form-v10.jpg" alt="Exemple de formulaire de login">
+              <figcaption>Exemple de formulaire de login</figcaption>
+            </figure>
+          </div>
+          <div class="col-8">
+            <p>Le formulaire ci-contre comporte cinq composants :</p>
+            <ol>
+              <li>Un <strong>input / text</strong> pour recueillir le <strong>Username</strong>
+                <pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;user&quot; placeholder=&quot;Username&quot;&gt;</code></pre>
+              </li>
+              <li>Un <strong>input / password</strong> pour recueillir le <strong>Password</strong>
+                <pre><code class="language-html">&lt;input type=&quot;password&quot; name=&quot;pass&quot; placeholder=&quot;Password&quot;&gt;</code></pre>
+              </li>
+              <li>Un <strong>button</strong> pour soumettre les données du formulaire
+                <pre><code class="language-html">&lt;button&gt;Login&lt;/button&gt;</code></pre>
+              </li>
+              <li>Un <strong>checkbox</strong> (5) associé à un <strong>label</strong> (4)
+                <pre><code class="language-html">&lt;!-- label --&gt;
+&lt;label&gt;
+  &lt;!-- checkbox --&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;remember&quot;&gt; Remember me
+&lt;/label&gt;</code></pre>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <p>Le code HTML associé est le suivant :</p>
+        <pre><code class="language-html">&lt;h1&gt;Login&lt;/h1&gt;
+&lt;form action=&quot;login.php&quot; method=&quot;post&quot;&gt;
+  &lt;div&gt;&lt;input type=&quot;text&quot; name=&quot;user&quot; placeholder=&quot;Username&quot;&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;input type=&quot;password&quot; name=&quot;pass&quot; placeholder=&quot;Password&quot;&gt;&lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;remember&quot;&gt; Remember me&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
       </section>
 
       <section>
-        <h3 class="p-break">Structure</h3>
+        <h3 class="p-break">Exercice 1</h3>
 
-        <p>Le formulaire est délimité par <code>&lt;form&gt;...&lt;/form&gt;</code>. Cette balise admet deux
-          attributs principaux :</p>
+        <p>En se basant sur le code du formulaire précédent, on demande de créer le formulaire suivant :</p>
+
+        <figure>
+          <img class="h8cm" src="assets/downloads/tp4/images/formes-form.png" alt="Formulaire sur les formes">
+          <figcaption>Formulaire sur les formes</figcaption>
+        </figure>
+
+        <p>On rappelle que :</p>
+        <ul>
+          <li>Pour créer le <strong>checkbox</strong> <img class="border border-dark"
+              src="assets/downloads/tp4/images/checkbox.png" alt="Checkbox"> on écrit :
+            <pre><code class="language-html">&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;forme[]&quot; value=&quot;Rectangle&quot;&gt; Rectangle&lt;/label&gt;</code></pre>
+          </li>
+          <li>Pour créer le <strong>radio</strong> <img class="border border-dark"
+              src="assets/downloads/tp4/images/radio.png" alt="Radio"> on écrit :
+            <pre><code class="language-html">&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;couleur&quot; value=&quot;Rouge&quot;&gt; Rouge&lt;/label&gt;</code></pre>
+          </li>
+        </ul>
+        <p>Utiliser les attributs suivants dans la balise <ins><strong>form</strong></ins> :
+          <strong>method="get"</strong> et
+          <strong>action="verif.php"</strong>.
+        </p>
+
+        <figure>
+          <img class="h8cm" src="assets/downloads/tp4/images/formes-form-html.png"
+            alt="Code HTML incomplet du formulaire">
+          <figcaption>Code HTML incomplet du formulaire</figcaption>
+        </figure>
+
+        <div class="d-none d-print-block">
+          <h4 class="p-break">Correction</h4>
+          <pre><code class="language-html">&lt;h1&gt;Formes g&eacute;om&eacute;triques&lt;/h1&gt;
+&lt;form action=&quot;verif.php&quot; method=&quot;post&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Observer les formes g&eacute;om&eacute;triques de l&apos;image suivante :&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;images/formes.png&quot; alt=&quot;Formes g&eacute;om&eacute;triques&quot;&gt;&lt;/p&gt;
+  &lt;h2&gt;Question 1&lt;/h2&gt;
+  &lt;p&gt;Quelles sont les formes g&eacute;om&eacute;triques pr&eacute;sentes dans l&apos;image ?&lt;/p&gt;
+  &lt;div&gt;
+    &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;forme[]&quot; value=&quot;Rectangle&quot;&gt; Rectangle&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;forme[]&quot; value=&quot;Carr&eacute;&quot;&gt; Carr&eacute;&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;forme[]&quot; value=&quot;Parall&eacute;logramme&quot;&gt; Parall&eacute;logramme&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;forme[]&quot; value=&quot;Triangle&quot;&gt; Triangle&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;h2&gt;Question 2&lt;/h2&gt;
+  &lt;p&gt;Quelle est la couleur du cercle ?&lt;/p&gt;
+  &lt;div&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;couleur&quot; value=&quot;Rouge&quot;&gt; Rouge&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;couleur&quot; value=&quot;Bleu&quot;&gt; Bleu&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;couleur&quot; value=&quot;Vert&quot;&gt; Vert&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;couleur&quot; value=&quot;Blanc&quot;&gt; Blanc&lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;&lt;button&gt;V&eacute;rifier&lt;/button&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3>Balise form</h3>
+
+        <p>Le formulaire est délimité par
+          <code>&lt;form <strong>action</strong>="..." <strong>method</strong>="..."&gt;...&lt;/form&gt;</code>.
+        </p>
+        <p>Cette balise admet deux attributs principaux :</p>
         <ul>
           <li><strong><em>action="..."</em></strong> indique l'<strong>URL</strong> qui <ins>traite les données</ins>
             récupérées dans le formulaire.
@@ -112,28 +176,12 @@
           <code>&lt;button type=&quot;submit&quot;&gt;Login&lt;/button&gt;</code>, pour soumettre les données du
           formulaire.
         </p>
+        <p>Il peut comporter, aussi, un autre type de bouton, le <strong>bouton reset</strong> pour ré-initialiser les
+          composants du formulaire à leurs valeurs par défaut.</p>
+      </section>
 
-        <h4>Recommendations</h4>
-        <p>Il est conseillé de définir une étiquette <strong>label</strong> pour chaque composant du formulaire, sauf
-          les <strong>boutons</strong>. L'attribut <strong>for="..."</strong> du <strong>label</strong> indique
-          l'<strong><ins>id</ins></strong> du composant correspondant.</p>
-        <pre><code class="language-html">&lt;div&gt;
-  &lt;label for=&quot;nom_prenom&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
-  &lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot; id=&quot;nom_prenom&quot;&gt;
-&lt;/div&gt;</code></pre>
-
-        <p>Tous les <strong>boutons radio</strong> appartenant à une <u>même catégorie</u> doivent avoir le même
-          attribut <strong>name="..."</strong>.
-        </p>
-        <p>Il est conseillé d'inclure les <strong>boutons radio</strong> et les <strong>cases à cocher</strong> à
-          l'intérieur d'un <strong>label</strong>.</p>
-
-        <pre><code class="language-html">&lt;div&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;g&quot;&gt; Gar&ccedil;on&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;f&quot;&gt; Fille&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-
-        <h4>Exemple</h4>
+      <section>
+        <h3 class="p-break">Méthode GET ou POST</h3>
 
         <p>Pour comprendre la différence entre les méthodes GET et POST, veuillez tester les exemples suivants,
           <strong>cliquer sur les images</strong>, le bon mot de passe est <strong>admin</strong>/<strong>admin</strong>
@@ -146,13 +194,11 @@
             <pre><code class="language-html">&lt;form action=&quot;login-get.php&quot; method=&quot;get&quot;&gt;
  &lt;div&gt;
     &lt;label for=&quot;user&quot;&gt;Username&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;user&quot; 
-           id=&quot;user&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label for=&quot;pass&quot;&gt;Password&lt;/label&gt;
-    &lt;input type=&quot;password&quot; name=&quot;pass&quot; 
-           id=&quot;pass&quot;&gt;
+    &lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
 &lt;/form&gt;</code></pre>
@@ -162,20 +208,18 @@
             <pre><code class="language-html">&lt;form action=&quot;login-post.php&quot; method=&quot;post&quot;&gt;
   &lt;div&gt;
     &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;user&quot; 
-           id=&quot;user&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label for=&quot;pass&quot;&gt;Password&lt;/label&gt;
-    &lt;input type=&quot;password&quot; name=&quot;pass&quot; 
-           id=&quot;pass&quot;&gt;
+    &lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot;&gt;
   &lt;/div&gt;
   &lt;div&gt;&lt;button&gt;Login&lt;/button&gt;&lt;/div&gt;
 &lt;/form&gt;</code></pre>
           </div>
         </div>
 
-        <div class="row p-break">
+        <div class="row">
           <div class="col-sm-6">
             <p>Le rendu du code HTML :</p>
             <figure>
@@ -209,7 +253,114 @@
       </section>
 
       <section>
-        <h3>Exercice</h3>
+        <h3>Exercice 2</h3>
+
+        <p>Soit le formulaire suivant :</p>
+        <div class="row">
+          <div class="offset-sm-3 col-sm-4">
+            <h5>Formulaire de test</h5>
+            <form action="dest.html" method="get" target="_blank">
+              <div class="my-2">
+                <label for="nomprenom">Nom & Prénom</label>
+                <input type="text" name="nomprenom" id="nomprenom" class="form-control" value="ahmed">
+              </div>
+              <div class="my-2">
+                <label for="secret">Secret</label>
+                <input type="password" name="secret" id="secret" class="form-control">
+              </div>
+              <div class="my-2">
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+                <button class="btn btn-secondary" type="reset">Effacer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <h4>Travail demandé</h4>
+        <p>Utiliser l'outil d'inspection pour :</p>
+        <ol>
+          <li>Déterminer les attributs utilisés avec la balise <strong>form</strong>.</li>
+          <li>Retrouver les types des boutons utilisés et leurs fonctions.</li>
+          <li>Découvrir comment associer un <strong>label</strong> à chacun de ces champs.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Les composants standards</h3>
+
+        <p>La figure suivante présente la majorité des composants HTML standards :</p>
+
+        <div class="row">
+          <div class="col-sm-5">
+            <figure>
+              <img class="h9cm" src="assets/downloads/tp4/images/html-form-components.png" alt="Composants standards">
+              <figcaption>Composants standards</figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-7">
+            <ol>
+              <li>
+                <pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot;&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;input type=&quot;password&quot; name=&quot;mot_passe&quot;&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;input type=&quot;email&quot; name=&quot;adr_email&quot;&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;input type=&quot;number&quot; name=&quot;age&quot;&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;input type=&quot;radio&quot; name=&quot;nbr_fruits&quot; value=&quot;0&quot;&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;select name=&quot;favori&quot;&gt;
+  &lt;option value=&quot;f1&quot;&gt;Pomme&lt;/option&gt;
+  &lt;option value=&quot;f2&quot;&gt;Banane&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;textarea name=&quot;regime&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;input type=&quot;checkbox&quot; name=&quot;contact&quot; id=&quot;email&quot; value=&quot;0&quot;&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;button type=&quot;submit&quot;&gt;S&apos;inscrire&lt;/button&gt;</code></pre>
+              </li>
+              <li>
+                <pre><code class="language-html">&lt;button type=&quot;reset&quot;&gt;Effacer&lt;/button&gt;</code></pre>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Recommandations</h3>
+        <p>Il est conseillé de définir une étiquette <strong>label</strong> pour chaque composant du formulaire, sauf
+          les <strong>boutons</strong>. L'attribut <strong>for="..."</strong> du <strong>label</strong> indique
+          l'<strong><ins>id</ins></strong> du composant correspondant.</p>
+        <pre><code class="language-html">&lt;div&gt;
+  &lt;label for=&quot;nom_prenom&quot;&gt;Nom &amp; Pr&eacute;nom&lt;/label&gt;
+  &lt;input type=&quot;text&quot; name=&quot;nom_prenom&quot; id=&quot;nom_prenom&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Tous les <strong>boutons radio</strong> appartenant à une <u>même catégorie</u> doivent avoir le même
+          attribut <strong>name="..."</strong>.
+        </p>
+        <p>Il est conseillé d'inclure les <strong>boutons radio</strong> et les <strong>cases à cocher</strong> à
+          l'intérieur d'un <strong>label</strong>.</p>
+
+        <pre><code class="language-html">&lt;div&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;g&quot;&gt; Gar&ccedil;on&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;f&quot;&gt; Fille&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3 class="p-break">Exercice 3</h3>
 
         <p>Le formulaire suivant peut servir dans une <strong>plateforme de vente de produits alimentaires</strong> pour
           le régime.</p>
@@ -236,13 +387,9 @@
   &lt;!-- Effacer : button, type reset --&gt;
 &lt;/form&gt;</code></pre>
       </section>
-    </article>
-
-    <article>
-      <h2>Révision</h2>
 
       <section>
-        <h3>Application 3</h3>
+        <h3 class="p-break">Application 3</h3>
 
         <p>Nous construisons le squelette d'un site Web, <strong>HTML uniquement</strong>, pour le magasin de vente de
           matériel informatique <strong>Techno Store</strong>, composé de sept pages :</p>
@@ -255,7 +402,7 @@
           <li><strong>commander.html</strong> : Formulaire de commande d'un produit</li>
           <li><strong>confirmation.html</strong> : Message affiché pour confirmer la commande</li>
         </ul>
-        <div class="d-print-none">
+        <div>
           <p>Cliquer sur les images pour les agrandir.</p>
           <div class="row">
             <div class="col-sm-3">

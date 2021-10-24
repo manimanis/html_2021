@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      width: 300px;
+      margin: calc(50vh - 160px) auto;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    input[type=text],
+    input[type=password],
+    button {
+      box-sizing: border-box;
+      padding: 1em 1.5em;
+      background-color: #e6e6e6;
+      border: none;
+      width: 100%;
+      font-size: 1.05em;
+    }
+
+    div {
+      margin: 0.5em;
+    }
+
+    div:nth-child(3) {
+      margin-bottom: 1.5em;
+    }
+
+    button {
+      background-color: #8281f6;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Login</h1>
+  <form action="login.php" method="post">
+    <div><input type="text" name="user" placeholder="Username"></div>
+    <div><input type="password" name="pass" placeholder="Password"></div>
+    <div>
+      <label>
+        <input type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <div><button>Login</button></div>
+  </form>
+</body>
+
+</html>
