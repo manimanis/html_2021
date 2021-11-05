@@ -29,7 +29,6 @@
     <article>
       <h2>Les feuilles de style</h2>
 
-
       <section>
         <h3>Introduction</h3>
 
@@ -211,6 +210,169 @@
           <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>
         </p>
         <p><strong>On adoptera cette méthode dans le reste de ce cours.</strong></p>
+      </section>
+    </article>
+
+    <article>
+      <h2>Application</h2>
+
+      <section>
+        <h3>Une joyeuse course</h3>
+
+        <p>L'objectif de cette application est d'obtenir une page web identique à l'image suivante :</p>
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-11-min.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Squelette de la page</h3>
+
+        <h4>Travail demandé</h4>
+        <ul>
+          <li>On demande au début de télécharger le texte, les images et les polices requis pour cette application à
+            travers le lien suivant : <a href="assets/downloads/tp5/JoyeuseCourseStarter.zip"
+              download="JoyeuseCourseStarter" target="_blank" rel="noopener noreferrer">Fichiers de démarrage</a></li>
+          <li>Décompresser le fichier dans votre dossier,</li>
+          <li>Editer le fichier <strong>course.html</strong>
+            <ul>
+              <li>Ajouter la structure minimale d'une page Web HTML5</li>
+              <li>Suivre les indications dans ce fichier pour construire le squelette de la page.</li>
+            </ul>
+          </li>
+          <li>Créer un fichier nommé <strong>style.css</strong> dans le même dossier que le fichier
+            <strong>course.html</strong>.
+          </li>
+          <li>Lier la feuille de style à la page en utilisant le code :
+            <pre><code class="language-css">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></pre>
+          </li>
+        </ul>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-02.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, squelette de la page</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Alignement du texte</h3>
+        <p>Nous allons commencer par centrer le texte de la page. La propriété <strong>text-align</strong> permet de
+          définir l'alignement du texte :</p>
+
+        <pre><code class="language-css">h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}</code></pre>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-03.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, texte centré</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Coloriage du texte</h3>
+        <p>La propriété <strong>color</strong> définit la couleur du texte d'un élément.</p>
+
+        <pre><code class="language-css">h1 {
+  /* ajouter cette propriété */
+  color: #e30000;
+}
+
+p {
+  /* ajouter cette propriété */
+  color: #0081a3;
+}</code></pre>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-04.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, colorier le texte</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Taille de la police</h3>
+        <p>La propriété <strong>font-size</strong> définit la taille du texte.</p>
+        <pre><code class="language-css">h1 {
+  /* ajouter cette propriété */
+  font-size: 42pt;
+}
+
+p {
+  /* ajouter cette propriété */
+  font-size: 42pt;
+}</code></pre>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-05.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, colorier le texte</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Famille de la police</h3>
+
+        <p>La propriété <strong>font-family</strong> définit la famille et le style d'écriture du texte.</p>
+
+        <p>Le sélecteur <strong>@font-face</strong> est ajouté lorsque les polices utilisées sont non disponibles sur la
+          machine de l'utilisateur.</p>
+        <pre><code class="language-css">@font-face {
+  font-family: Dancing Script;
+  src: url(fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Lily Script;
+  src: url(fonts/LilyScriptOne-Regular.ttf);
+}
+
+h1 {
+  /* ajouter cette propriété */
+  font-family: 'Lily Script', cursive;
+}
+
+p {
+  /* ajouter cette propriété */
+  font-family: 'Dancing Script', cursive;
+}</code></pre>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-06.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, colorier le texte</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>Balises sémantiques</h3>
+
+        <p>Ajouter des balises <strong>span</strong> avec les classes indiquées, dans l'image suivante, pour donner une
+          sémantique à leurs contenus.</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-html.png" alt="Code HTML de la page">
+          <figcaption>Une joyeuse course, code HTML de la page</figcaption>
+        </figure>
+
+        <p>Les textes de ces <strong>span</strong> devront être remplacées par des <span>images</span> par la suite.</p>
+      </section>
+
+      <section>
+        <h3>Cacher le texte d'un élément</h3>
+
+        <p>Pour cacher le texte à l'intérieur du <strong>span</strong> il faudra agir sur trois propriétés.</p>
+        <ul>
+          <li><strong>display</strong> : par défaut la balise <strong>span</strong> est une balise <ins>inline</ins>,
+            c'est à dire qu'on ne peut pas agir sur ces dimensions. Nous allons modifier la valeur cette propriétés à
+            <ins>inline-block</ins>, c'est à dire un élément inline dont on peut ajuster les dimensions
+            <strong>width</strong> et <strong>height</strong>.
+          </li>
+          <li><strong>width</strong> : la largeur par de l'élément <strong>span</strong></li>
+          <li></li>
+        </ul>
       </section>
     </article>
   </main>
