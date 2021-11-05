@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 6</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 6</h1>
+
+    <article>
+      <h2>Les feuilles de style</h2>
+
+
+      <section>
+        <h3>Introduction</h3>
+
+        <p>Les feuilles de style en cascade sont définis par le site Mozilla Developper Network (MDN). comme suit :</p>
+        <div>
+          <blockquote class="blockquote">
+            <p>Les Cascading StyleSheets — ou CSS — (Feuilles de style en cascade) sont la
+              première technique à apprendre après le HTML. Alors que HTML s'utilise pour définir la structure et la
+              sémantique du contenu, les CSS sont employées pour composer et déterminer l'apparence de ce contenu.</p>
+            <p>Ainsi par exemple, vous utiliserez les CSS pour modifier les polices, la couleur, la taille et
+              l'espacement de votre contenu, pour le répartir sur plusieurs colonnes ou bien pour ajouter des animations
+              et autres fonctionnalités décoratives.</p>
+            <footer class="blockquote-footer">Source <cite title="Source Title">MDN</cite></footer>
+          </blockquote>
+        </div>
+
+        <h4>Exemple</h4>
+
+        <p>Les deux images suivantes montrent l'effet des feuilles de style en cascade (CSS) sur une même page :</p>
+        <div class="row">
+          <div class="col-sm-5">
+            <figure>
+              <img src="assets/downloads/tp5/images/joyeuse-course-02-min.png" alt="Page en HTML" class="border">
+              <figcaption>Une page en HTML seulement</figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-7">
+            <figure>
+              <img src="assets/downloads/tp5/images/joyeuse-course-11-min.png" alt="Page en HTML et en CSS"
+                class="border">
+              <figcaption>La même page en HTML après application du CSS</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Premiers pas</h3>
+
+        <p>Pour appliquer un style dans une page Web, on peut opter pour l'une des trois méthodes suivantes :</p>
+        <ul>
+          <li>En utilisant <strong>l'attribut style</strong> : Le style est appliqué directement à l'élément à travers
+            l'attribut <strong>style=&quot;...&quot;</strong> :
+            <code>&lt;p style=&quot;...&quot;&gt;...&lt;/p&gt;</code>.
+          </li>
+          <li>En utilisant une <strong><em>feuille de style interne</em></strong> : En ajoutant, la balise
+            <code>&lt;style&gt;...&lt;/style&gt;</code> dans la partie <strong>&lt;head&gt;...&lt;/head&gt;</strong> du
+            document HTML.
+          </li>
+          <li>En utilisant <strong><em>feuille de style externe</em></strong> : La balise <strong>link</strong> autorise
+            le partage d'une même feuille de style entre plusieurs pages web sans avoir à dupliquer le code plusieurs
+            fois, et ce en utilisant la balise <strong>link</strong> :
+            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Attribut style</h3>
+
+        <p>Nous voulons par exemple illustrer les éléments d'une phrase à l'aide de plusieurs couleurs différentes.</p>
+        <ul>
+          <li class="my-1">Le sujet : couleur brown <span
+              style="background-color: brown; width: 32px; display: inline-block">&nbsp;</span></li>
+          <li class="my-1">Les adjectifs : couleurs blue <span
+              style="background-color: blue; width: 32px; display: inline-block">&nbsp;</span> et red <span
+              style="background-color: red; width: 32px; display: inline-block">&nbsp;</span></li>
+          <li class="my-1">Le verbe : couleur chartreuse <span
+              style="background-color: chartreuse; width: 32px; display: inline-block">&nbsp;</span></li>
+          <li class="my-1">Le complément : couleur darkgoldenrod <span
+              style="background-color: darkgoldenrod; width: 32px; display: inline-block">&nbsp;</span></li>
+        </ul>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/inline-style.png" alt="Style en ligne, inline">
+          <figcaption>Style en ligne, inline</figcaption>
+        </figure>
+
+        <p>Le code HTML de cette phrase est comme suit :</p>
+        <pre><code class="language-html">&lt;p&gt;&lt;span style=&quot;color: brown;&quot;&gt;Une 
+  &lt;i style=&quot;color: blue;&quot;&gt;jolie&lt;/i&gt; 
+  &lt;i style=&quot;color: red;&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt; 
+  &lt;b style=&quot;color: chartreuse;&quot;&gt;se prom&egrave;ne&lt;/b&gt; 
+  &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;dans le bois&lt;/u&gt;.&lt;/p&gt;</code></pre>
+
+        <h4>Exercice</h4>
+        <ol>
+          <li><strong>Sans copier/coller</strong> le code précédent, mettre en forme les deux phrases suivantes :
+            <figure>
+              <img src="assets/downloads/tp5/images/inline-style-02.png" alt="Style en ligne, inline">
+              <figcaption>Style en ligne, inline</figcaption>
+            </figure>
+          </li>
+          <li>Est-il pratique d'utiliser cette même méthode pour la mise en forme d'une centaine de phrases ?
+            <strong>Quelle est la solution</strong> ?
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Feuille de style interne</h3>
+
+        <p>La balise <code>&lt;style&gt;...&lt;/style&gt;</code> permet d'intégrer une <strong>feuille de style
+            interne</strong> dans une page Web.</p>
+        <p>Normalement, cette balise doit figurer dans la partie <code>&lt;head&gt;...&lt;/head&gt;</code> du document.
+        </p>
+
+        <p>Nous allons reprdrendre l'exemple précédent qui illustre les composants d'une phrase à l'aide de différentes
+          couleurs.</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/style-tag-01.png" alt="Eléments d'une phrase">
+          <figcaption>Eléments d'une phrase</figcaption>
+        </figure>
+
+        <p>L'utilisation de cette méthode requiert des changements au niveau du code HTML, dans le but de donner une,
+          certaine, sémantique (sens) à chacune des parties de la phrase.</p>
+
+        <pre><code class="language-html">&lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;Une
+    &lt;i class=&quot;adjectif1&quot;&gt;jolie&lt;/i&gt;
+    &lt;i class=&quot;adjectif2&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt;
+  &lt;b class=&quot;verbe&quot;&gt;se prom&egrave;ne&lt;/b&gt;
+  &lt;u class=&quot;complement&quot;&gt;dans le bois&lt;/u&gt;.
+&lt;/p&gt;</code></pre>
+
+        <p>Dans la partie <code>&lt;head&gt;...&lt;/head&gt;</code>, on définit la feuille de style interne de la façon
+          suivante :</p>
+
+        <pre><code class="language-css">&lt;style&gt;
+.sujet {
+  color: brown;
+}
+&lt;/style&gt;</code></pre>
+
+        <p>La balise <strong>&lt;style&gt;...&lt;/style&gt;</strong> comporte l'ensemble des <strong>règles</strong> de
+          mise en forme à appliquer au document.</p>
+
+        <h4>Exercice</h4>
+        <p>Continuer la définition des autres règles. Utiliser les mêmes couleurs de la partie précédente.</p>
+      </section>
+
+      <section>
+        <h3>Règles de style</h3>
+
+        <p>Une <strong>règle</strong> est appliquée à un <strong>sélecteur</strong> qui indique les éléments concernés
+          par une règle.</p>
+        <p>Une <strong>règle</strong> modifie les <strong>valeurs</strong> des <strong>propriétés</strong> du
+          <strong>sélecteur</strong>.
+        </p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/css-rule.png" alt="Règle CSS">
+          <figcaption>Règle CSS</figcaption>
+        </figure>
+
+        <p>Dans la figure précédente, <strong>.sujet</strong> est appelé un <strong><em>sélecteur de
+              classe</em></strong>, qui signifie que la <strong>règle</strong> sera appliquée à tous les éléments qui
+          appartiennent à la <ins>classe</ins> <strong>sujet</strong>, plus précisement toutes les balises définies :
+          <code>&lt;balise class=&quot;sujet&quot;&gt;&lt;/balise&gt;</code>.
+        </p>
+        <p>La propriété <strong>color</strong>, qui définit la couleur du texte, de ce sélecteur est définie à
+          <strong>brown</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h3>Feuille de style externe</h3>
+
+        <p>Plus fréquemment, la feuille de style est placée à l'extérieur du document html, dans un fichier qui porte
+          l'extension <strong>.css</strong>,exemple : <span class="text-success">style</span><span
+            class="text-danger">.css</span>.</p>
+        <p>Cette pratique est <strong>très recommandée</strong> dans la conception d'un site web car :</p>
+        <ul>
+          <li>Elle favorise le partage d'un même style pour toutes les pages pour obtenir une apparence homogène.</li>
+          <li>Elle évite la duplication du code CSS dans plusieurs documents et donc facilite la maintenance et les
+            modifications.</li>
+        </ul>
+        <p>Une feuille de style est liée à une page web à travers la balise <strong>&lt;link&gt;</strong> :
+          <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>
+        </p>
+        <p><strong>On adoptera cette méthode dans le reste de ce cours.</strong></p>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

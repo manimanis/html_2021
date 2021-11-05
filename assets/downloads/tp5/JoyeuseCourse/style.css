@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Dancing Script;
+  src: url(fonts/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Lily Script;
+  src: url(fonts/LilyScriptOne-Regular.ttf);
+}
+
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Lily Script', cursive;
+  font-size: 42pt;
+  text-align: center;
+  color: #e30000;
+}
+
+p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42pt;
+  text-align: center;
+  color: #0081a3;
+  line-height: 60px;
+}
+
+.image {
+  display: inline-block;
+  border: 1px solid #666;
+  vertical-align: middle;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.image.jardin {
+  width: 84px;
+  height: 87px;
+  background-image: url(images/image01.png);
+}
+
+.image.tortues {
+  width: 95px;
+  height: 55px;
+  background-image: url(images/image02.png);
+}
+
+.image.toboggan {
+  width: 87px;
+  height: 81px;
+  background-image: url(images/image03.png);
+}
+
+.image.fourmis {
+  width: 63px;
+  height: 68px;
+  background-image: url(images/image04.png);
+}
+
+.image.escargots {
+  width: 68px;
+  height: 63px;
+  background-image: url(images/image05.png);
+}
+
+.image.raisin {
+  width: 138px;
+  height: 61px;
+  background-image: url(images/image06.png);
+}
+
+.image.oiseau1 {
+  width: 51px;
+  height: 51px;
+  background-image: url(images/image07.png);
+}
+
+.image.oiseau2 {
+  width: 54px;
+  height: 51px;
+  background-image: url(images/image08.png);
+}
