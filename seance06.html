@@ -451,7 +451,7 @@
         <p>La propriété <strong>font-family</strong> définit la famille et le style d'écriture du texte. Le navigateur
           reconnait trois types de familles :</p>
         <ul>
-          <li><strong>génériques</strong> : <span style="font-family: serif;">serif</span>, <span
+          <li><strong>générique</strong> : <span style="font-family: serif;">serif</span>, <span
               style="font-family: sans-serif;">sans-serif</span>, <span
               style="font-family: monospace;">monospace</span>, <span style="font-family: cursive;">cursive</span>,
             <span style="font-family: fantasy;">fantasy</span>.
@@ -468,8 +468,10 @@
         <h4>Travail demandé</h4>
         <p>Changer les polices du titre <strong>h1</strong> et du paragraphe <strong>p</strong>.</p>
         <ul>
-          <li><strong>h1</strong>, police : Lily Script, fichier : fonts/LilyScriptOne-Regular.ttf</li>
-          <li><strong>p</strong>, police : Dancing script, fichier : fonts/DancingScript-VariableFont_wght.ttf</li>
+          <li><strong>h1</strong>, <strong>police :</strong> Lily Script, <strong>fichier :</strong>
+            fonts/LilyScriptOne-Regular.ttf</li>
+          <li><strong>p</strong>, <strong>police :</strong> Dancing script, <strong>fichier :</strong>
+            fonts/DancingScript-VariableFont_wght.ttf</li>
         </ul>
         <pre><code class="language-css">@font-face {
   font-family: Lily Script;
@@ -525,11 +527,33 @@ h1 {
   /* définir les propriétés : display, width, text-indent et overlow */
 }</code></pre>
 
-<p>Le résultat final ressemble à ce qui suit :</p>
+        <p>Le résultat final ressemble à ce qui suit :</p>
         <figure>
           <img src="assets/downloads/tp5/images/joyeuse-course-07-min.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course, cacher le texte des <strong>span</strong></figcaption>
         </figure>
+      </section>
+
+      <section>
+        <h3>Image d'arrière plan</h3>
+
+        <p>On peut utiliser la propriété <strong>background-image</strong> avec l'<ins>url(image)</ins> pour la définir
+          <strong><em>image</em></strong> comme <strong>image d'arrière plan</strong> de l'élément sélectionné.
+        </p>
+
+        <p>Il faut redimensionner l'élément qui contient une image d'arrière plan pour qu'il affiche l'image entière et
+          sans duplications : <strong>width</strong> et <strong>height</strong>.</p>
+
+        <h4>Travail demandé</h4>
+        <p>On donne le code suivant, qui permet de définir une image comme arrière plan pour l'élément
+          <strong>span</strong> ayant la classe <strong>jardin</strong>.</p>
+        <pre><code class="language-css">span.jardin {
+  background-image: url(images/image01.png);
+  width: 84px;
+  height: 87px;
+}</code></pre>
+
+        <p></p>
       </section>
     </article>
   </main>
