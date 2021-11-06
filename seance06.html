@@ -32,7 +32,7 @@
       <section>
         <h3>Introduction</h3>
 
-        <p>Les feuilles de style en cascade sont définis par le site Mozilla Developper Network (MDN). comme suit :</p>
+        <p>Les feuilles de style en cascade sont définies par le site Mozilla Developper Network (MDN). comme suit :</p>
         <div>
           <blockquote class="blockquote">
             <p>Les Cascading StyleSheets — ou CSS — (Feuilles de style en cascade) sont la
@@ -66,21 +66,62 @@
       </section>
 
       <section>
+        <h3>Découverte</h3>
+
+        <p>Appuyer sur <kbd>F12</kbd>, pour ouvrir l'inspecteur. En haut, s'affiche le code HTML de la page et en bas
+          les <strong>règles</strong> de style appliquées aux différents éléments de la page.</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/css-discovery.png" alt="Contenu d'une feuille de style">
+          <figcaption>Contenu d'une feuille de style</figcaption>
+        </figure>
+
+        <p>On en déduit, alors, qu'une feuille de style est constituée, comme le montre l'image, par un ensemble de
+          <strong>règles</strong> de style.
+        </p>
+      </section>
+
+      <section>
+        <h3>Règles de style</h3>
+
+        <p>Une <strong>règle</strong> de style est appliquée à un <strong>sélecteur</strong> qui indique les éléments
+          concernés. Cette <strong>règle</strong> modifie les <strong>valeurs</strong> par défaut des
+          <strong>propriétés</strong> du <strong>sélecteur</strong>.
+        </p>
+        <p>La figure suivante, montre l'anatomie d'une règle de style.</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/css-rule.png" alt="Règle CSS">
+          <figcaption>Règle CSS</figcaption>
+        </figure>
+
+        <p>Dans l'exemple précédent, <strong>.sujet</strong> est appelé un <strong><em>sélecteur de
+              classe</em></strong>, qui signifie que la <strong>règle</strong> sera appliquée à tous les éléments qui
+          appartiennent à la <ins>classe</ins> <strong>sujet</strong>, plus précisement toutes les balises définies avec
+          un attribut <code>class="sujet"</code>. Dans ce cas, la <ins>couleur du texte</ins> de l'élément sera
+          <strong>brown</strong> <span
+            style="background-color: brown; width: 32px; display: inline-block">&nbsp;</span>.
+        </p>
+      </section>
+
+      <section>
         <h3>Premiers pas</h3>
 
-        <p>Pour appliquer un style dans une page Web, on peut opter pour l'une des trois méthodes suivantes :</p>
+        <p>Pour appliquer un style dans une page Web, on peut opter pour l'une des <strong>trois méthodes</strong>
+          possibles :</p>
         <ul>
           <li>En utilisant <strong>l'attribut style</strong> : Le style est appliqué directement à l'élément à travers
             l'attribut <strong>style=&quot;...&quot;</strong> :
             <code>&lt;p style=&quot;...&quot;&gt;...&lt;/p&gt;</code>.
           </li>
-          <li>En utilisant une <strong><em>feuille de style interne</em></strong> : En ajoutant, la balise
-            <code>&lt;style&gt;...&lt;/style&gt;</code> dans la partie <strong>&lt;head&gt;...&lt;/head&gt;</strong> du
-            document HTML.
+          <li>En utilisant une <strong><em>feuille de style interne</em></strong> : En ajoutant les <strong>règles de
+              style</strong> dans la balise <code>&lt;style&gt;...&lt;/style&gt;</code>. De préférence cette balise doit
+            être mentionnée dans la partie <strong>&lt;head&gt;...&lt;/head&gt;</strong> du document HTML.
           </li>
-          <li>En utilisant <strong><em>feuille de style externe</em></strong> : La balise <strong>link</strong> autorise
-            le partage d'une même feuille de style entre plusieurs pages web sans avoir à dupliquer le code plusieurs
-            fois, et ce en utilisant la balise <strong>link</strong> :
+          <li>En utilisant une <strong><em>feuille de style externe</em></strong> : Les <strong>règles de style</strong>
+            sont regroupées dans un fichier CSS qui est lié au document HTML via la balise <strong>link</strong>. Cette
+            méthode autorise le partage d'une même feuille de style entre plusieurs pages web sans avoir à dupliquer le
+            code. La feuille de style est liée à la page web comme suit :
             <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>.
           </li>
         </ul>
@@ -91,28 +132,49 @@
 
         <p>Nous voulons par exemple illustrer les éléments d'une phrase à l'aide de plusieurs couleurs différentes.</p>
         <ul>
-          <li class="my-1">Le sujet : couleur brown <span
+          <li class="my-1">Le <strong>sujet</strong> : couleur brown <span
               style="background-color: brown; width: 32px; display: inline-block">&nbsp;</span></li>
-          <li class="my-1">Les adjectifs : couleurs blue <span
+          <li class="my-1">Les <strong>adjectifs</strong> : couleurs blue <span
               style="background-color: blue; width: 32px; display: inline-block">&nbsp;</span> et red <span
               style="background-color: red; width: 32px; display: inline-block">&nbsp;</span></li>
-          <li class="my-1">Le verbe : couleur chartreuse <span
+          <li class="my-1">Le <strong>verbe</strong> : couleur chartreuse <span
               style="background-color: chartreuse; width: 32px; display: inline-block">&nbsp;</span></li>
-          <li class="my-1">Le complément : couleur darkgoldenrod <span
+          <li class="my-1">Le <strong>complément</strong> : couleur darkgoldenrod <span
               style="background-color: darkgoldenrod; width: 32px; display: inline-block">&nbsp;</span></li>
         </ul>
 
-        <figure>
-          <img src="assets/downloads/tp5/images/inline-style.png" alt="Style en ligne, inline">
-          <figcaption>Style en ligne, inline</figcaption>
-        </figure>
+        <div class="row">
+          <div class="col-sm-5">
+            <p>Commençons par le code HTML :</p>
+            <pre><code class="language-html">&lt;p&gt;&lt;span&gt;Une
+    &lt;i&gt;jolie&lt;/i&gt;
+    &lt;i&gt;petite&lt;/i&gt; fille&lt;/span&gt;
+  &lt;b&gt;se prom&egrave;ne&lt;/b&gt;
+  &lt;u&gt;dans le bois&lt;/u&gt;.
+&lt;/p&gt;</code></pre>
 
-        <p>Le code HTML de cette phrase est comme suit :</p>
-        <pre><code class="language-html">&lt;p&gt;&lt;span style=&quot;color: brown;&quot;&gt;Une 
+            <p>Le résultat n'est pas spectaculaire.</p>
+            <figure>
+              <img src="assets/downloads/tp5/images/inline-style-03.png" alt="Phrase sans styles">
+              <figcaption>Phrase sans styles</figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-7">
+            <p>Ajoutons l'attribut <strong>style</strong> :</p>
+            <pre><code class="language-html">&lt;p&gt;&lt;span style=&quot;color: brown;&quot;&gt;Une 
   &lt;i style=&quot;color: blue;&quot;&gt;jolie&lt;/i&gt; 
   &lt;i style=&quot;color: red;&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt; 
   &lt;b style=&quot;color: chartreuse;&quot;&gt;se prom&egrave;ne&lt;/b&gt; 
-  &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;dans le bois&lt;/u&gt;.&lt;/p&gt;</code></pre>
+  &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;dans le bois&lt;/u&gt;.
+  &lt;/p&gt;</code></pre>
+
+            <p>Le résultat est meilleur :</p>
+            <figure>
+              <img src="assets/downloads/tp5/images/inline-style.png" alt="Style en ligne, inline">
+              <figcaption>Style en ligne, inline</figcaption>
+            </figure>
+          </div>
+        </div>
 
         <h4>Exercice</h4>
         <ol>
@@ -154,8 +216,8 @@
   &lt;u class=&quot;complement&quot;&gt;dans le bois&lt;/u&gt;.
 &lt;/p&gt;</code></pre>
 
-        <p>Dans la partie <code>&lt;head&gt;...&lt;/head&gt;</code>, on définit la feuille de style interne de la façon
-          suivante :</p>
+        <p>Dans la partie <code>&lt;head&gt;...&lt;/head&gt;</code>, on définit la <strong>feuille de style
+            interne</strong> en utilisant la balise <strong>&lt;style&gt;...&lt;/style&gt;</strong> :</p>
 
         <pre><code class="language-css">&lt;style&gt;
 .sujet {
@@ -163,35 +225,35 @@
 }
 &lt;/style&gt;</code></pre>
 
-        <p>La balise <strong>&lt;style&gt;...&lt;/style&gt;</strong> comporte l'ensemble des <strong>règles</strong> de
-          mise en forme à appliquer au document.</p>
-
         <h4>Exercice</h4>
-        <p>Continuer la définition des autres règles. Utiliser les mêmes couleurs de la partie précédente.</p>
-      </section>
+        <ol>
+          <li>Copier/coller le code HTML des phrases :
+            <pre><code class="language-html">&lt;p&gt;&lt;span&gt;Une
+    &lt;i&gt;jolie&lt;/i&gt;
+    &lt;i&gt;petite&lt;/i&gt; fille&lt;/span&gt;
+  &lt;b&gt;se prom&egrave;ne&lt;/b&gt;
+  &lt;u&gt;dans le bois&lt;/u&gt;.
+&lt;/p&gt;
 
-      <section>
-        <h3>Règles de style</h3>
+&lt;p&gt;&lt;span&gt;Le
+    &lt;i&gt;grand&lt;/i&gt;
+    sapin
+    &lt;i&gt;vert&lt;/i&gt;&lt;/span&gt;
+  &lt;b&gt;est install&eacute;&lt;/b&gt;
+  &lt;u&gt;dans le salon&lt;/u&gt;.
+&lt;/p&gt;
 
-        <p>Une <strong>règle</strong> est appliquée à un <strong>sélecteur</strong> qui indique les éléments concernés
-          par une règle.</p>
-        <p>Une <strong>règle</strong> modifie les <strong>valeurs</strong> des <strong>propriétés</strong> du
-          <strong>sélecteur</strong>.
-        </p>
-
-        <figure>
-          <img src="assets/downloads/tp5/images/css-rule.png" alt="Règle CSS">
-          <figcaption>Règle CSS</figcaption>
-        </figure>
-
-        <p>Dans la figure précédente, <strong>.sujet</strong> est appelé un <strong><em>sélecteur de
-              classe</em></strong>, qui signifie que la <strong>règle</strong> sera appliquée à tous les éléments qui
-          appartiennent à la <ins>classe</ins> <strong>sujet</strong>, plus précisement toutes les balises définies :
-          <code>&lt;balise class=&quot;sujet&quot;&gt;&lt;/balise&gt;</code>.
-        </p>
-        <p>La propriété <strong>color</strong>, qui définit la couleur du texte, de ce sélecteur est définie à
-          <strong>brown</strong>.
-        </p>
+&lt;p&gt;&lt;span&gt;
+    &lt;i&gt;Tr&egrave;s&lt;/i&gt;
+    &lt;i&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
+  &lt;b&gt;se l&egrave;ve&lt;/b&gt;
+  &lt;u&gt;de son lit&lt;/u&gt;.
+&lt;/p&gt;</code></pre>
+          </li>
+          <li>Définir des classes pour chaque élément de la phrase.</li>
+          <li>Compléter la définition de la feuille de style interne. Utiliser les mêmes couleurs que l'exercice
+            précédent.</li>
+        </ol>
       </section>
 
       <section>
@@ -200,16 +262,19 @@
         <p>Plus fréquemment, la feuille de style est placée à l'extérieur du document html, dans un fichier qui porte
           l'extension <strong>.css</strong>,exemple : <span class="text-success">style</span><span
             class="text-danger">.css</span>.</p>
-        <p>Cette pratique est <strong>très recommandée</strong> dans la conception d'un site web car :</p>
+
+        <p>Cette pratique est <strong>très recommandée</strong> en conception web car :</p>
         <ul>
-          <li>Elle favorise le partage d'un même style pour toutes les pages pour obtenir une apparence homogène.</li>
-          <li>Elle évite la duplication du code CSS dans plusieurs documents et donc facilite la maintenance et les
-            modifications.</li>
+          <li>Elle favorise le partage d'un même style pour toutes les pages, pour une apparence homogène.</li>
+          <li>Elle évite la duplication du code CSS. Elle facilite, donc, la maintenance d'un site web.</li>
         </ul>
-        <p>Une feuille de style est liée à une page web à travers la balise <strong>&lt;link&gt;</strong> :
+
+        <p>Une <strong>feuille de style externe</strong> est liée à une page web à travers la balise
+          <strong>&lt;link&gt;</strong> :
           <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>
         </p>
-        <p><strong>On adoptera cette méthode dans le reste de ce cours.</strong></p>
+
+        <p class="text-danger"><strong>On adoptera cette méthode dans le reste de ce cours.</strong></p>
       </section>
     </article>
 
@@ -249,6 +314,7 @@
           </li>
         </ul>
 
+        <p>A la fin de cette étape votre page doit ressembler à ce qui suit :</p>
         <figure>
           <img src="assets/downloads/tp5/images/joyeuse-course-02.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course, squelette de la page</figcaption>
@@ -257,17 +323,32 @@
 
       <section>
         <h3>Alignement du texte</h3>
-        <p>Nous allons commencer par centrer le texte de la page. La propriété <strong>text-align</strong> permet de
-          définir l'alignement du texte :</p>
+        <p>La propriété <strong>text-align</strong> permet de définir l'<u>alignement du texte</u>. Quelques valeurs
+          possibles de cette propriété :</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <ul>
+              <li>left</li>
+              <li>right</li>
+              <li>center</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <div class="bg-light p-2 border border-secondary">
+              <div style="text-align: left;">Texte aligné à gauche.</div>
+              <div style="text-align: center;">Texte aligné au centre.</div>
+              <div style="text-align: right;">Texte aligné à droite.</div>
+            </div>
+          </div>
+        </div>
 
-        <pre><code class="language-css">h1 {
-  text-align: center;
-}
-
-p {
+        <h4>Travail demandé</h4>
+        <p>Centrer le texte des éléments <strong>h1</strong> et <strong>p</strong>.</p>
+        <pre><code class="language-css">h1 { /* sélecteur de la balise h1 */
   text-align: center;
 }</code></pre>
 
+        <p>Le résultat final ressemble à ce qui suit :</p>
         <figure>
           <img src="assets/downloads/tp5/images/joyeuse-course-03.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course, texte centré</figcaption>
@@ -276,18 +357,50 @@ p {
 
       <section>
         <h3>Coloriage du texte</h3>
-        <p>La propriété <strong>color</strong> définit la couleur du texte d'un élément.</p>
+        <p>La propriété <strong>color</strong> définit la couleur du texte d'un élément. Cette propriété accepte
+          différents types de valeur, notamment :</p>
 
+        <ul>
+          <li>Le <strong>nom</strong> du couleur : <span style="color: red;">red</span>, <span
+              style="color: green;">green</span>, etc.
+            <p>La page suivante présente la liste des noms des couleurs : <a
+                href="https://htmlcolorcodes.com/fr/noms-de-couleur/" target="_blank"
+                rel="noopener noreferrer">https://htmlcolorcodes.com/fr/noms-de-couleur/</a></p>
+          </li>
+          <li>Le <strong>code hexadécimal</strong> d'une couleur : Il se présente sous la forme de 3
+            couples de chiffres hexadécimaux, entre 0 - 9 et A - F :
+            <p class="fs-2 text-center">#<span style="color:red">RR</span><span style="color:green">GG</span><span
+                style="color:blue">BB</span>
+            </p>
+            <p>Chaque couple définit le dosage d’une des trois couleurs primaires : <span
+                style="color:red">rouge</span>, <span style="color:green">vert</span> et <span
+                style="color:blue">bleu</span>.</p>
+            <p>Exemples : <span style="color: #ff0000;">#ff0000</span>, <span style="color: #0000ff;">#0000ff</span>,
+              etc.</p>
+            <p>Cet outil en ligne permet de créer une palette de couleurs pour son site web : <a
+                href="https://htmlcolorcodes.com/fr/" target="_blank"
+                rel="noopener noreferrer">https://htmlcolorcodes.com/fr/</a></p>
+          </li>
+          <li>Le <strong>code rgb(r, g, b)</strong> : Tout comme le <strong>code hexadécimal</strong> ce code utilise
+            trois valeurs numériques, comprises entre 0 et 255 chacune, pour définir le dosage des trois couleurs
+            primaires :
+            <p class="fs-2 text-center">rgb(<span style="color:red">r</span>, <span style="color:green">g</span>, <span
+                style="color:blue">b</span>)</p>
+
+            <p>Exemples : <span style="color: rgb(120, 130, 140);">rgb(120, 130, 140)</span>, <span
+                style="color: rgb(100, 150, 200);">rgb(100, 150, 200)</span>,
+              etc.</p>
+          </li>
+        </ul>
+
+        <h4>Travail demandé</h4>
+        <p>Définir la couleur <span style="color: #e30000;">#e30000</span> pour le titre <strong>h1</strong> et la
+          couleur <span style="color: #0081a3;">#0081a3</span> pour les paragraphes.</p>
         <pre><code class="language-css">h1 {
   /* ajouter cette propriété */
   color: #e30000;
-}
-
-p {
-  /* ajouter cette propriété */
-  color: #0081a3;
 }</code></pre>
-
+        <p>Le résultat final ressemble à ce qui suit :</p>
         <figure>
           <img src="assets/downloads/tp5/images/joyeuse-course-04.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course, colorier le texte</figcaption>
@@ -296,36 +409,69 @@ p {
 
       <section>
         <h3>Taille de la police</h3>
-        <p>La propriété <strong>font-size</strong> définit la taille du texte.</p>
+        <p>La propriété <strong>font-size</strong> définit la taille du texte. La taille peut être exprimée en :</p>
+        <ul>
+          <li><strong><em>px</em></strong> (<strong>pixels</strong>) : Les points lumineux de l'écran sont appelées
+            <strong>pixels</strong>.
+          </li>
+          <li><strong><em>pt</em></strong> (<strong>points</strong>) : 72pt = 1" = 2.54cm, donc 1pt = 0.03528cm</li>
+          <li><strong><em>cm</em></strong> (centimètre)</li>
+          <li><strong><em>em</em></strong> (<strong>M</strong>) : La taille des caractères est exprimée en fonction de
+            la taille de la lettre M de l'élément parent.</li>
+          <li><strong><em>%</em></strong> (<strong>pourcent</strong>) : La taille des caractères est exprimée en
+            fonction de la taille de la police de l'élément parent.</li>
+        </ul>
+
+        <div class="bg-light p-2 border border-secondary">
+          <div style="font-size: 35px;">font-size: 35px;</div>
+          <div style="font-size: 35pt;">font-size: 35pt;</div>
+          <div style="font-size: 0.5cm;">font-size: 0.5cm;</div>
+          <div style="font-size: 1.5em;">font-size: 1.5em;</div>
+          <div style="font-size: 150%;">font-size: 150%;</div>
+        </div>
+
+        <h4>Travail demandé</h4>
+        <p>Modifier la taille de la police des éléments <strong>h1</strong> et <strong>p</strong> à
+          <strong>42pt</strong> chacune.
+        </p>
         <pre><code class="language-css">h1 {
   /* ajouter cette propriété */
   font-size: 42pt;
-}
-
-p {
-  /* ajouter cette propriété */
-  font-size: 42pt;
 }</code></pre>
-
+        <p>Le résultat final ressemble à ce qui suit :</p>
         <figure>
-          <img src="assets/downloads/tp5/images/joyeuse-course-05.png" alt="Une joyeuse course">
-          <figcaption>Une joyeuse course, colorier le texte</figcaption>
+          <img src="assets/downloads/tp5/images/joyeuse-course-05-min.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, changer la taille du texte</figcaption>
         </figure>
       </section>
 
       <section>
         <h3>Famille de la police</h3>
 
-        <p>La propriété <strong>font-family</strong> définit la famille et le style d'écriture du texte.</p>
+        <p>La propriété <strong>font-family</strong> définit la famille et le style d'écriture du texte. Le navigateur
+          reconnait trois types de familles :</p>
+        <ul>
+          <li><strong>génériques</strong> : <span style="font-family: serif;">serif</span>, <span
+              style="font-family: sans-serif;">sans-serif</span>, <span
+              style="font-family: monospace;">monospace</span>, <span style="font-family: cursive;">cursive</span>,
+            <span style="font-family: fantasy;">fantasy</span>.
+          </li>
+          <li><strong>système</strong> : les polices installées dans la machine de l'utilisateur : <span
+              style="font-family: arial;">arial</span>, <span style="font-family: 'Times New Roman';">Times New
+              Roman</span>, etc.</li>
+          <li><strong>utilisateur</strong> : sont des polices installées sur un serveur CDN tel que : <a
+              href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">https://fonts.google.com/</a>.
+            <p>Le sélecteur <strong>@font-face</strong> est ajouté pour définir ce type de polices.</p>
+          </li>
+        </ul>
 
-        <p>Le sélecteur <strong>@font-face</strong> est ajouté lorsque les polices utilisées sont non disponibles sur la
-          machine de l'utilisateur.</p>
+        <h4>Travail demandé</h4>
+        <p>Changer les polices du titre <strong>h1</strong> et du paragraphe <strong>p</strong>.</p>
+        <ul>
+          <li><strong>h1</strong>, police : Lily Script, fichier : fonts/LilyScriptOne-Regular.ttf</li>
+          <li><strong>p</strong>, police : Dancing script, fichier : fonts/DancingScript-VariableFont_wght.ttf</li>
+        </ul>
         <pre><code class="language-css">@font-face {
-  font-family: Dancing Script;
-  src: url(fonts/DancingScript-VariableFont_wght.ttf);
-}
-
-@font-face {
   font-family: Lily Script;
   src: url(fonts/LilyScriptOne-Regular.ttf);
 }
@@ -333,16 +479,12 @@ p {
 h1 {
   /* ajouter cette propriété */
   font-family: 'Lily Script', cursive;
-}
-
-p {
-  /* ajouter cette propriété */
-  font-family: 'Dancing Script', cursive;
 }</code></pre>
 
+        <p>Le résultat final ressemble à ce qui suit :</p>
         <figure>
-          <img src="assets/downloads/tp5/images/joyeuse-course-06.png" alt="Une joyeuse course">
-          <figcaption>Une joyeuse course, colorier le texte</figcaption>
+          <img src="assets/downloads/tp5/images/joyeuse-course-06-min.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, changer la famille de la police</figcaption>
         </figure>
       </section>
 
@@ -363,16 +505,31 @@ p {
       <section>
         <h3>Cacher le texte d'un élément</h3>
 
-        <p>Pour cacher le texte à l'intérieur du <strong>span</strong> il faudra agir sur trois propriétés.</p>
+        <p>Pour cacher le texte à l'intérieur du <strong>span</strong> il faudra agir sur quatre propriétés.</p>
         <ul>
-          <li><strong>display</strong> : par défaut la balise <strong>span</strong> est une balise <ins>inline</ins>,
-            c'est à dire qu'on ne peut pas agir sur ces dimensions. Nous allons modifier la valeur cette propriétés à
-            <ins>inline-block</ins>, c'est à dire un élément inline dont on peut ajuster les dimensions
-            <strong>width</strong> et <strong>height</strong>.
+          <li>La propriété <strong>display</strong> de inline à <ins>inline-block</ins> pour pouvoir
+            ajuster ses dimensions <strong>width</strong> et <strong>height</strong>, tout en conservant sa propriété
+            <ins>inline</ins>.
           </li>
-          <li><strong>width</strong> : la largeur par de l'élément <strong>span</strong></li>
-          <li></li>
+          <li>La largeur <strong>width</strong> de l'élément à <ins>zéro</ins> pour cacher son contenu.</li>
+          <li>L'indentation <strong>text-indent</strong> de l'élément à <ins>200%</ins> pour mettre le texte du
+            <strong>span</strong> à l'extérieur de la partie visible.
+          </li>
+          <li>changer la propriété <strong>overflow</strong> de l'élément à <ins>hidden</ins> pour cacher le texte qui
+            en déborde.</li>
         </ul>
+
+        <h4>Travail demandé</h4>
+        <p>Copier le code CSS suivant et le compléter.</p>
+        <pre><code class="language-css">span {
+  /* définir les propriétés : display, width, text-indent et overlow */
+}</code></pre>
+
+<p>Le résultat final ressemble à ce qui suit :</p>
+        <figure>
+          <img src="assets/downloads/tp5/images/joyeuse-course-07-min.png" alt="Une joyeuse course">
+          <figcaption>Une joyeuse course, cacher le texte des <strong>span</strong></figcaption>
+        </figure>
       </section>
     </article>
   </main>
