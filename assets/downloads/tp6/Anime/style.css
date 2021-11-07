@@ -39,9 +39,18 @@ a:hover {
 }
 
 .personnage {
-  width: calc(50% - 20px);
-  margin: 10px;
+  width: calc(50% - 22px);
+  margin: 5px;
   text-align: center;
+  padding: 5px;
+  border: 1px solid #759fcb;
+  color: #0055af;
+}
+
+.personnage:hover {
+  color: #fff;
+  background-color: #0055af;
+  border: 1px solid #fff;
 }
 
 .personnage img {
