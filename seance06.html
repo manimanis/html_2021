@@ -76,15 +76,15 @@
           <figcaption>Contenu d'une feuille de style</figcaption>
         </figure>
 
-        <p>On en déduit, alors, qu'une feuille de style est constituée, comme le montre l'image, par un ensemble de
-          <strong>règles</strong> de style.
+        <p>On en déduit, alors, qu'une <strong>feuille de style</strong> est constituée, comme le montre l'image, par
+          <ins>un ensemble de <strong>règles de style</strong></ins>.
         </p>
       </section>
 
       <section>
         <h3>Règles de style</h3>
 
-        <p>Une <strong>règle</strong> de style est appliquée à un <strong>sélecteur</strong> qui indique les éléments
+        <p>Une <strong>règle de style</strong> est appliquée à un <strong>sélecteur</strong> qui indique les éléments
           concernés. Cette <strong>règle</strong> modifie les <strong>valeurs</strong> par défaut des
           <strong>propriétés</strong> du <strong>sélecteur</strong>.
         </p>
@@ -107,22 +107,50 @@
       <section>
         <h3>Premiers pas</h3>
 
-        <p>Pour appliquer un style dans une page Web, on peut opter pour l'une des <strong>trois méthodes</strong>
+        <p>Pour appliquer un style dans une page Web, on peut opter pour une des <strong>trois méthodes</strong>
           possibles :</p>
         <ul>
           <li>En utilisant <strong>l'attribut style</strong> : Le style est appliqué directement à l'élément à travers
-            l'attribut <strong>style=&quot;...&quot;</strong> :
-            <code>&lt;p style=&quot;...&quot;&gt;...&lt;/p&gt;</code>.
+            l'attribut <strong>style=&quot;...&quot;</strong>.
+            <p><strong>Exemple :</strong></p>
+            <pre><code class="language-html">&lt;p style=&quot;text-align: center;&quot;&gt;Texte du paragraphe centré&lt;/p&gt;</code></pre>
           </li>
           <li>En utilisant une <strong><em>feuille de style interne</em></strong> : En ajoutant les <strong>règles de
               style</strong> dans la balise <code>&lt;style&gt;...&lt;/style&gt;</code>. De préférence cette balise doit
             être mentionnée dans la partie <strong>&lt;head&gt;...&lt;/head&gt;</strong> du document HTML.
+            <p><strong>Exemple :</strong></p>
+            <pre><code class="language-html">&lt;head&gt;
+  &lt;!-- D&eacute;clarations head --&gt;
+  &lt;style&gt;p {text-align: center;}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- contenu de la page --&gt; 
+  &lt;p&gt;Texte du paragraphe centr&eacute;&lt;/p&gt;
+&lt;/body&gt;</code></pre>
           </li>
           <li>En utilisant une <strong><em>feuille de style externe</em></strong> : Les <strong>règles de style</strong>
             sont regroupées dans un fichier CSS qui est lié au document HTML via la balise <strong>link</strong>. Cette
             méthode autorise le partage d'une même feuille de style entre plusieurs pages web sans avoir à dupliquer le
-            code. La feuille de style est liée à la page web comme suit :
-            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>.
+            code.
+            <p><strong>Exemple :</strong></p>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Fichier <strong>HTML</strong></p>
+                <pre><code class="language-html">&lt;head&gt;
+  &lt;!-- D&eacute;clarations head --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- contenu de la page --&gt; 
+  &lt;p&gt;Texte du paragraphe centr&eacute;&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+              </div>
+              <div class="col-sm-6">
+                <p>Fichier <strong>style.css</strong></p>
+                <pre><code class="language-css">p {text-align: center;}</code></pre>
+              </div>
+            </div>
+
           </li>
         </ul>
       </section>
@@ -130,16 +158,22 @@
       <section>
         <h3>Attribut style</h3>
 
-        <p>Nous voulons par exemple illustrer les éléments d'une phrase à l'aide de plusieurs couleurs différentes.</p>
+        <p>Nous voulons dans l'exemple suivant illustrer les éléments d'une phrase à l'aide de plusieurs couleurs
+          différentes.</p>
+        <figure>
+          <img src="assets/downloads/tp5/images/inline-style.png" alt="Style en ligne, inline">
+          <figcaption>Style en ligne, inline</figcaption>
+        </figure>
+
         <ul>
-          <li class="my-1">Le <strong>sujet</strong> : couleur brown <span
+          <li class="my-1">Le <strong>sujet</strong> : couleur <ins>brown</ins> <span
               style="background-color: brown; width: 32px; display: inline-block">&nbsp;</span></li>
-          <li class="my-1">Les <strong>adjectifs</strong> : couleurs blue <span
-              style="background-color: blue; width: 32px; display: inline-block">&nbsp;</span> et red <span
+          <li class="my-1">Les <strong>adjectifs</strong> : couleurs <ins>blue</ins> <span
+              style="background-color: blue; width: 32px; display: inline-block">&nbsp;</span> et <ins>red</ins> <span
               style="background-color: red; width: 32px; display: inline-block">&nbsp;</span></li>
-          <li class="my-1">Le <strong>verbe</strong> : couleur chartreuse <span
+          <li class="my-1">Le <strong>verbe</strong> : couleur <ins>chartreuse</ins> <span
               style="background-color: chartreuse; width: 32px; display: inline-block">&nbsp;</span></li>
-          <li class="my-1">Le <strong>complément</strong> : couleur darkgoldenrod <span
+          <li class="my-1">Le <strong>complément</strong> : couleur <ins>darkgoldenrod</ins> <span
               style="background-color: darkgoldenrod; width: 32px; display: inline-block">&nbsp;</span></li>
         </ul>
 
@@ -194,20 +228,21 @@
         <h3>Feuille de style interne</h3>
 
         <p>La balise <code>&lt;style&gt;...&lt;/style&gt;</code> permet d'intégrer une <strong>feuille de style
-            interne</strong> dans une page Web.</p>
-        <p>Normalement, cette balise doit figurer dans la partie <code>&lt;head&gt;...&lt;/head&gt;</code> du document.
+            interne</strong> dans une page Web. Cette balise doit figurer dans la partie
+          <code>&lt;head&gt;...&lt;/head&gt;</code> du document.
         </p>
 
-        <p>Nous allons reprdrendre l'exemple précédent qui illustre les composants d'une phrase à l'aide de différentes
-          couleurs.</p>
+        <p>Repenons l'exemple précédent qui illustre les composants d'une phrase à l'aide d'<strong>une feuille de style
+            interne</strong>.</p>
 
         <figure>
           <img class="h3cm" src="assets/downloads/tp5/images/style-tag-01.png" alt="Eléments d'une phrase">
           <figcaption>Eléments d'une phrase</figcaption>
         </figure>
 
-        <p>L'utilisation de cette méthode requiert des changements au niveau du code HTML, dans le but de donner une,
-          certaine, sémantique (sens) à chacune des parties de la phrase.</p>
+        <p>Commençons par donner une, certaine, sémantique (un sens) à chacune des parties de la phrase. Et ce dans le
+          <strong>code HTML</strong>.
+        </p>
 
         <pre><code class="language-html">&lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;Une
     &lt;i class=&quot;adjectif1&quot;&gt;jolie&lt;/i&gt;
@@ -250,7 +285,7 @@
   &lt;u&gt;de son lit&lt;/u&gt;.
 &lt;/p&gt;</code></pre>
           </li>
-          <li>Définir des classes pour chaque élément de la phrase.</li>
+          <li>Définir des classes pour chaque élément de la phrase, pour leur donner une sémantique.</li>
           <li>Compléter la définition de la feuille de style interne. Utiliser les mêmes couleurs que l'exercice
             précédent.</li>
         </ol>
@@ -266,7 +301,8 @@
         <p>Cette pratique est <strong>très recommandée</strong> en conception web car :</p>
         <ul>
           <li>Elle favorise le partage d'un même style pour toutes les pages, pour une apparence homogène.</li>
-          <li>Elle évite la duplication du code CSS. Elle facilite, donc, la maintenance d'un site web.</li>
+          <li>Elle évite la duplication du code CSS et elle facilite, par conséquence, la maintenance d'un site web.
+          </li>
         </ul>
 
         <p>Une <strong>feuille de style externe</strong> est liée à une page web à travers la balise
@@ -310,7 +346,7 @@
             <strong>course.html</strong>.
           </li>
           <li>Lier la feuille de style à la page en utilisant le code :
-            <pre><code class="language-css">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></pre>
+            <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></pre>
           </li>
         </ul>
 
@@ -358,11 +394,12 @@
       <section>
         <h3>Coloriage du texte</h3>
         <p>La propriété <strong>color</strong> définit la couleur du texte d'un élément. Cette propriété accepte
-          différents types de valeur, notamment :</p>
+          différents types de valeurs, notamment :</p>
 
         <ul>
           <li>Le <strong>nom</strong> du couleur : <span style="color: red;">red</span>, <span
-              style="color: green;">green</span>, etc.
+              style="color: green;">green</span>, <span style="color: deeppink;">deeppink</span>, <span
+              style="color: orangered;">orangered</span>, etc.
             <p>La page suivante présente la liste des noms des couleurs : <a
                 href="https://htmlcolorcodes.com/fr/noms-de-couleur/" target="_blank"
                 rel="noopener noreferrer">https://htmlcolorcodes.com/fr/noms-de-couleur/</a></p>
@@ -376,7 +413,9 @@
                 style="color:red">rouge</span>, <span style="color:green">vert</span> et <span
                 style="color:blue">bleu</span>.</p>
             <p>Exemples : <span style="color: #ff0000;">#ff0000</span>, <span style="color: #0000ff;">#0000ff</span>,
-              etc.</p>
+              <span style="color: #BDB76B;">#BDB76B</span>, <span style="color: #9932CC;">#9932CC</span>,
+              etc.
+            </p>
             <p>Cet outil en ligne permet de créer une palette de couleurs pour son site web : <a
                 href="https://htmlcolorcodes.com/fr/" target="_blank"
                 rel="noopener noreferrer">https://htmlcolorcodes.com/fr/</a></p>
@@ -411,11 +450,11 @@
         <h3>Taille de la police</h3>
         <p>La propriété <strong>font-size</strong> définit la taille du texte. La taille peut être exprimée en :</p>
         <ul>
-          <li><strong><em>px</em></strong> (<strong>pixels</strong>) : Les points lumineux de l'écran sont appelées
-            <strong>pixels</strong>.
+          <li><strong><em>px</em></strong> (<strong>pixels</strong>) : Les points lumineux de l'écran de votre
+            ordinateur ou de votre téléphone sont appelées <strong>pixels</strong>.
           </li>
-          <li><strong><em>pt</em></strong> (<strong>points</strong>) : 72pt = 1" = 2.54cm, donc 1pt = 0.03528cm</li>
-          <li><strong><em>cm</em></strong> (centimètre)</li>
+          <li><strong><em>pt</em></strong> (<strong>points</strong>) : 72pt = 1" = 2.54cm, donc 1pt &asymp; 0.35mm</li>
+          <li><strong><em>cm</em></strong> (<strong>centimètre</strong>)</li>
           <li><strong><em>em</em></strong> (<strong>M</strong>) : La taille des caractères est exprimée en fonction de
             la taille de la lettre M de l'élément parent.</li>
           <li><strong><em>%</em></strong> (<strong>pourcent</strong>) : La taille des caractères est exprimée en
@@ -423,11 +462,11 @@
         </ul>
 
         <div class="bg-light p-2 border border-secondary">
-          <div style="font-size: 35px;">font-size: 35px;</div>
-          <div style="font-size: 35pt;">font-size: 35pt;</div>
-          <div style="font-size: 0.5cm;">font-size: 0.5cm;</div>
-          <div style="font-size: 1.5em;">font-size: 1.5em;</div>
-          <div style="font-size: 150%;">font-size: 150%;</div>
+          <span style="font-size: 20px; margin: 0 30px;">font-size: 20px;</span>
+          <span style="font-size: 20pt; margin: 0 30px;">font-size: 20pt;</span>
+          <span style="font-size: 0.5cm; margin: 0 30px;">font-size: 0.5cm;</span>
+          <span style="font-size: 1.5em; margin: 0 30px;">font-size: 1.5em;</span>
+          <span style="font-size: 80%; margin: 0 30px;">font-size: 80%;</span>
         </div>
 
         <h4>Travail demandé</h4>
@@ -458,20 +497,31 @@
           </li>
           <li><strong>système</strong> : les polices installées dans la machine de l'utilisateur : <span
               style="font-family: arial;">arial</span>, <span style="font-family: 'Times New Roman';">Times New
-              Roman</span>, etc.</li>
-          <li><strong>utilisateur</strong> : sont des polices installées sur un serveur CDN tel que : <a
-              href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">https://fonts.google.com/</a>.
-            <p>Le sélecteur <strong>@font-face</strong> est ajouté pour définir ce type de polices.</p>
+              Roman</span>, <span style="font-family: 'Book Antiqua';">Book Antiqua</span>, etc.</li>
+          <li><strong>utilisateur</strong> : sont des polices installées sur un serveur <abbr
+              title="Content Delivery Network">CDN</abbr> tel
+            que : <a href="https://fonts.google.com/" target="_blank"
+              rel="noopener noreferrer">https://fonts.google.com/</a>.
+            <p>Le sélecteur <strong>@font-face</strong> est ajouté, dans la feuille de style, pour déclarer ce type de
+              polices.</p>
           </li>
         </ul>
 
         <h4>Travail demandé</h4>
         <p>Changer les polices du titre <strong>h1</strong> et du paragraphe <strong>p</strong>.</p>
         <ul>
-          <li><strong>h1</strong>, <strong>police :</strong> Lily Script, <strong>fichier :</strong>
-            fonts/LilyScriptOne-Regular.ttf</li>
-          <li><strong>p</strong>, <strong>police :</strong> Dancing script, <strong>fichier :</strong>
-            fonts/DancingScript-VariableFont_wght.ttf</li>
+          <li><strong>h1</strong>
+            <ul>
+              <li><strong>police :</strong> Lily Script,</li>
+              <li><strong>chemin du fichier :</strong> fonts/LilyScriptOne-Regular.ttf</li>
+            </ul>
+          </li>
+          <li><strong>p</strong>
+            <ul>
+              <li><strong>police :</strong> Dancing script,</li>
+              <li><strong>chemin du fichier :</strong> fonts/DancingScript-VariableFont_wght.ttf</li>
+            </ul>
+          </li>
         </ul>
         <pre><code class="language-css">@font-face {
   font-family: Lily Script;
@@ -501,7 +551,7 @@ h1 {
           <figcaption>Une joyeuse course, code HTML de la page</figcaption>
         </figure>
 
-        <p>Les textes de ces <strong>span</strong> devront être remplacées par des <span>images</span> par la suite.</p>
+        <p>Ces <strong>span</strong> devront être remplacées par des <span>images</span> par la suite.</p>
       </section>
 
       <section>
@@ -509,16 +559,16 @@ h1 {
 
         <p>Pour cacher le texte à l'intérieur du <strong>span</strong> il faudra agir sur quatre propriétés.</p>
         <ul>
-          <li>La propriété <strong>display</strong> de inline à <ins>inline-block</ins> pour pouvoir
+          <li>La propriété <strong>display</strong> de inline à <ins>inline-block</ins>, pour pouvoir
             ajuster ses dimensions <strong>width</strong> et <strong>height</strong>, tout en conservant sa propriété
             <ins>inline</ins>.
           </li>
           <li>La largeur <strong>width</strong> de l'élément à <ins>zéro</ins> pour cacher son contenu.</li>
-          <li>L'indentation <strong>text-indent</strong> de l'élément à <ins>200%</ins> pour mettre le texte du
-            <strong>span</strong> à l'extérieur de la partie visible.
+          <li>L'indentation <strong>text-indent</strong> de l'élément à <ins>200%</ins>, pour mettre le texte du
+            <strong>span</strong> à l'extérieur du rectangle visible.
           </li>
-          <li>changer la propriété <strong>overflow</strong> de l'élément à <ins>hidden</ins> pour cacher le texte qui
-            en déborde.</li>
+          <li>changer la propriété <strong>overflow</strong> de l'élément à <ins>hidden</ins>, pour cacher le texte qui
+            du rectangle visible.</li>
         </ul>
 
         <h4>Travail demandé</h4>
@@ -527,7 +577,7 @@ h1 {
   /* définir les propriétés : display, width, text-indent et overlow */
 }</code></pre>
 
-        <p>Le résultat final ressemble à ce qui suit :</p>
+        <p>Le résultat final ressemble à ce qui suit, le texte des <strong>span</strong> est caché :</p>
         <figure>
           <img class="h4cm" src="assets/downloads/tp5/images/joyeuse-course-07-min.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course, cacher le texte des <strong>span</strong></figcaption>
@@ -537,12 +587,12 @@ h1 {
       <section>
         <h3>Image d'arrière plan</h3>
 
-        <p>On peut utiliser la propriété <strong>background-image</strong> avec l'<ins>url(image)</ins> pour la définir
-          <strong><em>image</em></strong> comme <strong>image d'arrière plan</strong> de l'élément sélectionné.
+        <p>La propriété <strong>background-image</strong> sert à définir une <strong><em>image</em></strong> comme
+          <strong>image d'arrière plan</strong> de l'élément sélectionné en indiquant son <ins>url(image)</ins>.
         </p>
 
-        <p>Il faut redimensionner l'élément qui contient une image d'arrière plan pour qu'il affiche l'image entière et
-          sans duplications : <strong>width</strong> et <strong>height</strong>.</p>
+        <p>Il faut <ins>redimensionner l'élément qui contient une image d'arrière plan</ins> pour qu'il affiche l'image
+          entière et sans duplications. Propriétés : <strong>width</strong> et <strong>height</strong>.</p>
 
         <h4>Travail demandé</h4>
         <p>On donne le code suivant, qui permet de définir une image comme arrière plan pour l'élément
@@ -593,8 +643,11 @@ span.oiseau2 {
       <section>
         <h3>Alignement vertical</h3>
 
-        <p>Outre l'alignement horizontal du texte vu précédemment, le CSS autorise le <strong>vertical-align</strong>
-          qui permet d'aligner les images verticalement dans un texte.</p>
+        <p>On remarque que les images insérées dans l'étape précédente ne sont pas bien alignées verticalement.</p>
+
+        <p>La propriété <strong>vertical-align</strong>, qui permet d'aligner les images verticalement dans un texte,
+          résout ce problème. Cette propriété peut prendre plusieurs valeurs, l'exemple suivant montre quelques-unes.
+        </p>
 
         <h4>Exemple</h4>
         <style>
@@ -645,6 +698,27 @@ span.oiseau2 {
           <img class="h4cm" src="assets/downloads/tp5/images/joyeuse-course-09-min.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course, alignement vertical des images</figcaption>
         </figure>
+      </section>
+
+      <section>
+        <h3>Résumé</h3>
+
+        <p>Les propriétés CSS utilisées dans cette application sont :</p>
+        <ul>
+          <li><strong>color</strong> : couleur du texte</li>
+          <li><strong>text-align</strong> : alignement du texte</li>
+          <li><strong>font-size</strong> : taille de la police</li>
+          <li><strong>font-family</strong> : famille de la police</li>
+          <li><strong>display</strong> : mode d'affichage de l'élément <strong>inline</strong>,
+            <strong>inline-block</strong> ou <strong>block</strong>
+          </li>
+          <li><strong>width</strong> : largeur d'un élément</li>
+          <li><strong>height</strong> : hauteur d'un élément</li>
+          <li><strong>background-image</strong> : image d'arrière plan d'un élément</li>
+          <li><strong>text-indent</strong> : indentation du texte dans l'élément</li>
+          <li><strong>overflow</strong> : affichage de la partie qui déborde hors de l'élément</li>
+          <li><strong>vertical-align</strong> : alignement vertical des images dans un élément</li>
+        </ul>
       </section>
     </article>
   </main>
