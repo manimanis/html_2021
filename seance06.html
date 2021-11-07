@@ -51,14 +51,14 @@
         <div class="row">
           <div class="col-sm-5">
             <figure>
-              <img src="assets/downloads/tp5/images/joyeuse-course-02-min.png" alt="Page en HTML" class="border">
+              <img src="assets/downloads/tp5/images/joyeuse-course-02-min.png" alt="Page en HTML" class="border h6cm">
               <figcaption>Une page en HTML seulement</figcaption>
             </figure>
           </div>
           <div class="col-sm-7">
             <figure>
               <img src="assets/downloads/tp5/images/joyeuse-course-11-min.png" alt="Page en HTML et en CSS"
-                class="border">
+                class="border h13cm">
               <figcaption>La même page en HTML après application du CSS</figcaption>
             </figure>
           </div>
@@ -66,13 +66,13 @@
       </section>
 
       <section>
-        <h3>Découverte</h3>
+        <h3 class="p-break">Découverte</h3>
 
         <p>Appuyer sur <kbd>F12</kbd>, pour ouvrir l'inspecteur. En haut, s'affiche le code HTML de la page et en bas
           les <strong>règles</strong> de style appliquées aux différents éléments de la page.</p>
 
         <figure>
-          <img class="h8cm" src="assets/downloads/tp5/images/css-discovery.png" alt="Contenu d'une feuille de style">
+          <img class="h10cm" src="assets/downloads/tp5/images/css-discovery.png" alt="Contenu d'une feuille de style">
           <figcaption>Contenu d'une feuille de style</figcaption>
         </figure>
 
@@ -210,7 +210,7 @@
           </div>
         </div>
 
-        <h4>Exercice</h4>
+        <h4 class="p-break">Exercice</h4>
         <ol>
           <li><strong>Sans copier/coller</strong> le code précédent, mettre en forme les deux phrases suivantes :
             <figure>
@@ -263,24 +263,17 @@
         <h4>Exercice</h4>
         <ol>
           <li>Copier/coller le code HTML des phrases :
-            <pre><code class="language-html">&lt;p&gt;&lt;span&gt;Une
-    &lt;i&gt;jolie&lt;/i&gt;
-    &lt;i&gt;petite&lt;/i&gt; fille&lt;/span&gt;
+            <pre><code class="language-html">&lt;p&gt;&lt;span&gt;Une &lt;i&gt;jolie&lt;/i&gt; &lt;i&gt;petite&lt;/i&gt; fille&lt;/span&gt;
   &lt;b&gt;se prom&egrave;ne&lt;/b&gt;
   &lt;u&gt;dans le bois&lt;/u&gt;.
 &lt;/p&gt;
 
-&lt;p&gt;&lt;span&gt;Le
-    &lt;i&gt;grand&lt;/i&gt;
-    sapin
-    &lt;i&gt;vert&lt;/i&gt;&lt;/span&gt;
+&lt;p&gt;&lt;span&gt;Le &lt;i&gt;grand&lt;/i&gt; sapin &lt;i&gt;vert&lt;/i&gt;&lt;/span&gt;
   &lt;b&gt;est install&eacute;&lt;/b&gt;
   &lt;u&gt;dans le salon&lt;/u&gt;.
 &lt;/p&gt;
 
-&lt;p&gt;&lt;span&gt;
-    &lt;i&gt;Tr&egrave;s&lt;/i&gt;
-    &lt;i&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
+&lt;p&gt;&lt;span&gt;&lt;i&gt;Tr&egrave;s&lt;/i&gt; &lt;i&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
   &lt;b&gt;se l&egrave;ve&lt;/b&gt;
   &lt;u&gt;de son lit&lt;/u&gt;.
 &lt;/p&gt;</code></pre>
@@ -322,7 +315,7 @@
 
         <p>L'objectif de cette application est d'obtenir une page web identique à l'image suivante :</p>
         <figure>
-          <img class="h8cm" src="assets/downloads/tp5/images/joyeuse-course-11-min.png" alt="Une joyeuse course">
+          <img class="h14cm" src="assets/downloads/tp5/images/joyeuse-course-11-min.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course</figcaption>
         </figure>
       </section>
@@ -420,7 +413,8 @@
                 href="https://htmlcolorcodes.com/fr/" target="_blank"
                 rel="noopener noreferrer">https://htmlcolorcodes.com/fr/</a></p>
           </li>
-          <li>Le <strong>code rgb(r, g, b)</strong> : Tout comme le <strong>code hexadécimal</strong> ce code utilise
+          <li class="p-break">Le <strong>code rgb(r, g, b)</strong> : Tout comme le <strong>code hexadécimal</strong> ce
+            code utilise
             trois valeurs numériques, comprises entre 0 et 255 chacune, pour définir le dosage des trois couleurs
             primaires :
             <p class="fs-2 text-center">rgb(<span style="color:red">r</span>, <span style="color:green">g</span>, <span
@@ -461,12 +455,12 @@
             fonction de la taille de la police de l'élément parent.</li>
         </ul>
 
-        <div class="bg-light p-2 border border-secondary">
-          <span style="font-size: 20px; margin: 0 30px;">font-size: 20px;</span>
-          <span style="font-size: 20pt; margin: 0 30px;">font-size: 20pt;</span>
-          <span style="font-size: 0.5cm; margin: 0 30px;">font-size: 0.5cm;</span>
-          <span style="font-size: 1.5em; margin: 0 30px;">font-size: 1.5em;</span>
-          <span style="font-size: 80%; margin: 0 30px;">font-size: 80%;</span>
+        <div class="bg-light p-2 border border-secondary" style="display: flex; flex-wrap: wrap;">
+          <div style="font-size: 20px; margin: 0 10px;">font-size: 20px;</div>
+          <div style="font-size: 20pt; margin: 0 10px;">font-size: 20pt;</div>
+          <div style="font-size: 0.5cm; margin: 0 10px;">font-size: 0.5cm;</div>
+          <div style="font-size: 1.5em; margin: 0 10px;">font-size: 1.5em;</div>
+          <div style="font-size: 80%; margin: 0 10px;">font-size: 80%;</div>
         </div>
 
         <h4>Travail demandé</h4>
@@ -479,7 +473,7 @@
 }</code></pre>
         <p>Le résultat final ressemble à ce qui suit :</p>
         <figure>
-          <img class="h5cm" src="assets/downloads/tp5/images/joyeuse-course-05-min.png" alt="Une joyeuse course">
+          <img class="h4cm" src="assets/downloads/tp5/images/joyeuse-course-05-min.png" alt="Une joyeuse course">
           <figcaption>Une joyeuse course, changer la taille du texte</figcaption>
         </figure>
       </section>
@@ -541,7 +535,7 @@ h1 {
       </section>
 
       <section>
-        <h3>Balises sémantiques</h3>
+        <h3 class="p-break">Balises sémantiques</h3>
 
         <p>Ajouter des balises <strong>span</strong> avec les classes indiquées, dans l'image suivante, pour donner une
           sémantique à leurs contenus.</p>
@@ -585,7 +579,7 @@ h1 {
       </section>
 
       <section>
-        <h3>Image d'arrière plan</h3>
+        <h3 class="p-break">Image d'arrière plan</h3>
 
         <p>La propriété <strong>background-image</strong> sert à définir une <strong><em>image</em></strong> comme
           <strong>image d'arrière plan</strong> de l'élément sélectionné en indiquant son <ins>url(image)</ins>.
@@ -605,33 +599,19 @@ h1 {
 }</code></pre>
 
         <p>On demande de compléter les autres définitions de classes.</p>
-        <pre><code class="language-css">span.tortues {
-  /* image02.png */
-}
+        <pre><code class="language-css">span.tortues { /* image02.png */ }
 
-span.toboggan {
-  /* image03.png */
-}
+span.toboggan { /* image03.png */ }
 
-span.fourmis {
-  /* image04.png */
-}
+span.fourmis { /* image04.png */ }
 
-span.escargots {
-  /* image05.png */
-}
+span.escargots { /* image05.png */ }
 
-span.raisin {
-  /* image06.png */
-}
+span.raisin { /* image06.png */ }
 
-span.oiseau1 {
-  /* image07.png */
-}
+span.oiseau1 { /* image07.png */ }
 
-span.oiseau2 {
-  /* image08.png */
-}</code></pre>
+span.oiseau2 { /* image08.png */ }</code></pre>
 
         <p>Le résultat final ressemble à ce qui suit :</p>
         <figure>
@@ -673,21 +653,22 @@ span.oiseau2 {
           .val-top {
             vertical-align: top;
           }
+
         </style>
-        <div class="bg-light p-2 border border-secondary row">
-          <div class="my-2 col-sm-3"><span class="val val-baseline"></span>
+        <div class="bg-light p-2 border border-secondary row small-text">
+          <div class="my-2 col-sm-6 col-lg-3"><span class="val val-baseline"></span>
             vertical-align: baseline;
           </div>
 
-          <div class="my-2 col-sm-3"><span class="val val-bottom"></span>
+          <div class="my-2 col-sm-6 col-lg-3"><span class="val val-bottom"></span>
             vertical-align: bottom;
           </div>
 
-          <div class="my-2 col-sm-3"><span class="val val-middle"></span>
+          <div class="my-2 col-sm-6 col-lg-3"><span class="val val-middle"></span>
             vertical-align: middle;
           </div>
 
-          <div class="my-2 col-sm-3"><span class="val val-top"></span>
+          <div class="my-2 col-sm-6 col-lg-3"><span class="val val-top"></span>
             vertical-align: top;
           </div>
         </div>
