@@ -1,0 +1,103 @@
+@font-face {
+  font-family: MochiyPopOne;
+  src: url(fonts/MochiyPopOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url(fonts/Merriweather-Regular.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  font-size: 14pt;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'MochiyPopOne', serif;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.personnages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personnage {
+  width: calc(50% - 20px);
+  margin: 10px;
+  text-align: center;
+}
+
+.personnage img {
+  max-width: 100%;
+}
+
+.personnage .nom {
+  text-align: center;
+  margin: 5px 0;
+}
+
+.carte {
+  width: 800px;
+  height: calc(100vh - 30px);
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.carte p {
+  margin: 0.5em 0;
+}
+
+.carte figure {
+  text-align: center;
+}
+
+.carte figcaption {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#personnage1 {
+  background-color: #f3c22e;
+}
+
+#personnage2 {
+  background-color: #759fcb;
+}
+
+#personnage3 {
+  background-color: #643c2b;
+  color: #fff;
+}
+
+#personnage4 {
+  background-color: #ba3626;
+  color: #fff;
+}
+
+#personnage4 a, #personnage3 a {
+  color: #999;
+  text-decoration: none;
+}
+
+#personnage4 a:hover, #personnage3 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
