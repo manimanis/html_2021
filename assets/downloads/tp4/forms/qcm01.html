@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QCM</title>
+</head>
+
+<body>
+  <h1>Exercices</h1>
+
+  <form action="verifier.php" method="post">
+    <div>
+      <h2>Question 1</h2>
+      <p><img src="images/garcon.webp" alt="Garçon"></p>
+      <p><strong>Je vois dans l'image :</strong></p>
+      <div>
+        <label><input type="radio" name="genre" value="Garçon"> Un garçon</label>
+        <label><input type="radio" name="genre" value="Fille"> Une fille</label>
+      </div>
+    </div>
+
+    <div>
+      <h2>Question 2</h2>
+      <table>
+        <tr>
+          <th width="25%"><img src="images/viande.webp" alt="Viande"></th>
+          <th width="25%"><img src="images/docteur.jpg" alt="Docteur"></th>
+          <th width="25%"><img src="images/menuisier.jpg" alt="Menuisier"></th>
+          <th width="25%"><img src="images/boucher.webp" alt="Boucher"></th>
+        </tr>
+        <tr>
+          <th>Viande</th>
+          <th>Docteur</th>
+          <th>Menuisier</th>
+          <th>Boucher</th>
+        </tr>
+      </table>
+      <p><strong>Pour acheter de la viande je vais chez qui ?</strong></p>
+      <div>
+        <label for="metier">Chez le </label>
+        <select name="metier" id="metier">
+          <option value="Docteur">Docteur</option>
+          <option value="Menuisier">Menuisier</option>
+          <option value="Boucher">Boucher</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <h2>Question 3</h2>
+      <p><strong>Quels sont les fruits qui se trouvent dans l'image suivante :</strong></p>
+      <p><img src="images/fruits.jpg" alt="fruits"></p>
+      <div>
+        <label><input type="checkbox" name="fruits[]" value="Orange"> Orange</label>
+        <label><input type="checkbox" name="fruits[]" value="Raisin"> Raisin</label>
+        <label><input type="checkbox" name="fruits[]" value="Ananas"> Ananas</label>
+        <label><input type="checkbox" name="fruits[]" value="Grenade"> Grenade</label>
+        <label><input type="checkbox" name="fruits[]" value="Banane"> Banane</label>
+        <label><input type="checkbox" name="fruits[]" value="Pastèque"> Pastèque</label>
+      </div>
+    </div>
+
+    <div>
+      <h2>Question 4</h2>
+      <p><strong>Comment s'appelle la fille et quel est son âge ?</strong></p>
+      <p><img src="images/sami-siwar.jpg" alt="Sami et Siwar"></p>
+      <div>
+        <label for="nom_fille">Nom de la fille</label>
+        <input type="text" name="nom_fille" id="nom_fille">
+
+        <label for="age_fille">Son âge</label>
+        <input type="number" name="age_fille" id="age_fille" min="1" max="10">
+      </div>
+    </div>
+
+    <div>
+      <h2>Question 5</h2>
+      <p><strong>Qui est le plus âgé, qui est le moins âgé ? Rédiger deux phrases selon le modèle suivant :</strong></p>
+      <p>..... est le plus âgé.<br>..... est la moins âgée.</p>
+      <div>
+        <label for="phrases"></label>
+        <textarea name="phrases" id="phrases" cols="60" rows="3"></textarea>
+      </div>
+    </div>
+
+    <div>
+      <h2>Question 6</h2>
+      <p><strong>Quelle est la fête célebrée par les enfants ?</strong></p>
+      <p><img src="images/anniversaire.jpg" alt="anniversaire"></p>
+      <div>
+        <label><input type="radio" name="fete" value="Réussite"> Réussite</label>
+        <label><input type="radio" name="fete" value="Mariage"> Mariage</label>
+        <label><input type="radio" name="fete" value="Fiançailles"> Fiançailles</label>
+        <label><input type="radio" name="fete" value="Anniversaire"> Anniversaire</label>
+      </div>
+    </div>
+
+    <div>
+      <button type="submit">Vérifier</button>
+      <button type="reset">Effacer</button>
+    </div>
+  </form>
+</body>
+
+</html>
