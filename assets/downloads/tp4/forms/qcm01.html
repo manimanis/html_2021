@@ -17,7 +17,7 @@
       <p><img src="images/garcon.webp" alt="Garçon"></p>
       <p><strong>Je vois dans l'image :</strong></p>
       <div>
-        <label><input type="radio" name="genre" value="Garçon"> Un garçon</label>
+        <label><input type="radio" name="genre" value="Garçon" required> Un garçon</label>
         <label><input type="radio" name="genre" value="Fille"> Une fille</label>
       </div>
     </div>
@@ -41,7 +41,7 @@
       <p><strong>Pour acheter de la viande je vais chez qui ?</strong></p>
       <div>
         <label for="metier">Chez le </label>
-        <select name="metier" id="metier">
+        <select name="metier" id="metier" required>
           <option value="Docteur">Docteur</option>
           <option value="Menuisier">Menuisier</option>
           <option value="Boucher">Boucher</option>
@@ -54,7 +54,7 @@
       <p><strong>Quels sont les fruits qui se trouvent dans l'image suivante :</strong></p>
       <p><img src="images/fruits.jpg" alt="fruits"></p>
       <div>
-        <label><input type="checkbox" name="fruits[]" value="Orange"> Orange</label>
+        <label><input type="checkbox" name="fruits[]" value="Orange" required> Orange</label>
         <label><input type="checkbox" name="fruits[]" value="Raisin"> Raisin</label>
         <label><input type="checkbox" name="fruits[]" value="Ananas"> Ananas</label>
         <label><input type="checkbox" name="fruits[]" value="Grenade"> Grenade</label>
@@ -69,10 +69,10 @@
       <p><img src="images/sami-siwar.jpg" alt="Sami et Siwar"></p>
       <div>
         <label for="nom_fille">Nom de la fille</label>
-        <input type="text" name="nom_fille" id="nom_fille">
+        <input type="text" name="nom_fille" id="nom_fille" required>
 
         <label for="age_fille">Son âge</label>
-        <input type="number" name="age_fille" id="age_fille" min="1" max="10">
+        <input type="number" name="age_fille" id="age_fille" min="1" max="10" required>
       </div>
     </div>
 
@@ -82,7 +82,7 @@
       <p>..... est le plus âgé.<br>..... est la moins âgée.</p>
       <div>
         <label for="phrases"></label>
-        <textarea name="phrases" id="phrases" cols="60" rows="3"></textarea>
+        <textarea name="phrases" id="phrases" cols="60" rows="3" required></textarea>
       </div>
     </div>
 
@@ -91,7 +91,7 @@
       <p><strong>Quelle est la fête célebrée par les enfants ?</strong></p>
       <p><img src="images/anniversaire.jpg" alt="anniversaire"></p>
       <div>
-        <label><input type="radio" name="fete" value="Réussite"> Réussite</label>
+        <label><input type="radio" name="fete" value="Réussite" required> Réussite</label>
         <label><input type="radio" name="fete" value="Mariage"> Mariage</label>
         <label><input type="radio" name="fete" value="Fiançailles"> Fiançailles</label>
         <label><input type="radio" name="fete" value="Anniversaire"> Anniversaire</label>

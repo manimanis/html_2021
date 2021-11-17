@@ -32,17 +32,252 @@
       <section>
         <h3>Problématique</h3>
 
-        <p>Le QCM suivant est destiné pour des élèves de maternelle : <a href="assets/downloads/tp4/images/qcm_01.png"
-            target="_blank" rel="noopener noreferrer">Cliquer pour agrandir</a>.</p>
+        <p>Le QCM suivant, <strong>composé de 6 questions</strong>, est destiné aux élèves de la maternelle : <a
+            href="assets/downloads/tp4/images/qcm_01.png" target="_blank" rel="noopener noreferrer">Cliquer pour
+            afficher le formulaire complet</a>.</p>
 
-        <figure>
+        <figure class="d-print-none">
           <a href="assets/downloads/tp4/images/qcm_01.png" target="_blank" rel="noopener noreferrer">
             <img src="assets/downloads/tp4/images/qcm-q01.png" alt="QCM Maternelle"></a>
           <figcaption>QCM Maternelle</figcaption>
         </figure>
+
+        <p>Les <strong>attributs du formulaire</strong> sont comme suit : </p>
+        <ul>
+          <li>La méthode HTTP : <strong>POST</strong></li>
+          <li>L'action : <strong>Demander à votre enseignant</strong></li>
+        </ul>
       </section>
 
-      
+      <section>
+        <h3>Question 1</h3>
+
+        <p>La première question ressemble à ce qui suit :</p>
+
+        <figure>
+          <img src="assets/downloads/tp4/images/qcm-q01.png" alt="Question 1">
+          <figcaption>Question n°1</figcaption>
+        </figure>
+
+        <p>Cette question utilise deux boutons radios : <code>&lt;input type=&quot;radio&quot;&gt;</code></p>
+        <ul>
+          <li>L'attribut <strong>name</strong> doit être le même pour les deux boutons: <code>name="genre"</code></li>
+          <li>L'attribut <strong>value</strong> doit être : <strong>Garçon</strong> pour le premier bouton et
+            <strong>Fille</strong> pour le second.
+          </li>
+          <li>L'attribut <strong>required</strong> doit être utilisé pour l'un des deux boutons.</li>
+        </ul>
+
+        <p>Les deux boutons radio sont dans un <strong>&lt;div&gt;&lt;/div&gt;</strong>. Et, chaque bouton radio doit
+          faire partie d'un <strong>&lt;label&gt;&lt;/label&gt;</strong>.</p>
+
+        <figure class="d-print-none">
+          <img src="assets/downloads/tp4/images/code-qcm-q01.png" alt="Code HTML question 1">
+          <figcaption>Code HTML question 1</figcaption>
+        </figure>
+
+        <div class="d-print-none">
+          <p>Image à télécharger pour l'utiliser dans la question :</p>
+          <figure>
+            <img src="assets/downloads/tp4/forms/images/garcon.webp" alt="Image Garçon">
+            <figcaption>Image Garçon</figcaption>
+          </figure>
+        </div>
+
+        <pre class="d-none d-print-block"><code class="language-html">&lt;div&gt;
+  &lt;h2&gt;Question 1&lt;/h2&gt;
+  &lt;p&gt;&lt;img src=&quot;images/garcon.webp&quot; alt=&quot;Gar&ccedil;on&quot;&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Je vois dans l&apos;image :&lt;/strong&gt;&lt;/p&gt;
+  &lt;div&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;Gar&ccedil;on&quot; required&gt; Un gar&ccedil;on&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;genre&quot; value=&quot;Fille&quot;&gt; Une fille&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3>Question 2</h3>
+
+        <p>La deuxième question ressemble à ce qui suit :</p>
+
+        <figure>
+          <img src="assets/downloads/tp4/images/qcm-q02.png" alt="Question 2" class="h6cm">
+          <figcaption>Question n°2</figcaption>
+        </figure>
+
+        <p>Les attributs de la liste déroulante <code>&lt;select&gt;...&lt;/select&gt;</code> sont comme suit :</p>
+        <ul>
+          <li>L'attribut <strong>name</strong> doit être <strong><ins>metier</ins></strong>.</li>
+          <li>L'attribut <strong>id</strong> doit être <strong><ins>metier</ins></strong>.</li>
+          <li>L'attribut <strong>required</strong> doit être utilisé.</li>
+        </ul>
+
+        <p>La liste déourlante est composée de trois options : <strong>Docteur</strong>, <strong>Menuisier</strong>,
+          <strong>Boucher</strong>. Compléter l'attribut <strong>value</strong> de chaque <strong>option</strong>.
+        </p>
+
+        <div class="d-print-none">
+          <p>Images à télécharger pour les utiliser dans la question :</p>
+          <figure>
+            <img src="assets/downloads/tp4/forms/images/viande.webp" alt="Viande">
+            <img src="assets/downloads/tp4/forms/images/docteur.jpg" alt="Docteur">
+            <img src="assets/downloads/tp4/forms/images/menuisier.jpg" alt="Menuisier">
+            <img src="assets/downloads/tp4/forms/images/boucher.webp" alt="Boucher">
+            <figcaption>Les images utilisées dans la question</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Question 3</h3>
+
+        <p>La troisième question ressemble à ce qui suit :</p>
+
+        <figure>
+          <img src="assets/downloads/tp4/images/qcm-q03.png" alt="Question 3">
+          <figcaption>Question n°3</figcaption>
+        </figure>
+
+        <p>Dans cette question on utilise six cases à cocher <code>&lt;input type=&quot;checkbox&quot;&gt;</code></p>
+        <ul>
+          <li>L'attribut <strong>name</strong> doit être le même pour toutes les cases à cocher :
+            <code>name="fruits[]"</code>
+          </li>
+          <li>L'attribut <strong>value</strong> doit être : <strong>Orange</strong> pour le premier bouton,
+            <strong>Raisin</strong> pour le second, etc.
+          </li>
+          <li>L'attribut <strong>required</strong> doit être utilisé pour l'un de cases à cocher.</li>
+        </ul>
+
+        <p>Les cases à cocher sont dans un <strong>&lt;div&gt;&lt;/div&gt;</strong>. Et, chacun d'eux doit faire partie
+          d'un <strong>&lt;label&gt;&lt;/label&gt;</strong>, tout comme les boutons radio.</p>
+
+        <div class="d-print-none">
+          <p>Image à télécharger pour l'utiliser dans la question :</p>
+          <figure>
+            <img src="assets/downloads/tp4/forms/images/fruits.jpg" alt="Image Fruits">
+            <figcaption>Image Fruits</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Question 4</h3>
+
+        <p>La quatrième question ressemble à ce qui suit :</p>
+
+        <figure>
+          <img src="assets/downloads/tp4/images/qcm-q04.png" alt="Question 4">
+          <figcaption>Question n°4</figcaption>
+        </figure>
+
+        <p>Dans cette question on utilise deux champs de texte :</p>
+        <ol>
+          <li>Le premier est de type <strong>texte</strong> : <code>&lt;input type=&quot;text&quot;&gt;</code>
+            <ul>
+              <li>Les attributs <strong>name</strong> et <strong>id</strong> sont tous les deux identiques
+                <strong><ins>nom_fille</ins></strong> : <code>name="nom_fille"</code>
+              </li>
+              <li>L'attribut <strong>required</strong> doit être utilisé avec ce champ.</li>
+            </ul>
+          </li>
+          <li>Le second est de type <strong>number</strong> : <code>&lt;input type=&quot;number&quot;&gt;</code>
+            <ul>
+              <li>Les attributs <strong>name</strong> et <strong>id</strong> sont tous les deux identiques
+                <strong><ins>age_fille</ins></strong> : <code>name="age_fille"</code>
+              </li>
+              <li>Les attributs <strong>min</strong> et <strong>max</strong> son utilisés pour fixer l'intervalle d'âge
+                valide à [1, 10].</li>
+              <li>L'attribut <strong>required</strong> doit être utilisé avec ce champ.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="d-print-none">
+          <p>Image à télécharger pour l'utiliser dans la question :</p>
+          <figure>
+            <img src="assets/downloads/tp4/forms/images/sami-siwar.jpg" alt="Image Frère et Soeur">
+            <figcaption>Image Frère et Soeur</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Question 5</h3>
+
+        <p>La cinquième question ressemble à ce qui suit :</p>
+
+        <figure>
+          <img src="assets/downloads/tp4/images/qcm-q05.png" alt="Question 5">
+          <figcaption>Question n°5</figcaption>
+        </figure>
+
+        <p>Dans cette question on utilise une zone de texte .</p>
+
+        <p>La zone de texte <strong>texte</strong> <code>&lt;textarea&gt;&lt;/textarea&gt;</code> possède les
+          attributs suivants :
+        <ul>
+          <li>Les attributs <strong>name</strong> et <strong>id</strong> sont tous les deux identiques
+            <strong><ins>phrases</ins></strong> : <code>name="phrases"</code>
+          </li>
+          <li>Les attributs <strong>cols</strong> et <strong>rows</strong> sont utilisés pour fixer le nombre de
+            caractères affichés horizontalement et le nombre de lignes affichées verticalement. Dans notre cas ces
+            valeurs sont comme suit :
+            <ul>
+              <li>Nombre de colonnes = 60, <code>cols="60"</code></li>
+              <li>Nombre de lignes = 30, <code>rows="3"</code></li>
+            </ul>
+          </li>
+          <li>L'attribut <strong>required</strong> doit être utilisé avec ce champ.</li>
+        </ul>
+        </p>
+      </section>
+
+      <section>
+        <h3>Question 6</h3>
+
+        <p>La sixième question ressemble à ce qui suit :</p>
+
+        <figure>
+          <img src="assets/downloads/tp4/images/qcm-q06.png" alt="Question 6">
+          <figcaption>Question n°6</figcaption>
+        </figure>
+
+        <p>Cette question utilise quatre boutons radios : <code>&lt;input type=&quot;radio&quot;&gt;</code></p>
+        <ul>
+          <li>L'attribut <strong>name</strong> doit être le même pour tous les boutons: <code>name="fete"</code></li>
+          <li>L'attribut <strong>value</strong> doit être : <strong>Réussite</strong> pour le premier bouton et
+            <strong>Mariage</strong> pour le second, etc.
+          </li>
+          <li>L'attribut <strong>required</strong> doit être utilisé pour l'un des boutons.</li>
+        </ul>
+
+        <p>Les quatre boutons radio sont dans un <strong>&lt;div&gt;&lt;/div&gt;</strong>. Et, chaque bouton radio doit
+          faire partie d'un <strong>&lt;label&gt;&lt;/label&gt;</strong>.</p>
+
+        <div class="d-print-none">
+          <p>Image à télécharger pour l'utiliser dans la question :</p>
+          <figure>
+            <img src="assets/downloads/tp4/forms/images/anniversaire.jpg" alt="Image Anniversaire">
+            <figcaption>Image Anniversaire</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h3>Soumission du formulaire</h3>
+
+        <p>Prévoir un <strong>&lt;div&gt;&lt;/div&gt;</strong> contenant deux boutons :</p>
+        <ul>
+          <li>Bouton d'envoi <code>&lt;button type=&quot;submit&quot;&gt;V&eacute;rifier&lt;/button&gt;</code></li>
+          <li>Bouton de remise à zéro <code>type="reset"</code> qui permet d'effacer les champs du formulaire.</li>
+        </ul>
+
+        <p>Tester votre formulaire après avoir complété l'attribut <strong>action="..."</strong> de la balise
+          <code>&lt;form action=&quot;...&quot;&gt;&lt;/form&gt;</code>. Cette information sera indiquée par votre
+          enseignant.
+        </p>
+      </section>
     </article>
   </main>
   <footer class="d-print-none bg-dark text-white p-2">
