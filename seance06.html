@@ -158,12 +158,11 @@
       <section>
         <h3>Attribut style</h3>
 
-        <p>Nous voulons dans l'exemple suivant illustrer les éléments d'une phrase à l'aide de plusieurs couleurs
-          différentes.</p>
-        <figure>
-          <img src="assets/downloads/tp5/images/inline-style.png" alt="Style en ligne, inline">
-          <figcaption>Style en ligne, inline</figcaption>
-        </figure>
+        <p>On peut appliquer une mise en forme à un élément d'une page Web en utilisant son attribut
+          <strong>style="..."</strong>.
+        </p>
+
+        <p>Par exemple, on veut colorier les différents éléments d'une phrase à l'aide de plusieurs couleurs.</p>
 
         <ul>
           <li class="my-1">Le <strong>sujet</strong> : couleur <ins>brown</ins> <span
@@ -177,6 +176,11 @@
               style="background-color: darkgoldenrod; width: 32px; display: inline-block">&nbsp;</span></li>
         </ul>
 
+        <figure>
+          <img src="assets/downloads/tp5/images/inline-style.png" alt="Style en ligne, inline">
+          <figcaption>Coloriage des différents éléments de la phrase selon sa fonction</figcaption>
+        </figure>
+
         <div class="row">
           <div class="col-sm-5">
             <p>Commençons par le code HTML :</p>
@@ -187,7 +191,7 @@
   &lt;u&gt;dans le bois&lt;/u&gt;.
 &lt;/p&gt;</code></pre>
 
-            <p>Le résultat n'est pas spectaculaire.</p>
+            <p>Tout est noir. Le résultat n'est pas spectaculaire.</p>
             <figure>
               <img src="assets/downloads/tp5/images/inline-style-03.png" alt="Phrase sans styles">
               <figcaption>Phrase sans styles</figcaption>
@@ -200,7 +204,7 @@
   &lt;i style=&quot;color: red;&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt; 
   &lt;b style=&quot;color: chartreuse;&quot;&gt;se prom&egrave;ne&lt;/b&gt; 
   &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;dans le bois&lt;/u&gt;.
-  &lt;/p&gt;</code></pre>
+&lt;/p&gt;</code></pre>
 
             <p>Le résultat est meilleur :</p>
             <figure>
@@ -209,17 +213,35 @@
             </figure>
           </div>
         </div>
+      </section>
 
-        <h4 class="p-break">Exercice</h4>
+      <section>
+        <h3 class="p-break">Exercice 1</h3>
         <ol>
-          <li><strong>Sans copier/coller</strong> le code précédent, mettre en forme les deux phrases suivantes :
+          <li>On donne le code HTML des deux phrases suivantes :
+            <pre><code class="language-html">&lt;p&gt;&lt;span&gt;Le
+    &lt;i&gt;grand&lt;/i&gt;
+    sapin
+    &lt;i&gt;vert&lt;/i&gt;&lt;/span&gt;
+  &lt;b&gt;est install&eacute;&lt;/b&gt;
+  &lt;u&gt;dans le salon&lt;/u&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;
+    &lt;i&gt;Tr&egrave;s&lt;/i&gt;
+    &lt;i&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
+  &lt;b&gt;se l&egrave;ve&lt;/b&gt;
+  &lt;u&gt;de son lit&lt;/u&gt;.
+&lt;/p&gt;</code></pre>
+          </li>
+          <li><strong>Sans copier/coller</strong> le code précédent, mettre ces phrases de la même façon :
             <figure>
               <img class="h2cm" src="assets/downloads/tp5/images/inline-style-02.png" alt="Style en ligne, inline">
               <figcaption>Style en ligne, inline</figcaption>
             </figure>
           </li>
-          <li>Est-il pratique d'utiliser cette même méthode pour la mise en forme d'une centaine de phrases ?
-            <strong>Quelle est la solution</strong> ?
+          <li><strong>A votre avis</strong>, est-il pratique cette même méthode pour mettre en forme une centaine de
+            phrases ? <strong>Comment faire dans ce cas</strong> ?
           </li>
         </ol>
       </section>
@@ -232,7 +254,7 @@
           <code>&lt;head&gt;...&lt;/head&gt;</code> du document.
         </p>
 
-        <p>Repenons l'exemple précédent qui illustre les composants d'une phrase à l'aide d'<strong>une feuille de style
+        <p>Repenons l'exemple précédent qui illustre les composants d'une phrase à l'aide d'une <strong>feuille de style
             interne</strong>.</p>
 
         <figure>
@@ -259,28 +281,37 @@
   color: brown;
 }
 &lt;/style&gt;</code></pre>
+      </section>
 
-        <h4>Exercice</h4>
+      <section>
+        <h3>Exercice 2</h3>
+
         <ol>
-          <li>Copier/coller le code HTML des phrases :
-            <pre><code class="language-html">&lt;p&gt;&lt;span&gt;Une &lt;i&gt;jolie&lt;/i&gt; &lt;i&gt;petite&lt;/i&gt; fille&lt;/span&gt;
-  &lt;b&gt;se prom&egrave;ne&lt;/b&gt;
-  &lt;u&gt;dans le bois&lt;/u&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;&lt;span&gt;Le &lt;i&gt;grand&lt;/i&gt; sapin &lt;i&gt;vert&lt;/i&gt;&lt;/span&gt;
-  &lt;b&gt;est install&eacute;&lt;/b&gt;
-  &lt;u&gt;dans le salon&lt;/u&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;&lt;span&gt;&lt;i&gt;Tr&egrave;s&lt;/i&gt; &lt;i&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
-  &lt;b&gt;se l&egrave;ve&lt;/b&gt;
-  &lt;u&gt;de son lit&lt;/u&gt;.
-&lt;/p&gt;</code></pre>
+          <li>Ouvrir le fichier <a href="assets/downloads/tp5/balise_style_start.html" target="_blank"
+              rel="noopener noreferrer">balise_style_start.html</a>.</li>
+          <li>Afficher son code source. Presser les touches <kbd>Ctrl+u</kbd>.</li>
+          <li>Copier/coller le code HTML dans votre éditeur.</li>
+          <li>Définir des classes pour chaque élément de la phrase, pour leur donner une sémantique.
+            <figure>
+              <img class="h3cm" src="assets/downloads/tp5/images/style-tag-01-class.png" alt="Eléments d'une phrase">
+              <figcaption>Eléments d'une phrase</figcaption>
+            </figure>
           </li>
-          <li>Définir des classes pour chaque élément de la phrase, pour leur donner une sémantique.</li>
           <li>Compléter la définition de la feuille de style interne. Utiliser les mêmes couleurs que l'exercice
-            précédent.</li>
+            précédent.
+            <ul>
+              <li class="my-1">Le <strong>sujet</strong> : couleur <ins>brown</ins> <span
+                  style="background-color: brown; width: 32px; display: inline-block">&nbsp;</span></li>
+              <li class="my-1">Les <strong>adjectifs</strong> : couleurs <ins>blue</ins> <span
+                  style="background-color: blue; width: 32px; display: inline-block">&nbsp;</span> et <ins>red</ins>
+                <span style="background-color: red; width: 32px; display: inline-block">&nbsp;</span>
+              </li>
+              <li class="my-1">Le <strong>verbe</strong> : couleur <ins>chartreuse</ins> <span
+                  style="background-color: chartreuse; width: 32px; display: inline-block">&nbsp;</span></li>
+              <li class="my-1">Le <strong>complément</strong> : couleur <ins>darkgoldenrod</ins> <span
+                  style="background-color: darkgoldenrod; width: 32px; display: inline-block">&nbsp;</span></li>
+            </ul>
+          </li>
         </ol>
       </section>
 
@@ -304,6 +335,38 @@
         </p>
 
         <p class="text-danger"><strong>On adoptera cette méthode dans le reste de ce cours.</strong></p>
+      </section>
+
+      <section>
+        <h3>Exercice 3</h3>
+
+        <ol>
+          <li>Copier le contenu du fichier HTML de l'exercice n°2 dans une nouvelle page lui attribuer le nom :
+            phrase03.html</li>
+          <li>Créer un nouveau fichier nommé : style.css</li>
+          <li>Copier/Coller le contenu de la balise <strong>&lt;style&gt;...&lt;/style&gt;</strong> dans le fichier
+            <strong>style.css</strong>
+          </li>
+          <li>Lier la feuille de style à l'aide de la balise : <strong>&lt;link rel=&quot;stylesheet&quot;
+              href=&quot;style.css&quot;&gt;</strong></li>
+        </ol>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <figure>
+              <img src="assets/downloads/tp5/images/link-style.png" alt="Feuille de style externe">
+              <figcaption>Code HTML</figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-6">
+            <figure>
+              <img src="assets/downloads/tp5/images/style.css.png" alt="Style CSS">
+              <figcaption>Code CSS</figcaption>
+            </figure>
+          </div>
+        </div>
+
+
       </section>
     </article>
 
@@ -653,7 +716,6 @@ span.oiseau2 { /* image08.png */ }</code></pre>
           .val-top {
             vertical-align: top;
           }
-
         </style>
         <div class="bg-light p-2 border border-secondary row small-text">
           <div class="my-2 col-sm-6 col-lg-3"><span class="val val-baseline"></span>
