@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 7</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 7</h1>
+
+    <article>
+      <h2>Les feuilles de style</h2>
+
+      <section>
+        <h3>Happy Birthday</h3>
+
+        <p>On demande de créer une page Web qui contient le texte suivant :</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/happy-birthday.png" alt="Happy Birthday" class="h3cm">
+          <figcaption>Happy Birthday multicolore</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé <strong>text-colors</strong>, créer dans ce dossier deux fichiers :
+            <ul>
+              <li>un fichier HTML nommé <strong>happy-birthday.html</strong></li>
+              <li>un fichier CSS nommé <strong>happy-birthday.css</strong></li>
+            </ul>
+          </li>
+          <li>Lier le fichier <strong>happy-birthday.css</strong> à la page Web :
+            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;happy-birthday.css&quot;&gt;</code>
+          </li>
+          <li>Copier/Coller le code HTML suivant dans la partie <code>&lt;body&gt;...&lt;/body&gt;</code> de la page.
+            <pre><code class="language-html">&lt;div class=&quot;text&quot;&gt;
+  &lt;span class=&quot;color1&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;color2&quot;&gt;A&lt;/span&gt;&lt;span 
+    class=&quot;color3&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;color4&quot;&gt;P&lt;/span&gt;&lt;span 
+    class=&quot;color5&quot;&gt;Y&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text&quot;&gt;
+  &lt;span class=&quot;color4&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;color1&quot;&gt;I&lt;/span&gt;&lt;span 
+    class=&quot;color5&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;color3&quot;&gt;T&lt;/span&gt;&lt;span 
+    class=&quot;color6&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;color2&quot;&gt;D&lt;/span&gt;&lt;span
+    class=&quot;color1&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;color7&quot;&gt;Y&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+          <li>Modifier les propriétés du sélecteur <code>.text</code> :
+            <ul>
+              <li>Utiliser une police <strong><em>Arial Black</em></strong>.</li>
+              <li>Taille de la police <strong><em>100px</em></strong>.</li>
+              <li>Mettre le texte en gras.</li>
+              <li>Center le texte.</li>
+            </ul>
+          </li>
+          <li>Utiliser les couleurs suivantes pour colorier les lettres sélecteurs de classes <code>.colorx</code> :
+            <style>
+              #ex1 .color1 {
+                background-color: #ff0204;
+              }
+
+              #ex1 .color2 {
+                background-color: #007ad6;
+              }
+
+              #ex1 .color3 {
+                background-color: #0ac4ea;
+              }
+
+              #ex1 .color4 {
+                background-color: #f9ae06;
+              }
+
+              #ex1 .color5 {
+                background-color: #4fdf00;
+              }
+
+              #ex1 .color6 {
+                background-color: #9a3cbc;
+              }
+
+              #ex1 .color7 {
+                background-color: #fff200;
+              }
+
+              .color {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin: 4px;
+                vertical-align: middle;
+                border: #000 solid 1px;
+              }
+            </style>
+            <ul id="ex1">
+              <li><strong>color1</strong> <span class="color color1"></span>#ff0204 | <strong>color2</strong> <span class="color color2"></span>#007ad6</li>
+              <li><strong>color3</strong> <span class="color color3"></span>#0ac4ea | <strong>color4</strong> <span class="color color4"></span>#f9ae06</li>
+              <li><strong>color5</strong> <span class="color color5"></span>#4fdf00</li>
+              <li><strong>color6</strong> <span class="color color6"></span>#9a3cbc</li>
+              <li><strong>color7</strong> <span class="color color7"></span>#fff200</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="d-none d-print-block">
+          <h4>Correction - Happy Birthday</h4>
+
+          <p>Contenu du fichier : <strong>happy-birthday.css</strong></p>
+
+          <pre><code class="language-css">.text {
+    font-size: 100px;
+    font-family: 'Arial Black';
+    font-weight: bold;
+    text-align: center;
+  }
+  .color1 { color: #ff0204; }
+  .color2 { color: #007ad6; }
+  .color3 { color: #0ac4ea; }
+  .color4 { color: #f9ae06; }
+  .color5 { color: #4fdf00; }
+  .color6 { color: #9a3cbc; }
+  .color7 { color: #fff200; }</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3>Colorful Text</h3>
+
+        <p>On demande de créer une page Web qui contient le texte suivant :</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/colorful-text.png" alt="COLORFUL TEXT" class="h4cm">
+          <figcaption>COLORFUL TEXT</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé <strong>colorful-text</strong>, créer dans ce dossier deux fichiers :
+            <ul>
+              <li>un fichier HTML nommé <strong>colorful-text.html</strong></li>
+              <li>un fichier CSS nommé <strong>colorful-text.css</strong></li>
+            </ul>
+          </li>
+          <li>Lier le fichier <strong>colorful-text.css</strong> à la page Web :
+            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;colorful-text.css&quot;&gt;</code>
+          </li>
+          <li>Copier/Coller le code HTML suivant dans la partie <code>&lt;body&gt;...&lt;/body&gt;</code> de la page.
+            <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;text&quot;&gt;
+      &lt;span class=&quot;letter color1&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;letter color2&quot;&gt;O&lt;/span&gt;&lt;span 
+        class=&quot;letter color3&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;letter color4&quot;&gt;O&lt;/span&gt;&lt;span 
+        class=&quot;letter color5&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;letter color6&quot;&gt;F&lt;/span&gt;&lt;span
+        class=&quot;letter color7&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;letter color8&quot;&gt;L&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;text&quot;&gt;
+      &lt;span class=&quot;letter color1&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;letter color2&quot;&gt;E&lt;/span&gt;&lt;span 
+        class=&quot;letter color3&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;letter color4&quot;&gt;T&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+          </li>
+          <li>Modifier les <strong>marges</strong> (<code>margin</code>) du sélecteur <code>.container</code> pour
+            centrer son contenu horizontalement.</li>
+          <li>Modifier les propriétés du sélecteur <code>.text</code> :
+            font-family: Garamond;
+            font-size: 250px;
+            font-weight: bold;
+            text-align: center;
+            <ul>
+              <li>Utiliser une police <strong>Garamond</strong> d'une taille de <strong>250px</strong>.</li>
+              <li>Mettre en gras (<strong>bold</strong>) le texte.</li>
+              <li>Centrer le texte de l'élément.</li>
+            </ul>
+          </li>
+          <li>Modifier la largeur du sélecteur <code>.letter</code> à <strong>100px</strong>, ne pas oublier de changer
+            l'affichage <strong>display</strong> de cet élément à <strong>inline-block</strong>.</li>
+          <li>Les couleurs des lettres sont comme suit :
+            <style>
+              #ex2 .color1 {
+                background-color: #214697CC;
+              }
+
+              #ex2 .color2 {
+                background-color: #198e23CC;
+              }
+
+              #ex2 .color3 {
+                background-color: #f9a60aCC;
+              }
+
+              #ex2 .color4 {
+                background-color: #70046aCC;
+              }
+
+              #ex2 .color5 {
+                background-color: #de2f1cCC;
+              }
+
+              #ex2 .color6 {
+                background-color: #e00046CC;
+              }
+
+              #ex2 .color7 {
+                background-color: #1b47aaCC;
+              }
+
+              #ex2 .color8 {
+                background-color: #f9a60cCC;
+              }
+            </style>
+            <ul id="ex2">
+              <li><strong>color1</strong> <span class="color color1"></span>#214697CC | <strong>color2</strong> <span
+                  class="color color2"></span>#198e23CC</li>
+              <li><strong>color3</strong> <span class="color color3"></span>#f9a60aCC | <strong>color4</strong> <span
+                  class="color color4"></span>#70046aCC</li>
+              <li><strong>color5</strong> <span class="color color5"></span>#de2f1cCC |
+                <strong>color6</strong> <span class="color color6"></span>#e00046CC
+              </li>
+              <li><strong>color7</strong> <span class="color color7"></span>#1b47aaCC | <strong>color8</strong> <span
+                  class="color color8"></span>#f9a60cCC
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="d-none d-print-block">
+          <h4>Correction - Colorful Text</h4>
+
+          <p>Contenu du fichier : colorful-text.css</p>
+
+          <pre><code class="language-css">body { margin: 0; }
+.container { margin: 0 auto; }
+.text {
+	font-family: Garamond;
+	font-size: 250px;
+	font-weight: bold;
+	text-align: center;
+}
+.letter { display: inline-block; width: 100px; }
+.color1 { color: #214697CC; }
+.color2 { color: #198e23CC; }
+.color3 { color: #f9a60aCC; }
+.color4 { color: #70046aCC; }
+.color5 { color: #de2f1cCC; }
+.color6 { color: #e00046CC; }
+.color7 { color: #1b47aaCC; }
+.color8 { color: #f9a60cCC; }</code></pre>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

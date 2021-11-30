@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.text {
+	font-family: Garamond;
+	font-size: 250px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.letter {
+	display: inline-block;
+	width: 100px;
+}
+
+.color1 {
+    color: #214697CC;
+}
+
+.color2 {
+    color: #198e23CC;
+}
+
+.color3 {
+    color: #f9a60aCC;
+}
+
+.color4 {
+    color: #70046aCC;
+}
+
+.color5 {
+    color: #de2f1cCC;
+}
+
+.color6 {
+    color: #e00046CC;
+}
+
+.color7 {
+    color: #1b47aaCC;
+}
+
+.color8 {
+    color: #f9a60cCC;
+}
