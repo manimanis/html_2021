@@ -105,7 +105,7 @@
       </section>
 
       <section>
-        <h3>Premiers pas</h3>
+        <h3 class="p-break">Premiers pas</h3>
 
         <p>Pour appliquer un style dans une page Web, on peut opter pour une des <strong>trois méthodes</strong>
           possibles :</p>
@@ -216,8 +216,17 @@
       </section>
 
       <section>
-        <h3 class="p-break">Exercice 1</h3>
+        <h3>Exercice 1</h3>
         <ol>
+          <li>Créer un fichier HTML nommé : <strong>phrase01.html</strong></li>
+          <li>Copier/Coller le code de la première phrase.
+            <pre><code class="language-html">&lt;p&gt;&lt;span style=&quot;color: brown;&quot;&gt;Une 
+  &lt;i style=&quot;color: blue;&quot;&gt;jolie&lt;/i&gt; 
+  &lt;i style=&quot;color: red;&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt; 
+  &lt;b style=&quot;color: chartreuse;&quot;&gt;se prom&egrave;ne&lt;/b&gt; 
+  &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;dans le bois&lt;/u&gt;.
+&lt;/p&gt;</code></pre>
+          </li>
           <li>On donne le code HTML des deux phrases suivantes :
             <pre><code class="language-html">&lt;p&gt;&lt;span&gt;Le
     &lt;i&gt;grand&lt;/i&gt;
@@ -226,7 +235,6 @@
   &lt;b&gt;est install&eacute;&lt;/b&gt;
   &lt;u&gt;dans le salon&lt;/u&gt;.
 &lt;/p&gt;
-
 &lt;p&gt;&lt;span&gt;
     &lt;i&gt;Tr&egrave;s&lt;/i&gt;
     &lt;i&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
@@ -234,16 +242,55 @@
   &lt;u&gt;de son lit&lt;/u&gt;.
 &lt;/p&gt;</code></pre>
           </li>
-          <li><strong>Sans copier/coller</strong> le code précédent, mettre ces phrases de la même façon :
+          <li><strong>Sans copier/coller</strong> le code précédent, mettre en forme ces phrases de la même façon :
             <figure>
               <img class="h2cm" src="assets/downloads/tp5/images/inline-style-02.png" alt="Style en ligne, inline">
               <figcaption>Style en ligne, inline</figcaption>
             </figure>
           </li>
-          <li><strong>A votre avis</strong>, est-il pratique cette même méthode pour mettre en forme une centaine de
-            phrases ? <strong>Comment faire dans ce cas</strong> ?
+          <li><strong>A votre avis</strong>, est-il pratique d'utiliser cette même méthode pour mettre en forme une
+            centaine de phrases ? <strong>Comment faire dans ce cas</strong> ?
           </li>
         </ol>
+      </section>
+
+      <section>
+        <h3>Correction - Exercice 1</h3>
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Composants de la phrase&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;p&gt;&lt;span&gt;Une
+      &lt;i style=&quot;color: blue;&quot;&gt;jolie&lt;/i&gt;
+      &lt;i style=&quot;color: red;&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt;
+    &lt;b style=&quot;color: chartreuse;&quot;&gt;se prom&egrave;ne&lt;/b&gt;
+    &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;dans le bois&lt;/u&gt;.
+  &lt;/p&gt;
+
+  &lt;p&gt;&lt;span style=&quot;color: brown;&quot;&gt;Le
+      &lt;i style=&quot;color: blue;&quot;&gt;grand&lt;/i&gt;
+      sapin
+      &lt;i style=&quot;color: red;&quot;&gt;vert&lt;/i&gt;&lt;/span&gt;
+    &lt;b style=&quot;color: chartreuse;&quot;&gt;est install&eacute;&lt;/b&gt;
+    &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;dans le salon&lt;/u&gt;.
+  &lt;/p&gt;
+
+  &lt;p&gt;&lt;span style=&quot;color: brown;&quot;&gt;
+      &lt;i style=&quot;color: blue;&quot;&gt;Tr&egrave;s&lt;/i&gt;
+      &lt;i style=&quot;color: red;&quot;&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
+    &lt;b style=&quot;color: chartreuse;&quot;&gt;se l&egrave;ve&lt;/b&gt;
+    &lt;u style=&quot;color: darkgoldenrod;&quot;&gt;de son lit&lt;/u&gt;.
+  &lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
       </section>
 
       <section>
@@ -290,7 +337,9 @@
           <li>Ouvrir le fichier <a href="assets/downloads/tp5/balise_style_start.html" target="_blank"
               rel="noopener noreferrer">balise_style_start.html</a>.</li>
           <li>Afficher son code source. Presser les touches <kbd>Ctrl+u</kbd>.</li>
-          <li>Copier/coller le code HTML dans votre éditeur.</li>
+          <li>Copier/coller le code HTML dans votre éditeur. Sauvegarder ce travail sous le nom :
+            <strong>phrase02.html</strong>
+          </li>
           <li>Définir des classes pour chaque élément de la phrase, pour leur donner une sémantique.
             <figure>
               <img class="h3cm" src="assets/downloads/tp5/images/style-tag-01-class.png" alt="Eléments d'une phrase">
@@ -312,11 +361,64 @@
                   style="background-color: darkgoldenrod; width: 32px; display: inline-block">&nbsp;</span></li>
             </ul>
           </li>
+          <li>Est-il pratique de dupliquer (copier/coller) la même feuille de style dans plusieurs documents HTML ?
+            Comment faire ?</li>
         </ol>
       </section>
 
       <section>
-        <h3>Feuille de style externe</h3>
+        <h3 class="p-break">Correction - Exercice 2</h3>
+
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Composants de la phrase&lt;/title&gt;
+  &lt;style&gt;
+    .sujet { color: brown; }
+
+    .adjectif1 { color: blue; }
+
+    .adjectif2 { color: red; }
+
+    .verbe { color: chartreuse; }
+
+    .complement { color: darkgoldenrod; }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;Une
+      &lt;i class=&quot;adjectif1&quot;&gt;jolie&lt;/i&gt;
+      &lt;i class=&quot;adjectif2&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt;
+    &lt;b class=&quot;verbe&quot;&gt;se prom&egrave;ne&lt;/b&gt;
+    &lt;u class=&quot;complement&quot;&gt;dans le bois&lt;/u&gt;.
+  &lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;Le
+      &lt;i class=&quot;adjectif1&quot;&gt;grand&lt;/i&gt;
+      sapin
+      &lt;i class=&quot;adjectif2&quot;&gt;vert&lt;/i&gt;&lt;/span&gt;
+    &lt;b class=&quot;verbe&quot;&gt;est install&eacute;&lt;/b&gt;
+    &lt;u class=&quot;complement&quot;&gt;dans le salon&lt;/u&gt;.
+  &lt;/p&gt;
+
+  &lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;
+      &lt;i class=&quot;adjectif1&quot;&gt;Tr&egrave;s&lt;/i&gt;
+      &lt;i class=&quot;adjectif2&quot;&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
+    &lt;b class=&quot;verbe&quot;&gt;se l&egrave;ve&lt;/b&gt;
+    &lt;u class=&quot;complement&quot;&gt;de son lit&lt;/u&gt;.
+  &lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3 class="p-break">Feuille de style externe</h3>
 
         <p>Plus fréquemment, la feuille de style est placée à l'extérieur du document html, dans un fichier qui porte
           l'extension <strong>.css</strong>,exemple : <span class="text-success">style</span><span
@@ -350,23 +452,55 @@
           <li>Lier la feuille de style à l'aide de la balise : <strong>&lt;link rel=&quot;stylesheet&quot;
               href=&quot;style.css&quot;&gt;</strong></li>
         </ol>
+      </section>
 
+      <section>
+        <h3>Correction - Exercice 3</h3>
         <div class="row">
-          <div class="col-sm-6">
-            <figure>
-              <img src="assets/downloads/tp5/images/link-style.png" alt="Feuille de style externe">
-              <figcaption>Code HTML</figcaption>
-            </figure>
+          <div class="col-sm-7">
+            <h4>Fichier HTML : phrase03.html</h4>
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;!-- autres balises : title et meta --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;Une
+      &lt;i class=&quot;adjectif1&quot;&gt;jolie&lt;/i&gt;
+      &lt;i class=&quot;adjectif2&quot;&gt;petite&lt;/i&gt; fille&lt;/span&gt;
+    &lt;b class=&quot;verbe&quot;&gt;se prom&egrave;ne&lt;/b&gt;
+    &lt;u class=&quot;complement&quot;&gt;dans le bois&lt;/u&gt;.
+  &lt;/p&gt;
+  &lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;Le
+      &lt;i class=&quot;adjectif1&quot;&gt;grand&lt;/i&gt;
+      sapin
+      &lt;i class=&quot;adjectif2&quot;&gt;vert&lt;/i&gt;&lt;/span&gt;
+    &lt;b class=&quot;verbe&quot;&gt;est install&eacute;&lt;/b&gt;
+    &lt;u class=&quot;complement&quot;&gt;dans le salon&lt;/u&gt;.
+  &lt;/p&gt;
+  &lt;p&gt;&lt;span class=&quot;sujet&quot;&gt;
+      &lt;i class=&quot;adjectif1&quot;&gt;Tr&egrave;s&lt;/i&gt;
+      &lt;i class=&quot;adjectif2&quot;&gt;t&ocirc;t&lt;/i&gt; Malek&lt;/span&gt;
+    &lt;b class=&quot;verbe&quot;&gt;se l&egrave;ve&lt;/b&gt;
+    &lt;u class=&quot;complement&quot;&gt;de son lit&lt;/u&gt;.
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
           </div>
-          <div class="col-sm-6">
-            <figure>
-              <img src="assets/downloads/tp5/images/style.css.png" alt="Style CSS">
-              <figcaption>Code CSS</figcaption>
-            </figure>
+          <div class="col-sm-5">
+            <h4>Fichier CSS : style.css</h4>
+            <pre><code class="language-css">.sujet { color: brown; }
+
+.adjectif1 { color: blue; }
+
+.adjectif2 { color: red; }
+
+.verbe { color: chartreuse; }
+
+.complement { color: darkgoldenrod; }</code></pre>
           </div>
         </div>
-
-
       </section>
     </article>
 
@@ -476,7 +610,7 @@
                 href="https://htmlcolorcodes.com/fr/" target="_blank"
                 rel="noopener noreferrer">https://htmlcolorcodes.com/fr/</a></p>
           </li>
-          <li class="p-break">Le <strong>code rgb(r, g, b)</strong> : Tout comme le <strong>code hexadécimal</strong> ce
+          <li>Le <strong>code rgb(r, g, b)</strong> : Tout comme le <strong>code hexadécimal</strong> ce
             code utilise
             trois valeurs numériques, comprises entre 0 et 255 chacune, pour définir le dosage des trois couleurs
             primaires :
@@ -534,15 +668,17 @@
   /* ajouter cette propriété */
   font-size: 42pt;
 }</code></pre>
-        <p>Le résultat final ressemble à ce qui suit :</p>
-        <figure>
-          <img class="h4cm" src="assets/downloads/tp5/images/joyeuse-course-05-min.png" alt="Une joyeuse course">
-          <figcaption>Une joyeuse course, changer la taille du texte</figcaption>
-        </figure>
+        <div class="d-print-none">
+          <p>Le résultat final ressemble à ce qui suit :</p>
+          <figure>
+            <img class="h4cm" src="assets/downloads/tp5/images/joyeuse-course-05-min.png" alt="Une joyeuse course">
+            <figcaption>Une joyeuse course, changer la taille du texte</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section>
-        <h3>Famille de la police</h3>
+        <h3 class="p-break">Famille de la police</h3>
 
         <p>La propriété <strong>font-family</strong> définit la famille et le style d'écriture du texte. Le navigateur
           reconnait trois types de familles :</p>
@@ -642,7 +778,7 @@ h1 {
       </section>
 
       <section>
-        <h3 class="p-break">Image d'arrière plan</h3>
+        <h3>Image d'arrière plan</h3>
 
         <p>La propriété <strong>background-image</strong> sert à définir une <strong><em>image</em></strong> comme
           <strong>image d'arrière plan</strong> de l'élément sélectionné en indiquant son <ins>url(image)</ins>.
@@ -663,17 +799,11 @@ h1 {
 
         <p>On demande de compléter les autres définitions de classes.</p>
         <pre><code class="language-css">span.tortues { /* image02.png */ }
-
 span.toboggan { /* image03.png */ }
-
 span.fourmis { /* image04.png */ }
-
 span.escargots { /* image05.png */ }
-
 span.raisin { /* image06.png */ }
-
 span.oiseau1 { /* image07.png */ }
-
 span.oiseau2 { /* image08.png */ }</code></pre>
 
         <p>Le résultat final ressemble à ce qui suit :</p>
@@ -684,7 +814,7 @@ span.oiseau2 { /* image08.png */ }</code></pre>
       </section>
 
       <section>
-        <h3>Alignement vertical</h3>
+        <h3 class="p-break">Alignement vertical</h3>
 
         <p>On remarque que les images insérées dans l'étape précédente ne sont pas bien alignées verticalement.</p>
 
