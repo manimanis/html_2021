@@ -111,10 +111,12 @@
               }
             </style>
             <ul id="ex1">
-              <li><strong>color1</strong> <span class="color color1"></span>#ff0204 | <strong>color2</strong> <span class="color color2"></span>#007ad6</li>
-              <li><strong>color3</strong> <span class="color color3"></span>#0ac4ea | <strong>color4</strong> <span class="color color4"></span>#f9ae06</li>
-              <li><strong>color5</strong> <span class="color color5"></span>#4fdf00</li>
-              <li><strong>color6</strong> <span class="color color6"></span>#9a3cbc</li>
+              <li><strong>color1</strong> <span class="color color1"></span>#ff0204 | <strong>color2</strong> <span
+                  class="color color2"></span>#007ad6</li>
+              <li><strong>color3</strong> <span class="color color3"></span>#0ac4ea | <strong>color4</strong> <span
+                  class="color color4"></span>#f9ae06</li>
+              <li><strong>color5</strong> <span class="color color5"></span>#4fdf00 | <strong>color6</strong> <span
+                  class="color color6"></span>#9a3cbc</li>
               <li><strong>color7</strong> <span class="color color7"></span>#fff200</li>
             </ul>
           </li>
@@ -179,10 +181,6 @@
           <li>Modifier les <strong>marges</strong> (<code>margin</code>) du sélecteur <code>.container</code> pour
             centrer son contenu horizontalement.</li>
           <li>Modifier les propriétés du sélecteur <code>.text</code> :
-            font-family: Garamond;
-            font-size: 250px;
-            font-weight: bold;
-            text-align: center;
             <ul>
               <li>Utiliser une police <strong>Garamond</strong> d'une taille de <strong>250px</strong>.</li>
               <li>Mettre en gras (<strong>bold</strong>) le texte.</li>
@@ -263,6 +261,46 @@
 .color7 { color: #1b47aaCC; }
 .color8 { color: #f9a60cCC; }</code></pre>
         </div>
+      </section>
+
+      <section>
+        <h3>Drapeaux à trois bandes</h3>
+
+        <p>On demande de créer une page Web qui contient le texte suivant :</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/drapeaux-trois-bandes.png" alt="Drapeaux à trois bandes" class="h6cm">
+          <figcaption>Drapeaux à trois bandes</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé <strong>flags</strong>, créer dans ce dossier deux fichiers :
+            <ul>
+              <li>un fichier HTML nommé <strong>flags.html</strong></li>
+              <li>un fichier CSS nommé <strong>flags.css</strong></li>
+            </ul>
+          </li>
+          <li>Lier le fichier <strong>flags.css</strong> à la page Web :
+            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;flags.css&quot;&gt;</code>
+          </li>
+          <li>Copier/Coller le code HTML suivant dans la partie <code>&lt;body&gt;...&lt;/body&gt;</code> de la page.
+            <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div id=&quot;armenie&quot; class=&quot;drapeau horizontaux&quot;&gt;
+    &lt;div class=&quot;bande bande1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div id=&quot;france&quot; class=&quot;drapeau verticaux&quot;&gt;
+    &lt;div class=&quot;bande bande1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+        </ol>
       </section>
     </article>
   </main>
