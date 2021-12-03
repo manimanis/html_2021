@@ -6,24 +6,26 @@
 }
 
 .drapeau {
-	width: 200px;
+	width: 198px;
 	height: 150px;
-	padding-bottom: 35px;
-  margin: 0 20px;
+  border: #333 solid 1px;
+  position: relative;
+  margin: 0 20px 35px;
 }
 
 .drapeau::after {
-  content: "";
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 5px;
+	position: absolute;
+	content: "";
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	bottom: -25px;
 }
 
 .drapeau.horizontaux .bande {
   width: 100%;
-  height: 50px;
+  height: calc(100% / 3);
 }
 
 #armenie::after {
@@ -70,22 +72,20 @@
   background-color: #fff;
 }
 
-#iraq::after {
-  content: "Iraq";
+#russie::after {
+  content: "Russie";
 }
 
-#iraq .bande1 {
-  background-color: #ce1127;
-}
-
-#iraq .bande2 {
-  background: url(images/allah-akbar.svg) no-repeat center center;
-  background-size: contain;
+#russie .bande1 {
   background-color: #fff;
 }
 
-#iraq .bande3 {
-  background-color: #000;
+#russie .bande2 {
+  background-color: blue;
+}
+
+#russie .bande3 {
+  background-color: red;
 }
 
 .drapeau.verticaux {
@@ -94,8 +94,8 @@
 }
 
 .drapeau.verticaux .bande {
-  width: 33.3%;
-  height: 150px;
+  width: calc(100% / 3);
+  height: 100%;
 }
 
 #france::after {
