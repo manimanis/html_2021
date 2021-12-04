@@ -122,6 +122,26 @@
           </li>
         </ol>
 
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>Sélecteurs CSS</h4>
+
+            <ul>
+              <li><strong>Classes</strong> : .text, .color1, .color2, .color3, .color4, .color5, .color6, .color7</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <h4>Propriétés CSS</h4>
+            <ul>
+              <li><strong>Police</strong> : <strong>font-family</strong>, <strong>font-size</strong>,
+                <strong>font-weight</strong>
+              </li>
+              <li><strong>Alignment</strong> : <strong>text-align</strong></li>
+              <li><strong>Mise en forme</strong> : <strong>color</strong></li>
+            </ul>
+          </div>
+        </div>
+
         <div class="d-none d-print-block">
           <h4>Correction - Happy Birthday</h4>
 
@@ -238,6 +258,29 @@
           </li>
         </ol>
 
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>Sélecteurs CSS</h4>
+
+            <ul>
+              <li><strong>Eléments</strong> : body</li>
+              <li><strong>Classes</strong> : .container, .text, .letter, .color1, .color2, .color3, .color4, .color5,
+                .color6, .color7, .color8</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <h4>Propriétés CSS</h4>
+            <ul>
+              <li><strong>Police</strong> : <strong>font-family</strong>, <strong>font-size</strong>,
+                <strong>font-weight</strong>
+              </li>
+              <li><strong>Modèle de boîte</strong> : <strong>display</strong>, <strong>width</strong></li>
+              <li><strong>Alignment</strong> : <strong>text-align</strong></li>
+              <li><strong>Mise en forme</strong> : <strong>color</strong></li>
+            </ul>
+          </div>
+        </div>
+
         <div class="d-none d-print-block">
           <h4>Correction - Colorful Text</h4>
 
@@ -264,7 +307,7 @@
       </section>
 
       <section>
-        <h3>Drapeaux à trois bandes</h3>
+        <h3 class="p-break">Drapeaux à trois bandes</h3>
 
         <p>On demande de créer une page Web qui contient des drapeaux à trois bandes :</p>
 
@@ -309,6 +352,7 @@
               <li>mesurent : 198px &times; 150px</li>
               <li>possèdent une marge horizontale (margin left/right) de 20px</li>
               <li>possèdent une marge inférieure (margin bottom) de 35px</li>
+              <li>possèdent une bordure de 1px de couleur gris</li>
               <li>utilisent un positionnement relatif</li>
             </ul>
           </li>
@@ -333,6 +377,114 @@
           </li>
           <li>Colorier les bandes des drapeaux selon la figure ci-dessus.</li>
         </ol>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>Sélecteurs CSS</h4>
+            <ul>
+              <li><strong>Classes</strong> : .container, .drapeau</li>
+              <li><strong>Combinaison de classes</strong> : .drapeau.verticaux</li>
+              <li><strong>Classes avec pseudo-éléments</strong> : .drapeau::after</li>
+              <li><strong>Id avec pseudo-éléments</strong> : #armenie::after, #inde::after, #autriche::after, etc.</li>
+              <li><strong>Descendants</strong> : .drapeau.horizontaux .bande, .drapeau.verticaux .bande, #armenie
+                .bande1, #armenie .bande2, #armenie .bande3, etc.</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <h4>Propriétés CSS</h4>
+            <ul>
+              <li><strong>Police</strong> : <strong>font-weight</strong></li>
+              <li><strong>Modèle de boîte</strong> : <strong>display</strong>, <strong>position</strong>,
+                <strong>width</strong>, <strong>height</strong>, <strong>flex-wrap</strong>, <strong>margin</strong>,
+                <strong>border</strong>, <strong>content</strong>, <strong>bottom</strong>
+              </li>
+              <li><strong>Alignment</strong> : <strong>text-align</strong></li>
+              <li><strong>Mise en forme</strong> : <strong>background-color</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="d-none d-print-block">
+          <h4>Correction - Drapeaux à trois bandes</h4>
+
+          <p>Contenu du fichier : flags.css</p>
+
+          <pre><code class="language-css">.container {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.drapeau {
+	width: 198px;
+	height: 150px;
+  border: #333 solid 1px;
+  position: relative;
+  margin: 0 20px 35px;
+}
+.drapeau::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	bottom: -25px;
+}
+.drapeau.horizontaux .bande {
+  width: 100%;
+  height: calc(100% / 3);
+}
+
+#armenie::after { content: "Arménie"; }
+#armenie .bande1 { background-color: #f00; }
+#armenie .bande2 { background-color: #0000ab; }
+#armenie .bande3 { background-color: #fe9900; }
+
+#inde::after { content: "Inde"; }
+#inde .bande1 { background-color: #fe6610; }
+#inde .bande2 { background-color: #fff; }
+#inde .bande3 { background-color: #007143; }
+
+#autriche::after { content: "Autriche"; }
+#autriche .bande1, #autriche .bande3 { background-color: #fe0022; }
+#autriche .bande2 { background-color: #fff; }
+
+#russie::after { content: "Russie"; }
+#russie .bande1 { background-color: #fff; }
+#russie .bande2 { background-color: blue; }
+#russie .bande3 { background-color: red; }
+
+.drapeau.verticaux { 
+  display: flex; 
+  flex-wrap: wrap;
+}
+.drapeau.verticaux .bande {
+  width: calc(100% / 3);
+  height: 100%;
+}
+
+#france::after { content: "France"; }
+#france .bande1 { background-color: #00f; }
+#france .bande2 { background-color: #fff; }
+#france .bande3 { background-color: #f00; }
+
+#italie::after { content: "Italie"; }
+#italie .bande1 { background-color: #008360; }
+#italie .bande2 { background-color: #fff; }
+#italie .bande3 { background-color: #f00; }
+
+#tchad::after { content: "Tchad"; }
+#tchad .bande1 { background-color: #002561; }
+#tchad .bande2 { background-color: #f6c500; }
+#tchad .bande3 { background-color: #c00c2f; }
+
+#belgique::after { content: "Belgique"; }
+#belgique .bande1 { background-color: #000; }
+#belgique .bande2 { background-color: #fae043; }
+#belgique .bande3 { background-color: #ed2839; }</code></pre>
+        </div>
       </section>
     </article>
   </main>
