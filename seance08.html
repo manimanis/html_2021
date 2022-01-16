@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 7</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 8</h1>
+
+    <article>
+      <h2>Les feuilles de style</h2>
+
+      <section>
+        <h3>Tic-Tac-Toe Game</h3>
+
+        <p>On veut concevoir la plateforme du jeu, très connu : Tic-Tac-Toe</p>
+        <figure>
+          <img src="assets/downloads/tp6/images/tic-tac-toe.png" alt="Tic-Tac-Toe Game">
+          <figcaption>Tic-Tac-Toe Game</figcaption>
+        </figure>
+
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé : <strong>tictactoe</strong>. Créer dans ce dossier deux fichiers :
+            <ul>
+              <li>tictactoe.html</li>
+              <li>tictactoe.css</li>
+            </ul>
+          </li>
+          <li>Lier la feuille de style <strong>tictactoe.css</strong> au fichier HTML <strong>tictactoe.html</strong>.
+          </li>
+          <li>Copier/Coller le code HTML suivant dans la partie <code>&lt;body&gt;...&lt;/body&gt;</code> de la page.
+            <pre><code class="html">&lt;h1&gt;Tic-Tac-Toe Game&lt;/h1&gt;
+&lt;div id=&quot;game&quot;&gt;
+  &lt;div class=&quot;carre col-1&quot;&gt;X&lt;/div&gt;
+  &lt;div class=&quot;carre col-2&quot;&gt;O&lt;/div&gt;
+  &lt;div class=&quot;carre col-1&quot;&gt;X&lt;/div&gt;
+  &lt;div class=&quot;carre col-2&quot;&gt;O&lt;/div&gt;
+  &lt;div class=&quot;carre col-1&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;carre col-2&quot;&gt;X&lt;/div&gt;
+  &lt;div class=&quot;carre col-1&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;carre col-2&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;carre col-1&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+          <li>Mettre en forme le titre <code>&lt;h1&gt;...&lt;/h1&gt;</code>:
+            <ul>
+              <li>Police : sans-serif, Taille : 40px</li>
+              <li>Titre centré avec une marge verticale de 40px</li>
+              <li>Couleur : <span style="color: #007096;">#007096</span></li>
+            </ul>
+          </li>
+          <li>Mettre en forme l'élément ayant <strong>game</strong> comme id :
+            <ul>
+              <li>Largeur : 450 pixels</li>
+              <li>Display : <code>flex</code> avec retour à la ligne autmoatique</li>
+              <li>Marges horizontales : automatiques</li>
+              <li>Bordure de 15 pixels de couleur #666</li>
+            </ul>
+          </li>
+          <li>Mettre en forme l'élément ayant <strong>carre</strong> comme classe :
+            width: 120px;
+            height: 120px;
+            padding: 9px;
+            margin: 3px;
+            font-size: 120px;
+            font-weight: bold;
+            line-height: 120px;
+            text-align: center;
+            border: #000 solid 3px            
+            <ul>
+              <li>Dimensions : 120 pixels &times; 120 pixels</li>
+              <li>Marge intérieure : 9 pixels</li>
+              <li>Marge extérieure : 3 pixels</li>
+              <li>Texte centré, Taille : 120 pixels, Style : Gras</li>
+              <li>Bordure de 3 pixels couleur #000</li>
+              <li>Hauteur de lignes (line-height) : 120 pixels</li>
+            </ul>
+          </li>
+          <li>Mettre en form les éléments ayant <strong>col-1</strong> et <strong>col-2</strong> comme classes :
+            <ul>
+              <li>Couleur d'arrière plan de col-1 : lightblue</li>
+              <li>Couleur d'arrière plan de col-2 : lightsalmon</li>
+            </ul>
+          </li>
+        </ol>
+        <div class="d-none d-print-block">
+          <h4>Correction - Tic-Tac-Toe Game</h4>
+
+          <p>Contenu du fichier : <strong>tictactoe.css</strong></p>
+
+          <pre><code class="css">body {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #007096;
+  margin: 40px 0;
+}
+
+#game {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: #666 solid 15px;
+}
+
+.carre {
+	width: 120px;
+	height: 120px;
+	padding: 9px;
+	margin: 3px;
+	font-size: 120px;
+  font-weight: bold;
+	line-height: 120px;
+	text-align: center;
+	border: #000 solid 3px;
+}
+
+.col-1 {
+  background-color: lightblue;
+}
+
+.col-2 {
+  background-color: lightsalmon;
+}</code></pre>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
