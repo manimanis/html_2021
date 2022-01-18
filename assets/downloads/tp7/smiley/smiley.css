@@ -1,0 +1,107 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 36pt;
+  letter-spacing: 10pt;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  color: #b57700;
+}
+
+.smilies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  flex-direction: row;
+}
+
+.smiley {
+  background: linear-gradient(135deg, rgb(255, 233, 25) 0%, rgb(251, 192, 0) 100%);
+  border-radius: 100%;
+  padding: 25px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  box-shadow: rgba(211, 165, 110, 0.498039) 0px 30px 30px 1px, rgb(245, 245, 245) 0px 20px 10px 1px;
+}
+
+.mouth {
+  width: 60%;
+  height: 30%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  margin-left: -30%;
+  background: #B57700;
+}
+
+.eyes {
+  width: 100%;
+  margin-top: 15%;
+  box-sizing: border-box;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.eyes .eye {
+  width: 20px;
+  height: 20px;
+  background: #B57700;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 10px;
+}
+
+#unhappy .smiley .mouth {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  height: 10%;
+  width: 40%;
+  bottom: 25%;
+  margin-left: -20%;
+}
+
+#angry .eyes .eye::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 10px;
+  background: #fed800;
+  transform: rotate(45deg);
+  top: -4px;
+  left: 0px;
+}
+
+#angry .eyes .eye:nth-child(2)::after {
+  transform: rotate(135deg);
+  top: -5px;
+  left: -8px;
+}
+
+#angry .smiley .mouth {
+  width: 40%;
+  height: 20%;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  bottom: 18%;
+  left: 50%;
+  margin-left: -20%;
+  border-bottom: 0;
+}
