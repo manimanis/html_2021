@@ -1,0 +1,149 @@
+/*
+$background: #ffffff;
+$outline-color: #195272;
+$face-color: #e1f4f0;
+$tongue-color: #f9bbbb;
+$inner-bg: #cedbdd;
+*/
+
+.antenna {
+  width: 8px;
+  height: 30px;
+  background-color: #195272;
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 4px);
+}
+
+.antenna::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #cedbdd;
+  border-radius: 50%;
+  border: #195272 2px solid;
+  position: absolute;
+  left: -8px;
+  top: -20px;
+}
+.face {
+  width: 190px;
+  height: 170px;
+  background-color: #e1f4f0;
+  border: #195272 solid 3px;
+  border-radius: 10px;
+  margin: 50px auto 0;
+  position: relative;
+}
+
+.eyes {
+  text-align: center;
+}
+
+.eye {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: #195272 solid 3px;
+  border-radius: 10px;
+  position: relative;
+  margin: 25px 12px -25px;
+}
+
+.eye::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+}
+
+.eye::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 55%;
+  bottom: 24%;
+}
+
+.nose {
+  width: 15px;
+  height: 45px;
+  background-color: #195272;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 8px;
+}
+
+.nose::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 11px;
+  background-color: #195272;
+  left: -5px;
+  bottom: 0;
+  border-radius: 3px;
+}
+
+.mustaches {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.mustache {
+  width: 70px;
+  height: 5px;
+  margin: 0 10px;
+  background-color: #195272;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+
+.mustache:nth-child(2) {
+  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+}
+
+.mouth {
+  width: 80%;
+  height: 30px;
+  background-color: #f00;
+  border: #195272 solid 3px;
+  border-radius: 5px;
+  margin: 15px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.teeth {
+  width: calc(12.5% - 2px);
+  height: 10px;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.teeth:nth-child(3), .teeth:nth-child(5), .teeth:nth-child(10) {
+  background-color: #000;
+}
+
+h2 {
+  color: transparent;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 26pt;
+  text-transform: uppercase;
+  background-image: linear-gradient(90deg, #195272, #f9bbbb);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
