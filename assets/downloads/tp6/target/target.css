@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#target {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 416px;
+	position: relative;
+	padding: 2.5rem;
+}
+
+#target::after {
+	content: "Cible de flèches";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bolder;
+	letter-spacing: 1rem;
+	font-size: 1.75rem;
+}
+
+.circle {
+  padding: 25px;
+  border-radius: 50%;
+  border: #000 1px solid;
+}
+
+.red {
+	background: radial-gradient(#ffabab 63%, red 80%);
+}
+
+.white {
+	background: radial-gradient(#333 0%,#777 30%,#fff 75%);
+}
