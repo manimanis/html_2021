@@ -143,7 +143,7 @@
         </div>
 
         <div class="d-none d-print-block">
-          <h4>Correction - Happy Birthday</h4>
+          <h4 class="p-break">Correction - Happy Birthday</h4>
 
           <p>Contenu du fichier : <strong>happy-birthday.css</strong></p>
 
@@ -307,7 +307,89 @@
       </section>
 
       <section>
-        <h3 class="p-break">Drapeaux à trois bandes</h3>
+        <h3 class="p-break">Carreaux</h3>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/carreaux.png" alt="Carreaux" class="h6cm">
+          <figcaption>Carreaux</figcaption>
+        </figure>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Dessiner les dix carrés précédents de dimensions 150 pixels &times; 150 pixels chacun.</li>
+          <li>Définir les marges internes (padding) de la façon suivante :
+            <ol type="A">
+              <li>Pas de marges</li>
+              <li>Marges verticales &udarr; de 20px.</li>
+              <li>Marges horizontales &lrarr; de 20px.</li>
+              <li>Marges haute et gauche de 20px</li>
+              <li>Marges droite et basse de 20px</li>
+              <li>Marges droite et haute de 20px</li>
+              <li>Marges gauche et basse de 20px</li>
+              <li>Toutes les marges de 30px</li>
+              <li>Marges verticlaes de 30px et Marges horizontales de 25px</li>
+              <li>Marge haute de 50px</li>
+            </ol>
+          </li>
+          <li>Mettre les carrés sur deux lignes avec une marge externe (margin) entre deux carrés de 6px.</li>
+        </ul>
+
+        <h4>Code HTML</h4>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;carre.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;carre carreA&quot;&gt;A&lt;/div&gt;
+  &lt;div class=&quot;carre carreB&quot;&gt;B&lt;/div&gt;
+  &lt;div class=&quot;carre carreC&quot;&gt;C&lt;/div&gt;
+  &lt;div class=&quot;carre carreD&quot;&gt;D&lt;/div&gt;
+  &lt;div class=&quot;carre carreE&quot;&gt;E&lt;/div&gt;
+  &lt;div class=&quot;carre carreF&quot;&gt;F&lt;/div&gt;
+  &lt;div class=&quot;carre carreG&quot;&gt;G&lt;/div&gt;
+  &lt;div class=&quot;carre carreH&quot;&gt;H&lt;/div&gt;
+  &lt;div class=&quot;carre carreI&quot;&gt;I&lt;/div&gt;
+  &lt;div class=&quot;carre carreJ&quot;&gt;J&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h4 class="p-break">Code CSS</h4>
+        <pre><code class="css">body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 60px auto;
+}
+.carre {
+  background-color: yellowgreen;
+  color: green;
+  border: green solid 2px;
+  font-size: 110px;
+  line-height: 110px;
+  margin: 3px;
+  text-align: center;
+  font-weight: bold;
+}
+.carreA { width: 150px; height: 150px; padding: 0; }
+.carreB { width: 150px; height: 110px; padding: 20px 0; }
+.carreC { width: 110px; height: 150px; padding: 0 20px; }
+.carreD { width: 130px; height: 130px; padding: 20px 0 0 20px; }
+.carreE { width: 130px; height: 130px; padding: 0 20px 20px 0; }
+.carreF { width: 130px; height: 130px; padding: 20px 20px 0 0; }
+.carreG { width: 130px; height: 130px; padding: 0 0 20px 20px; }
+.carreH { width: 90px;  height: 90px;  padding: 30px; }
+.carreI { width: 100px; height: 90px;  padding: 30px 25px; }
+.carreJ { width: 150px; height: 100px; padding: 50px 0 0 0; }</code></pre>
+
+      </section>
+
+      <section>
+        <h3>Drapeaux à trois bandes</h3>
 
         <p>On demande de créer une page Web qui contient des drapeaux à trois bandes :</p>
 
@@ -316,7 +398,7 @@
           <figcaption>Drapeaux à trois bandes</figcaption>
         </figure>
 
-        <h4>Travail demandé</h4>
+        <h4 class="p-break">Travail demandé</h4>
         <ol>
           <li>Créer un dossier nommé <strong>flags</strong>, créer dans ce dossier deux fichiers :
             <ul>
@@ -405,7 +487,7 @@
         </div>
 
         <div class="d-none d-print-block">
-          <h4>Correction - Drapeaux à trois bandes</h4>
+          <h4 class="p-break">Correction - Drapeaux à trois bandes</h4>
 
           <p>Contenu du fichier : flags.css</p>
 
