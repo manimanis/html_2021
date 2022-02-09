@@ -34,7 +34,7 @@
 
         <p>On veut dessiner la cible de flèches suivante :</p>
         <figure>
-          <img src="assets/downloads/tp6/images/target.png" alt="Cible de flèches">
+          <img src="assets/downloads/tp6/images/target.png" alt="Cible de flèches" class="h5cm">
           <figcaption>Cible de flèches</figcaption>
         </figure>
 
@@ -51,6 +51,58 @@
           <li>Ecrire le code HTML nécessaire pour dessiner cette cible.</li>
           <li>Ecrire le code CSS nécessaire pour dessiner cette cible.</li>
         </ol>
+        <div class="d-none d-print-block">
+          <h4>target.html</h4>
+          <pre><code class="html"><div id="target">
+  &lt;div class=&quot;circle red&quot;&gt;
+    &lt;div class=&quot;circle white&quot;&gt;
+      &lt;div class=&quot;circle red&quot;&gt;
+        &lt;div class=&quot;circle white&quot;&gt;
+          &lt;div class=&quot;circle red&quot;&gt;
+            &lt;div class=&quot;circle white&quot;&gt;
+              &lt;div class=&quot;circle red&quot;&gt;
+                &lt;div class=&quot;circle white&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <pre><code class="css">body {
+  margin: 0;
+  padding: 0;
+}
+#target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 416px;
+  position: relative;
+  padding: 2.5rem;
+}
+#target::after {
+  content: "Cible de flèches";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1rem;
+  font-size: 1.75rem;
+}
+.circle {
+  padding: 25px;
+  border-radius: 50%;
+  border: #000 1px solid;
+}
+.red { background: radial-gradient(#ffabab 63%, red 80%); }
+.white { background: radial-gradient(#333 0%,#777 30%,#fff 75%); }</code></pre>
+        </div>
       </section>
 
       <section>
@@ -58,7 +110,7 @@
 
         <p>On veut concevoir la plateforme du jeu, très connu : Tic-Tac-Toe</p>
         <figure>
-          <img src="assets/downloads/tp6/images/tic-tac-toe.png" alt="Tic-Tac-Toe Game">
+          <img src="assets/downloads/tp6/images/tic-tac-toe.png" alt="Tic-Tac-Toe Game" class="h6cm">
           <figcaption>Tic-Tac-Toe Game</figcaption>
         </figure>
 
@@ -119,7 +171,7 @@
           </li>
         </ol>
         <div class="d-none d-print-block">
-          <h4>Correction - Tic-Tac-Toe Game</h4>
+          <h4 class="p-break">Correction - Tic-Tac-Toe Game</h4>
 
           <p>Contenu du fichier : <strong>tictactoe.css</strong></p>
 
@@ -128,13 +180,11 @@
   font-size: 20px;
   padding: 0;
 }
-
 h1 {
   text-align: center;
   color: #007096;
   margin: 40px 0;
 }
-
 #game {
   width: 450px;
   display: flex;
@@ -142,26 +192,19 @@ h1 {
   margin: 0 auto;
   border: #666 solid 15px;
 }
-
 .carre {
-	width: 120px;
-	height: 120px;
-	padding: 9px;
-	margin: 3px;
-	font-size: 120px;
+  width: 120px;
+  height: 120px;
+  padding: 9px;
+  margin: 3px;
+  font-size: 120px;
   font-weight: bold;
-	line-height: 120px;
-	text-align: center;
-	border: #000 solid 3px;
+  line-height: 120px;
+  text-align: center;
+  border: #000 solid 3px;
 }
-
-.col-1 {
-  background-color: lightblue;
-}
-
-.col-2 {
-  background-color: lightsalmon;
-}</code></pre>
+.col-1 { background-color: lightblue; }
+.col-2 { background-color: lightsalmon; }</code></pre>
         </div>
       </section>
     </article>
