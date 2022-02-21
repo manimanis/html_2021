@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 7</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 9</h1>
+
+    <article>
+      <h2>Les feuilles de style</h2>
+
+      <section>
+        <h3>Rappel</h3>
+        <p>Comment en CSS :</p>
+        <ol>
+          <li>Colorier le texte en vert ?</li>
+          <li>Colorier l'arrière plan en gris clair ?</li>
+          <li>Centrer le contenu d'un élément ?</li>
+          <li>Centrer un élément de type inline ?</li>
+          <li>Centrer un élément de type block ?</li>
+          <li>Définir les dimensions d'un élément à 200px &times; 150px ?</li>
+          <li>Définir la marge extérieure d'un élément à 15px ?</li>
+          <li>Définir la marge intérieure d'un élément à 20px ?</li>
+          <li>Mettre une bordure pointillée d'épaisseur 3px ?</li>
+          <li>Dessiner un rectangle ?</li>
+          <li>Dessiner un cercle de rayon 50px ?</li>
+          <li>Dessiner un triangle ?</li>
+        </ol>
+        <div class="d-none d-print-block">
+          <pre><code class="css">.cls1 { color: green; } /* 1 */
+.cls2 { background-color: lightgray; } /* 2 */
+.cls3 { text-align: center; } /* 3 et 4 */
+.cls5 { margin: 0 auto; } /* 5 */
+.cls6 { width: 200px; height: 150px; } /* 6 */
+.cls7 { margin: 15px; } /* 7 */
+.cls8 { padding: 20px; } /* 8 */
+.cls9 { border: 3px dotted black; } /* 9 */
+.cls10 {
+  width: 300px; height: 100px;
+  background-color: red; /* ou */ border: 1px solid black;
+} /* 10 */
+.cls11 {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+} /* 11 */
+.cls12 {
+  width: 0; height: 0;
+  border: transparent solid 100px;
+  border-bottom: blue solid 100px;
+} /* 12 */
+          </code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="p-break">Drapeau de la Tunisie</h3>
+
+        <p>On veut dessiner le drapeau de la Tunisie suivant :</p>
+        <figure>
+          <img src="assets/downloads/tp6/images/Tunisian-Flags.png" alt="Drapeau de la Tunisie" class="h5cm">
+          <figcaption>Drapeau de la Tunisie</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé : <strong>tunisie</strong>. Créer dans ce dossier deux fichiers :
+            <ul>
+              <li>tunisie.html</li>
+              <li>tunisie.css</li>
+            </ul>
+          </li>
+          <li>Lier la feuille de style <strong>tunisie.css</strong> au fichier HTML <strong>tunisie.html</strong>.
+          </li>
+          <li>Ecrire le code HTML nécessaire pour dessiner ce drapeau</li>
+          <li>Ecrire le code CSS nécessaire pour dessiner ce drapeau.</li>
+        </ol>
+        <div class="d-none d-print-block">
+          <pre><code class="html">&lt;div class=&quot;external-box&quot;&gt;
+  &lt;div class=&quot;white-circle&quot;&gt;
+    &lt;div class=&quot;crescent-external&quot;&gt;
+      &lt;div class=&quot;crescent-internal&quot;&gt;
+        &lt;div class=&quot;star&quot;&gt;&starf;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <pre><code class="css">.star {
+  color: #f00;
+  text-align: center;
+  line-height: 130px;
+  font-size: 100px;
+  transform: rotate(22.5deg);
+}
+.crescent-internal {
+  position: absolute;
+  background-color: #fff;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  top: 15px;
+  right: -5px;
+}
+.crescent-external {
+  position: relative;
+  background-color: #f00;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+.white-circle {
+  background-color: #fff;
+  width: 160px;
+  height: 160px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.external-box {
+  background-color: #f00;
+  width: 200px;
+  height: 200px;
+  padding: 50px 100px;
+  margin: calc(50vh - 150px) auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+}</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3>Drapeau de l'Algérie</h3>
+
+        <p>On veut dessiner le drapeau de l'Algérie suivant :</p>
+        <figure>
+          <img src="assets/downloads/tp6/images/Algerian-Flag.png" alt="Drapeau de l'Algérie" class="h5cm">
+          <figcaption>Drapeau de l'Algérie</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé : <strong>algerie</strong>. Créer dans ce dossier deux fichiers :
+            <ul>
+              <li>algerie.html</li>
+              <li>algerie.css</li>
+            </ul>
+          </li>
+          <li>Lier la feuille de style <strong>algerie.css</strong> au fichier HTML <strong>algerie.html</strong>.
+          </li>
+          <li>Ecrire le code HTML nécessaire pour dessiner ce drapeau</li>
+          <li>Ecrire le code CSS nécessaire pour dessiner ce drapeau.</li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
