@@ -30,6 +30,146 @@
       <h2>Les feuilles de style</h2>
 
       <section>
+        <h3>Rappel</h3>
+        <p>Comment en CSS :</p>
+        <ol>
+          <li>Colorier le texte en vert ?</li>
+          <li>Colorier l'arrière plan en gris clair ?</li>
+          <li>Centrer le contenu d'un élément ?</li>
+          <li>Centrer un élément de type inline ?</li>
+          <li>Centrer un élément de type block ?</li>
+          <li>Définir les dimensions d'un élément à 200px &times; 150px ?</li>
+          <li>Définir la marge extérieure d'un élément à 15px ?</li>
+          <li>Définir la marge intérieure d'un élément à 20px ?</li>
+          <li>Mettre une bordure pointillée d'épaisseur 3px ?</li>
+          <li>Dessiner un rectangle ?</li>
+          <li>Dessiner un cercle de rayon 50px ?</li>
+          <li>Dessiner un triangle ?</li>
+        </ol>
+        <div class="d-none d-print-block">
+          <pre><code class="css">.cls1 { color: green; } /* 1 */
+.cls2 { background-color: lightgray; } /* 2 */
+.cls3 { text-align: center; } /* 3 et 4 */
+.cls5 { margin: 0 auto; } /* 5 */
+.cls6 { width: 200px; height: 150px; } /* 6 */
+.cls7 { margin: 15px; } /* 7 */
+.cls8 { padding: 20px; } /* 8 */
+.cls9 { border: 3px dotted black; } /* 9 */
+.cls10 {
+  width: 300px; height: 100px;
+  background-color: red; /* ou */ border: 1px solid black;
+} /* 10 */
+.cls11 {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+} /* 11 */
+.cls12 {
+  width: 0; height: 0;
+  border: transparent solid 100px;
+  border-bottom: blue solid 100px;
+} /* 12 */
+          </code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="p-break">Drapeau de la Tunisie</h3>
+
+        <p>On veut dessiner le drapeau de la Tunisie suivant :</p>
+        <figure>
+          <img src="assets/downloads/tp6/images/Tunisian-Flags.png" alt="Drapeau de la Tunisie" class="h5cm">
+          <figcaption>Drapeau de la Tunisie</figcaption>
+        </figure>
+        <li>Créer un dossier nommé : <strong>tunisie</strong>. Créer dans ce dossier deux fichiers :
+          <ul>
+            <li>tunisie.html</li>
+            <li>tunisie.css</li>
+          </ul>
+        </li>
+        <li>Lier la feuille de style <strong>tunisie.css</strong> au fichier HTML <strong>tunisie.html</strong>.
+        </li>
+        <li>Ecrire le code HTML nécessaire pour dessiner ce drapeau</li>
+        <li>Ecrire le code CSS nécessaire pour dessiner ce drapeau.</li>
+        </ol>
+        <div class="d-none d-print-block">
+          <pre><code class="html">&lt;div class=&quot;external-box&quot;&gt;
+&lt;div class=&quot;white-circle&quot;&gt;
+&lt;div class=&quot;crescent-external&quot;&gt;
+&lt;div class=&quot;crescent-internal&quot;&gt;
+&lt;div class=&quot;star&quot;&gt;&starf;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <pre><code class="css">.star {
+color: #f00;
+text-align: center;
+line-height: 130px;
+font-size: 100px;
+transform: rotate(22.5deg);
+}
+.crescent-internal {
+position: absolute;
+background-color: #fff;
+width: 130px;
+height: 130px;
+border-radius: 50%;
+top: 15px;
+right: -5px;
+}
+.crescent-external {
+position: relative;
+background-color: #f00;
+width: 160px;
+height: 160px;
+border-radius: 50%;
+}
+.white-circle {
+background-color: #fff;
+width: 160px;
+height: 160px;
+padding: 20px;
+border-radius: 50%;
+}
+.external-box {
+background-color: #f00;
+width: 200px;
+height: 200px;
+padding: 50px 100px;
+margin: calc(50vh - 150px) auto;
+}
+body {
+margin: 0;
+padding: 0;
+}</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3>Drapeau de l'Algérie</h3>
+
+        <p>On veut dessiner le drapeau de l'Algérie suivant :</p>
+        <figure>
+          <img src="assets/downloads/tp6/images/Algerian-Flag.png" alt="Drapeau de l'Algérie" class="h5cm">
+          <figcaption>Drapeau de l'Algérie</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé : <strong>algerie</strong>. Créer dans ce dossier deux fichiers :
+            <ul>
+              <li>algerie.html</li>
+              <li>algerie.css</li>
+            </ul>
+          </li>
+          <li>Lier la feuille de style <strong>algerie.css</strong> au fichier HTML <strong>algerie.html</strong>.
+          </li>
+          <li>Ecrire le code HTML nécessaire pour dessiner ce drapeau</li>
+          <li>Ecrire le code CSS nécessaire pour dessiner ce drapeau.</li>
+        </ol>
+      </section>
+
+      <section>
         <h3>DARTY</h3>
 
         <p>On veut créer la page suivante :</p>
@@ -41,7 +181,8 @@
         <h4>Travail demandé</h4>
         <ol>
           <li>Télécharger les images et les ressources nécessaires pour ce TP : <a href="assets/downloads/tp8/darty.zip"
-              target="_blank" rel="noopener noreferrer">les ressources</a></li>
+              target="_blank" rel="noopener noreferrer">les ressources</a>
+          </li>
           <li>Décompresser le fichier dans votre dossier de travail. Puis, l'ouvrir à l'aide de VSC.</li>
           <li>Compléter le fichier HTML pour ajouter les articles manquant.</li>
           <li>Editer le fichier <strong>darty.css</strong> :
@@ -103,11 +244,6 @@
                   <li>Texte en rouge, gras, taille 1.2em</li>
                 </ul>
               </li>
-              h1 {
-              font-size: 80px;
-              margin: 20px 0;
-              line-height: 80px;
-              }
               <li>Mettre en forme l'élément <code>h1</code> :
                 <ul>
                   <li>Taille de la police 80px, hauteur de ligne 80px</li>
@@ -141,7 +277,7 @@
               target="_blank" rel="noopener noreferrer">les ressources</a></li>
           <li>Utiliser une police Google Font <strong>Orbitron</strong></li>
           <li>Editer le fichier CSS et mettre en forme la calculatrice comme ci-dessus.</li>
-      </section>
+        </ol>
     </article>
   </main>
   <footer class="d-print-none bg-dark text-white p-2">
