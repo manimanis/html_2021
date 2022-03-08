@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 9</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 9</h1>
+
+    <article>
+      <h2>Les feuilles de style</h2>
+
+      <section>
+        <h3>DARTY</h3>
+
+        <p>On veut créer la page suivante :</p>
+        <figure>
+          <img src="assets/downloads/tp8/darty-incomplete/modele.png" alt="DARTY" class="h7cm">
+          <figcaption>DARTY</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Télécharger les images et les ressources nécessaires pour ce TP : <a href="assets/downloads/tp8/darty.zip"
+              target="_blank" rel="noopener noreferrer">les ressources</a></li>
+          <li>Décompresser le fichier dans votre dossier de travail. Puis, l'ouvrir à l'aide de VSC.</li>
+          <li>Compléter le fichier HTML pour ajouter les articles manquant.</li>
+          <li>Editer le fichier <strong>darty.css</strong> :
+            <ul>
+              <li>Ajouter la classe <code>.container</code> :
+                <ul>
+                  <li>Largeur : 826px, Marges horizontales : automatiques</li>
+                  <li>Police : calibri</li>
+                  <li>Display : flex, activer flex-wrap</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>.article</code> :
+                <ul>
+                  <li>Largeur : 263px</li>
+                  <li>Bordure : 1px couleur, gris</li>
+                  <li>Toutes les marges: 5px</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>.exclusif</code> :
+                <ul>
+                  <li>Couleur blanche sur fond rouge</li>
+                  <li>Texte centré, gras avec une marge interne de 5px</li>
+                  <li>Largeur: 100px</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>.image</code> :
+                <ul>
+                  <li>Texte centré, marges verticales 15px, merges horizontales 0</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>.image img</code> :
+                <ul>
+                  <li>Limiter la largeur maximale de l'image à 100%</li>
+                  <li>Limiter l'hauteur maximale de l'image à 150px</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>.titre</code> :
+                <ul>
+                  <li>Mettre le texte en rouge, en gras et en majuscules (text-transform: uppercase)</li>
+                  <li>Marge interne 5px</li>
+                  <li>Bordure haute rouge, épaisseur 1px</li>
+                  <li>Bordure basse rouge, épaisseur thick</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>.prices</code> :
+                <ul>
+                  <li>marges de 5px</li>
+                  <li>texte aligné à droite</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>.prices>.oldprice</code> :
+                <ul>
+                  <li>Texte de couleur gris foncé, taille 0.9em, barré (text-decoration: line-through)</li>
+                </ul>
+              </li>
+
+              <li>Ajouter la classe <code>.prices>.newprice</code> :
+                <ul>
+                  <li>Texte en rouge, gras, taille 1.2em</li>
+                </ul>
+              </li>
+              h1 {
+              font-size: 80px;
+              margin: 20px 0;
+              line-height: 80px;
+              }
+              <li>Mettre en forme l'élément <code>h1</code> :
+                <ul>
+                  <li>Taille de la police 80px, hauteur de ligne 80px</li>
+                  <li>Marges verticales 20px, marges horizontales 0</li>
+                </ul>
+              </li>
+              <li>Ajouter la classe <code>h1 .logo</code> :
+                <ul>
+                  <li>Display inline-block, dimensions : 120px &times; 120px</li>
+                  <li>image d'arrière plan <strong>images/logod.png</strong></li>
+                  <li>alignement vertical au milieu (vertical-align: middle)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Calculator</h3>
+
+        <p>On veut concevoir une calculatrice simple qui ressemble à ce qui suit :</p>
+        <figure>
+          <img src="assets/downloads/tp8/calc-incomplete/modele.png" alt="calculatrice simple" class="h6cm">
+          <figcaption>Calculatrice simple</figcaption>
+        </figure>
+
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Télécharger les images et les ressources nécessaires pour ce TP : <a href="assets/downloads/tp8/calc.zip"
+              target="_blank" rel="noopener noreferrer">les ressources</a></li>
+          <li>Utiliser une police Google Font <strong>Orbitron</strong></li>
+          <li>Editer le fichier CSS et mettre en forme la calculatrice comme ci-dessus.</li>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

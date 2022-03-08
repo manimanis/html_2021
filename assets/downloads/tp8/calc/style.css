@@ -1,0 +1,40 @@
+body {
+  font-family: Orbitron;
+  font-size: 13pt;
+}
+
+input {
+  font-family: Orbitron;
+  font-size: 13pt;
+}
+
+form {
+  width: 375px;
+  background-color: #444;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+form h2 {
+  color: #eee;
+  margin: 0 0 20px;
+}
+
+#scr {
+  width: calc(100% - 40px);
+  text-align: right;
+  font-size: 26pt;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#cont {
+  margin-top: 30px;
+}
+
+#cont input {
+  width: 80px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16pt;
+}
