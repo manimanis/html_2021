@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somme Nombres</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-size: 30px;
+    }
+
+    form {
+      width: 600px;
+      margin: 0 auto;
+      font-size: 30px;
+    }
+
+    label {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    input[type=text], input[type=number] {
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: gray solid 2px;
+      outline: solid 1px #f00;
+    }
+
+    button {
+      width: 100%;
+      font-weight: 300;
+      color: #f00;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <div>
+      <label for="nbr_a">A</label>
+      <input type="number" id="nbr_a" name="nbr_a" placeholder="input A">
+    </div>
+    <div>
+      <label for="nbr_b">B</label>
+      <input type="number" id="nbr_b" name="nbr_b" placeholder="input B">
+      <button>Somme!</button>
+    </div>
+  </form>
+
+  <script>
+    const aInput = document.querySelector("#nbr_a");
+    const bInput = document.querySelector("#nbr_b");
+    const sumButton = document.querySelector("#nbr_b + button");
+    sumButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const a = aInput.value;
+      const b = bInput.value;
+      if (a == "" || b == "") {
+        alert("Enter two numbers please!");
+        return;
+      }
+      const res = +a + +b;
+      alert(a + "+" + b + "=" + res);
+    });
+  </script>
+</body>
+
+</html>

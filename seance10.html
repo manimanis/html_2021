@@ -41,7 +41,6 @@
         <p>Le code HTML, CSS et JavaScript nécessaire est donné :</p>
         <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
-
 &lt;head&gt;
   &lt;meta charset=&quot;UTF-8&quot;&gt;
   &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
@@ -56,16 +55,12 @@
     button { width: 100%; font-weight: 300; color: #f00; padding: 10px; }
   &lt;/style&gt;
 &lt;/head&gt;
-
 &lt;body&gt;
   &lt;form&gt;
-    &lt;div&gt;
-      &lt;label for=&quot;name&quot;&gt;Your name&lt;/label&gt;
+    &lt;div&gt;&lt;label for=&quot;name&quot;&gt;Your name&lt;/label&gt;
       &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; placeholder=&quot;input your name&quot;&gt;
-      &lt;button&gt;Greet !&lt;/button&gt;
-    &lt;/div&gt;
+      &lt;button&gt;Greet !&lt;/button&gt;&lt;/div&gt;
   &lt;/form&gt;
-
   &lt;script&gt;
     const nameInput = document.querySelector(&quot;#name&quot;);
     const greetButton = document.querySelector(&quot;#name + button&quot;);
@@ -80,7 +75,6 @@
     });
   &lt;/script&gt;
 &lt;/body&gt;
-
 &lt;/html&gt;</code></pre>
 
         <h4>Travail Demandé</h4>
@@ -90,13 +84,13 @@
             <div class="row">
               <div class="col-6">
                 <figure>
-                  <img src="assets/downloads/tp9/images/tp01-01.png" alt="Champ vide" class="h3cm">
+                  <img src="assets/downloads/tp9/images/tp01-01.png" alt="Champ vide" class="h5cm">
                   <figcaption>Champ vide</figcaption>
                 </figure>
               </div>
               <div class="col-6">
                 <figure>
-                  <img src="assets/downloads/tp9/images/tp01-02.png" alt="Champ non vide" class="h3cm">
+                  <img src="assets/downloads/tp9/images/tp01-02.png" alt="Champ non vide" class="h5cm">
                   <figcaption>Champ non vide</figcaption>
                 </figure>
               </div>
@@ -136,7 +130,7 @@
                   l'envoi des données du formulaire et le vidage (effacement) automatique des champs. Cette instruction
                   annule le comportement par défaut.</p>
               </li>
-              <li class="p-break"><code>const name = nameInput.value;</code>
+              <li><code>const name = nameInput.value;</code>
                 <p class="d-none d-print-block text-danger">Récupère le texte tapé dans le champ <code>nameInput</code>
                   dans la constante <code>name</code>.</p>
               </li>
@@ -167,7 +161,8 @@
         <h4>Travail Demandé</h4>
         <p>Le clic sur le bouton <kbd>Greet !</kbd> permet de :</p>
         <ul>
-          <li>Vérifier que les deux champs ne sont pas vides.</li>
+          <li>Vérifier que les deux champs ne sont pas vides. Afficher un message d'erreur si l'un des champs est vide.
+          </li>
           <li>Affiche le message :
             <p class="text-center fw-bold">Hello, [name] ! You are [age] years old.</p>
             <figure>
@@ -228,6 +223,78 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         </div>
+      </section>
+
+      <section>
+        <h3 class="p-break">Somme de deux valeurs</h3>
+        <p>Copier/Coller la page <strong>greet_age.html</strong> sous le nom <strong>somme.html</strong>.</p>
+        <p>Faire les modifications nécessaires pour que la page affiche la somme de deux nombres A et B entrés par
+          l'utilisateur. Votre page erssemblera à ce qui suit :</p>
+        <figure>
+          <img src="assets/downloads/tp9/images/tp03-00.jpeg" alt="Calcul somme" class="h4cm">
+          <figcaption>Calcul somme</figcaption>
+        </figure>
+
+        <div class="d-none d-print-block">
+          <h4>Correction</h4>
+          <p>Le code CSS est le même que <strong>greet_age.html</strong></p>
+          <pre><code class="html">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;nbr_a&quot;&gt;A&lt;/label&gt;
+    &lt;input type=&quot;number&quot; id=&quot;nbr_a&quot; name=&quot;nbr_a&quot; placeholder=&quot;input A&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;nbr_b&quot;&gt;B&lt;/label&gt;
+    &lt;input type=&quot;number&quot; id=&quot;nbr_b&quot; name=&quot;nbr_b&quot; placeholder=&quot;input B&quot;&gt;
+    &lt;button&gt;Somme!&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+  const aInput = document.querySelector(&quot;#nbr_a&quot;);
+  const bInput = document.querySelector(&quot;#nbr_b&quot;);
+  const sumButton = document.querySelector(&quot;#nbr_b + button&quot;);
+  sumButton.addEventListener(&apos;click&apos;, (e) =&gt; {
+    e.preventDefault();
+    const a = aInput.value;
+    const b = bInput.value;
+    if (a == &quot;&quot; || b == &quot;&quot;) {
+      alert(&quot;Enter two numbers please!&quot;);
+      return;
+    }
+    const res = +a + +b;
+    alert(a + &quot;+&quot; + b + &quot;=&quot; + res);
+  });
+&lt;/script&gt;</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="p-break">Calulatrice Simple Améliorée</h3>
+
+        <p>Améliorer votre calculatrice comme suit :</p>
+        <figure>
+          <img src="assets/downloads/tp9/images/tp04-00.jpeg" alt="Calculatrice Simple Améliorée" class="h5cm">
+          <figcaption>Calculatrice Simple Améliorée</figcaption>
+        </figure>
+
+        <p>Les opérations simples <code>-</code>, <code>*</code> seront implémentées comme l'opération de l'addition
+          <code>+</code>.</p>
+        <p>L'opérateur <code>/</code> calcule le quotient de la division euclidienne, on pourra utiliser la fonction
+          <code>Math.floor(x)</code> qui supprime la partie décimale d'un nombre.</p>
+        <p>L'opérateur <code>%</code> calcule le reste de la division euclidienne. Utiliser l'opérateur <code>%</code>.
+        </p>
+
+        <p>Vous pouvez utiliser la fonction suivante :</p>
+        <pre><code class="javascript">function evaluer(a, b, op) {
+  let res = Infinity;
+  if (op == "+") { res = a + b; } 
+  else if (op == "-") { res = a - b; } 
+  else if (op == "*") { res = a * b; } 
+  else if (op == "/") { res = Math.floor(a / b); } 
+  else { res = a % b; }
+  return res;
+}</code></pre>
       </section>
     </article>
   </main>

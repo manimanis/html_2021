@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice Simple</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-size: 30px;
+    }
+
+    form {
+      width: 600px;
+      margin: 0 auto;
+      font-size: 30px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    form .w-50 {
+      width: calc(50% - 20px);
+      margin: 10px;
+    }
+
+    form .w-100 {
+      width: calc(100% - 20px);
+      margin: 10px;
+    }
+
+    label {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    input[type=text] {
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: gray solid 2px;
+      outline: solid 1px #f00;
+    }
+
+    input[type=button] {
+    width: calc(20% - 6px);
+    font-weight: 300;
+    color: #f00;
+    padding: 10px;
+}
+  </style>
+</head>
+
+<body>
+  <form>
+    <div class="w-50">
+      <label for="value_a">A</label>
+      <input type="text" id="value_a" name="value_a">
+    </div>
+    <div class="w-50">
+      <label for="value_b">B</label>
+      <input type="text" id="value_b" name="value_b">
+    </div>
+    <div class="w-100">
+      <input type="button" value="+">
+      <input type="button" value="-">
+      <input type="button" value="*">
+      <input type="button" value="/">
+      <input type="button" value="%">
+    </div>
+    <div class="w-100">
+      <label for="res">Résultat</label>
+      <input type="text" id="res" name="res" disabled>
+    </div>
+  </form>
+
+  <script>
+    const aInput = document.querySelector("#value_a");
+    const bInput = document.querySelector("#value_b");
+    const resInput = document.querySelector("#res");
+    const buttons = document.querySelectorAll("input[type=button]");
+
+    function evaluer(a, b, op) {
+      let res = Infinity;
+      if (op == "+") {
+        res = a + b;
+      } else if (op == "-") {
+        res = a - b;
+      } else if (op == "*") {
+        res = a * b;
+      } else if (op == "/") {
+        res = Math.floor(a / b);
+      } else {
+        res = a % b;
+      }
+      return res;
+    }
+
+    function calculer(e) {
+      e.preventDefault();
+      const button = e.target;
+      const op = button.value;
+      const a = aInput.value;
+      const b = bInput.value;
+      if (a == "" || b == "") {
+        alert("Taper deux nombres S'il vous plaît.");
+        return;
+      }
+      const res = evaluer(+a, +b, op);
+      resInput.value = a + op + b + "=" + res;
+      aInput.value = "";
+      bInput.value = "";
+    }
+    buttons.forEach(button => button.addEventListener('click', calculer));
+  </script>
+</body>
+
+</html>
