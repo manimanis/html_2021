@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 10</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 10</h1>
+
+    <article>
+      <h2>JavaScript Projects</h2>
+
+      <section>
+        <h3>Greetings</h3>
+
+        <p>Créer une page web <strong>greetings.html</strong> qui contient le formulaire suivant :</p>
+        <figure>
+          <img src="assets/downloads/tp9/images/tp01-00.png" alt="Page web Greetings" class="h3cm">
+          <figcaption>Page web Greetings</figcaption>
+        </figure>
+
+        <p>Le code HTML, CSS et JavaScript nécessaire est donné :</p>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Greet&lt;/title&gt;
+  &lt;style&gt;
+    * { box-sizing: border-box; font-size: 30px; }
+    form { width: 600px; margin: 0 auto; font-size: 30px; }
+    label { display: block; text-align: center; font-weight: bold; }
+    input[type=text] { padding: 10px; width: 100%; margin: 10px 0;
+      border-radius: 5px; border: gray solid 2px; outline: solid 1px #f00; }
+    button { width: 100%; font-weight: 300; color: #f00; padding: 10px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      &lt;label for=&quot;name&quot;&gt;Your name&lt;/label&gt;
+      &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; placeholder=&quot;input your name&quot;&gt;
+      &lt;button&gt;Greet !&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;script&gt;
+    const nameInput = document.querySelector(&quot;#name&quot;);
+    const greetButton = document.querySelector(&quot;#name + button&quot;);
+    greetButton.addEventListener(&apos;click&apos;, (e) =&gt; {
+      e.preventDefault();
+      const name = nameInput.value;
+      if (name == &quot;&quot;) {
+        alert(&quot;Enter your name please!&quot;);
+      } else {
+        alert(&quot;Hello, &quot; + name + &quot;!&quot;);
+      }
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Copier/Coller le code précédent dans votre éditeur (Visual Studio Code).</li>
+          <li>Tester le bon fonctionnement de la page dans les deux scénarios suivants :
+            <div class="row">
+              <div class="col-6">
+                <figure>
+                  <img src="assets/downloads/tp9/images/tp01-01.png" alt="Champ vide" class="h3cm">
+                  <figcaption>Champ vide</figcaption>
+                </figure>
+              </div>
+              <div class="col-6">
+                <figure>
+                  <img src="assets/downloads/tp9/images/tp01-02.png" alt="Champ non vide" class="h3cm">
+                  <figcaption>Champ non vide</figcaption>
+                </figure>
+              </div>
+            </div>
+          </li>
+          <li>Identifier la balise utilisée pour insérer un code JavaScript dans la page HTML.
+            <p class="d-none d-print-block text-danger">Pour ajouter un code JavaScript on utilise la balise
+              &lt;script&gt;&lt;/script&gt;</p>
+          </li>
+          <li>Expliquer la signification du code <code>const nameInput = document.querySelector("#name");</code>.
+            <ul>
+              <li>const <p class="d-none d-print-block text-danger">Indique qu'on va déclarer une constante.</p>
+              </li>
+              <li>nameInput <p class="d-none d-print-block text-danger">L'identificateur (le nom) de la
+                  constante.</p>
+              </li>
+              <li>document.querySelector(...) <p class="d-none d-print-block text-danger">Retourne le premier
+                  Element dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou null
+                  si aucune correspondance n'est trouvée.</p>
+              </li>
+              <li>"#name" <p class="d-none d-print-block text-danger">L'élément ayant <code>name</code> comme
+                  ID.</p>
+              </li>
+              <li>"#name + button" <p class="d-none d-print-block text-danger">Le voisin direct <code>button</code>
+                  de l'élément ayant <code>name</code> comme ID.</p>
+              </li>
+            </ul>
+          </li>
+          <li>Expliquer le code suivant :
+            <ul>
+              <li><code>greetButton.addEventListener('click', (e) => { ... });</code>
+                <p class="d-none d-print-block text-danger">Indique l'action à exécuter lorsque l'utilisateur clique sur
+                  le bouton <code>greetButton</code></p>
+              </li>
+              <li><code>e.preventDefault();</code>
+                <p class="d-none d-print-block text-danger">Le clic sur le bouton <kbd>Greet!</kbd> provoque par défaut
+                  l'envoi des données du formulaire et le vidage (effacement) automatique des champs. Cette instruction
+                  annule le comportement par défaut.</p>
+              </li>
+              <li class="p-break"><code>const name = nameInput.value;</code>
+                <p class="d-none d-print-block text-danger">Récupère le texte tapé dans le champ <code>nameInput</code>
+                  dans la constante <code>name</code>.</p>
+              </li>
+              <li><code>alert("Enter your name please!");</code>
+                <p class="d-none d-print-block text-danger">Affiche une boîte d'alerte contenant le message indiqué.</p>
+              </li>
+              <li><code>if (name == "") { ... } else { ... }</code>
+                <p class="d-none d-print-block text-danger">Teste si le champ <code>name</code> est vide pour faire le
+                  traitement adéquat.</p>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Greet and Age</h3>
+
+        <p>En s'inspirant de la page <strong>Greet</strong> créer une autre page nommée :
+          <strong>greet_age.html</strong> qui contient le formulaire suivant :
+        </p>
+
+        <figure>
+          <img src="assets/downloads/tp9/images/tp02-00.png" alt="Formulaire Greets and Age" class="h3cm">
+          <figcaption>Formulaire Greets and Age</figcaption>
+        </figure>
+
+        <h4>Travail Demandé</h4>
+        <p>Le clic sur le bouton <kbd>Greet !</kbd> permet de :</p>
+        <ul>
+          <li>Vérifier que les deux champs ne sont pas vides.</li>
+          <li>Affiche le message :
+            <p class="text-center fw-bold">Hello, [name] ! You are [age] years old.</p>
+            <figure>
+              <img src="assets/downloads/tp9/images/tp02-01.png" alt="Affichage si tout va bien" class="h4cm">
+              <figcaption>Affichage si tout va bien</figcaption>
+            </figure>
+          </li>
+        </ul>
+
+        <div class="d-none d-print-block p-break">
+          <h4>Solution</h4>
+          <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Greet and Age&lt;/title&gt;
+  &lt;style&gt;
+    * { box-sizing: border-box; font-size: 30px; }
+    form { width: 600px; margin: 0 auto; font-size: 30px; }
+    label { display: block; text-align: center; font-weight: bold; }
+    input[type=text], input[type=number] { padding: 10px; width: 100%;
+      margin: 10px 0; border-radius: 5px; border: gray solid 2px;
+      outline: solid 1px #f00; }
+    button { width: 100%; font-weight: 300; color: #f00; padding: 10px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      &lt;label for=&quot;name&quot;&gt;Your name&lt;/label&gt;
+      &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; placeholder=&quot;input your name&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;label for=&quot;age&quot;&gt;Your age&lt;/label&gt;
+      &lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;150&quot; id=&quot;age&quot; name=&quot;age&quot; placeholder=&quot;input your age&quot;&gt;
+      &lt;button&gt;Greet !&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+  &lt;script&gt;
+    const nameInput = document.querySelector(&quot;#name&quot;);
+    const ageInput = document.querySelector(&quot;#age&quot;);
+    const greetButton = document.querySelector(&quot;#age + button&quot;);
+    greetButton.addEventListener(&apos;click&apos;, (e) =&gt; {
+      e.preventDefault();
+      const name = nameInput.value;
+      const age = ageInput.value;
+      if (name == &quot;&quot;) {
+        alert(&quot;Enter your name please!&quot;); return;
+      } 
+      if (age == &quot;&quot;) {
+        alert(&quot;Enter your age please!&quot;); return;
+      }
+      alert(&quot;Hello, &quot; + name + &quot;! You are &quot; + age + &quot; years old.&quot;);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

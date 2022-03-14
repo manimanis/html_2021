@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greet and Age</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-size: 30px;
+    }
+
+    form {
+      width: 600px;
+      margin: 0 auto;
+      font-size: 30px;
+    }
+
+    label {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    input[type=text], input[type=number] {
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: gray solid 2px;
+      outline: solid 1px #f00;
+    }
+
+    button {
+      width: 100%;
+      font-weight: 300;
+      color: #f00;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <div>
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" placeholder="input your name">
+    </div>
+    <div>
+      <label for="age">Your age</label>
+      <input type="number" min="0" max="150" id="age" name="age" placeholder="input your age">
+      <button>Greet !</button>
+    </div>
+  </form>
+
+  <script>
+    const nameInput = document.querySelector("#name");
+    const ageInput = document.querySelector("#age");
+    const greetButton = document.querySelector("#age + button");
+    greetButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = nameInput.value;
+      const age = ageInput.value;
+      if (name == "") {
+        alert("Enter your name please!");
+        return;
+      } 
+      if (age == "") {
+        alert("Enter your age please!");
+        return;
+      }
+      alert("Hello, " + name + "! You are " + age + " years old.");
+    });
+  </script>
+</body>
+
+</html>
