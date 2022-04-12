@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feu de circulation</title>
+  <style>
+    #feu {
+      width: 100px;
+      height: 360px;
+      padding: 20px;
+      background-color: black;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+    }
+
+    .voyant {
+      background-color: #333;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 10px 0;
+    }
+
+    .red {
+      background-color: red;
+      box-shadow: 0 0 20px 10px red;
+    }
+
+    .orange {
+      background-color: orange;
+      box-shadow: 0 0 20px 10px orange;
+    }
+
+    .green {
+      background-color: green;
+      box-shadow: 0 0 20px 10px green;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="feu">
+    <div class="voyant red"></div>
+    <div class="voyant orange"></div>
+    <div class="voyant green"></div>
+  </div>
+  <script>    
+    // // Première étape
+    // const divVoyants = document.querySelectorAll("#feu .voyant");
+    // let classes = ["red", "orange", "green"];
+    // let count = 0;
+    // divVoyants.forEach((voyant, idx) => {
+    //   voyant.classList.remove(classes[idx]);
+    // });
+    // function clignotant() {
+    //   if (count % 2 == 0) {
+    //     divVoyants[1].classList.add(classes[1]);
+    //   } else {
+    //     divVoyants[1].classList.remove(classes[1]);
+    //   }
+    //   count++;
+    //   setTimeout(clignotant, 1000);
+    // }
+    // clignotant();
+
+    // Deuxième étape
+    const divVoyants = document.querySelectorAll("#feu .voyant");
+    let classes = ["red", "orange", "green"];
+    let count = 2;
+    divVoyants.forEach((voyant, idx) => {
+      voyant.classList.remove(classes[idx]);
+    });
+    function cycle() {
+      divVoyants[count].classList.remove(classes[count]);
+      count = Math.floor(Math.random() * 3);
+      divVoyants[count].classList.add(classes[count]);
+      setTimeout(cycle, 500);
+    }
+    cycle();
+    // final
+    // let voyantStates = [true, false, false];
+    // let voyantsTimes = [5000, 2000, 5000];
+    // let current = 0;
+    // function cycleFeu() {
+    //   const last = (current + 2) % 3;
+    //   divVoyants[last].classList.remove(classes[last]);
+    //   divVoyants[current].classList.add(classes[current]);
+    //   setTimeout(cycleFeu, voyantsTimes[current]);
+    //   current = (current + 1) % 3;
+    // }
+    // cycleFeu();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 11</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 11</h1>
+
+    <article>
+      <h2>JavaScript Projects</h2>
+
+      <section>
+        <h3>Feu de circulation - éteint</h3>
+        <p>Dessiner le feu de circulation suivant à l'aide du langage HTML et du css.</p>
+        <figure>
+          <img src="assets/downloads/tp9/images/feu.png" alt="Feu de circulation" class="h4cm">
+          <figcaption>Feu de circulation éteint</figcaption>
+        </figure>
+        <p>Le feu est composé d'un div <strong>(id:feu)</strong> contenant trois autres div
+          <strong>(class:voyant)</strong>.
+        </p>
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Ecrire le code HTML du feu de circulation.</li>
+          <li>Ecrire le code CSS des deux sélecteurs : <code>#feu</code> et <code>.voyant</code>. Après cette étape le
+            feu doit ressembler à la figure ci-dessus.</li>
+        </ol>
+        <div class="d-none d-print-block">
+          <div class="row">
+            <div class="col-6">
+              <h4>HTML</h4>
+              <pre><code class="html">&lt;div id=&quot;feu&quot;&gt;
+  &lt;div class=&quot;voyant&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;voyant&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;voyant&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="col-6">
+              <h4>CSS</h4>
+              <pre><code class="css">#feu {
+  width: 100px;
+  height: 360px;
+  padding: 20px;
+  background-color: black;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.voyant {
+  background-color: #333;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px 0;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h3 class="p-break">Feu de circulation - allumé</h3>
+        <p>Au niveau du code HTML, ajouter les classes <code>red</code>, <code>orange</code> et <code>green</code>
+          respectivement pour chacun des trois voyants.</p>
+        <p>Ecrire le code CSS de trois nouveaux sélecteurs : <code>.red</code>, <code>.orange</code> et
+          <code>.green</code> à la fin de cette étape votre feu doit ressembler à ce qui suit.
+        </p>
+        <figure>
+          <img src="assets/downloads/tp9/images/feu_allume.png" alt="Feu de circulation Allumé" class="h4cm">
+          <figcaption>Feu de circulation allumé</figcaption>
+        </figure>
+        <div class="d-none d-print-block">
+          <div class="row">
+            <div class="col-5">
+              <h4>HTML</h4>
+              <pre><code class="html">&lt;div id=&quot;feu&quot;&gt;
+&lt;div class=&quot;voyant red&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;voyant orange&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;voyant green&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="col-7">
+              <h4>CSS</h4>
+              <pre><code class="css">.red {    background-color: red; 
+          box-shadow: 0 0 20px 10px red;    }
+.orange { background-color: orange; 
+          box-shadow: 0 0 20px 10px orange; }
+.green {  background-color: green;  
+          box-shadow: 0 0 20px 10px green;  }</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Feu de circulation - Animation</h3>
+        <p>Nous allons maintenant créer un feu de circulation fonctionnel :</p>
+        <ul>
+          <li>Le rouge s'allume pendant 5 secondes puis s'éteint,</li>
+          <li>L'orange s'allume pendant 2 secondes puis s'éteint,</li>
+          <li>Le vert s'allume pendant 5 secondes puis s'éteint,</li>
+          <li>Le cycle reprend indéfiniment.</li>
+        </ul>
+        <figure>
+          <img src="assets/downloads/tp9/images/feu_rouge.png" alt="Feu de circulation - Rouge" class="h4cm">
+          <img src="assets/downloads/tp9/images/feu_orange.png" alt="Feu de circulation - Orange" class="h4cm">
+          <img src="assets/downloads/tp9/images/feu_vert.png" alt="Feu de circulation - Vert" class="h4cm">
+          <figcaption>Feu de circulation</figcaption>
+        </figure>
+        <p class="p-break">Tester le code JavaScript suivant et vérifier qu'il fonctionne bien. Que fait-il ?</p>
+        <pre><code class="javascript">const divVoyants = document.querySelectorAll("#feu .voyant");
+let classes = ["red", "orange", "green"];
+let count = 0;
+// Première étape
+divVoyants.forEach((voyant, idx) => {
+  voyant.classList.remove(classes[idx]);
+});
+function clignotant() {
+  if (count % 2 == 0) {
+    divVoyants[1].classList.add(classes[1]);
+  } else {
+    divVoyants[1].classList.remove(classes[1]);
+  }
+  count++;
+  setTimeout(clignotant, 1000);
+}
+clignotant()</code></pre>
+        <p>Modifier le code précédent, dans la fonction <strong>clignotant</strong>, pour faire clignoter le voyant
+          rouge.</p>
+        <p>Modifier le code précédent, dans la fonction <strong>clignotant</strong>, pour faire clignoter les trois
+          voyants en même temps.</p>
+        <p>Tester le code JavaScript suivant et vérifier qu'il fonctionne bien. Que fait-il ?</p>
+        <pre><code class="javascript">const divVoyants = document.querySelectorAll("#feu .voyant");
+let classes = ["red", "orange", "green"];
+let count = 2;
+divVoyants.forEach((voyant, idx) => {
+  voyant.classList.remove(classes[idx]);
+});
+function cycle() {
+  divVoyants[count].classList.remove(classes[count]);
+  count = Math.floor(Math.random() * 3);
+  divVoyants[count].classList.add(classes[count]);
+  setTimeout(cycle, 500);
+}
+cycle();</code></pre>
+        <p>Est-ce qu'il respecte la séquence correcte : Rouge &rarr; Orange &rarr; Vert ? Corriger l'ordre d'activation
+          des voyants dans la fonction <strong>cycle</strong>.</p>
+        <p>Est-ce qu'il respecte la temporisation indiquée ci-dessus : 5s (Rouge) &rarr; 2s (Orange) &rarr; 5s (Vert) ?
+          Corriger la temporisation.</p>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
