@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 12</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 12</h1>
+
+    <article>
+      <h2>JavaScript Projects</h2>
+
+      <section>
+        <h3>Tic-Tac-Toe - interface</h3>
+        <p>Dessiner l'interface du jeu à l'aide de HTML et de CSS.</p>
+        <figure>
+          <img src="assets/downloads/tp9/images/tic-tac-toe01.png" alt="Tic-Tac-Toe" class="h5cm">
+          <figcaption>Tic-Tac-Toe</figcaption>
+        </figure>
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Ecrire le code HTML du jeu.</li>
+          <li>Ecrire le code CSS des deux sélecteurs indiqués dans l'image.</li>
+        </ol>
+        <div class="d-none d-print-block">
+
+          <h4>HTML</h4>
+          <pre><code class="html">&lt;div id=&quot;grid&quot;&gt;
+  &lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;controls&quot;&gt;
+  &lt;button id=&quot;restart&quot;&gt;Restart the game...&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+          <h4>CSS</h4>
+          <pre><code class="css">#grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 486px;
+  border: 1px solid #333;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  border: 1px solid #333;
+  cursor: pointer;
+  background-color: #468;
+  text-align: center;
+  font-size: 150px;
+  line-height: 150px;
+}
+
+.cell:nth-child(odd) {
+  background-color: #89A;
+}
+
+#controls {
+  text-align: center;
+  margin: 25px 0;
+}
+
+#controls #restart {
+  padding: 10px 30px;
+  font-size: 12pt;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3>Tic-Tac-Toe - Initialisation</h3>
+
+        <p>Copier/Coller le code suivant :</p>
+        <pre><code class="javascript">const cells = document.querySelectorAll("#grid .cell");
+const btnRestart = document.querySelector("#restart");
+
+let letter;
+
+btnRestart.onclick = (e) => {
+  cells.forEach((cell, idx) => {
+    const rnd = Math.floor(Math.random() * 2);    
+    if (rnd == 0) {
+      letter = "X";
+    } else {
+      letter = "O";
+    }
+    cell.textContent = letter;
+  });
+};</code></pre>
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Cliquer sur le bouton <strong>Restart the game...</strong>. Que fait-t-il ?</li>
+          <li>Quelle est l'instruction qui permet de modifier le contenu d'un élément ?</li>
+          <li>Quelle est la valeur de <code>letter</code> qui permet d'initialiser correctement la grille du jeu ?
+            Modifier le code pour que la grille soit vidée lorsqu'on clique sur le bouton.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Tic-Tac-Toe - X puis O</h3>
+
+        <p>Copier/Coller le code suivant :</p>
+        <pre><code class="javascript">const cells = document.querySelectorAll("#grid .cell");
+const btnRestart = document.querySelector("#restart");
+
+let letter = "X";
+btnRestart.onclick = (e) => {
+  cells.forEach((cell, idx) => {
+    cell.textContent = "";
+  });
+};
+
+cells.forEach((cell, idx) => {
+  cell.onclick = (e) => {
+    cell.textContent = letter;
+  }
+});</code></pre>
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Tester le fonctionnement du code. Cliquer sur les cellules de la grille et sur le bouton.</li>
+          <li>Est-ce que la grille est remplie correctement lorsqu'on clique dessus ?</li>
+          <li>Modifier le code précédent pour qu'il permette d'alterner les lettres "X" et "O".</li>
+          <li>Que se passe-t-il lorsqu'on clique plusieurs fois de suite sur une même cellule ? Corriger ce défaut.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Tic-Tac-Toe - Gagnant</h3>
+
+        <p>Copier/Coller le code suivant :</p>
+        <pre><code class="javascript">const cells = document.querySelectorAll("#grid .cell");
+const btnRestart = document.querySelector("#restart");
+
+let letter = "X";
+btnRestart.onclick = (e) => {
+  cells.forEach((cell, idx) => {
+    cell.textContent = "";
+  });
+};
+
+cells.forEach((cell, idx) => {
+  cell.onclick = (e) => {
+    if (cell.textContent != "") {
+      return;
+    }
+    cell.textContent = letter;
+
+    if (isWinner(letter)) {
+      setTimeout(() => {
+        alert(letter + " wins!")
+      }, 10);
+    }
+
+    if (letter == "X") {
+      letter = "O";
+    } else {
+      letter = "X";
+    }
+  }
+});
+
+function ligne(l) {
+  let s = "";
+  for (let i = 0; i < 3; i++) {
+    s = s + cells[3 * l + i].textContent;
+  }
+  return s;
+}
+
+function isWinner(letter) {
+  const lwin = letter + letter + letter;
+  if (ligne(0) == lwin) {
+    return true;
+  }
+  return false;
+}</code></pre>
+        <h4>Travail Demande</h4>
+        <ol>
+          <li>Tester les scénarios des figures suivantes : <figure>
+              <img src="assets/downloads/tp9/images/tic-tac-toe02.png" alt="Tic-Tac-Toe X Wins">
+              <img src="assets/downloads/tp9/images/tic-tac-toe03.png" alt="Tic-Tac-Toe O Wins">
+              <figcaption>Tic-Tac-Toe Winners</figcaption>
+            </figure>
+          </li>
+          <li>Est-ce que le gagnant est affiché correctement ? Corriger ce problème. Ajouter une variable
+            <code>winner</code> qui contient le nom du gagnant, puis l'afficher au lieu d'afficher <code>letter</code>.
+          </li>
+          <li>Tester le scénario de la figure suivante : <figure>
+              <img src="assets/downloads/tp9/images/tic-tac-toe04.png" alt="Tic-Tac-Toe X Wins">
+              <figcaption>Tic-Tac-Toe X Wins</figcaption>
+            </figure>
+          </li>
+          <li>Est-ce que le nom du gagnant est affiché ? Opérer les changements nécessaires dans la fonction
+            <code>isWinner(letter)</code>.
+          </li>
+          <li>Ajouter le code nécessaire dans la fonction <code>isWinner</code> pour prendre en compte le cas suivant :
+            <figure>
+              <img src="assets/downloads/tp9/images/tic-tac-toe05.png" alt="Tic-Tac-Toe X Wins">
+              <figcaption>Tic-Tac-Toe X Wins</figcaption>
+            </figure>
+          </li>
+          <li>Implémenter une fonction <code>colonne(c)</code> qui retourne le contenu d'une colonne de la grille.</li>
+          <li>Faire de même pour les deux diagonales.</li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

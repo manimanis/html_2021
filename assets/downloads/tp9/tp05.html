@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <style>
+    #grid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 486px;
+      border: 1px solid #333;
+      padding: 5px;
+      margin: 0 auto;
+    }
+
+    .cell {
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+      border: 1px solid #333;
+      cursor: pointer;
+      background-color: #468;
+      text-align: center;
+      font-size: 150px;
+      line-height: 150px;
+    }
+
+    .cell:nth-child(odd) {
+      background-color: #89A;
+    }
+
+    #controls {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    #controls #restart {
+      padding: 10px 30px;
+      font-size: 12pt;
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="grid">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <div id="controls">
+    <button id="restart">Restart the game...</button>
+  </div>
+  <script>
+    ////---------------------------------------------------
+    // const cells = document.querySelectorAll("#grid .cell");
+    // const btnRestart = document.querySelector("#restart");
+
+    // let letter;
+
+    // btnRestart.onclick = (e) => {
+    //   cells.forEach((cell, idx) => {
+    //     const rnd = Math.floor(Math.random() * 2);    
+    //     if (rnd == 0) {
+    //       letter = "X";
+    //     } else {
+    //       letter = "O";
+    //     }
+    //     cell.textContent = letter;
+    //   });
+    // };
+
+    ////---------------------------------------------------
+    const cells = document.querySelectorAll("#grid .cell");
+    const btnRestart = document.querySelector("#restart");
+
+    let letter = "X";
+    let winner = "";
+    let count = 0;
+    btnRestart.onclick = (e) => {
+      letter = "X";
+      winner = "";
+      cells.forEach((cell, idx) => {
+        cell.textContent = "";
+      });
+    };
+
+    cells.forEach((cell, idx) => {
+      cell.onclick = (e) => {
+        if (winner !=  "" || cell.textContent != "") {
+          return;
+        }
+        count++;
+        cell.textContent = letter;
+
+        if (isWinner(letter)) {
+          winner = letter;
+          setTimeout(() => {
+            alert(winner + " wins!")
+          }, 10);
+        } else if (count == 9) {
+          winner = "D";
+          setTimeout(() => {
+            alert("Draw game!")
+          }, 10);
+        }
+
+        if (letter == "X") {
+          letter = "O";
+        } else {
+          letter = "X";
+        }
+      }
+    });
+
+    function ligne(l) {
+      let s = "";
+      for (let i = 0; i < 3; i++) {
+        s = s + cells[3 * l + i].textContent;
+      }
+      return s;
+    }
+
+    function colonne(c) {
+      let s = "";
+      for (let i = 0; i < 3; i++) {
+        s = s + cells[3 * i + c].textContent;
+      }
+      return s;
+    }
+
+    function diag1() {
+      let s = "";
+      for (let i = 0; i < 3; i++) {
+        s = s + cells[4*i].textContent;
+      }
+      return s;
+    }
+
+    function diag2() {
+      let s = "";
+      for (let i = 0; i < 3; i++) {
+        s = s + cells[2*(i+1)].textContent;
+      }
+      return s;
+    }
+
+    function isWinner(letter) {
+      const lwin = letter + letter + letter;
+      if (ligne(0) == lwin || ligne(1) == lwin || ligne(2) == lwin) {
+        return true;
+      }
+      if (colonne(0) == lwin || colonne(1) == lwin || colonne(2) == lwin) {
+        return true;
+      }
+      if (diag1() == lwin || diag2() == lwin) {
+        return true;
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>
