@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierre - Feuille - Ciseaux</title>
+  <style>
+    #container {
+      width: 600px;
+      padding: 10px;
+      margin: 0 auto;
+      font-family: 'Garamond';
+      border: #333 solid 1px;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    .none,
+    .pierre,
+    .feuille,
+    .ciseaux {
+      display: inline-block;
+      background-color: #47423f;
+      background-image: url(images/pierre.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100px;
+      height: 100px;
+      padding: 20px 20px 40px;
+      margin: 0 20px;
+      border: none;
+      border-radius: 10px;
+      position: relative;
+      box-sizing: content-box;
+    }
+
+    .none::after,
+    .pierre::after,
+    .feuille::after,
+    .ciseaux::after {
+      content: 'Pierre';
+      display: block;
+      position: absolute;
+      bottom: 16px;
+      right: 0;
+      left: 0;
+      font-size: 14pt;
+      font-weight: bold;
+      font-family: 'Garamond';
+      color: #fff;
+    }
+
+    .feuille {
+      background-color: #ee5253;
+      background-image: url(images/feuille.png);
+    }
+
+    .feuille::after {
+      content: 'Feuille';
+    }
+
+    .ciseaux {
+      background-color: #83be60;
+      background-image: url(images/ciseaux.png);
+    }
+
+    .ciseaux::after {
+      content: 'Ciseaux';
+    }
+
+    .none {
+      background-image: none;
+      background-color: #9c27b0;
+    }
+
+    .none::after {
+      content: '?';
+      font-size: 120px;
+    }
+
+    #resultat {
+      color: #A00;
+      margin: 20px 0;
+      font-size: 24pt;
+      font-weight: bold;
+    }
+
+    #rejouer {
+      padding: 15px 45px;
+      font-size: 14pt;
+      border: none;
+      border-radius: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Jeu Pierre - Feuille - Ciseaux</h1>
+
+    <p>Votre choix ?</p>
+    <div id="user-btn">
+      <button type="button" value="0" class="pierre"></button><button type="button" value="1"
+        class="feuille"></button><button type="button" value="2" class="ciseaux"></button>
+    </div>
+
+    <p>Choix de l'ordinateur ?</p>
+    <div id="comp-btn">
+      <button type="button" value="-1" class="none"></button>
+    </div>
+    <div id="resultat"></div>
+    <div id="control"><button id="rejouer">Rejouer</button></div>
+  </div>
+
+  <script>
+    let g = -1;
+    const userBtns = document.querySelectorAll("#user-btn button");
+    const compBtn = document.querySelector("#comp-btn button");
+    const resultat = document.querySelector("#resultat");
+    const rejouer = document.querySelector("#rejouer");
+    const classes = ['pierre', 'feuille', 'ciseaux'];
+    const gagnants = ["Partie nulle", "Vous avez gagné!", "Vous avez perdu!"];
+
+    userBtns.forEach(btn => {
+      btn.onclick = (e) => {
+        if (g != -1) {
+          return;
+        }
+
+        const j1 = +btn.value;
+        const j2 = Math.floor(Math.random() * 3);
+        compBtn.className = classes[j2];
+        userBtns.forEach(btn1 => {
+          if (btn1 != btn) {
+            btn1.style.display = "none";
+          }
+        });
+
+        g = (j1 - j2 + 3) % 3;
+
+        resultat.textContent = gagnants[g];
+        rejouer.style.display = "";
+      };
+    });
+
+    rejouer.onclick = (e) => {
+      g = -1;
+      rejouer.style.display = "none";
+      compBtn.className = "none";
+      resultat.textContent = "";
+      userBtns.forEach(btn => {
+        btn.style.display = "";
+      });
+    };
+
+    rejouer.style.display = "none";
+  </script>
+</body>
+
+</html>
