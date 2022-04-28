@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 13</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 13</h1>
+
+    <article>
+      <h2>JavaScript Projects</h2>
+
+      <section>
+        <h3>Pierre-Feuille-Ciseaux - interface</h3>
+        <p>Dessiner l'interface du jeu à l'aide de HTML et de CSS.</p>
+        <figure>
+          <img src="assets/downloads/tp10/imgs/interface01.png" alt="Pierre-Feuille-Ciseaux" class="h5cm">
+          <figcaption>Pierre-Feuille-Ciseaux</figcaption>
+        </figure>
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Ecrire le code HTML du jeu.</li>
+          <li>Ecrire le code CSS des deux sélecteurs indiqués dans l'image.</li>
+        </ol>
+        <div class="d-none d-print-block">
+
+          <h4>HTML</h4>
+          <pre><code class="html">&lt;div id=&quot;container&quot;&gt;
+  &lt;h1&gt;Jeu Pierre - Feuille - Ciseaux&lt;/h1&gt;
+
+  &lt;p&gt;Votre choix ?&lt;/p&gt;
+  &lt;div id=&quot;user-btn&quot;&gt;
+    &lt;button type=&quot;button&quot; value=&quot;0&quot; class=&quot;pierre&quot;&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; value=&quot;1&quot;
+      class=&quot;feuille&quot;&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; value=&quot;2&quot; class=&quot;ciseaux&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;p&gt;Choix de l&apos;ordinateur ?&lt;/p&gt;
+  &lt;div id=&quot;comp-btn&quot;&gt;
+    &lt;button type=&quot;button&quot; value=&quot;-1&quot; class=&quot;none&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;resultat&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;control&quot;&gt;&lt;button id=&quot;rejouer&quot;&gt;Rejouer&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h4>CSS</h4>
+          <pre><code class="css">    #container {
+  width: 600px;
+  padding: 10px;
+  margin: 0 auto;
+  font-family: 'Garamond';
+  border: #333 solid 1px;
+}
+
+body {
+  text-align: center;
+}
+
+.none,
+.pierre,
+.feuille,
+.ciseaux {
+  display: inline-block;
+  background-color: #47423f;
+  background-image: url(images/pierre.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  padding: 20px 20px 40px;
+  margin: 0 20px;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.none::after,
+.pierre::after,
+.feuille::after,
+.ciseaux::after {
+  content: 'Pierre';
+  display: block;
+  position: absolute;
+  bottom: 16px;
+  right: 0;
+  left: 0;
+  font-size: 14pt;
+  font-weight: bold;
+  font-family: 'Garamond';
+  color: #fff;
+}
+
+.feuille {
+  background-color: #ee5253;
+  background-image: url(images/feuille.png);
+}
+
+.feuille::after {
+  content: 'Feuille';
+}
+
+.ciseaux {
+  background-color: #83be60;
+  background-image: url(images/ciseaux.png);
+}
+
+.ciseaux::after {
+  content: 'Ciseaux';
+}
+
+.none {
+  background-image: none;
+  background-color: #9c27b0;
+}
+
+.none::after {
+  content: '?';
+  font-size: 120px;
+}
+
+#resultat {
+  color: #A00;
+  margin: 20px 0;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+#rejouer {
+  padding: 15px 45px;
+  font-size: 14pt;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+}</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <h3>Pierre-Feuille-Ciseaux - Initialisation</h3>
+
+        <p>Copier/Coller le code suivant :</p>
+        <pre><code class="javascript">// Numéro du gagnant d'une partie
+let g = -1; // -1 : partie non terminée - 0 : partie nulle
+            //  1 : vous gagnez         - 2 : vous perdez
+// Les 3 boutons utilisateur
+const userBtns = document.querySelectorAll("à compléter");
+// Le bouton réservé à l'ordinateur
+const compBtn = document.querySelector("à compléter");
+// Le div réservé au résultat
+const resultat = document.querySelector("à compléter");
+// Le bouton rejouer
+const rejouer = document.querySelector("à compléter");
+// Les éléments du jeu
+const classes = ['pierre', 'feuille', 'ciseaux'];
+const gagnants = ["Partie nulle", "Vous avez gagné!", "Vous avez perdu!"];</code></pre>
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Compléter le script ci-dessus. Les champs marqués "à compléter".</li>
+          <li>Cliquer sur les boutons. Que font-t-ils ?</li>
+          <li>Ajouter les gestionnaires d'évènement <code>onclick</code> pour les trois boutons utilisateur.</li>
+          <li>Ajouter le gestionnaire d'évènement <code>onclick</code> pour le bouton rejouer.</li>
+          <li>Cacher initialement le bouton rejouer</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Pierre-Feuille-Ciseaux - Gagnant</h3>
+
+        <p>Copier/Coller le code suivant dans le gestionnaire d'évènement <code>onclick</code> des boutons utilisateur :
+        </p>
+        <pre><code class="javascript">const j1 = 0; // Numéro du bouton cliqué par l'utilisateur
+const j2 = 1; // L'ordinateur sélectionne un numéro entre 0 et 2 au hasard
+compBtn.className = classes[j2];
+
+g = 2; // calculer le numéro du gagnant
+       // 0 : partie nulle
+
+// Afficher le gagnant et le bouton rejouer
+resultat.textContent = gagnants[g];
+rejouer.style.display = "";</code></pre>
+        <h4>Travail Demandé</h4>
+        <ol>
+          <li>Récupérer le numéro du bouton appuyé par l'utilisateur dans la constante <code>j1</code>.</li>
+          <li>Sélectionner un nombre au hasard entre 0 et 2, c'est le choix de l'ordinateur, constante <code>j2</code>.
+          </li>
+          <li>Calculer le numéro du gagnant puis l'affecter à la variable <code>g</code> :
+            <ul>
+              <li>0 : Partie nulle</li>
+              <li>1 : L'utilisateur gagne</li>
+              <li>2 : L'ordinateur gagne</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Pierre-Feuille-Ciseaux - perfectionnement</h3>
+
+        <p>Améliorer votre jeu.</p>
+        <h4>Travail Demande</h4>
+        <ol>
+          <li>Le clic sur le bouton rejouer doit réinitialiser le jeu.</li>
+          <li>Le clic sur le bouton rejouer doit faire disparaitre ce même bouton.</li>
+          <li>Le clic sur l'un des boutons utilisateur fait disparaitre les autres qui n'ont pas été cliqué.
+            <figure><img src="assets/downloads/tp10/imgs/interface02.png" alt="Interface Pierre-Feuille-Ciseaux">
+            </figure>
+          </li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

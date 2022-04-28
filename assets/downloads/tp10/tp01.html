@@ -119,11 +119,18 @@
   </div>
 
   <script>
-    let g = -1;
+    // Numéro du gagnant d'une partie
+    let g = -1; // -1 : partie non terminée - 0 : partie nulle
+                //  1 : vous gagnez         - 2 : vous perdez
+    // Les 3 boutons utilisateur
     const userBtns = document.querySelectorAll("#user-btn button");
+    // Le bouton réservé à l'ordinateur
     const compBtn = document.querySelector("#comp-btn button");
+    // Le div réservé au résultat
     const resultat = document.querySelector("#resultat");
+    // Le bouton rejouer
     const rejouer = document.querySelector("#rejouer");
+    // Les éléments du jeu
     const classes = ['pierre', 'feuille', 'ciseaux'];
     const gagnants = ["Partie nulle", "Vous avez gagné!", "Vous avez perdu!"];
 
