@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Animaux domestiques / Animaux sauvages</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="domestiques.html">Domestiques</a></li>
+      <li><a href="sauvages.html">Sauvages</a></li>
+      <li><a href="information.html">Informations</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Informations</h1>
+
+    <form action="#" method="post">
+      <div>
+        <label for="np">Nom & Prénom *</label>
+        <input type="text" id="np" name="np" placeholder="Votre nom">
+      </div>
+      <div>
+        <label for="age">Age *</label>
+        <input type="number" name="age" id="age" placeholder="Votre âge">
+      </div>
+      <div>
+        <label for="typeinfo">Type d'information*</label>
+        <select name="typeinfo" id="typeinfo">
+          <option value="">Sélectionner</option>
+          <option value="Propsition">Propsition d'un sujet</option>
+          <option value="Réclamation">Réclamation</option>
+          <option value="Autres">Autres</option>
+        </select>
+      </div>
+      <div>
+        <label for="msg">Message *</label>
+        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Laisser nous un message"></textarea>
+      </div>
+      <div>
+        <button type="submit">Soumettre</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <a href="https://www.iletaitunehistoire.com/">Il était une histoire</a></p>
+  </footer>
+</body>
+
+</html>
