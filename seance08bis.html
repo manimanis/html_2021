@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 8 (bis)</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 8 (bis)</h1>
+
+    <article>
+      <h2>Les dégradés</h2>
+
+      <section>
+        <h3>Les dégradés linaires</h3>
+
+        <p>Un dégradé linéaire se propage dans une seule direction.</p>
+
+        <h4>Exemple</h4>
+        <p>Copier le code HTML suivant :</p>
+        <pre><code class="html">&lt;div id=&quot;grad1&quot; class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;grad2&quot; class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;grad3&quot; class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;grad4&quot; class=&quot;box&quot;&gt;&lt;/div&gt;</code></pre>
+        <p>Copier le code CSS suivant :</p>
+        <pre><code class="css">.box {
+  width: 720px;
+  height: 120px;
+  margin: 5px auto;
+}
+
+/* Un dégradé équilibré de gauche à droite */
+#grad1 { background: linear-gradient(to right, #f00 0%, #00f 100%); }
+
+/* Un dégradé non équilibré de haut en bas */
+#grad2 { background: linear-gradient(to bottom, #0f0 0%, #f00 60%); }
+
+/* Un dégradé équilibré d'un angle 70° */
+#grad3 { background: linear-gradient(70deg, pink, yellow); }
+
+/* Un dégradé équilibré de trois couleurs d'un angle 70° */
+#grad4 { background: linear-gradient(-80deg, red 0%, green 50%, blue 100%); }</code></pre>
+      </section>
+
+      <section>
+        <h3>Les dégradés radiaux</h3>
+        <p>Un dégradé radial est un dégradé qui va partir d'un point central et se propager dans toutes les directions à
+          partir de ce point.</p>
+        <h4>Exemple</h4>
+        <p>Copier le code HTML suivant :</p>
+        <pre><code class="html">&lt;div id=&quot;grad5&quot; class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;grad6&quot; class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;grad7&quot; class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;grad8&quot; class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;grad9&quot; class=&quot;box&quot;&gt;&lt;/div&gt;</code></pre>
+        <p>Copier le code CSS suivant :</p>
+        <pre><code class="css">/* Un dégradé radial du blanc au rouge */
+#grad5 { background: radial-gradient(white 0%, red 100%); }
+
+/* Un dégradé radial circulaire de trois couleurs */
+#grad6 { background: radial-gradient(circle, yellow, green, purple); }
+
+/* Un dégradé radial de couleurs à positions non équilibrées */
+#grad7 { background: radial-gradient(pink 40%, cyan 60%, magenta); }
+
+/* Un dégradé radial avec la position du centre en haut */
+#grad8 { background: radial-gradient(at top, #f44336, #ffeb3b, #00bcd4); }
+
+/* Un dégradé radial avec la position du centre définie en pourcentage*/
+#grad9 { background: radial-gradient(at 20% 80%, #ffc107, #ff9800, #ff5722); }</code></pre>
+      </section>
+    </article>
+
+    <article>
+      <h2>Les types de positionnements</h2>
+
+      <section>
+        <h3>Positionnement statique</h3>
+        <p>Le positionnement statique est celui reçu par défaut par chaque élément. Cela veut tout simplement dire «
+          positionner l'élément selon le flux normal ».</p>
+
+          https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Positioning
+      </section>
+    </article>
+
+    <article>
+      <h2>Application</h2>
+      <section>
+        <h3>Affiche Merlin-Leroy</h3>
+        <p>On souhaite créer l'affiche suivante :</p>
+        <figure>
+          <img src="assets/downloads/tp11/leroy_merlin/page-sample.png" alt="Affiche Leory Merlin">
+          <figcaption>Affiche Leory Merlin</figcaption>
+        </figure>
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer deux fichiers <strong>leroy.html</strong> et <strong>leroy.css</strong>.</li>
+          <li>Lier le fichier CSS au fichier HTML.</li>
+          <li>Copier le code HTML suivant:
+            <pre><code class="html">&lt;div id=&quot;design&quot;&gt;
+  &lt;div id=&quot;entete&quot;&gt;
+    &lt;div id=&quot;bloc1&quot;&gt;E.03&lt;/div&gt;
+    &lt;div id=&quot;bloc2&quot;&gt;Electricit&eacute;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;bloc3&quot;&gt;
+    &lt;p&gt;Je r&eacute;alise&lt;/p&gt;
+    &lt;p&gt;une installation&lt;/p&gt;
+    &lt;p&gt;&eacute;lectrique&lt;/p&gt;
+    &lt;p&gt;en toute s&eacute;curit&eacute;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;bloc4&quot;&gt;
+    &lt;div id=&quot;bloc5&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;bloc6&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+          <li>Mettre en forme l'élément ayant comme id <code>design</code> :
+            <ul>
+              <li>marge horizontale <code>auto</code></li>
+              <li>largeur <code>750px</code></li>
+              <li>marge interne <code>20px</code></li>
+              <li>couleur d'arrière plan <code>blanche</code></li>
+            </ul>
+          </li>
+          <li>Mettre en forme l'élément ayant comme id <code>entete</code> :
+            <ul>
+              <li>mode d'affichage <code>flex</code></li>
+              <li>justifier le contenu <code>space-between</code></li>
+            </ul>
+          </li>
+          <li>Mettre en forme les éléments ayant comme ids <code>bloc1</code> et <code>bloc2</code> :
+            <ul>
+              <li>largeur de l'élément <code>350px</code></li>
+              <li>marge interne <code>10px</code></li>
+              <li>taille de la police <code>20px</code></li>
+              <li>la couleur du texte est blanche</li>
+              <li>la police est en gras</li>
+            </ul>
+          </li>
+          <li>Mettre en forme l'élément ayant comme id <code>bloc1</code> :
+            <ul>
+              <li>l'arrière plan est un dégradé linéaire dirigé de gauche à droite utilisant deux couleurs
+                <code>#4caf50</code> et <code>#8bc34a</code>
+              </li>
+            </ul>
+          </li>
+          <li>Mettre en forme l'élément ayant comme id <code>bloc2</code> :
+            <ul>
+              <li>l'arrière plan est un dégradé linéaire dirigé de gauche à droite utilisant deux couleurs
+                <code>#00bcd4</code> et <code>#2196f3</code>
+              </li>
+              <li>transformer le texte en majuscules <code>uppercase</code></li>
+              <li>l'espacement entre les lettres est de <code>20px</code></li>
+            </ul>
+          </li>
+          <li>Mettre en forme l'élément ayant comme id <code>bloc3</code> :
+            <ul>
+              <li>l'arrière plan est un dégradé linéaire dirigé de gauche à droite utilisant deux couleurs
+                <code>#00bcd4</code> et <code>#2196f3</code>
+              </li>
+              <li>la couleur du texte est blanche</li>
+              <li>les marges verticales sont de <code>10px</code></li>
+              <li>les marges internes sont de <code>10px</code></li>
+              <li>la taille de la police est de <code>60pt</code></li>
+            </ul>
+          </li>
+          <li>Mettre en forme les paragraphes du <code>bloc3</code> :
+            <ul>
+              <li>marges verticales <code>0</code></li>
+              <li>indenter le premier paragraphe de <code>1.5em</code></li>
+              <li>mettre en gras le deuxième et le troisième paragraphe</li>
+              <li>aligner le troisième paragraphe à droite</li>
+              <li>centrer le quatrième paragraphe</li>
+            </ul>
+          </li>
+          <li>Télécharger l'image de <a href="assets/downloads/tp11/leroy_merlin/images/cuisine.jpg" target="_blank"
+              rel="noopener noreferrer">cuisine</a></li>
+          <li>Mettre en forme l'élément ayant comme id <code>bloc4</code> :
+            <ul>
+              <li>dimensions <code>750px</code> &times; <code>442px</code></li>
+              <li>utiliser l'image de cuisine téléchargée comme arrière plan</li>
+              <li>utiliser un <code>background-size: cover</code></li>
+              <li>opter pour un positionnement relatif</li>
+            </ul>
+          </li>
+          <li>Télécharger l'image des <a href="assets/downloads/tp11/leroy_merlin/images/disjoncteur.webp"
+              target="_blank" rel="noopener noreferrer">disjoncteurs</a></li>
+          <li>Mettre en forme l'élément ayant comme id <code>bloc5</code> :
+            <ul>
+              <li>dimensions <code>250px</code> &times; <code>166px</code></li>
+              <li>utiliser l'image du disjoncteur comme arrière plan</li>
+              <li>utiliser une bordure blanche de <code>10px</code></li>
+              <li>utiliser un <code>background-size: contain</code></li>
+              <li>utiliser un positionnement <code>absolute</code></li>
+              <li>position de l'élément <code>top: -10px</code> et <code>right: -10px</code></li>
+            </ul>
+          </li>
+          <li>Télécharger l'image de <a href="assets/downloads/tp11/leroy_merlin/images/Leroy_Merlin.png"
+              target="_blank" rel="noopener noreferrer">Leroy Merlin</a></li>
+          <li>Mettre en forme l'élément ayant comme id <code>bloc6</code> :
+            <ul>
+              <li>dimensions <code>150px</code> &times; <code>90px</code></li>
+              <li>utiliser l'image de Leroy Merlin comme arrière plan sur un fond blanc</li>
+              <li>utiliser une bordure blanche de <code>10px</code></li>
+              <li>utiliser un <code>background-size: contain</code></li>
+              <li>utiliser un positionnement <code>absolute</code></li>
+              <li>position de l'élément <code>bottom: -10px</code> et <code>left: 10px</code></li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

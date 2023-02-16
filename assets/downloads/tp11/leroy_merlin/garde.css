@@ -1,0 +1,92 @@
+body {
+  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+  font-family: sans-serif;
+}
+
+#design {
+  margin: auto;
+  width: 750px;
+  padding: 20px;
+  background-color: white;
+}
+
+#entete {
+  display: flex;
+  justify-content: space-between;
+}
+
+#bloc1, #bloc2 {
+  padding: 10px;
+  font-size: 20px;
+  width: 350px;
+  color: white;
+  font-weight: bold;
+}
+
+#bloc1 {
+  background: linear-gradient(to right, #4caf50, #8bc34a);
+}
+
+#bloc2 {
+  background: linear-gradient(to right, #00bcd4, #2196f3);
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+#bloc3 {
+  background: linear-gradient(to right, #00bcd4, #2196f3);
+  color: white;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 60pt;
+}
+
+p {
+  margin: 0;
+}
+
+p:nth-of-type(1) {
+  text-indent: 1.5em;
+}
+
+p:nth-of-type(2), p:nth-of-type(3) {
+  font-weight: bold;
+}
+
+p:nth-of-type(3) {
+  text-align: right;
+}
+
+p:nth-of-type(4) {
+  text-align: center;
+}
+
+#bloc4 {
+  width: 750px;
+  height: 442px;
+  background: url(images/cuisine.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+#bloc5 {
+  width: 250px;
+  height: 166px;
+  background: url(images/disjoncteur.webp);
+  border: #fff solid 10px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-size: contain;
+}
+
+#bloc6 {
+  width: 150px;
+  height: 90px;
+  background: white url(images/Leroy_Merlin.png);
+  border: #fff solid 10px;
+  position: absolute;
+  bottom: -10px;
+  left: 40px;
+  background-size: contain;
+}

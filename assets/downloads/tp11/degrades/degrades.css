@@ -1,0 +1,50 @@
+.box {
+  width: 720px;
+  height: 120px;
+  margin: 5px auto;
+}
+
+/* Un dégradé équilibré de gauche à droite */
+#grad1 {
+  background: linear-gradient(to right, #f00 0%, #00f 100%);
+}
+
+/* Un dégradé non équilibré de haut en bas */
+#grad2 {
+  background: linear-gradient(to bottom, #0f0 0%, #f00 60%);
+}
+
+/* Un dégradé équilibré d'un angle 70° */
+#grad3 {
+  background: linear-gradient(70deg, pink, yellow);
+}
+
+/* Un dégradé équilibré de trois couleurs d'un angle 70° */
+#grad4 {
+  background: linear-gradient(-80deg, red 0%, green 50%, blue 100%);
+}
+
+/* Un dégradé radial du blanc au rouge */
+#grad5 {
+  background: radial-gradient(white 0%, red 100%);
+}
+
+/* Un dégradé radial circulaire de trois couleurs */
+#grad6 {
+  background: radial-gradient(circle, yellow, green, purple);
+}
+
+/* Un dégradé radial de couleurs à positions non équilibrées */
+#grad7 {
+  background: radial-gradient(pink 40%, cyan 60%, magenta);
+}
+
+/* Un dégradé radial avec la position du centre en haut */
+#grad8 {
+  background: radial-gradient(at top, #f44336, #ffeb3b, #00bcd4);
+}
+
+/* Un dégradé radial avec la position du centre définie en pourcentage*/
+#grad9 {
+  background: radial-gradient(at 20% 80%, #ffc107, #ff9800, #ff5722);
+}
