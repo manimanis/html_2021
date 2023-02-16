@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conception Web - Séance 7</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web - Séance 7</h1>
+
+    <article>
+      <h2>Les feuilles de style</h2>
+
+      <section>
+        <h3>Happy Birthday</h3>
+
+        <p>On demande de créer une page Web qui contient le texte suivant :</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/happy-birthday.png" alt="Happy Birthday" class="h3cm">
+          <figcaption>Happy Birthday multicolore</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé <strong>text-colors</strong>, créer dans ce dossier deux fichiers :
+            <ul>
+              <li>un fichier HTML nommé <strong>happy-birthday.html</strong></li>
+              <li>un fichier CSS nommé <strong>happy-birthday.css</strong></li>
+            </ul>
+          </li>
+          <li>Lier le fichier <strong>happy-birthday.css</strong> à la page Web :
+            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;happy-birthday.css&quot;&gt;</code>
+          </li>
+          <li>Copier/Coller le code HTML suivant dans la partie <code>&lt;body&gt;...&lt;/body&gt;</code> de la page.
+            <pre><code class="language-html">&lt;div class=&quot;text&quot;&gt;
+  &lt;span class=&quot;color1&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;color2&quot;&gt;A&lt;/span&gt;&lt;span 
+    class=&quot;color3&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;color4&quot;&gt;P&lt;/span&gt;&lt;span 
+    class=&quot;color5&quot;&gt;Y&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text&quot;&gt;
+  &lt;span class=&quot;color4&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;color1&quot;&gt;I&lt;/span&gt;&lt;span 
+    class=&quot;color5&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;color3&quot;&gt;T&lt;/span&gt;&lt;span 
+    class=&quot;color6&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;color2&quot;&gt;D&lt;/span&gt;&lt;span
+    class=&quot;color1&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;color7&quot;&gt;Y&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+          <li>Modifier les propriétés du sélecteur <code>.text</code> :
+            <ul>
+              <li>Utiliser une police <strong><em>Arial Black</em></strong>.</li>
+              <li>Taille de la police <strong><em>100px</em></strong>.</li>
+              <li>Mettre le texte en gras.</li>
+              <li>Center le texte.</li>
+            </ul>
+          </li>
+          <li>Utiliser les couleurs suivantes pour colorier les lettres sélecteurs de classes <code>.colorx</code> :
+            <style>
+              #ex1 .color1 {
+                background-color: #ff0204;
+              }
+
+              #ex1 .color2 {
+                background-color: #007ad6;
+              }
+
+              #ex1 .color3 {
+                background-color: #0ac4ea;
+              }
+
+              #ex1 .color4 {
+                background-color: #f9ae06;
+              }
+
+              #ex1 .color5 {
+                background-color: #4fdf00;
+              }
+
+              #ex1 .color6 {
+                background-color: #9a3cbc;
+              }
+
+              #ex1 .color7 {
+                background-color: #fff200;
+              }
+
+              .color {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin: 4px;
+                vertical-align: middle;
+                border: #000 solid 1px;
+              }
+            </style>
+            <ul id="ex1">
+              <li><strong>color1</strong> <span class="color color1"></span>#ff0204 | <strong>color2</strong> <span
+                  class="color color2"></span>#007ad6</li>
+              <li><strong>color3</strong> <span class="color color3"></span>#0ac4ea | <strong>color4</strong> <span
+                  class="color color4"></span>#f9ae06</li>
+              <li><strong>color5</strong> <span class="color color5"></span>#4fdf00 | <strong>color6</strong> <span
+                  class="color color6"></span>#9a3cbc</li>
+              <li><strong>color7</strong> <span class="color color7"></span>#fff200</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3 class="p-break">Colorful Text</h3>
+
+        <p>On demande de créer une page Web qui contient le texte suivant :</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/colorful-text.png" alt="COLORFUL TEXT" class="h4cm">
+          <figcaption>COLORFUL TEXT</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé <strong>colorful-text</strong>, créer dans ce dossier deux fichiers :
+            <ul>
+              <li>un fichier HTML nommé <strong>colorful-text.html</strong></li>
+              <li>un fichier CSS nommé <strong>colorful-text.css</strong></li>
+            </ul>
+          </li>
+          <li>Lier le fichier <strong>colorful-text.css</strong> à la page Web :
+            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;colorful-text.css&quot;&gt;</code>
+          </li>
+          <li>Copier/Coller le code HTML suivant dans la partie <code>&lt;body&gt;...&lt;/body&gt;</code> de la page.
+            <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;text&quot;&gt;
+      &lt;span class=&quot;letter color1&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;letter color2&quot;&gt;O&lt;/span&gt;&lt;span 
+        class=&quot;letter color3&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;letter color4&quot;&gt;O&lt;/span&gt;&lt;span 
+        class=&quot;letter color5&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;letter color6&quot;&gt;F&lt;/span&gt;&lt;span
+        class=&quot;letter color7&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;letter color8&quot;&gt;L&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;text&quot;&gt;
+      &lt;span class=&quot;letter color1&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;letter color2&quot;&gt;E&lt;/span&gt;&lt;span 
+        class=&quot;letter color3&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;letter color4&quot;&gt;T&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+          </li>
+          <li>Modifier les <strong>marges</strong> (<code>margin</code>) du sélecteur <code>.container</code> pour
+            centrer son contenu horizontalement.</li>
+          <li>Modifier les propriétés du sélecteur <code>.text</code> :
+            <ul>
+              <li>Utiliser une police <strong>Garamond</strong> d'une taille de <strong>250px</strong>.</li>
+              <li>Mettre en gras (<strong>bold</strong>) le texte.</li>
+              <li>Centrer le texte de l'élément.</li>
+            </ul>
+          </li>
+          <li>Modifier la largeur du sélecteur <code>.letter</code> à <strong>100px</strong>, ne pas oublier de changer
+            l'affichage <strong>display</strong> de cet élément à <strong>inline-block</strong>.</li>
+          <li>Les couleurs des lettres sont comme suit :
+            <style>
+              #ex2 .color1 {
+                background-color: #214697CC;
+              }
+
+              #ex2 .color2 {
+                background-color: #198e23CC;
+              }
+
+              #ex2 .color3 {
+                background-color: #f9a60aCC;
+              }
+
+              #ex2 .color4 {
+                background-color: #70046aCC;
+              }
+
+              #ex2 .color5 {
+                background-color: #de2f1cCC;
+              }
+
+              #ex2 .color6 {
+                background-color: #e00046CC;
+              }
+
+              #ex2 .color7 {
+                background-color: #1b47aaCC;
+              }
+
+              #ex2 .color8 {
+                background-color: #f9a60cCC;
+              }
+            </style>
+            <ul id="ex2">
+              <li><strong>color1</strong> <span class="color color1"></span>#214697CC | <strong>color2</strong> <span
+                  class="color color2"></span>#198e23CC</li>
+              <li><strong>color3</strong> <span class="color color3"></span>#f9a60aCC | <strong>color4</strong> <span
+                  class="color color4"></span>#70046aCC</li>
+              <li><strong>color5</strong> <span class="color color5"></span>#de2f1cCC |
+                <strong>color6</strong> <span class="color color6"></span>#e00046CC
+              </li>
+              <li><strong>color7</strong> <span class="color color7"></span>#1b47aaCC | <strong>color8</strong> <span
+                  class="color color8"></span>#f9a60cCC
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3 class="p-break">Carreaux</h3>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/carreaux.png" alt="Carreaux" class="h6cm">
+          <figcaption>Carreaux</figcaption>
+        </figure>
+
+        <p>On demande de :</p>
+        <ul>
+          <li>Dessiner les dix carrés précédents de dimensions 150 pixels &times; 150 pixels chacun.</li>
+          <li>Définir les marges internes (padding) de la façon suivante :
+            <ol type="A">
+              <li>Pas de marges</li>
+              <li>Marges verticales &udarr; de 20px.</li>
+              <li>Marges horizontales &lrarr; de 20px.</li>
+              <li>Marges haute et gauche de 20px</li>
+              <li>Marges droite et basse de 20px</li>
+              <li>Marges droite et haute de 20px</li>
+              <li>Marges gauche et basse de 20px</li>
+              <li>Toutes les marges de 30px</li>
+              <li>Marges verticlaes de 30px et Marges horizontales de 25px</li>
+              <li>Marge haute de 50px</li>
+            </ol>
+          </li>
+          <li>Mettre les carrés sur deux lignes avec une marge externe (margin) entre deux carrés de 6px.</li>
+        </ul>
+
+        <h4>Code HTML</h4>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;carre.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;carre carreA&quot;&gt;A&lt;/div&gt;
+  &lt;div class=&quot;carre carreB&quot;&gt;B&lt;/div&gt;
+  &lt;div class=&quot;carre carreC&quot;&gt;C&lt;/div&gt;&lt;!-- Compl&eacute;ter les autres carreaux --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3 class="p-break">Drapeaux à trois bandes</h3>
+
+        <p>On demande de créer une page Web qui contient des drapeaux à trois bandes :</p>
+
+        <figure>
+          <img src="assets/downloads/tp5/images/drapeaux-trois-bandes.png" alt="Drapeaux à trois bandes" class="h7cm">
+          <figcaption>Drapeaux à trois bandes</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+        <ol>
+          <li>Créer un dossier nommé <strong>flags</strong>, créer dans ce dossier deux fichiers :
+            <ul>
+              <li>un fichier HTML nommé <strong>flags.html</strong></li>
+              <li>un fichier CSS nommé <strong>flags.css</strong></li>
+            </ul>
+          </li>
+          <li>Lier le fichier <strong>flags.css</strong> à la page Web :
+            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;flags.css&quot;&gt;</code>
+          </li>
+          <li>Copier/Coller le code HTML suivant dans la partie <code>&lt;body&gt;...&lt;/body&gt;</code> de la page.
+            <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div id=&quot;armenie&quot; class=&quot;drapeau horizontaux&quot;&gt;
+    &lt;div class=&quot;bande bande1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div id=&quot;france&quot; class=&quot;drapeau verticaux&quot;&gt;
+    &lt;div class=&quot;bande bande1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bande bande3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </li>
+          <li>Compléter le code HTML manquant pour les trois autres drapeaux de chaque catégorie.
+            <br><small class="text-success">Copier/Coller le code HTML d'un drapeau tout en changeant juste son
+              <strong>id</strong></small>.
+          </li>
+          <li>Tous les drapeaux :
+            <ul>
+              <li>mesurent : 198px &times; 150px</li>
+              <li>possèdent une marge horizontale (margin left/right) de 20px</li>
+              <li>possèdent une marge inférieure (margin bottom) de 35px</li>
+              <li>possèdent une bordure de 1px de couleur gris</li>
+              <li>utilisent un positionnement relatif</li>
+            </ul>
+          </li>
+          <li>Sous les drapeaux :
+            <ul>
+              <li>Afficher le nom du pays en gras et centré sur la totalité de l'espace horizontal disponible.</li>
+              <li>Afficher le nom du pays dans la marge à -25px du bord inférieur du drapeau.</li>
+              <li>Utiliser un positionnement absolu du nom.</li>
+            </ul>
+          </li>
+          <li>Les bandes des drapeaux horizontaux :
+            <ul>
+              <li>Mesurent 100% de l'espace horizontal</li>
+              <li>Ont une largeur de 50px</li>
+            </ul>
+          </li>
+          <li>Les bandes des drapeaux verticaux :
+            <ul>
+              <li>Mesurent 33% de l'espace horizontal</li>
+              <li>Ont une largeur de 150px</li>
+            </ul>
+          </li>
+          <li>Colorier les bandes des drapeaux selon la figure ci-dessus.</li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
