@@ -1,0 +1,30 @@
+/*
+Image size = 16 x 16
+Pixel size = 32px
+
+color0 = rgb(0, 0, 0)
+color1 = rgb(255, 0, 0)
+color2 = rgb(255, 173, 96)
+color3 = rgb(128, 71, 22)
+color4 = rgb(63, 81, 181)
+color5 = rgb(255, 235, 59)
+*/
+
+#image {
+  width: 512px;
+  height: 512px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pixel {
+  width: 32px;
+  height: 32px;
+}
+
+.color0 { background-color: rgb(0, 0, 0); color: rgb(0, 0, 0); }
+.color1 { background-color: rgb(255, 0, 0); color: rgb(255, 0, 0); }
+.color2 { background-color: rgb(128, 71, 22); color: rgb(128, 71, 22); }
+.color3 { background-color: rgb(255, 173, 96); color: rgb(255, 173, 96); }
+.color4 { background-color: rgb(63, 81, 181); color: rgb(63, 81, 181); }
+.color5 { background-color: rgb(255, 235, 59); color: rgb(255, 235, 59); }
