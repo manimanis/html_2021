@@ -90,14 +90,141 @@
     </article>
 
     <article>
-      <h2>Les types de positionnements</h2>
+      <h2>Les positionnements</h2>
 
       <section>
         <h3>Positionnement statique</h3>
         <p>Le positionnement statique est celui reçu par défaut par chaque élément. Cela veut tout simplement dire «
           positionner l'élément selon le flux normal ».</p>
+      </section>
+      <section>
+        <!-- https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Positioning -->
+        <h3>Positionnement relatif</h3>
+        <p>L'élément qui possède un positionnement relatif est positionné par rapport à son emplacement actuel dans la
+          page.</p>
+        <h4>Exemple</h4>
+        <p>Soit le code HTML suivant :</p>
+        <pre><code class="html">&lt;div class=&quot;carre&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;carre1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;carre&quot;&gt;&lt;/div&gt;</code></pre>
+        <p>Et le code CSS correspondant :</p>
+        <pre><code class="css">.carre,
+.carre1 { width: 100px; height: 100px; background-color: red; }
 
-          https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Positioning
+.carre1 {
+  background-color: blue;
+  position: relative;
+  left: 110px;
+  top: -100px;
+}</code></pre>
+        <p>Le résultat est comme suit : </p>
+        <style>
+          .carre,
+          .carre1,
+          .carre2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+          }
+
+          .carre1 {
+            background-color: blue;
+            position: relative;
+            left: 110px;
+            top: -100px;
+            animation: carre1anim 2s 1;
+          }
+
+          @keyframes carre1anim {
+            0% {
+              left: 0;
+              top: 0;
+            }
+
+            50% {
+              left: 110px;
+              top: 0;
+            }
+
+            100% {
+              left: 110px;
+              top: -100px;
+            }
+          }
+        </style>
+        <div class="carre"></div>
+        <div class="carre1"></div>
+        <div class="carre"></div>
+      </section>
+      <section>
+        <h3>Positionnement absolu</h3>
+        <p>L'élément qui possède un positionnement absolu est positionné par rapport à son parent le plus proche qui
+          possède un positionnement relatif.</p>
+        <h4>Exemple</h4>
+        <p>Soit le code HTML suivant :</p>
+        <pre><code class="html">&lt;div class=&quot;coul1&quot;&gt;
+  &lt;div class=&quot;coul2&quot;&gt;
+    &lt;div class=&quot;coul3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p>Et le code CSS correspondant :</p>
+        <pre><code class="css">.coul1, .coul2, .coul3 {
+  padding: 20px;
+  background-color: red;
+}
+
+.coul1 { width: 120px; position: relative; }
+
+.coul2 { background-color: green; }
+
+.coul3 {
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}</code></pre>
+        <p>Le résultat final est le suivant : le carré bleu <code>.coul3</code> est supprimé de sa place normale et
+          inséré à la position (0, 0) par rapport au carré rouge <code>.coul1</code>.</p>
+        <style>
+          .coul1,
+          .coul2,
+          .coul3 {
+            padding: 20px;
+            background-color: red;
+          }
+
+          .coul1 {
+            width: 120px;
+            position: relative;
+          }
+
+          .coul2 {
+            background-color: green;
+          }
+
+          .coul3 {
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: coul3anim 3s 1 linear;
+          }
+
+          @keyframes coul3anim {
+            0% {
+              position: static;
+            }
+
+            100% {
+              position: absolute;
+            }
+          }
+        </style>
+        <div class="coul1">
+          <div class="coul2">
+            <div class="coul3"></div>
+          </div>
+        </div>
       </section>
     </article>
 
