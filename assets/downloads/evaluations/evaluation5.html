@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="inscri.php" method="post">
+    <table>
+      <tr>
+        <td>Nom & Prénrom</td>
+        <td>
+          <input type="text" id="np" name="np" placeholder="Votre nom ?">
+        </td>
+      </tr>
+      <tr>
+        <td>Genre</td>
+        <td>
+          <label><input type="radio" name="genre" id="g1" value="G"> Garçon</label>
+          <label><input type="radio" name="genre" id="g2" value="F"> Fille</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit">Inscrivez-moi!</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <select name="fruits" id="fruits">
+    <optgroup label="Fruits">
+      <option value="Orange">Orange</option>
+      <option value="Poire">Poire</option>
+      <option value="Pèche">Pèche</option>
+    </optgroup>
+    <optgroup label="Légumes">
+      <option value="Pomme de terre">Pomme de terre</option>
+      <option value="Carotte">Carotte</option>
+      <option value="Petits-pois">Petits-pois</option>
+    </optgroup>
+  </select>
+</body>
+
+</html>
