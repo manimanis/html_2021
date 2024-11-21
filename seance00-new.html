@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours HTML5 / CSS3</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <aside>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#aside_navbar"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="aside_navbar"></div>
+      </div>
+    </nav>
+  </aside>
+  <main class="my-4 container">
+    <h1>Conception Web</h1>
+
+    <article>
+      <h2>Partie Théorique</h2>
+
+      <section>
+        <h3>Questions vidéo 1 et 2</h3>
+
+        <p>Répondre aux questions suivantes :</p>
+        <ol>
+          <li>C'est quoi le web ?</li>
+          <li>C'est quoi le HTML ?</li>
+          <li>C'est quoi l'hypertexte ?</li>
+          <li>C'est quoi un navigateur ?</li>
+          <li>Où est-ce que le navigateur va chercher les pages web ?</li>
+          <li>C'est quoi un serveur Web ?</li>
+          <li>Est-ce qu'on a besoin d'utiliser un serveur web local pour accéder à une page web enregistée localement ?
+          </li>
+          <li>Comment faire pour publier notre site web et le rendre accessible à tout le monde ?</li>
+          <li>Que signifie le mot HTTP retrouvé dans une adresse d'une page web ?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Vidéo 4 et 5</h3>
+
+        <p>Répondre aux questions suivantes :</p>
+        <ol>
+          <li>Quels sont les concepts auxquels il faut faire attention en programmation ?</li>
+          <li>Peut-on utiliser MS Word pour éditer des pages HTML ?</li>
+          <li>Quelles sont les caractéristiques les plus importantes dans un éditeur de codes tel que Visual Studio Code
+            ?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Questions vidéos 8 à 12</h3>
+
+        <p>Répondre aux questions suivantes :</p>
+        <ol>
+          <li>Que signifient les mots suivants retrouvés dans le langage HTML : texte, balise, référence ?</li>
+          <li>C'est quoi une balise ? C'est quoi un élément ?</li>
+          <li>Quelles sont les balises qui sont dans la vidéo et quelle est leur signification ?</li>
+          <li>Comment insérer un saut de ligne en HTML ?</li>
+          <li>Comment insérer une image ?</li>
+          <li>Comment appelle-t-on les éléments sans balise fermante ?</li>
+          <li>Comment insérer un paragraphe en HTML ?</li>
+          <li>Quelle est la différence etre &lt;p>...&lt;/p> et &lt;br> ?</li>
+          <li>Donner la signification des balises : mark, sub et sup ?</li>
+          <li>Comment ajouter un titre principal à un document HTML ?</li>
+          <li>Combien y-a-t'il de niveaux de titres en HTML ?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Questions vidéos 14 à 16</h3>
+
+        <p>Répondre aux questions suivantes :</p>
+        <ol>
+          <li>Quelle est la différence entre les éléments de bloc et les éléments en ligne ? Citer des exemples.</li>
+          <li>Quelle est la différence entre une liste ordonnée et une liste non ordonnée ?</li>
+          <li>Quelles sont les balises utilisées pour chacune des deux types ?</li>
+          <li>Comment ajouter des éléments dans une liste ?</li>
+          <li>Quelle est l'abbréviation (nom plus court) d'une adresse Web ?</li>
+          <li>Donner la signification de chacune de ses parties ?</li>
+          <li>Quel est le protocole utilisé pour les pages enregistrées localement ?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Questions vidéos 17 à 20</h3>
+
+        <p>Répondre aux questions suivantes :</p>
+        <ol>
+          <li>Comment créer un lien hypertexte ?</li>
+          <li>Comment insérer une image ? Quelle est la signification de chacun des attributs ?</li>
+          <li>Quelle est la différence entre une adresse relative et une adresse absolue ?</li>
+          <li>Donner la structure minimale d'un document HTML ? Expliquer chacune de ses parties.</li>
+        </ol>
+      </section>
+    </article>
+
+    <article>
+      <h2 class="p-break">Réponses</h2>
+      <section>
+
+        <h4>1. <strong>C'est quoi le web ?</strong></h4>
+        <p>Le Web (ou World Wide Web) est un système de pages et de contenus interconnectés accessibles
+          via Internet. Il utilise des technologies comme l'HTML, les navigateurs web et les protocoles
+          pour permettre aux utilisateurs de consulter et d'échanger des informations.</p>
+        <hr>
+        <h4>2. <strong>C'est quoi le HTML ?</strong></h4>
+        <p>HTML (HyperText Markup Language) est le langage utilisé pour créer et structurer le contenu des
+          pages web. Il permet de définir les titres, paragraphes, images, liens, tableaux, et bien plus,
+          pour qu'ils soient affichés correctement par les navigateurs.</p>
+        <hr>
+        <h4>3. <strong>C'est quoi l'hypertexte ?</strong></h4>
+        <p>L'hypertexte est un système qui relie des mots ou des phrases (sous forme de liens cliquables)
+          à d'autres documents, pages web ou sections. C'est l'une des bases du fonctionnement du Web,
+          permettant la navigation d'une page à une autre.</p>
+        <hr>
+        <h4>4. <strong>C'est quoi un navigateur ?</strong></h4>
+        <p>Un navigateur web est un logiciel utilisé pour accéder et afficher les pages web. Il interprète
+          les langages comme HTML, CSS et JavaScript pour présenter les informations de manière lisible.
+          Exemples : Google Chrome, Firefox, Safari.</p>
+        <hr>
+        <h4>5. <strong>Où est-ce que le navigateur va chercher les pages web ?</strong></h4>
+        <p>Le navigateur envoie une demande (requête) au serveur web où la page est hébergée, grâce à
+          l'adresse (URL) fournie. Le serveur répond en envoyant le fichier HTML et ses ressources
+          associées (images, CSS, scripts), que le navigateur affiche.</p>
+        <hr>
+        <h4>6. <strong>C'est quoi un serveur Web ?</strong></h4>
+        <p>Un serveur web est un ordinateur (ou programme) qui stocke les fichiers des sites web et les
+          transmet aux navigateurs des utilisateurs lorsqu'une requête est effectuée. Il agit comme un
+          intermédiaire entre le site et les utilisateurs.</p>
+        <hr>
+        <h4>7. <strong>Est-ce qu'on a besoin d'utiliser un serveur web local pour accéder à une page web
+            enregistrée localement ?</strong></h4>
+        <p>Non, ce n'est pas obligatoire. Vous pouvez ouvrir un fichier HTML directement dans un
+          navigateur sans passer par un serveur local. Cependant, un serveur web local est nécessaire pour
+          tester certaines fonctionnalités avancées, comme les scripts ou les requêtes réseau.</p>
+        <hr>
+        <h4 class="p-break">8. <strong>Comment faire pour publier notre site web et le rendre accessible à tout le monde
+            ?</strong></h4>
+        <p>Pour publier un site web :</p>
+        <ul>
+          <li><strong>Achetez un nom de domaine</strong> (ex. : <a rel="noopener" target="_new"
+              style="--streaming-animation-state: var(--batch-play-state-1); --animation-rate: var(--batch-play-rate-1);"
+              href="http://www.mon-site.com"><span
+                style="--animation-count: 0; --streaming-animation-state: var(--batch-play-state-2);">www.mon</span><span
+                style="--animation-count: 1; --streaming-animation-state: var(--batch-play-state-2);">-site.com</span></a>).
+          </li>
+          <li><strong>Choisissez un hébergeur web</strong> (ex. : OVH, Bluehost, etc.).</li>
+          <li><strong>Transférez vos fichiers du site</strong> sur le serveur de l’hébergeur à l’aide d’un
+            outil comme FTP.</li>
+          <li>Votre site sera accessible en ligne via son URL.</li>
+        </ul>
+        <hr>
+        <h4>9. <strong>Que signifie le mot HTTP retrouvé dans une adresse d'une page web ?</strong></h4>
+        <p>HTTP (HyperText Transfer Protocol) est un protocole utilisé pour la communication entre les
+          navigateurs et les serveurs web. Il définit comment les informations sont transmises sur le Web.
+          Son successeur sécurisé est HTTPS, qui ajoute une couche de chiffrement pour protéger les
+          données.</p>
+        <hr>
+
+        <h4>10. <strong>Concepts importants en programmation</strong></h4>
+        <p>Voici les concepts essentiels à maîtriser pour devenir un bon programmeur :</p>
+        <h5>a. <strong>Structure et logique</strong></h5>
+        <ul>
+          <li><strong>Les algorithmes</strong> : Savoir décomposer un problème en étapes claires et
+            logiques.</li>
+          <li><strong>Les structures de contrôle</strong> : Comprendre les boucles (<code>for</code>,
+            <code>while</code>) et les conditions (<code>if</code>, <code>else</code>).
+          </li>
+          <li><strong>Les structures de données</strong> : Connaître les tableaux, listes,
+            dictionnaires, etc.</li>
+        </ul>
+        <h5>b. <strong>Lisibilité du code</strong></h5>
+        <ul>
+          <li><strong>Clarté et commentaires</strong> : Écrire du code propre avec des noms de variables
+            explicites et des commentaires.</li>
+          <li><strong>Indentation</strong> : Suivre une structure uniforme pour rendre le code lisible.
+          </li>
+        </ul>
+        <h5>c. <strong>Réutilisation et modularité</strong></h5>
+        <ul>
+          <li><strong>Fonctions et méthodes</strong> : Réduire la duplication en créant des blocs de
+            code réutilisables.</li>
+          <li><strong>DRY (Don't Repeat Yourself)</strong> : Éviter les répétitions inutiles dans le
+            code.</li>
+        </ul>
+        <h5>d. <strong>Débogage et tests</strong></h5>
+        <ul>
+          <li><strong>Détection des erreurs</strong> : Savoir utiliser les outils de débogage.</li>
+          <li><strong>Tests unitaires</strong> : Tester les parties critiques du code pour prévenir les
+            bugs.</li>
+        </ul>
+        <h5>e. <strong>Optimisation</strong></h5>
+        <ul>
+          <li><strong>Performance</strong> : Éviter des solutions inefficaces ou lentes.</li>
+          <li><strong>Gestion de la mémoire</strong> : Comprendre comment gérer les ressources
+            efficacement.</li>
+        </ul>
+        <h5>f. <strong>Versionnement</strong></h5>
+        <ul>
+          <li><strong>Utilisation d'outils comme Git</strong> : Suivre et gérer les versions du code,
+            surtout en équipe.</li>
+        </ul>
+        <hr>
+        <h4 class="p-break">11. <strong>Peut-on utiliser MS Word pour éditer des pages HTML ?</strong></h4>
+        <p>Techniquement, oui, mais ce n'est pas recommandé. MS Word n'est pas conçu pour coder et
+          risque d’ajouter des éléments indésirables ou non standard dans votre code (par ex. balises
+          superflues ou styles inadaptés).</p>
+        <p>Pour éditer une page HTML efficacement :</p>
+        <ul>
+          <li>Utilisez un éditeur de texte simple comme <strong>Notepad</strong> (Windows) ou
+            <strong>TextEdit</strong> (Mac).
+          </li>
+          <li>Pour une meilleure expérience, privilégiez des éditeurs spécialisés comme <strong>Visual
+              Studio Code</strong>, <strong>Sublime Text</strong>, ou <strong>Atom</strong>.</li>
+        </ul>
+        <hr>
+        <h4>12. <strong>Caractéristiques importantes dans un éditeur comme Visual Studio Code</strong>
+        </h4>
+        <p>VS Code est un éditeur de code très populaire. Voici les fonctionnalités clés qui le rendent
+          puissant :</p>
+        <h5>a. <strong>Interface utilisateur personnalisable</strong></h5>
+        <ul>
+          <li>Support des <strong>thèmes</strong> (mode clair/sombre).</li>
+          <li><strong>Disposition flexible</strong> : Disposez les panneaux selon vos besoins.</li>
+        </ul>
+        <h5>b. <strong>Syntaxe et auto-complétion</strong></h5>
+        <ul>
+          <li>Mise en évidence de la <strong>syntaxe</strong> pour de nombreux langages.</li>
+          <li><strong>Suggestions automatiques</strong> pour accélérer le codage.</li>
+        </ul>
+        <h5>c. <strong>Extensions et plugins</strong></h5>
+        <ul>
+          <li>Supporte des milliers d’extensions pour ajouter des fonctionnalités (ex. : Prettier,
+            ESLint).</li>
+          <li>Intégration avec des outils de versionnement comme <strong>Git</strong>.</li>
+        </ul>
+        <h5>d. <strong>Débogage intégré</strong></h5>
+        <ul>
+          <li>Permet de tester et de corriger le code directement dans l’éditeur.</li>
+        </ul>
+        <h5>e. <strong>Terminal intégré</strong></h5>
+        <ul>
+          <li>Vous pouvez exécuter des commandes sans quitter l’environnement.</li>
+        </ul>
+        <h5>f. <strong>Gestion de projets</strong></h5>
+        <ul>
+          <li>Facilité pour ouvrir et naviguer dans les dossiers de projet.</li>
+          <li><strong>Explorateur de fichiers</strong> pour une gestion rapide.</li>
+        </ul>
+        <h5>g. <strong>Performances légères</strong></h5>
+        <ul>
+          <li>VS Code est rapide, même avec des projets complexes, tout en étant extensible.</li>
+        </ul>
+        <h5>h. <strong>Support multi-plateforme</strong></h5>
+        <ul>
+          <li>Disponible sur <strong>Windows</strong>, <strong>Mac</strong>, et <strong>Linux</strong>.
+          </li>
+        </ul>
+        <p>Si vous travaillez sur HTML/CSS/JavaScript, VS Code est l'un des meilleurs choix pour booster
+          votre productivité ! 😊</p>
+
+        <h4 class="p-break">13. <strong>Significations des termes en HTML</strong></h4>
+        <ul>
+          <li><strong>Texte</strong> : Le contenu visible par l'utilisateur dans une page web. En HTML, le texte est
+            souvent encadré par des balises pour définir son rôle ou style (par exemple, titre, paragraphe).</li>
+          <li><strong>Balise</strong> : Un composant utilisé pour définir le type d'information ou sa structure (ex. :
+            <code>&lt;p&gt;</code> pour un paragraphe).
+          </li>
+          <li><strong>Référence</strong> : Un lien ou un chemin vers une ressource externe ou interne, comme une image,
+            une feuille CSS ou un autre document HTML.</li>
+        </ul>
+        <hr>
+        <h4>14. <strong>C'est quoi une balise ? C'est quoi un élément ?</strong></h4>
+        <ul>
+          <li><strong>Balise</strong> : Une instruction qui indique au navigateur comment traiter une partie du contenu.
+            Elle est délimitée par <code>&lt;</code> et <code>&gt;</code>. Exemple : <code>&lt;h1&gt;</code>.</li>
+          <li><strong>Élément</strong> : La combinaison d'une balise ouvrante, d'une balise fermante, et de son contenu.
+            Exemple :
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Mon Titre<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>Ici, <code>&lt;h1&gt;</code> est la balise, et tout
+            (<code>&lt;h1&gt;Mon Titre&lt;/h1&gt;</code>) constitue l'élément.
+          </li>
+        </ul>
+        <hr>
+        <h4>15. <strong>Comment insérer un saut de ligne en HTML ?</strong></h4>
+        <p>Utilisez la balise <code>&lt;br&gt;</code> :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html">Voici un texte avec un<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>saut de ligne.
+</code></pre>
+        <hr>
+        <h4>16. <strong>Comment insérer une image ?</strong></h4>
+        <p>Utilisez la balise <code>&lt;img&gt;</code> avec les attributs <code>src</code> et <code>alt</code> :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"chemin/vers/image.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Description de l'image"</span>&gt;</span>
+</code></pre>
+        <ul>
+          <li><strong><code>src</code></strong> : Spécifie l'emplacement de l'image.</li>
+          <li><strong><code>alt</code></strong> : Fournit une description alternative pour les lecteurs d'écran ou si
+            l'image ne se charge pas.</li>
+        </ul>
+        <hr>
+        <h4>17. <strong>Comment appelle-t-on les éléments sans balise fermante ?</strong></h4>
+        <p>Ces éléments sont appelés <strong>éléments auto-fermants</strong> ou <strong>éléments vides</strong>.
+          Exemples : <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;hr&gt;</code>.</p>
+        <hr>
+        <h4>18. <strong>Comment insérer un paragraphe en HTML ?</strong></h4>
+        <p>Utilisez la balise <code>&lt;p&gt;</code> :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ceci est un paragraphe.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+        <hr>
+        <h4 class="p-break">19. <strong>Différence entre <code>&lt;p&gt;...&lt;/p&gt;</code> et <code>&lt;br&gt;</code></strong></h4>
+        <ul>
+          <li><strong><code>&lt;p&gt;</code></strong> : Utilisé pour structurer un paragraphe entier. Il crée
+            automatiquement un espace avant et après le texte.
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraphe 1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraphe 2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+          </li>
+          <li><strong><code>&lt;br&gt;</code></strong> : Utilisé pour insérer un saut de ligne <strong>à l'intérieur
+              d'un paragraphe</strong> ou d'un autre élément.
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html">Ligne 1<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>Ligne 2
+</code></pre>
+          </li>
+        </ul>
+        <hr>
+        <h4>20. <strong>Signification des balises : <code>mark</code>, <code>sub</code>, et <code>sup</code></strong>
+        </h4>
+        <ul>
+          <li><strong><code>&lt;mark&gt;</code></strong> : Met en surbrillance un texte (comme un stabilo).
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ce mot est <span class="hljs-tag">&lt;<span class="hljs-name">mark</span>&gt;</span>important<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+          </li>
+          <li><strong><code>&lt;sub&gt;</code></strong> : Affiche un texte en indice (plus bas que le texte normal).
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html">H<span class="hljs-tag">&lt;<span class="hljs-name">sub</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">sub</span>&gt;</span>O
+</code></pre>
+          </li>
+          <li><strong><code>&lt;sup&gt;</code></strong> : Affiche un texte en exposant (plus haut que le texte normal).
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html">2<span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span>nd<span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span>
+</code></pre>
+          </li>
+        </ul>
+        <hr>
+        <h4>21. <strong>Comment ajouter un titre principal à un document HTML ?</strong></h4>
+        <p>Utilisez la balise <code>&lt;h1&gt;</code> pour le titre principal :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Bienvenue sur mon site<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+        <hr>
+        <h4>22. <strong>Combien y a-t-il de niveaux de titres en HTML ?</strong></h4>
+        <p>Il y a <strong>6 niveaux de titres</strong> en HTML :</p>
+        <ul>
+          <li><code>&lt;h1&gt;</code> (le plus important)</li>
+          <li><code>&lt;h2&gt;</code></li>
+          <li><code>&lt;h3&gt;</code></li>
+          <li><code>&lt;h4&gt;</code></li>
+          <li><code>&lt;h5&gt;</code></li>
+          <li><code>&lt;h6&gt;</code> (le moins important)</li>
+        </ul>
+        <p>Exemple :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Titre principal<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sous-titre<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Sous-sous-titre<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+</code></pre>
+
+        <h4 class="p-break">23. <strong>Différence entre éléments de bloc et éléments en ligne</strong></h4>
+        <h5>a. <strong>Éléments de bloc</strong></h5>
+        <ul>
+          <li><strong>Comportement</strong> : Occupent toute la largeur disponible (nouvelle ligne automatiquement).
+          </li>
+          <li><strong>Rôle</strong> : Structurent le contenu.</li>
+          <li><strong>Exemples</strong> : <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code> à
+            <code>&lt;h6&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code>.
+          </li>
+        </ul>
+        <h5>b. <strong>Éléments en ligne</strong></h5>
+        <ul>
+          <li><strong>Comportement</strong> : Ne prennent que la largeur nécessaire et s'alignent avec d'autres
+            éléments.</li>
+          <li><strong>Rôle</strong> : Agissent principalement à l'intérieur des éléments de bloc.</li>
+          <li><strong>Exemples</strong> : <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>,
+            <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>.
+          </li>
+        </ul>
+        <hr>
+        <h4>24. <strong>Différence entre une liste ordonnée et une liste non ordonnée</strong></h4>
+        <h5>a. <strong>Liste ordonnée (<code>&lt;ol&gt;</code>)</strong></h5>
+        <ul>
+          <li><strong>Caractéristique</strong> : Les éléments sont numérotés ou classés (1, 2, 3… ou i, ii, iii…).</li>
+          <li><strong>Usage</strong> : Utilisée pour représenter un ordre ou une hiérarchie.
+            <pre class="!overflow-visible">h4<code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Première étape<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deuxième étape<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
+          </li>
+        </ul>
+        <h5>b. <strong>Liste non ordonnée (<code>&lt;ul&gt;</code>)</strong></h5>
+        <ul>
+          <li><strong>Caractéristique</strong> : Les éléments sont marqués avec des puces ou des symboles.</li>
+          <li><strong>Usage</strong> : Utilisée pour des listes sans importance d'ordre.
+            <pre class="!overflow-visible">h4<code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Élément A<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Élément B<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+          </li>
+        </ul>
+        <hr>
+        <h4>25. <strong>Balises utilisées pour chaque type de liste</strong></h4>
+        <ul>
+          <li>Liste ordonnée : <code>&lt;ol&gt;</code> (Ordered List).</li>
+          <li>Liste non ordonnée : <code>&lt;ul&gt;</code> (Unordered List).</li>
+          <li>Les deux types utilisent <code>&lt;li&gt;</code> (List Item) pour ajouter des éléments.</li>
+        </ul>
+        <hr>
+        <h4 class="p-break">26. <strong>Comment ajouter des éléments dans une liste ?</strong></h4>
+        <p>Chaque élément de liste est défini par une balise <code>&lt;li&gt;</code> :</p>
+        <pre class="!overflow-visible">h4<code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Élément 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Élément 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+        <p>Pour une liste ordonnée :</p>
+        <pre class="!overflow-visible">h4<code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Premier<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deuxième<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
+        <hr>
+        <h4>27. <strong>Abréviation d'une adresse Web</strong></h4>
+        <p>L’abréviation courante pour une adresse Web est <strong>URL</strong> (<em>Uniform Resource Locator</em>).</p>
+        <hr>
+        <h4>28. <strong>Signification des parties d'une URL</strong></h4>
+        <p>Exemple d’URL :<br><code>https://www.example.com/page.html?query=123#section</code></p>
+        <ul>
+          <li><strong><code>https://</code></strong> : Protocole (HyperText Transfer Protocol Secure).</li>
+          <li><strong><code>www</code></strong> : Sous-domaine (optionnel).</li>
+          <li><strong><code>example.com</code></strong> : Nom de domaine principal.</li>
+          <li><strong><code>/page.html</code></strong> : Chemin vers une ressource spécifique sur le serveur.</li>
+          <li><strong><code>?query=123</code></strong> : Paramètres de requête (optionnels).</li>
+          <li><strong><code>#section</code></strong> : Ancre ou fragment pointant vers une partie précise de la page
+            (optionnel).</li>
+        </ul>
+        <hr>
+        <h4>29. <strong>Protocole utilisé pour les pages enregistrées localement</strong></h4>
+        <p>Le protocole utilisé pour accéder aux pages enregistrées localement est
+          <strong><code>file://</code></strong>.
+        </p>
+        <p>Exemple :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-plaintext">file:///C:/Users/VotreNom/Documents/page.html
+</code></pre>
+        <p>Cela permet au navigateur d'afficher les fichiers directement à partir du système de fichiers local.</p>
+
+        <h4>30. <strong>Comment créer un lien hypertexte ?</strong></h4>
+        <p>Pour créer un lien hypertexte, utilisez la balise <code>&lt;a&gt;</code> avec l'attribut <code>href</code> :
+        </p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.example.com"</span>&gt;</span>Cliquez ici<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        </code></pre>
+        <ul>
+          <li><strong><code>href</code></strong> : Indique l'adresse de la ressource (page web, fichier, ou autre).</li>
+          <li><strong>Texte entre les balises</strong> : Ce sera le texte cliquable visible pour l'utilisateur.</li>
+        </ul>
+        <hr>
+        <h4>31. <strong>Comment insérer une image ? Quelle est la signification de ses attributs ?</strong></h4>
+        <p>Utilisez la balise <code>&lt;img&gt;</code> :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"image.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Description de l'image"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"500"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"300"</span>&gt;</span></code></pre>
+        <h5>Signification des attributs :</h5>
+        <ul>
+          <li><strong><code>src</code></strong> (source) : Chemin ou URL de l'image.</li>
+          <li><strong><code>alt</code></strong> (texte alternatif) : Description affichée si l'image ne peut pas être
+            chargée (important pour l'accessibilité et le SEO).</li>
+          <li><strong><code>width</code> et <code>height</code></strong> : Dimensions de l'image (en pixels ou en
+            pourcentage).</li>
+          <li><strong>Autres attributs possibles</strong> :<ul>
+              <li><strong><code>title</code></strong> : Infobulle affichée lorsque l'on survole l'image.</li>
+              <li><strong><code>loading</code></strong> : Contrôle le chargement différé (<code>lazy</code> pour
+                retarder le chargement).</li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+        <h4>32. <strong>Différence entre une adresse relative et une adresse absolue</strong></h4>
+        <h5>a. <strong>Adresse absolue</strong></h5>
+        <ul>
+          <li>Indique le chemin complet vers une ressource.</li>
+          <li>Utilisée pour des ressources externes ou sur des serveurs distants.</li>
+          <li>Exemple :
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.example.com/page.html"</span>&gt;</span>Lien absolu<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+          </li>
+        </ul>
+        <h5>b. <strong>Adresse relative</strong></h5>
+        <ul>
+          <li>Indique un chemin par rapport à l'emplacement actuel du fichier HTML.</li>
+          <li>Utilisée pour des fichiers locaux ou dans la même structure de site.</li>
+          <li>Exemple :
+            <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"page.html"</span>&gt;</span>Lien relatif<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+          </li>
+        </ul>
+        <h5>Différence clé :</h5>
+        <ul>
+          <li><strong>Adresse absolue</strong> : Toujours accessible quel que soit l'emplacement du fichier HTML.</li>
+          <li><strong>Adresse relative</strong> : Dépend de l'emplacement du fichier HTML.</li>
+        </ul>
+        <hr>
+        <h4>33. <strong>Structure minimale d'un document HTML</strong></h4>
+        <p>Voici la structure minimale et l'explication de ses parties :</p>
+        <pre class="!overflow-visible"><code class="!whitespace-pre hljs language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Titre du document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Contenu visible de la page.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+        <h5 class="p-break">Explications :</h5>
+        <ol>
+          <li>
+            <p><strong><code>&lt;!DOCTYPE html&gt;</code></strong> :</p>
+            <ul>
+              <li>Déclare que le document utilise HTML5.</li>
+              <li>Aide les navigateurs à interpréter correctement le code.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong><code>&lt;html&gt;</code></strong> :</p>
+            <ul>
+              <li>Balise racine englobant tout le document HTML.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong><code>&lt;head&gt;</code></strong> :</p>
+            <ul>
+              <li>Contient les informations <strong>méta</strong> sur le document (non visibles par l'utilisateur).</li>
+              <li>Exemples : titre, styles, encodage, scripts.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong><code>&lt;title&gt;</code></strong> :</p>
+            <ul>
+              <li>Définit le titre affiché dans l'onglet du navigateur.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong><code>&lt;body&gt;</code></strong> :</p>
+            <ul>
+              <li>Contient tout le contenu visible par l'utilisateur (texte, images, liens, etc.).</li>
+            </ul>
+          </li>
+        </ol>
+        <hr>
+      </section>
+    </article>
+  </main>
+  <footer class="d-print-none bg-dark text-white p-2">
+    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+    <div class="text-center small">Année scolaire : 2021/2022</div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
