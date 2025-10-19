@@ -143,9 +143,19 @@
         <pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;</code></pre>
         <p>Indique l'encodage des caractères, l'UTF-8 est un encodage universel qui permet d'afficher toutes
           les langues (Latin, Arabe, Chinois, Japonais, etc.).</p>
+        <p>Autres encodages :</p>
+        <ul>
+          <li><strong>ISO-8859-1</strong> ou <strong>Windows-1252</strong> → Encodage pour les langues occidentales
+            (Europe de l'Ouest).</li>
+          <li><strong>Shift_JIS</strong> ou <strong>EUC-JP</strong> → Japonais (こんにちは / Konnichiwa).</li>
+          <li><strong>GB2312</strong> ou <strong>Big5</strong> → Chinois (你好 / Nǐ hǎo).</li>
+          <li><strong>KOI8-R</strong> → Russe (Здравствуйте / Zdravstvuyte).</li>
+          <li><strong>ISO-8859-5</strong> → Cyrillique (Serbe : Здраво / Zdravo).</li>
+          <li><strong>ISO-8859-6</strong> → Arabe (صباح الخير).</li>
+          <li><strong>ISO-8859-8</strong> → Hébreu (שלום / Shalom).</li>
+        </ul>
 
-        <pre><code class="language-html">&lt;meta name=&quot;viewport&quot;
-content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
+        <pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
         <p>Indique que la page peut-être rendue sur un mobile sans subir d'agrandissements, ni de
           rétricissements.</p>
       </section>
@@ -230,8 +240,10 @@ Les membres de la famille, sont Homer, Marge, Bart, Lisa, Maggie, ainsi que
 Abe, le père d'Homer.</code></pre>
 
           <p>Ainsi que l'image de la famille à télécharger.</p>
-          <p><a href="assets/downloads/tp1/simpson.jpg" target="_blank" rel="noopener noreferrer"><img
-                src="assets/downloads/tp1/simpson_thumb.jpg" alt="La famille Simpson"></a></p>
+          <p class="d-print-none"><a href="assets/downloads/tp1/simpson.jpg" target="_blank" rel="noopener noreferrer"
+              download="simpson.jpg">Cliquer sur l'image pour l'agrandir</a>.</p>
+          <p><a href="assets/downloads/tp1/simpson.jpg" target="_blank" rel="noopener noreferrer"
+              download="simpson.jpg"><img src="assets/downloads/tp1/simpson_thumb.jpg" alt="La famille Simpson"></a></p>
         </div>
 
         <h4>Travail demandé</h4>
@@ -377,16 +389,33 @@ Epicerie du quartier
         <h4 class="p-break">Souligné</h4>
 
         <p>Pour souligner un mot ou une phrase on utilise la balise
-          <code>&lt;u&gt;mot soulign&eacute;&lt;/u&gt;</code></code>.
+          <code>&lt;u&gt;mot soulign&eacute;&lt;/u&gt;</code> ou
+          <code>&lt;ins&gt;mot soulign&eacute;&lt;/ins&gt;</code>.
         </p>
 
         <p>Ainsi, le code suivant :</p>
 
-        <pre><code class="language-html">Une &lt;u&gt;cl&eacute; primaire&lt;/u&gt; doit &ecirc;tre toujours &lt;u&gt;soulign&eacute;e.</code></pre>
+        <pre><code class="language-html">Une &lt;u&gt;cl&eacute; primaire&lt;/u&gt; doit &ecirc;tre toujours &lt;ins&gt;soulign&eacute;e&lt;/ins&gt;.</code></pre>
 
         <p>Est interprété comme :</p>
 
-        <p class="bg-dark text-light p-2">Une <u>clé primaire</u> doit être toujours <u>soulignée</u>.</p>
+        <p class="bg-dark text-light p-2">Une <u>clé primaire</u> doit être toujours <ins>soulignée</ins>.</p>
+
+        <h4 class="p-break">Barré</h4>
+
+        <p>Pour barrer un mot ou une phrase on utilise la balise
+          <code>&lt;s&gt;mot barr&eacute;&lt;/s&gt;</code> ou
+          <code>&lt;del&gt;mot barr&eacute;&lt;/del&gt;</code></code>.
+        </p>
+
+        <p>Ainsi, le code suivant :</p>
+
+        <pre><code class="language-html">Je ne veux pas &lt;s&gt;mang&eacute;&lt;/s&gt; manger un g&acirc;teau. Je veux une &lt;del&gt;paume&lt;/del&gt; pomme.</code></pre>
+
+        <p>Est interprété comme :</p>
+
+        <p class="bg-dark text-light p-2">Je ne veux pas <s>mangé</s> manger un gâteau. Je veux une <del>paume</del>
+          pomme.</p>
 
         <h4>Exposant et Indice</h4>
 
