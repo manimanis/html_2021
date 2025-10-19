@@ -167,6 +167,16 @@
       <section>
         <h3>Les titres</h3>
         <p>Le langage HTML supporte 6 niveaux pour les titres de <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>.</p>
+
+        <div class="bg-dark text-light p-2">
+          <h1 style="color: unset; text-align: unset;">Titre niveau 1</h1>
+          <h2 style="color: unset;">Titre niveau 2</h2>
+          <h3 style="color: unset;">Titre niveau 3</h3>
+          <h4 style="color: unset;">Titre niveau 4</h4>
+          <h5 style="color: unset;">Titre niveau 5</h5>
+          <h6 style="color: unset;">Titre niveau 6</h6>
+        </div>
+
         <p>Le titre principal est indiqué par, un titre niveau 1, <code>&lt;h1&gt;</code>.</p>
         <p>Un sous-titre, titre niveau 2, est indiqué par <code>&lt;h2&gt;</code>.</p>
 
@@ -176,6 +186,8 @@
           <img class="p-2 border" src="assets/downloads/tp1/tp1_balises_titre.png" alt="Balise h1">
           <figcaption>Exemple avec la balise &lt;h1&gt;...&lt;/h1&gt;</figcaption>
         </figure>
+
+
       </section>
 
       <section>
@@ -192,6 +204,20 @@
           <img class="p-2 border" src="assets/downloads/tp1/tp1_balises_paragraphes.png" alt="Balise p">
           <figcaption>Exemple avec la balise &lt;p&gt;...&lt;/p&gt;</figcaption>
         </figure>
+      </section>
+
+      <section>
+        <h3>Le saut de ligne insécable</h3>
+
+        <p>On utilise la balise <code>&lt;br&gt;</code> pour un saut de ligne insécable à l'intérieur d'un paragraphe.
+        </p>
+
+        <pre><code class="language-html">Je vous souhaite succès et réussite.&lt;br&gt;Une vide pleine de bonheur et de joie !</code></pre>
+
+        <p>Le résultat sera comme suit :</p>
+
+        <p class="bg-dark text-light p-2">Je vous souhaite succès et réussite.<br>Une vide pleine de bonheur et de joie
+          !</p>
       </section>
 
       <section>
@@ -483,15 +509,214 @@ Epicerie du quartier
     </article>
 
     <article>
-      <h2>Applications</h2>
+      <h2>QCM</h2>
 
       <section>
-        <h3>Tunisie</h3>
+        <h3>Partie 1 : Introduction au web</h3>
 
-        <p>On désire créer la page Web suivante :</p>
-        <p class="text-center"><img src="images/presentation_tunisie.png" alt="Présentation de la tunisie"></p>
-        <p>On donne le texte de la page :</p>
-        <pre class="p-2 bg-dark text-light"><code class="nohighlight">Bienvenue en Tunisie
+        <ol>
+          <li><strong>C'est quoi le web ?</strong></li>
+          <ul>
+            <li>Une application pour écrire des documents</li>
+            <li>Un système mondial de documents liés par des hyperliens</li>
+            <li>Un langage de programmation</li>
+            <li>Un logiciel pour afficher des images</li>
+          </ul>
+
+          <li><strong>C'est quoi le HTML ?</strong></li>
+          <ul>
+            <li>Un protocole pour transférer des données</li>
+            <li>Un langage de balisage utilisé pour créer des pages web</li>
+            <li>Un navigateur web</li>
+            <li>Une application pour éditer des documents Word</li>
+          </ul>
+
+          <li><strong>C'est quoi l'hypertexte ?</strong></li>
+          <ul>
+            <li>Une image interactive</li>
+            <li>Un texte contenant des liens vers d'autres textes</li>
+            <li>Une application web</li>
+            <li>Une balise HTML</li>
+          </ul>
+
+          <li><strong>C'est quoi un navigateur ?</strong></li>
+          <ul>
+            <li>Un langage de programmation</li>
+            <li>Un outil pour créer des sites web</li>
+            <li>Un logiciel permettant d'accéder et de naviguer sur le web</li>
+            <li>Un serveur web</li>
+          </ul>
+
+          <li><strong>Où est-ce que le navigateur va chercher les pages web ?</strong></li>
+          <ul>
+            <li>Sur le disque dur local</li>
+            <li>Sur un serveur web</li>
+            <li>Dans la mémoire de l'ordinateur</li>
+            <li>Dans un fichier texte</li>
+          </ul>
+
+          <li><strong>C'est quoi un serveur web ?</strong></li>
+          <ul>
+            <li>Un programme pour écrire du code</li>
+            <li>Un ordinateur ou un programme qui distribue des pages web></li>
+            <li>Un navigateur web</li>
+            <li>Un protocole de transfert</li>
+          </ul>
+
+          <li><strong>Est-ce qu'on a besoin d'utiliser un serveur web local pour accéder à une page web enregistrée
+              localement ?</strong></li>
+          <ul>
+            <li>Oui</li>
+            <li>Non</li>
+          </ul>
+
+          <li><strong>Comment faire pour publier notre site web et le rendre accessible à tout le monde ?</strong></li>
+          <ul>
+            <li>En l'envoyant par e-mail</li>
+            <li>En l'hébergeant sur un serveur web</li>
+            <li>En le sauvegardant sur une clé USB</li>
+            <li>En le stockant dans un dossier local</li>
+          </ul>
+
+          <li><strong>Que signifie le mot HTTP ?</strong></li>
+          <ul>
+            <li>HyperText Transfer Protocol</li>
+            <li>HyperLink Tool Program</li>
+            <li>High Transfer Text Protocol</li>
+            <li>Host Text Transfer Program</li>
+          </ul>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Partie 2 : Programmation et outils</h3>
+
+        <ol>
+          <li><strong>Quels sont les concepts auxquels il faut faire attention en programmation ?</strong></li>
+          <ul>
+            <li>La sécurité, la lisibilité et l'efficacité</li>
+            <li>La couleur des pages</li>
+            <li>Le style d'écriture du code</li>
+            <li>Le choix du logiciel d'édition</li>
+          </ul>
+
+          <li><strong>Peut-on utiliser MS Word pour éditer des pages HTML ?</strong></li>
+          <ul>
+            <li>Oui, mais avec des limitations</li>
+            <li>Non, pas du tout</li>
+            <li>Oui, sans aucune restriction</li>
+            <li>Non, cela produit des erreurs</li>
+          </ul>
+
+          <li><strong>Quelles sont les caractéristiques les plus importantes dans un éditeur de code tel que Visual
+              Studio Code ?</strong></li>
+          <ul>
+            <li>L'auto-complétions, la coloration syntaxique et la gestion des extensions</li>
+            <li>La capacité d'imprimer des fichiers</li>
+            <li>L'édition de documents Word</li>
+            <li>L'écoute de musique</li>
+          </ul>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Partie 3 : HTML et balises</h1>
+          <ol>
+            <li><strong>Que signifient les mots suivants retrouvés dans le langage HTML : texte, balise, référence
+                ?</strong></li>
+            <ul>
+              <li>Une structure HTML standard</li>
+              <li>Les éléments essentiels du HTML</li>
+              <li>Les parties d'une page web</li>
+              <li>Les éléments interactifs</li>
+            </ul>
+
+            <li><strong>C'est quoi une balise ? C'est quoi un élément ?</strong></li>
+            <ul>
+              <li>Une commande pour exécuter du code</li>
+              <li>Une paire de tags délimitant une structure HTML</li>
+              <li>Un lien vers une autre page</li>
+              <li>Un attribut spécifique</li>
+            </ul>
+
+            <li><strong>Comment insérer un saut de ligne en HTML ?</strong></li>
+            <ul>
+              <li>Avec la balise &lt;p&gt;</li>
+              <li>Avec la balise &lt;br&gt;</li>
+              <li>Avec la balise &lt;line&gt;</li>
+              <li>Avec la balise &lt;h1&gt;</li>
+            </ul>
+
+            <li><strong>Comment insérer une image ?</strong></li>
+            <ul>
+              <li>&lt;img src="url"&gt;</li>
+              <li>&lt;image&gt;</li>
+              <li>&lt;media&gt;</li>
+              <li>&lt;photo&gt;</li>
+            </ul>
+          </ol>
+      </section>
+
+      <section>
+        <h3>Partie 4 : Organisation des éléments</h3>
+
+        <ol>
+          <li>
+            <strong>Quelle est la différence entre les éléments de bloc et les éléments en ligne ?</strong>
+            <ul>
+              <li>Les éléments de bloc occupent toute la largeur, les éléments en ligne n'occupent que l'espace
+                nécessaire</li>
+              <li>Il n'y a aucune différence</li>
+              <li>Les éléments en ligne ne peuvent pas être stylisés</li>
+              <li>Les éléments de bloc sont toujours invisibles</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Quelle est la différence entre une liste ordonnée et une liste non ordonnée ?</strong>
+            <ul>
+              <li>Une liste ordonnée utilise des numéros, une liste non ordonnée utilise des puces</li>
+              <li>Les deux utilisent des puces</li>
+              <li>Les deux sont toujours numérotées</li>
+              <li>Les listes ordonnées ne peuvent contenir d'images</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Comment créer un lien hypertexte ?</strong>
+            <ul>
+              <li>&lt;a href="url"&gt;texte&lt;/a&gt;</li>
+              <li>&lt;link&gt;</li>
+              <li>&lt;href&gt;</li>
+              <li>&lt;hyperlink&gt;</li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Quelle est la structure minimale d'un document HTML ?</strong>
+            <ul>
+              <li>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</li>
+              <li>&lt;doc&gt;&lt;title&gt;&lt;/title&gt;&lt;content&gt;&lt;/content&gt;</li>
+              <li>&lt;site&gt;&lt;header&gt;&lt;/header&gt;&lt;content&gt;&lt;/content&gt;</li>
+              <li>&lt;main&gt;&lt;section&gt;&lt;/section&gt;&lt;footer&gt;&lt;/footer&gt;</li>
+            </ul>
+          </li>
+        </ol>
+</body>
+
+</html>
+</section>
+</article>
+
+<article>
+  <h2>Applications</h2>
+  <section>
+    <h3>Tunisie</h3>
+
+    <p>On désire créer la page Web suivante :</p>
+    <p class="text-center"><img src="images/presentation_tunisie.png" alt="Présentation de la tunisie"></p>
+    <p>On donne le texte de la page :</p>
+    <pre class="p-2 bg-dark text-light"><code class="nohighlight">Bienvenue en Tunisie
 
 La Tunisie est un pays situé en Afrique du Nord. Elle est connue pour ses plages magnifiques, son histoire riche et sa culture diverse.
 
@@ -512,92 +737,92 @@ Quelques villes importantes :
     Se détendre sur les plages de Hammamet
     Déguster la cuisine tunisienne
 </code></pre>
-        <p>Ainsi que l'image de la famille à télécharger.</p>
-        <p class="d-print-none"><a href="images/tn-flag.png" target="_blank" rel="noopener noreferrer">Cliquer sur
-            l'image pour l'agrandir</a>.</p>
-        <p><a href="images/tn-flag.png" target="_blank" rel="noopener noreferrer"><img src="images/tn-flag.png"
-              width="200" alt="Tunisian Flag"></a></p>
-        <h4>Travail demandé</h4>
-        <p>Créer la page : <strong>tunisie.html</strong>.</p>
-      </section>
+    <p>Ainsi que l'image de la famille à télécharger.</p>
+    <p class="d-print-none"><a href="images/tn-flag.png" target="_blank" rel="noopener noreferrer">Cliquer sur
+        l'image pour l'agrandir</a>.</p>
+    <p><a href="images/tn-flag.png" target="_blank" rel="noopener noreferrer"><img src="images/tn-flag.png" width="200"
+          alt="Tunisian Flag"></a></p>
+    <h4>Travail demandé</h4>
+    <p>Créer la page : <strong>tunisie.html</strong>.</p>
+  </section>
 
-      <section class="p-break">
-        <h3>Computers</h3>
+  <section class="p-break">
+    <h3>Computers</h3>
 
-        <p>On veut concevoir un site composé de quatre pages web à propos des ordinateurs, cliquer sur les miniatures
-          ci-dessous pour les agrandir :</p>
-        <ul>
-          <li>La page <strong>index.html</strong>, définit ce qu'est un ordinateur.</li>
-          <li>La page <strong>uses.html</strong>, définit les usages qu'on peut faire avec un
-            ordinateur.</li>
-          <li>La page <strong>types.html</strong>, présente quelques types d'ordinateurs.</li>
-          <li>La page <strong>parts.html</strong>, présente les composants principaux d'un
-            ordinateur.</li>
-        </ul>
+    <p>On veut concevoir un site composé de quatre pages web à propos des ordinateurs, cliquer sur les miniatures
+      ci-dessous pour les agrandir :</p>
+    <ul>
+      <li>La page <strong>index.html</strong>, définit ce qu'est un ordinateur.</li>
+      <li>La page <strong>uses.html</strong>, définit les usages qu'on peut faire avec un
+        ordinateur.</li>
+      <li>La page <strong>types.html</strong>, présente quelques types d'ordinateurs.</li>
+      <li>La page <strong>parts.html</strong>, présente les composants principaux d'un
+        ordinateur.</li>
+    </ul>
 
-        <div class="row">
-          <div class="col-3">
-            <figure>
-              <a href="images/page01.png" target="_blank"><img src="images/page01-thumb.png" alt="index.html"></a>
-              <figcaption>index.html</figcaption>
-            </figure>
-            <p>Page 1, What is a computer?</p>
-          </div>
-          <div class="col-3">
-            <figure>
-              <a href="images/page02.png" target="_blank"><img src="images/page02-thumb.png" alt="uses.html"></a>
-              <figcaption>uses.html</figcaption>
-            </figure>
-            <p>Page 2, What a computer is used for?</p>
-          </div>
-          <div class="col-3">
-            <figure>
-              <a href="images/page03.png" target="_blank"><img src="images/page03-thumb.png" alt="types.html"></a>
-              <figcaption>types.html</figcaption>
-            </figure>
-            <p>Page 3, What are computers types?</p>
-          </div>
-          <div class="col-3">
-            <figure>
-              <a href="images/page04.png" target="_blank"><img src="images/page04-thumb.png" alt="parts.html"></a>
-              <figcaption>parts.html</figcaption>
-            </figure>
-            <p>Page 4, What a computer is composed of?</p>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-3">
+        <figure>
+          <a href="images/page01.png" target="_blank"><img src="images/page01-thumb.png" alt="index.html"></a>
+          <figcaption>index.html</figcaption>
+        </figure>
+        <p>Page 1, What is a computer?</p>
+      </div>
+      <div class="col-3">
+        <figure>
+          <a href="images/page02.png" target="_blank"><img src="images/page02-thumb.png" alt="uses.html"></a>
+          <figcaption>uses.html</figcaption>
+        </figure>
+        <p>Page 2, What a computer is used for?</p>
+      </div>
+      <div class="col-3">
+        <figure>
+          <a href="images/page03.png" target="_blank"><img src="images/page03-thumb.png" alt="types.html"></a>
+          <figcaption>types.html</figcaption>
+        </figure>
+        <p>Page 3, What are computers types?</p>
+      </div>
+      <div class="col-3">
+        <figure>
+          <a href="images/page04.png" target="_blank"><img src="images/page04-thumb.png" alt="parts.html"></a>
+          <figcaption>parts.html</figcaption>
+        </figure>
+        <p>Page 4, What a computer is composed of?</p>
+      </div>
+    </div>
 
-        <h4>Travail demandé</h4>
-        <ol>
-          <li>Télécharger le texte et les images nécessaires pour réaliser ce TP : <a
-              href="assets/downloads/Computers_nocss.zip" download="computers_nocss">Fichiers du TP</a></li>
-          <li>Décompresser le fichier <i>compressé</i> dans votre dossier de travail.</li>
-          <li>Ouvrir ce dossier à l'aide de Visual Studio Code.</li>
-          <li>Ajouter la structure minimale d'une page Web à chacune des quatre pages.</li>
-          <li>Ajouter les balises des titres et des sous-titres.</li>
-          <li>Ajouter les balises pour les paragraphes.</li>
-          <li>Mettre en forme les mots <strong>gras</strong>, <em>italiques</em> et <u>soulignés</u>.
-          </li>
-          <li>Insérer les images miniatures dans les pages qui contiennent des images.
-            <p><strong>Attention :</strong> Les images sont dans le dossier <strong>images</strong> et se terminent par
-              le mot <strong>thumb</strong>
-            </p>
-          </li>
-          <li>Ajouter les balises pour les listes.</li>
-        </ol>
-      </section>
-    </article>
-  </main>
-  <footer class="d-print-none bg-dark text-white p-2">
-    <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
-    <div class="text-center small">Année scolaire : 2021/2022</div>
-  </footer>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/highlight.pack.js"></script>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/pages.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad();
-  </script>
+    <h4>Travail demandé</h4>
+    <ol>
+      <li>Télécharger le texte et les images nécessaires pour réaliser ce TP : <a
+          href="assets/downloads/Computers_nocss.zip" download="computers_nocss">Fichiers du TP</a></li>
+      <li>Décompresser le fichier <i>compressé</i> dans votre dossier de travail.</li>
+      <li>Ouvrir ce dossier à l'aide de Visual Studio Code.</li>
+      <li>Ajouter la structure minimale d'une page Web à chacune des quatre pages.</li>
+      <li>Ajouter les balises des titres et des sous-titres.</li>
+      <li>Ajouter les balises pour les paragraphes.</li>
+      <li>Mettre en forme les mots <strong>gras</strong>, <em>italiques</em> et <u>soulignés</u>.
+      </li>
+      <li>Insérer les images miniatures dans les pages qui contiennent des images.
+        <p><strong>Attention :</strong> Les images sont dans le dossier <strong>images</strong> et se terminent par
+          le mot <strong>thumb</strong>
+        </p>
+      </li>
+      <li>Ajouter les balises pour les listes.</li>
+    </ol>
+  </section>
+</article>
+</main>
+<footer class="d-print-none bg-dark text-white p-2">
+  <div class="text-center">Page créée avec ♥ par Mohamed Anis MANI</div>
+  <div class="text-center small">Année scolaire : 2021/2022</div>
+</footer>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/highlight.pack.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/pages.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
 </body>
 
 </html>

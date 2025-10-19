@@ -14,7 +14,7 @@ $(() => {
     .each((index, art_elem) => {
       const article = $(art_elem);
       const id = `article-${index + 1}`;
-      const title = article.find('h2').text();
+      const title = article.find('> h2').text();
 
       // article
       //   .attr('id', id);
@@ -45,7 +45,7 @@ $(() => {
             const section = $(sect_elem);
             const id = `section-${index + 1}-${section_index + 1}`;
             const a_id = `link-${index + 1}-${section_index + 1}`;
-            const title = section.find('h3').text() || `Page ${section_index + 1}`;
+            const title = section.find('> h3').text() || `Page ${section_index + 1}`;
             section
               // .attr('id', id)
               .addClass('d-none d-print-block');
