@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Study in Scarlet - An Interactive Audio Tableau</title>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/default-style.css">
+  <!-- Ajouter une feuille de style "style.css" -->
+</head>
+
+<body>
+  <div class="progress-indicator">
+    <div class="progress-line" style="--progress: 0%;"></div>
+    <div class="progress-dots">
+      <a href="#s0" class="dot" title="1"><span></span></a>
+      <a href="#s1" class="dot" title="2"><span></span></a>
+      <a href="#s2" class="dot" title="3"><span></span></a>
+      <a href="#s3" class="dot" title="4"><span></span></a>
+      <a href="#s4" class="dot" title="5"><span></span></a>
+    </div>
+  </div>
+
+  <main class="tableau">
+    <section id="s0" class="scene" data-scene="0">
+      <div class="scene-content">
+        <div class="scene-image">
+          <img src="assets/scene-01.jpg" alt="Dr. Watson returning to London">
+        </div>
+        <div class="scene-text">
+          <h2 class="scene-title">A Surgeon Returned</h2>
+          <blockquote class="scene-quote">"I had neither kith nor kin in England, and was therefore as free as
+            air."</blockquote>
+          <p class="scene-synopsis">Dr. Watson returns to London after serving in Afghanistan, seeking
+            affordable lodging and companionship.</p>
+        </div>
+        <div class="scene-controls">
+          <audio src="assets/mp3/01.mp3" controls></audio>
+        </div>
+      </div>
+    </section>
+
+    <section id="s1" class="scene" data-scene="1">
+      <div class="scene-content">
+        <div class="scene-image">
+          <img src="assets/scene-02.jpg" alt="Meeting Stamford at the hospital">
+        </div>
+        <div class="scene-text">
+          <h2 class="scene-title">Meeting Stamford</h2>
+          <blockquote class="scene-quote">"You must meet him… He is a little queer in his ideas."</blockquote>
+          <p class="scene-synopsis">At St. Bartholomew's Hospital, Watson's old acquaintance Stamford suggests
+            a potential roommate.</p>
+        </div>
+        <div class="scene-controls">
+          <audio src="assets/mp3/02.mp3" controls></audio>
+        </div>
+      </div>
+    </section>
+
+    <section id="s2" class="scene" data-scene="2">
+      <div class="scene-content">
+        <div class="scene-image">
+          <img src="assets/scene-03.jpg" alt="The chemistry lab meeting">
+        </div>
+        <div class="scene-text">
+          <h2 class="scene-title">The Chemistry Lab and Deduction</h2>
+          <blockquote class="scene-quote">"You have been in Afghanistan, I perceive."</blockquote>
+          <p class="scene-synopsis">Watson meets Sherlock Holmes in a chemistry lab, where Holmes demonstrates
+            his remarkable deductive abilities.</p>
+        </div>
+        <div class="scene-controls">
+          <audio src="assets/mp3/03.mp3" controls></audio>
+        </div>
+      </div>
+    </section>
+
+    <section id="s3" class="scene" data-scene="3">
+      <div class="scene-content">
+        <div class="scene-image">
+          <img src="assets/scene-04.jpg" alt="Baker Street lodgings">
+        </div>
+        <div class="scene-text">
+          <h2 class="scene-title">Baker Street, 221B</h2>
+          <blockquote class="scene-quote">"We entered a lofty sitting-room…"</blockquote>
+          <p class="scene-synopsis">Holmes and Watson settle into their famous Baker Street lodgings, complete
+            with violin and chemical experiments.</p>
+        </div>
+        <div class="scene-controls">
+          <audio src="assets/mp3/04.mp3" controls></audio>
+        </div>
+      </div>
+    </section>
+
+    <section id="s4" class="scene" data-scene="4">
+      <div class="scene-content">
+        <div class="scene-image">
+          <img src="assets/scene-05.jpg" alt="Lauriston Gardens crime scene">
+        </div>
+        <div class="scene-text">
+          <h2 class="scene-title">A Case at Lauriston Gardens</h2>
+          <blockquote class="scene-quote">"A case of considerable interest has been placed in my hands."
+          </blockquote>
+          <p class="scene-synopsis">Detectives Lestrade and Gregson seek Holmes's assistance with a mysterious
+            murder in an empty house.</p>
+        </div>
+        <div class="scene-controls">
+          <audio src="assets/mp3/05.mp3" controls></audio>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="instructions">
+    <p>Scroll to explore the story • Click play buttons to hear audio</p>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+
+</html>

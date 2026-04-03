@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url(fonts/SourceSans3-VariableFont_wght.ttf) format('truetype');
+}
+/* Italic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Spectral-Italic.ttf) format('truetype');
+}
+/* normal */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Spectral-Regular.ttf) format('truetype');
+}
+/* Bold */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/Spectral-Bold.ttf) format('woff2');
+}

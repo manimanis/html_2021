@@ -1,0 +1,82 @@
+/* Reset and base styles */
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: #F3EDE2;
+  color: #1A1A1A;
+  width: 1000px;
+  margin: auto;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: 'Spectral', serif;
+  font-weight: 600;
+}
+
+h2 {
+  color: #8B0000;
+}
+
+/* Progress Indicator */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(139, 0, 0, 0.3);
+}
+
+.dot.active {
+  background: #8B0000;
+}
+
+.dot:hover {
+  background: rgba(139, 0, 0, 0.6);
+}
+
+/* Scene Styles */
+.scene {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.scene-content {
+  max-width: 1400px;
+  width: 100%;
+  text-align: center;
+}
+
+.scene-image {
+	border-radius: 8px;
+	box-shadow: 0 20px 40px rgba(26, 26, 26, 0.1);
+	width: 80%;
+	margin: auto;
+}
+
+.scene-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.scene-text {
+  padding: 2rem 0;
+}
+
+.scene-quote {
+  font-style: italic;
+  color: #8B0000;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  border-left: 3px solid #D6B25E;
+}
+
+.scene-synopsis {
+  color: #4A4A4A;
+  margin-bottom: 2rem;
+}
+
+/* Audio Controls */
+.scene-controls>audio {
+  width: 100%;
+}

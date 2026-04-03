@@ -358,8 +358,9 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-        <h4 class="p-break">Code CSS</h4>
-        <pre><code class="css">body {
+        <div class="d-none">
+          <h4 class="p-break">Code CSS</h4>
+          <pre><code class="css">body {
   display: flex;
   flex-wrap: wrap;
   width: 800px;
@@ -385,7 +386,7 @@
 .carreH { width: 90px;  height: 90px;  padding: 30px; }
 .carreI { width: 100px; height: 90px;  padding: 30px 25px; }
 .carreJ { width: 150px; height: 100px; padding: 50px 0 0 0; }</code></pre>
-
+        </div>
       </section>
 
       <section>
@@ -567,6 +568,98 @@
 #belgique .bande2 { background-color: #fae043; }
 #belgique .bande3 { background-color: #ed2839; }</code></pre>
         </div>
+      </section>
+
+      <section id="study-scarlet">
+        <style>
+          #study-scarlet>ol>li {
+            margin: 20px 0;
+          }
+
+          #study-scarlet ol ol {
+            list-style-type: lower-alpha;
+          }
+        </style>
+        <h3>A Study Scarlet</h3>
+
+        <p>On se propose de créer une page web comme suit :</p>
+
+        <figure>
+          <a href="assets/downloads/tp14/images/a-study-scarlet.png" target="_blank"><img
+              src="assets/downloads/tp14/images/a-study-scarlet-thumb.png" alt="A Study Scarlet"></a>
+          <figcaption>A Study Scarlet</figcaption>
+        </figure>
+
+        <h4>Travail demandé</h4>
+
+        <ol>
+          <li>Télécharger le fichier <a href="assets/downloads/tp14/A_Study_in_scarlet_incomplete.zip"
+              download="a-study-scarlet.zip">Ressources</a>, puis le décompresser dans votre dossier de travail.</li>
+          <li>Style de l'élément <code>body</code> :
+            <ol>
+              <li>Largeur : 1000px, élément centré</li>
+              <li>Couleurs : <i>Arrière-plan</i> : #F3EDE2, <i>Texte</i> : #1A1A1A</li>
+              <li>Police 'Source Sans 3', sans-serif</li>
+            </ol>
+          </li>
+          <li>Styles des titres <code>h1</code>, <code>h2</code> et <code>h3</code> :
+            <ol>
+              <li>Police : 'Spectral', serif</li>
+            </ol>
+          </li>
+          <li>Couleur du titre <code>h2</code> : #8B0000</li>
+          <li>Style de la classe <code>.dot</code> :
+            <ol>
+              <li>Dimensions : 12px &times; 12px</li>
+              <li>Coins arrondis : 50%</li>
+              <li>Couleur d'arrière-plan : rgba(139, 0, 0, 0.3)</li>
+              <li><strong>Effet de survol :</strong> <i>Couleur d'arrière-plan :</i> rgba(139, 0, 0, 0.6)</li>
+            </ol>
+          </li>
+          <li>Style de la classe <code>.dot.active</code> : <i>Couleur d'arrière-plan :</i> #8B0000</li>
+          <li>Style de la classe <code>.scene</code> :
+            <ol>
+              <li>Hauteur minimale : 100vh</li>
+              <li>Marges internes : 32px</li>
+            </ol>
+          </li>
+          <li>Style de la classe <code>.scene-content</code> :
+            <ol>
+              <li>Largeur : 100%</li>
+              <li>Texte centré</li>
+            </ol>
+          </li>
+          <li>Style de la classe <code>.scene-image</code> :
+            <ol>
+              <li>Largeur : 80%, élément centré (margin: auto)</li>
+              <li>Coins arrondis : 8px</li>
+              <li>Ombre : 0 20px 40px rgba(26, 26, 26, 0.1)</li>
+            </ol>
+          </li>
+          <li>Styles des images <code>img</code> à l'intérieur d'une classe <code>.scene-image</code> :
+            <ol>
+              <li>Dimensions : 100% &times; 100%</li>
+            </ol>
+          </li>
+          <li>Marges internes <strong>verticales</strong> de la classe <code>.scene-text</code> : 2rem,
+            <strong>horizontales</strong> : 0</li>
+          <li>Styles de la classe <code>.scene-quote</code> :
+            <ol>
+              <li>Police style italique</li>
+              <li>Couleur du texte : #8B0000</li>
+              <li>Marge basse : 32px</li>
+              <li>Marge interne gauche : 32px</li>
+              <li>Bordure gauche : 3px, solide, couleur : #D6B25E</li>
+            </ol>
+          </li>
+          <li>Style de la classe <code>.scene-synopsis</code> :
+            <ol>
+              <li>Couleur de texte : #4A4A4A</li>
+              <li>Marge basse : 32px</li>
+            </ol>
+          </li>
+          <li>Largeur de l'élément <code>audio</code> de la classe <code>.scene-controls</code> : 100%</li>
+        </ol>
       </section>
     </article>
   </main>
